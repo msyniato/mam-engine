@@ -1,0 +1,111 @@
+\hypertarget{classmam_1_1_entity_manager}{}\doxysection{mam\+::Entity\+Manager Class Reference}
+\label{classmam_1_1_entity_manager}\index{mam::EntityManager@{mam::EntityManager}}
+
+
+Manages creation, destruction, and signatures of entities.  
+
+
+
+
+{\ttfamily \#include $<$entity\+\_\+manager.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_entity_manager_a9735b65c65cf04116f0947466280a321}\label{classmam_1_1_entity_manager_a9735b65c65cf04116f0947466280a321}} 
+\mbox{\hyperlink{classmam_1_1_entity_manager_a9735b65c65cf04116f0947466280a321}{Entity\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Constructs the \mbox{\hyperlink{classmam_1_1_entity_manager}{Entity\+Manager}} and initializes the entity pool. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_entity_manager_a564d4ec69de09ffd2e58b7cc175f1f59}\label{classmam_1_1_entity_manager_a564d4ec69de09ffd2e58b7cc175f1f59}} 
+\mbox{\hyperlink{classmam_1_1_entity_manager_a564d4ec69de09ffd2e58b7cc175f1f59}{$\sim$\+Entity\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+Entity \mbox{\hyperlink{classmam_1_1_entity_manager_a9680c5115db94a932d4efd4499c70b4f}{create\+Entity}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new entity ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_entity_manager_a3c7b3a6782b0fa578a841b5ff6064dea}{destroy\+Entity}} (Entity e)
+\begin{DoxyCompactList}\small\item\em Destroys an entity. Frees the entity ID for reuse and resets its signature. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_entity_manager_a8035ccfaa235a01ae59132f741c85c2a}{set\+Signature}} (Entity e, Signature s)
+\begin{DoxyCompactList}\small\item\em Sets the component signature for an entity. \end{DoxyCompactList}\item 
+Signature \mbox{\hyperlink{classmam_1_1_entity_manager_a90a3816a5d53bf7bc0fdf34c88fed342}{get\+Signature}} (Entity e)
+\begin{DoxyCompactList}\small\item\em Retrieves the component signature of an entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages creation, destruction, and signatures of entities. 
+
+The \mbox{\hyperlink{classmam_1_1_entity_manager}{Entity\+Manager}} is responsible for\+:
+\begin{DoxyItemize}
+\item Assigning unique entity I\+Ds
+\item Recycling destroyed entity I\+Ds
+\item Storing component signatures for each entity
+\end{DoxyItemize}
+
+Other E\+CS managers use these signatures to determine which systems should process an entity. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmam_1_1_entity_manager_a9680c5115db94a932d4efd4499c70b4f}\label{classmam_1_1_entity_manager_a9680c5115db94a932d4efd4499c70b4f}} 
+\index{mam::EntityManager@{mam::EntityManager}!createEntity@{createEntity}}
+\index{createEntity@{createEntity}!mam::EntityManager@{mam::EntityManager}}
+\doxysubsubsection{\texorpdfstring{createEntity()}{createEntity()}}
+{\footnotesize\ttfamily Entity mam\+::\+Entity\+Manager\+::create\+Entity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates a new entity ID. 
+
+\begin{DoxyReturn}{Returns}
+A unique entity identifier. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmam_1_1_entity_manager_a3c7b3a6782b0fa578a841b5ff6064dea}\label{classmam_1_1_entity_manager_a3c7b3a6782b0fa578a841b5ff6064dea}} 
+\index{mam::EntityManager@{mam::EntityManager}!destroyEntity@{destroyEntity}}
+\index{destroyEntity@{destroyEntity}!mam::EntityManager@{mam::EntityManager}}
+\doxysubsubsection{\texorpdfstring{destroyEntity()}{destroyEntity()}}
+{\footnotesize\ttfamily void mam\+::\+Entity\+Manager\+::destroy\+Entity (\begin{DoxyParamCaption}\item[{Entity}]{e }\end{DoxyParamCaption})}
+
+
+
+Destroys an entity. Frees the entity ID for reuse and resets its signature. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The entity to destroy. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmam_1_1_entity_manager_a90a3816a5d53bf7bc0fdf34c88fed342}\label{classmam_1_1_entity_manager_a90a3816a5d53bf7bc0fdf34c88fed342}} 
+\index{mam::EntityManager@{mam::EntityManager}!getSignature@{getSignature}}
+\index{getSignature@{getSignature}!mam::EntityManager@{mam::EntityManager}}
+\doxysubsubsection{\texorpdfstring{getSignature()}{getSignature()}}
+{\footnotesize\ttfamily Signature mam\+::\+Entity\+Manager\+::get\+Signature (\begin{DoxyParamCaption}\item[{Entity}]{e }\end{DoxyParamCaption})}
+
+
+
+Retrieves the component signature of an entity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Entity whose signature is requested. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The signature associated with the entity. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmam_1_1_entity_manager_a8035ccfaa235a01ae59132f741c85c2a}\label{classmam_1_1_entity_manager_a8035ccfaa235a01ae59132f741c85c2a}} 
+\index{mam::EntityManager@{mam::EntityManager}!setSignature@{setSignature}}
+\index{setSignature@{setSignature}!mam::EntityManager@{mam::EntityManager}}
+\doxysubsubsection{\texorpdfstring{setSignature()}{setSignature()}}
+{\footnotesize\ttfamily void mam\+::\+Entity\+Manager\+::set\+Signature (\begin{DoxyParamCaption}\item[{Entity}]{e,  }\item[{Signature}]{s }\end{DoxyParamCaption})}
+
+
+
+Sets the component signature for an entity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Entity whose signature is being updated. \\
+\hline
+{\em s} & The new signature to assign. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/ecs/entity\+\_\+manager.\+hpp\end{DoxyCompactItemize}

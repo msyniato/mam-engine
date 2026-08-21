@@ -1,0 +1,118 @@
+\hypertarget{classmam_1_1_framebuffer}{}\doxysection{mam\+::Framebuffer Class Reference}
+\label{classmam_1_1_framebuffer}\index{mam::Framebuffer@{mam::Framebuffer}}
+
+
+Abstract framebuffer class.  
+
+
+
+
+{\ttfamily \#include $<$frame\+\_\+buffer.\+hpp$>$}
+
+Inheritance diagram for mam\+::Framebuffer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmam_1_1_framebuffer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmam_1_1_framebuffer_a56378dc4f8736f2b4874ebad85dc207e}{Framebuffer}} (const \mbox{\hyperlink{structmam_1_1_framebuffer_spec}{Framebuffer\+Spec}} \&\mbox{\hyperlink{classmam_1_1_framebuffer_a2136f3c4e0da2430d92389a45bf00132}{spec}})
+\begin{DoxyCompactList}\small\item\em Constructs a framebuffer with a given specification. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_framebuffer_a4705388c5cc532d666cc33a9ca15a533}\label{classmam_1_1_framebuffer_a4705388c5cc532d666cc33a9ca15a533}} 
+virtual \mbox{\hyperlink{classmam_1_1_framebuffer_a4705388c5cc532d666cc33a9ca15a533}{$\sim$\+Framebuffer}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_framebuffer_a91721b8a5edd0214d2a7b21f5cde644e}\label{classmam_1_1_framebuffer_a91721b8a5edd0214d2a7b21f5cde644e}} 
+virtual void \mbox{\hyperlink{classmam_1_1_framebuffer_a91721b8a5edd0214d2a7b21f5cde644e}{bind}} () const =0
+\begin{DoxyCompactList}\small\item\em Bind the framebuffer for rendering. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_framebuffer_ab7c6a48aceca6cb8f164f52df7b6da84}\label{classmam_1_1_framebuffer_ab7c6a48aceca6cb8f164f52df7b6da84}} 
+virtual void \mbox{\hyperlink{classmam_1_1_framebuffer_ab7c6a48aceca6cb8f164f52df7b6da84}{unbind}} () const =0
+\begin{DoxyCompactList}\small\item\em Unbind the framebuffer. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmam_1_1_framebuffer_ab3a68582a376484d610a10f265608af9}{resize}} (u32 width, u32 height)=0
+\begin{DoxyCompactList}\small\item\em Resize the framebuffer and its attachments. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_framebuffer_a2136f3c4e0da2430d92389a45bf00132}\label{classmam_1_1_framebuffer_a2136f3c4e0da2430d92389a45bf00132}} 
+const \mbox{\hyperlink{structmam_1_1_framebuffer_spec}{Framebuffer\+Spec}} \& \mbox{\hyperlink{classmam_1_1_framebuffer_a2136f3c4e0da2430d92389a45bf00132}{spec}} () const
+\begin{DoxyCompactList}\small\item\em Returns the framebuffer specification. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_framebuffer_a3837f9724a3f4e10cbb213b3c6cb6ac9}\label{classmam_1_1_framebuffer_a3837f9724a3f4e10cbb213b3c6cb6ac9}} 
+const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmam_1_1_texture}{Texture}} $>$ $>$ \& \mbox{\hyperlink{classmam_1_1_framebuffer_a3837f9724a3f4e10cbb213b3c6cb6ac9}{get\+Color\+Attachments}} () const
+\begin{DoxyCompactList}\small\item\em Returns all color attachments. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_framebuffer_a6687992aca3c4fb70ca27d3e50765e6f}\label{classmam_1_1_framebuffer_a6687992aca3c4fb70ca27d3e50765e6f}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmam_1_1_texture}{Texture}} $>$ \mbox{\hyperlink{classmam_1_1_framebuffer_a6687992aca3c4fb70ca27d3e50765e6f}{get\+Depth\+Attachment}} () const
+\begin{DoxyCompactList}\small\item\em Returns the depth attachment. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_framebuffer_ae957e44279a71e524ab3ae2ebc2c05ef}\label{classmam_1_1_framebuffer_ae957e44279a71e524ab3ae2ebc2c05ef}} 
+u32 \mbox{\hyperlink{classmam_1_1_framebuffer_ae957e44279a71e524ab3ae2ebc2c05ef}{id}} () const
+\begin{DoxyCompactList}\small\item\em Returns the internal framebuffer ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_framebuffer_a2f036dedd4f693e4f2f64d6b015ec9eb}\label{classmam_1_1_framebuffer_a2f036dedd4f693e4f2f64d6b015ec9eb}} 
+virtual void \mbox{\hyperlink{classmam_1_1_framebuffer_a2f036dedd4f693e4f2f64d6b015ec9eb}{invalidate}} ()=0
+\begin{DoxyCompactList}\small\item\em Invalidate and recreate the framebuffer (A\+P\+I-\/specific implementation) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_framebuffer_adb73d87172f64627cbe0c4b1caddede3}\label{classmam_1_1_framebuffer_adb73d87172f64627cbe0c4b1caddede3}} 
+\mbox{\hyperlink{structmam_1_1_framebuffer_spec}{Framebuffer\+Spec}} \mbox{\hyperlink{classmam_1_1_framebuffer_adb73d87172f64627cbe0c4b1caddede3}{spec\+\_\+}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classmam_1_1_framebuffer}{Framebuffer}} configuration. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_framebuffer_a9e8284c8b93fa35a6f08e56142655bcb}\label{classmam_1_1_framebuffer_a9e8284c8b93fa35a6f08e56142655bcb}} 
+u32 \mbox{\hyperlink{classmam_1_1_framebuffer_a9e8284c8b93fa35a6f08e56142655bcb}{fbo\+\_\+}} = 0
+\begin{DoxyCompactList}\small\item\em G\+PU framebuffer ID. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_framebuffer_a2a3cfdf5c0095c69d5c65b88ae47ad58}\label{classmam_1_1_framebuffer_a2a3cfdf5c0095c69d5c65b88ae47ad58}} 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmam_1_1_texture}{Texture}} $>$ $>$ \mbox{\hyperlink{classmam_1_1_framebuffer_a2a3cfdf5c0095c69d5c65b88ae47ad58}{color\+Attachments\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Color attachment textures. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_framebuffer_a98ce073d0c031e56cc3760e9950ffdff}\label{classmam_1_1_framebuffer_a98ce073d0c031e56cc3760e9950ffdff}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmam_1_1_texture}{Texture}} $>$ \mbox{\hyperlink{classmam_1_1_framebuffer_a98ce073d0c031e56cc3760e9950ffdff}{depth\+Attachment\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Depth attachment texture. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract framebuffer class. 
+
+Manages color and depth attachments, supports binding, resizing, and invalidation. Specific A\+P\+Is (Open\+GL, Vulkan, etc.) should implement this interface. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmam_1_1_framebuffer_a56378dc4f8736f2b4874ebad85dc207e}\label{classmam_1_1_framebuffer_a56378dc4f8736f2b4874ebad85dc207e}} 
+\index{mam::Framebuffer@{mam::Framebuffer}!Framebuffer@{Framebuffer}}
+\index{Framebuffer@{Framebuffer}!mam::Framebuffer@{mam::Framebuffer}}
+\doxysubsubsection{\texorpdfstring{Framebuffer()}{Framebuffer()}}
+{\footnotesize\ttfamily mam\+::\+Framebuffer\+::\+Framebuffer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmam_1_1_framebuffer_spec}{Framebuffer\+Spec}} \&}]{spec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Constructs a framebuffer with a given specification. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spec} & \mbox{\hyperlink{classmam_1_1_framebuffer}{Framebuffer}} specification \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmam_1_1_framebuffer_ab3a68582a376484d610a10f265608af9}\label{classmam_1_1_framebuffer_ab3a68582a376484d610a10f265608af9}} 
+\index{mam::Framebuffer@{mam::Framebuffer}!resize@{resize}}
+\index{resize@{resize}!mam::Framebuffer@{mam::Framebuffer}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily virtual void mam\+::\+Framebuffer\+::resize (\begin{DoxyParamCaption}\item[{u32}]{width,  }\item[{u32}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Resize the framebuffer and its attachments. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & New width in pixels \\
+\hline
+{\em height} & New height in pixels \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classmam_1_1_g_l_framebuffer_a2aaecb9f067f1eef5cc1303a61069aea}{mam\+::\+G\+L\+Framebuffer}}, and \mbox{\hyperlink{classmam_1_1_v_k_framebuffer_a2c69c7874b578ea26e73b85279315ea9}{mam\+::\+V\+K\+Framebuffer}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/mam/frame\+\_\+buffer.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,66 @@
+\hypertarget{classmam_1_1_g_l_g_buffer}{}\doxysection{mam\+::G\+L\+G\+Buffer Class Reference}
+\label{classmam_1_1_g_l_g_buffer}\index{mam::GLGBuffer@{mam::GLGBuffer}}
+
+
+Open\+GL \mbox{\hyperlink{classmam_1_1_g_buffer}{G\+Buffer}} for deferred rendering.  
+
+
+
+
+{\ttfamily \#include $<$gl\+\_\+buffer.\+hpp$>$}
+
+Inheritance diagram for mam\+::G\+L\+G\+Buffer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmam_1_1_g_l_g_buffer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmam_1_1_g_l_g_buffer_a80d23e8c1dbcd44ede3be449064a9c79}{G\+L\+G\+Buffer}} (glm\+::vec2 screen\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Construct a \mbox{\hyperlink{classmam_1_1_g_buffer}{G\+Buffer}} for a specific screen size. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_g_l_g_buffer_acf3efcdf051db0b862b6d427b2992e06}\label{classmam_1_1_g_l_g_buffer_acf3efcdf051db0b862b6d427b2992e06}} 
+void \mbox{\hyperlink{classmam_1_1_g_l_g_buffer_acf3efcdf051db0b862b6d427b2992e06}{bind}} () override
+\begin{DoxyCompactList}\small\item\em Bind the \mbox{\hyperlink{classmam_1_1_g_buffer}{G\+Buffer}} framebuffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_g_l_g_buffer_a4a03e858452bda8684b46a067964e336}\label{classmam_1_1_g_l_g_buffer_a4a03e858452bda8684b46a067964e336}} 
+void \mbox{\hyperlink{classmam_1_1_g_l_g_buffer_a4a03e858452bda8684b46a067964e336}{clean\+Textures}} () override
+\begin{DoxyCompactList}\small\item\em Clear attached textures (position, normal, color, etc.) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_g_l_g_buffer_aeb7e47d7ae978ca9bc31d6c58acc97fb}\label{classmam_1_1_g_l_g_buffer_aeb7e47d7ae978ca9bc31d6c58acc97fb}} 
+void \mbox{\hyperlink{classmam_1_1_g_l_g_buffer_aeb7e47d7ae978ca9bc31d6c58acc97fb}{bind\+Textures}} () override
+\begin{DoxyCompactList}\small\item\em Bind the \mbox{\hyperlink{classmam_1_1_g_buffer}{G\+Buffer}} textures for shading. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_g_l_g_buffer_a10ad9ca89e0684ac360c9c3c30108df8}\label{classmam_1_1_g_l_g_buffer_a10ad9ca89e0684ac360c9c3c30108df8}} 
+void \mbox{\hyperlink{classmam_1_1_g_l_g_buffer_a10ad9ca89e0684ac360c9c3c30108df8}{un\+Bind}} () override
+\begin{DoxyCompactList}\small\item\em Unbind the \mbox{\hyperlink{classmam_1_1_g_buffer}{G\+Buffer}} framebuffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_g_l_g_buffer_a950fb648afe19d7e988f2ddcf3201714}\label{classmam_1_1_g_l_g_buffer_a950fb648afe19d7e988f2ddcf3201714}} 
+void \mbox{\hyperlink{classmam_1_1_g_l_g_buffer_a950fb648afe19d7e988f2ddcf3201714}{release}} () override
+\begin{DoxyCompactList}\small\item\em Release G\+PU resources. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Open\+GL \mbox{\hyperlink{classmam_1_1_g_buffer}{G\+Buffer}} for deferred rendering. 
+
+Stores multiple render targets (position, normal, color, etc.) in one framebuffer. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmam_1_1_g_l_g_buffer_a80d23e8c1dbcd44ede3be449064a9c79}\label{classmam_1_1_g_l_g_buffer_a80d23e8c1dbcd44ede3be449064a9c79}} 
+\index{mam::GLGBuffer@{mam::GLGBuffer}!GLGBuffer@{GLGBuffer}}
+\index{GLGBuffer@{GLGBuffer}!mam::GLGBuffer@{mam::GLGBuffer}}
+\doxysubsubsection{\texorpdfstring{GLGBuffer()}{GLGBuffer()}}
+{\footnotesize\ttfamily mam\+::\+G\+L\+G\+Buffer\+::\+G\+L\+G\+Buffer (\begin{DoxyParamCaption}\item[{glm\+::vec2}]{screen\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Construct a \mbox{\hyperlink{classmam_1_1_g_buffer}{G\+Buffer}} for a specific screen size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em screen\+\_\+size} & Size of the screen (width, height) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+platform/opengl/gl\+\_\+buffer.\+hpp\end{DoxyCompactItemize}

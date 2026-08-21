@@ -1,0 +1,100 @@
+\hypertarget{classmam_1_1_v_k_vertex_array}{}\doxysection{mam\+::V\+K\+Vertex\+Array Class Reference}
+\label{classmam_1_1_v_k_vertex_array}\index{mam::VKVertexArray@{mam::VKVertexArray}}
+
+
+Vulkan implementation of a vertex array object (V\+AO)  
+
+
+
+
+{\ttfamily \#include $<$vk\+\_\+vertex\+\_\+array.\+hpp$>$}
+
+Inheritance diagram for mam\+::V\+K\+Vertex\+Array\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmam_1_1_v_k_vertex_array}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_vertex_array_a5ba98c96e1639f85ef427f45fd7c5253}\label{classmam_1_1_v_k_vertex_array_a5ba98c96e1639f85ef427f45fd7c5253}} 
+\mbox{\hyperlink{classmam_1_1_v_k_vertex_array_a5ba98c96e1639f85ef427f45fd7c5253}{V\+K\+Vertex\+Array}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_vertex_array_af5e0667a49d7c02625aff962249e7075}\label{classmam_1_1_v_k_vertex_array_af5e0667a49d7c02625aff962249e7075}} 
+\mbox{\hyperlink{classmam_1_1_v_k_vertex_array_af5e0667a49d7c02625aff962249e7075}{$\sim$\+V\+K\+Vertex\+Array}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_vertex_array_a1a42cb057d99606c3971761527c8e76e}\label{classmam_1_1_v_k_vertex_array_a1a42cb057d99606c3971761527c8e76e}} 
+void \mbox{\hyperlink{classmam_1_1_v_k_vertex_array_a1a42cb057d99606c3971761527c8e76e}{bind}} () const override
+\begin{DoxyCompactList}\small\item\em Bind the vertex array for rendering. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_vertex_array_a8905d6b92357f59dcbf8b0b561f395ce}\label{classmam_1_1_v_k_vertex_array_a8905d6b92357f59dcbf8b0b561f395ce}} 
+void \mbox{\hyperlink{classmam_1_1_v_k_vertex_array_a8905d6b92357f59dcbf8b0b561f395ce}{un\+Bind}} () const override
+\begin{DoxyCompactList}\small\item\em Unbind the vertex array. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_v_k_vertex_array_ad21ca226d3f9d1b29715ca7161f27900}{add\+Vertex\+Buffer}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmam_1_1_vertex_buffer}{Vertex\+Buffer}} $>$ \&vertex\+Buffer, unsigned int index, int count, Uniform\+Type type, bool normalized, int stride, const void $\ast$offset) override
+\begin{DoxyCompactList}\small\item\em Add a vertex buffer to the vertex array. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_v_k_vertex_array_ab88a196617fef795e2665a1f823ee06c}{set\+Index\+Buffer}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmam_1_1_index_buffer}{Index\+Buffer}} $>$ \&index\+Buffer) override
+\begin{DoxyCompactList}\small\item\em Set the index buffer for the vertex array. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Vulkan implementation of a vertex array object (V\+AO) 
+
+Manages vertex and index buffers for rendering with Vulkan. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmam_1_1_v_k_vertex_array_ad21ca226d3f9d1b29715ca7161f27900}\label{classmam_1_1_v_k_vertex_array_ad21ca226d3f9d1b29715ca7161f27900}} 
+\index{mam::VKVertexArray@{mam::VKVertexArray}!addVertexBuffer@{addVertexBuffer}}
+\index{addVertexBuffer@{addVertexBuffer}!mam::VKVertexArray@{mam::VKVertexArray}}
+\doxysubsubsection{\texorpdfstring{addVertexBuffer()}{addVertexBuffer()}}
+{\footnotesize\ttfamily void mam\+::\+V\+K\+Vertex\+Array\+::add\+Vertex\+Buffer (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmam_1_1_vertex_buffer}{Vertex\+Buffer}} $>$ \&}]{vertex\+Buffer,  }\item[{unsigned int}]{index,  }\item[{int}]{count,  }\item[{Uniform\+Type}]{type,  }\item[{bool}]{normalized,  }\item[{int}]{stride,  }\item[{const void $\ast$}]{offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Add a vertex buffer to the vertex array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vertex\+Buffer} & Shared pointer to the vertex buffer \\
+\hline
+{\em index} & Index of the buffer in the V\+AO \\
+\hline
+{\em count} & Number of components per vertex \\
+\hline
+{\em type} & Data type of the vertex components \\
+\hline
+{\em normalized} & Whether the data should be normalized \\
+\hline
+{\em stride} & Byte offset between consecutive vertices \\
+\hline
+{\em offset} & Byte offset of the first element \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classmam_1_1_vertex_array_a319067e1962d347f3936d1b39b2cc238}{mam\+::\+Vertex\+Array}}.
+
+\mbox{\Hypertarget{classmam_1_1_v_k_vertex_array_ab88a196617fef795e2665a1f823ee06c}\label{classmam_1_1_v_k_vertex_array_ab88a196617fef795e2665a1f823ee06c}} 
+\index{mam::VKVertexArray@{mam::VKVertexArray}!setIndexBuffer@{setIndexBuffer}}
+\index{setIndexBuffer@{setIndexBuffer}!mam::VKVertexArray@{mam::VKVertexArray}}
+\doxysubsubsection{\texorpdfstring{setIndexBuffer()}{setIndexBuffer()}}
+{\footnotesize\ttfamily void mam\+::\+V\+K\+Vertex\+Array\+::set\+Index\+Buffer (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmam_1_1_index_buffer}{Index\+Buffer}} $>$ \&}]{index\+Buffer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Set the index buffer for the vertex array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index\+Buffer} & Shared pointer to the index buffer \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classmam_1_1_vertex_array_a584a5cb5839f3183a05bf882b2da7fc2}{mam\+::\+Vertex\+Array}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+platform/vulkan/vk\+\_\+vertex\+\_\+array.\+hpp\end{DoxyCompactItemize}

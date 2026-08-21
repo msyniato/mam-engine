@@ -1,0 +1,122 @@
+\hypertarget{classmam_1_1_job_system}{}\doxysection{mam\+::Job\+System Class Reference}
+\label{classmam_1_1_job_system}\index{mam::JobSystem@{mam::JobSystem}}
+
+
+Simple job system with worker threads and work-\/stealing deques.  
+
+
+
+
+{\ttfamily \#include $<$job\+\_\+system.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmam_1_1_job_system_a65eb6b6097de1b92a800a143ec5e41d1}{Startup}} (unsigned workers=std\+::thread\+::hardware\+\_\+concurrency(), size\+\_\+t deque\+\_\+capacity=1024)
+\begin{DoxyCompactList}\small\item\em Start the job system with a pool of worker threads. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_job_system_a5baa47087695baed1e19ca246f5e6f92}\label{classmam_1_1_job_system_a5baa47087695baed1e19ca246f5e6f92}} 
+void \mbox{\hyperlink{classmam_1_1_job_system_a5baa47087695baed1e19ca246f5e6f92}{Shutdown}} ()
+\begin{DoxyCompactList}\small\item\em Shutdown the job system and join all worker threads. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmam_1_1_job_handle}{Job\+Handle}} \mbox{\hyperlink{classmam_1_1_job_system_a61765a02592b7a19897aa23873ce67e2}{submit}} (Job\+Proc fn, void $\ast$user, const std\+::vector$<$ \mbox{\hyperlink{classmam_1_1_job_handle}{Job\+Handle}} $>$ \&prerequisites=\{\})
+\begin{DoxyCompactList}\small\item\em Submit a C-\/style job function with optional prerequisites. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename F , typename... Args$>$ }\\auto \mbox{\hyperlink{classmam_1_1_job_system_ace4f82cef157afdf0d58e87b3c6d3ad4}{submit\+\_\+callable}} (F \&\&f, Args \&\&... args)
+\begin{DoxyCompactList}\small\item\em Submit any callable (lambda, std\+::function, bind) as a job. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_job_system_a9783b4ec092217beea843db2da6a15bf}{wait\+\_\+all}} (const std\+::vector$<$ \mbox{\hyperlink{classmam_1_1_job_handle}{Job\+Handle}} $>$ \&hs) const
+\begin{DoxyCompactList}\small\item\em Block until all jobs in the given handles are complete. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Simple job system with worker threads and work-\/stealing deques. 
+
+Provides \mbox{\hyperlink{classmam_1_1_job_system_a61765a02592b7a19897aa23873ce67e2}{submit()}}, \mbox{\hyperlink{classmam_1_1_job_system_ace4f82cef157afdf0d58e87b3c6d3ad4}{submit\+\_\+callable()}}, and \mbox{\hyperlink{classmam_1_1_job_system_a9783b4ec092217beea843db2da6a15bf}{wait\+\_\+all()}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmam_1_1_job_system_a65eb6b6097de1b92a800a143ec5e41d1}\label{classmam_1_1_job_system_a65eb6b6097de1b92a800a143ec5e41d1}} 
+\index{mam::JobSystem@{mam::JobSystem}!Startup@{Startup}}
+\index{Startup@{Startup}!mam::JobSystem@{mam::JobSystem}}
+\doxysubsubsection{\texorpdfstring{Startup()}{Startup()}}
+{\footnotesize\ttfamily void mam\+::\+Job\+System\+::\+Startup (\begin{DoxyParamCaption}\item[{unsigned}]{workers = {\ttfamily std\+:\+:thread\+:\+:hardware\+\_\+concurrency()},  }\item[{size\+\_\+t}]{deque\+\_\+capacity = {\ttfamily 1024} }\end{DoxyParamCaption})}
+
+
+
+Start the job system with a pool of worker threads. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em workers} & Number of worker threads (default\+: hardware concurrency) \\
+\hline
+{\em deque\+\_\+capacity} & Capacity of each worker\textquotesingle{}s deque \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmam_1_1_job_system_a61765a02592b7a19897aa23873ce67e2}\label{classmam_1_1_job_system_a61765a02592b7a19897aa23873ce67e2}} 
+\index{mam::JobSystem@{mam::JobSystem}!submit@{submit}}
+\index{submit@{submit}!mam::JobSystem@{mam::JobSystem}}
+\doxysubsubsection{\texorpdfstring{submit()}{submit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmam_1_1_job_handle}{Job\+Handle}} mam\+::\+Job\+System\+::submit (\begin{DoxyParamCaption}\item[{Job\+Proc}]{fn,  }\item[{void $\ast$}]{user,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{classmam_1_1_job_handle}{Job\+Handle}} $>$ \&}]{prerequisites = {\ttfamily \{\}} }\end{DoxyParamCaption})}
+
+
+
+Submit a C-\/style job function with optional prerequisites. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fn} & Function pointer to execute \\
+\hline
+{\em user} & Optional user pointer \\
+\hline
+{\em prerequisites} & Vector of job handles that must complete first \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classmam_1_1_job_handle}{Job\+Handle}} representing the submitted job 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmam_1_1_job_system_ace4f82cef157afdf0d58e87b3c6d3ad4}\label{classmam_1_1_job_system_ace4f82cef157afdf0d58e87b3c6d3ad4}} 
+\index{mam::JobSystem@{mam::JobSystem}!submit\_callable@{submit\_callable}}
+\index{submit\_callable@{submit\_callable}!mam::JobSystem@{mam::JobSystem}}
+\doxysubsubsection{\texorpdfstring{submit\_callable()}{submit\_callable()}}
+{\footnotesize\ttfamily template$<$typename F , typename... Args$>$ \\
+auto mam\+::\+Job\+System\+::submit\+\_\+callable (\begin{DoxyParamCaption}\item[{F \&\&}]{f,  }\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Submit any callable (lambda, std\+::function, bind) as a job. 
+
+Template implementation for \mbox{\hyperlink{classmam_1_1_job_system_ace4f82cef157afdf0d58e87b3c6d3ad4}{submit\+\_\+callable()}}.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em F} & Callable type \\
+\hline
+{\em Args} & Argument types \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em f} & Callable function \\
+\hline
+{\em args} & Arguments for the callable \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classmam_1_1_job_handle}{Job\+Handle}} representing the submitted job
+\end{DoxyReturn}
+Wraps the callable in a \mbox{\hyperlink{structmam_1_1_job}{Job}}, fulfilling a promise on completion, enqueues to the current worker or a random worker. \mbox{\Hypertarget{classmam_1_1_job_system_a9783b4ec092217beea843db2da6a15bf}\label{classmam_1_1_job_system_a9783b4ec092217beea843db2da6a15bf}} 
+\index{mam::JobSystem@{mam::JobSystem}!wait\_all@{wait\_all}}
+\index{wait\_all@{wait\_all}!mam::JobSystem@{mam::JobSystem}}
+\doxysubsubsection{\texorpdfstring{wait\_all()}{wait\_all()}}
+{\footnotesize\ttfamily void mam\+::\+Job\+System\+::wait\+\_\+all (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classmam_1_1_job_handle}{Job\+Handle}} $>$ \&}]{hs }\end{DoxyParamCaption}) const}
+
+
+
+Block until all jobs in the given handles are complete. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hs} & Vector of job handles \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/mam/job\+\_\+system.\+hpp\end{DoxyCompactItemize}

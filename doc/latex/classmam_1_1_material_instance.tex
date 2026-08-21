@@ -1,0 +1,99 @@
+\hypertarget{classmam_1_1_material_instance}{}\doxysection{mam\+::Material\+Instance Class Reference}
+\label{classmam_1_1_material_instance}\index{mam::MaterialInstance@{mam::MaterialInstance}}
+
+
+Instance of a base material with parameter overrides.  
+
+
+
+
+{\ttfamily \#include $<$material.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const Material\+Value \& \mbox{\hyperlink{classmam_1_1_material_instance_a5675abe8adf04809440b5fe117520679}{Get}} (const std\+::string \&name) const
+\begin{DoxyCompactList}\small\item\em Get parameter value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmam_1_1_material_instance_a83aafb7af09fad08da8d5a16d1c62c8d}{Material\+Instance}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmam_1_1_material_base}{Material\+Base}} $>$ base)
+\begin{DoxyCompactList}\small\item\em Construct a material instance from a base material. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classmam_1_1_material_instance_acdd2fe06da45d6e191dc3aae8e0f3676}{Set}} (const std\+::string \&name, T \&\&value)
+\begin{DoxyCompactList}\small\item\em Set parameter value (overrides base) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_material_instance_a3c1b4529e9ecdf959fe19b03fadedd0a}\label{classmam_1_1_material_instance_a3c1b4529e9ecdf959fe19b03fadedd0a}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmam_1_1_material_base}{Material\+Base}} $>$ \mbox{\hyperlink{classmam_1_1_material_instance_a3c1b4529e9ecdf959fe19b03fadedd0a}{base\+Material}}
+\begin{DoxyCompactList}\small\item\em Base material. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_material_instance_a1b424a1858e73b843e632bcd6d800f00}\label{classmam_1_1_material_instance_a1b424a1858e73b843e632bcd6d800f00}} 
+std\+::unordered\+\_\+map$<$ std\+::string, Material\+Value $>$ \mbox{\hyperlink{classmam_1_1_material_instance_a1b424a1858e73b843e632bcd6d800f00}{overrides}}
+\begin{DoxyCompactList}\small\item\em Overrides per-\/instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Instance of a base material with parameter overrides. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmam_1_1_material_instance_a83aafb7af09fad08da8d5a16d1c62c8d}\label{classmam_1_1_material_instance_a83aafb7af09fad08da8d5a16d1c62c8d}} 
+\index{mam::MaterialInstance@{mam::MaterialInstance}!MaterialInstance@{MaterialInstance}}
+\index{MaterialInstance@{MaterialInstance}!mam::MaterialInstance@{mam::MaterialInstance}}
+\doxysubsubsection{\texorpdfstring{MaterialInstance()}{MaterialInstance()}}
+{\footnotesize\ttfamily mam\+::\+Material\+Instance\+::\+Material\+Instance (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmam_1_1_material_base}{Material\+Base}} $>$}]{base }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Construct a material instance from a base material. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & Base material pointer \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmam_1_1_material_instance_a5675abe8adf04809440b5fe117520679}\label{classmam_1_1_material_instance_a5675abe8adf04809440b5fe117520679}} 
+\index{mam::MaterialInstance@{mam::MaterialInstance}!Get@{Get}}
+\index{Get@{Get}!mam::MaterialInstance@{mam::MaterialInstance}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily const Material\+Value\& mam\+::\+Material\+Instance\+::\+Get (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const}
+
+
+
+Get parameter value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Parameter name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to value (from override or base) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmam_1_1_material_instance_acdd2fe06da45d6e191dc3aae8e0f3676}\label{classmam_1_1_material_instance_acdd2fe06da45d6e191dc3aae8e0f3676}} 
+\index{mam::MaterialInstance@{mam::MaterialInstance}!Set@{Set}}
+\index{Set@{Set}!mam::MaterialInstance@{mam::MaterialInstance}}
+\doxysubsubsection{\texorpdfstring{Set()}{Set()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void mam\+::\+Material\+Instance\+::\+Set (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{T \&\&}]{value }\end{DoxyParamCaption})}
+
+
+
+Set parameter value (overrides base) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Parameter type \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Parameter name \\
+\hline
+{\em value} & Value to set \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/mam/material.\+hpp\end{DoxyCompactItemize}

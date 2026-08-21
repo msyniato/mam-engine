@@ -1,0 +1,80 @@
+\hypertarget{classmam_1_1_v_k_index_buffer}{}\doxysection{mam\+::V\+K\+Index\+Buffer Class Reference}
+\label{classmam_1_1_v_k_index_buffer}\index{mam::VKIndexBuffer@{mam::VKIndexBuffer}}
+
+
+Vulkan implementation of an index buffer.  
+
+
+
+
+{\ttfamily \#include $<$vk\+\_\+buffer.\+hpp$>$}
+
+Inheritance diagram for mam\+::V\+K\+Index\+Buffer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmam_1_1_v_k_index_buffer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_index_buffer_acb6e31516fdd0c3216a4cfdfe33fc6d0}\label{classmam_1_1_v_k_index_buffer_acb6e31516fdd0c3216a4cfdfe33fc6d0}} 
+\mbox{\hyperlink{classmam_1_1_v_k_index_buffer_acb6e31516fdd0c3216a4cfdfe33fc6d0}{V\+K\+Index\+Buffer}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classmam_1_1_v_k_index_buffer}{V\+K\+Index\+Buffer}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_index_buffer_a7717f36847f5bb55c04802f325e04610}\label{classmam_1_1_v_k_index_buffer_a7717f36847f5bb55c04802f325e04610}} 
+\mbox{\hyperlink{classmam_1_1_v_k_index_buffer_a7717f36847f5bb55c04802f325e04610}{$\sim$\+V\+K\+Index\+Buffer}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classmam_1_1_v_k_index_buffer}{V\+K\+Index\+Buffer}} object and free Vulkan resources. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_index_buffer_a68278cd160a449513f1a32eb0934ed21}\label{classmam_1_1_v_k_index_buffer_a68278cd160a449513f1a32eb0934ed21}} 
+void \mbox{\hyperlink{classmam_1_1_v_k_index_buffer_a68278cd160a449513f1a32eb0934ed21}{bind}} () override
+\begin{DoxyCompactList}\small\item\em Bind the index buffer for rendering. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_v_k_index_buffer_a200b4cf55d1fec769c0e7805c38945eb}{upload\+Data}} (const void $\ast$data, unsigned int \mbox{\hyperlink{classmam_1_1_index_buffer_a0a84f78ee139a24d007659e2e5af839d}{size}}, unsigned int offset=0) override
+\begin{DoxyCompactList}\small\item\em Upload data to the index buffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_index_buffer_a64233b344abe6a638be9b33582aa50d0}\label{classmam_1_1_v_k_index_buffer_a64233b344abe6a638be9b33582aa50d0}} 
+void \mbox{\hyperlink{classmam_1_1_v_k_index_buffer_a64233b344abe6a638be9b33582aa50d0}{release}} () override
+\begin{DoxyCompactList}\small\item\em Release Vulkan buffer and memory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_index_buffer_a16799b608f2ea1a5899691b610c7a8cb}\label{classmam_1_1_v_k_index_buffer_a16799b608f2ea1a5899691b610c7a8cb}} 
+vk\+::\+Buffer \mbox{\hyperlink{classmam_1_1_v_k_index_buffer_a16799b608f2ea1a5899691b610c7a8cb}{index\+Buffer}}
+\begin{DoxyCompactList}\small\item\em Vulkan index buffer handle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_index_buffer_ae3fb02435431bcecfed5019854df7b5e}\label{classmam_1_1_v_k_index_buffer_ae3fb02435431bcecfed5019854df7b5e}} 
+vk\+::\+Device\+Memory \mbox{\hyperlink{classmam_1_1_v_k_index_buffer_ae3fb02435431bcecfed5019854df7b5e}{index\+Buffer\+Memory}}
+\begin{DoxyCompactList}\small\item\em Vulkan device memory associated with the buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Vulkan implementation of an index buffer. 
+
+Manages a Vulkan index buffer and its associated device memory. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmam_1_1_v_k_index_buffer_a200b4cf55d1fec769c0e7805c38945eb}\label{classmam_1_1_v_k_index_buffer_a200b4cf55d1fec769c0e7805c38945eb}} 
+\index{mam::VKIndexBuffer@{mam::VKIndexBuffer}!uploadData@{uploadData}}
+\index{uploadData@{uploadData}!mam::VKIndexBuffer@{mam::VKIndexBuffer}}
+\doxysubsubsection{\texorpdfstring{uploadData()}{uploadData()}}
+{\footnotesize\ttfamily void mam\+::\+V\+K\+Index\+Buffer\+::upload\+Data (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{unsigned int}]{size,  }\item[{unsigned int}]{offset = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Upload data to the index buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Pointer to the index data \\
+\hline
+{\em size} & Size of the data in bytes \\
+\hline
+{\em offset} & Offset in the buffer to start writing \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classmam_1_1_index_buffer}{mam\+::\+Index\+Buffer}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+platform/vulkan/vk\+\_\+buffer.\+hpp\end{DoxyCompactItemize}

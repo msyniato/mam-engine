@@ -1,0 +1,80 @@
+\hypertarget{classmam_1_1_v_k_vertex_buffer}{}\doxysection{mam\+::V\+K\+Vertex\+Buffer Class Reference}
+\label{classmam_1_1_v_k_vertex_buffer}\index{mam::VKVertexBuffer@{mam::VKVertexBuffer}}
+
+
+Vulkan implementation of a vertex buffer.  
+
+
+
+
+{\ttfamily \#include $<$vk\+\_\+buffer.\+hpp$>$}
+
+Inheritance diagram for mam\+::V\+K\+Vertex\+Buffer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmam_1_1_v_k_vertex_buffer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_vertex_buffer_a36ac0c3883c017a3ee9b37ed6b70d318}\label{classmam_1_1_v_k_vertex_buffer_a36ac0c3883c017a3ee9b37ed6b70d318}} 
+\mbox{\hyperlink{classmam_1_1_v_k_vertex_buffer_a36ac0c3883c017a3ee9b37ed6b70d318}{V\+K\+Vertex\+Buffer}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classmam_1_1_v_k_vertex_buffer}{V\+K\+Vertex\+Buffer}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_vertex_buffer_a8a2fad88adbaf14790a8542230963dd7}\label{classmam_1_1_v_k_vertex_buffer_a8a2fad88adbaf14790a8542230963dd7}} 
+\mbox{\hyperlink{classmam_1_1_v_k_vertex_buffer_a8a2fad88adbaf14790a8542230963dd7}{$\sim$\+V\+K\+Vertex\+Buffer}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classmam_1_1_v_k_vertex_buffer}{V\+K\+Vertex\+Buffer}} object and free Vulkan resources. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_vertex_buffer_a35aa273e6e0139f450b0ac3cb2d6aaf2}\label{classmam_1_1_v_k_vertex_buffer_a35aa273e6e0139f450b0ac3cb2d6aaf2}} 
+void \mbox{\hyperlink{classmam_1_1_v_k_vertex_buffer_a35aa273e6e0139f450b0ac3cb2d6aaf2}{bind}} () override
+\begin{DoxyCompactList}\small\item\em Bind the vertex buffer for rendering. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_v_k_vertex_buffer_a98454aaf07b55258462633960d0b14fd}{upload\+Data}} (const void $\ast$data, unsigned int size, unsigned int offset=0) override
+\begin{DoxyCompactList}\small\item\em Upload data to the vertex buffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_vertex_buffer_a5880a95cbd6b6fd59bdc2b837d2de97f}\label{classmam_1_1_v_k_vertex_buffer_a5880a95cbd6b6fd59bdc2b837d2de97f}} 
+void \mbox{\hyperlink{classmam_1_1_v_k_vertex_buffer_a5880a95cbd6b6fd59bdc2b837d2de97f}{release}} () override
+\begin{DoxyCompactList}\small\item\em Release Vulkan buffer and memory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_vertex_buffer_ad7a27e8e9643175f1bcfeed850d86b23}\label{classmam_1_1_v_k_vertex_buffer_ad7a27e8e9643175f1bcfeed850d86b23}} 
+vk\+::\+Buffer \mbox{\hyperlink{classmam_1_1_v_k_vertex_buffer_ad7a27e8e9643175f1bcfeed850d86b23}{vertex\+Buffer}}
+\begin{DoxyCompactList}\small\item\em Vulkan vertex buffer handle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_vertex_buffer_a6130d3304131b2012d45947b072f6bf2}\label{classmam_1_1_v_k_vertex_buffer_a6130d3304131b2012d45947b072f6bf2}} 
+vk\+::\+Device\+Memory \mbox{\hyperlink{classmam_1_1_v_k_vertex_buffer_a6130d3304131b2012d45947b072f6bf2}{vertex\+Buffer\+Memory}}
+\begin{DoxyCompactList}\small\item\em Vulkan device memory associated with the buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Vulkan implementation of a vertex buffer. 
+
+Manages a Vulkan vertex buffer and its associated device memory. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmam_1_1_v_k_vertex_buffer_a98454aaf07b55258462633960d0b14fd}\label{classmam_1_1_v_k_vertex_buffer_a98454aaf07b55258462633960d0b14fd}} 
+\index{mam::VKVertexBuffer@{mam::VKVertexBuffer}!uploadData@{uploadData}}
+\index{uploadData@{uploadData}!mam::VKVertexBuffer@{mam::VKVertexBuffer}}
+\doxysubsubsection{\texorpdfstring{uploadData()}{uploadData()}}
+{\footnotesize\ttfamily void mam\+::\+V\+K\+Vertex\+Buffer\+::upload\+Data (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{unsigned int}]{size,  }\item[{unsigned int}]{offset = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Upload data to the vertex buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Pointer to the vertex data \\
+\hline
+{\em size} & Size of the data in bytes \\
+\hline
+{\em offset} & Offset in the buffer to start writing \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classmam_1_1_vertex_buffer_ad008cabd65e9dcf088503038ddb0e176}{mam\+::\+Vertex\+Buffer}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+platform/vulkan/vk\+\_\+buffer.\+hpp\end{DoxyCompactItemize}

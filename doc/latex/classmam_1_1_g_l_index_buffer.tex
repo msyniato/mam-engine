@@ -1,0 +1,46 @@
+\hypertarget{classmam_1_1_g_l_index_buffer}{}\doxysection{mam\+::G\+L\+Index\+Buffer Class Reference}
+\label{classmam_1_1_g_l_index_buffer}\index{mam::GLIndexBuffer@{mam::GLIndexBuffer}}
+
+
+Open\+GL implementation of an Index Buffer.  
+
+
+
+
+{\ttfamily \#include $<$gl\+\_\+buffer.\+hpp$>$}
+
+Inheritance diagram for mam\+::G\+L\+Index\+Buffer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmam_1_1_g_l_index_buffer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_g_l_index_buffer_a47bafb30f8deb7745b47fb2776f8e9f3}\label{classmam_1_1_g_l_index_buffer_a47bafb30f8deb7745b47fb2776f8e9f3}} 
+\mbox{\hyperlink{classmam_1_1_g_l_index_buffer_a47bafb30f8deb7745b47fb2776f8e9f3}{G\+L\+Index\+Buffer}} (unsigned int \mbox{\hyperlink{classmam_1_1_index_buffer_a0a84f78ee139a24d007659e2e5af839d}{size}})
+\begin{DoxyCompactList}\small\item\em Create empty index buffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_g_l_index_buffer_a9aeaddf890efaef078d154ed4267412f}\label{classmam_1_1_g_l_index_buffer_a9aeaddf890efaef078d154ed4267412f}} 
+\mbox{\hyperlink{classmam_1_1_g_l_index_buffer_a9aeaddf890efaef078d154ed4267412f}{G\+L\+Index\+Buffer}} (void $\ast$index, unsigned int \mbox{\hyperlink{classmam_1_1_index_buffer_a0a84f78ee139a24d007659e2e5af839d}{size}})
+\begin{DoxyCompactList}\small\item\em Create buffer with initial indices. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_g_l_index_buffer_a6dd0e2578ab8118d81a89a0efacc58eb}\label{classmam_1_1_g_l_index_buffer_a6dd0e2578ab8118d81a89a0efacc58eb}} 
+virtual void \mbox{\hyperlink{classmam_1_1_g_l_index_buffer_a6dd0e2578ab8118d81a89a0efacc58eb}{bind}} () override
+\begin{DoxyCompactList}\small\item\em Bind the index buffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_g_l_index_buffer_a412ecaf39a028c803b0f3c1fda4f6334}\label{classmam_1_1_g_l_index_buffer_a412ecaf39a028c803b0f3c1fda4f6334}} 
+virtual void \mbox{\hyperlink{classmam_1_1_g_l_index_buffer_a412ecaf39a028c803b0f3c1fda4f6334}{upload\+Data}} (const void $\ast$data, unsigned int \mbox{\hyperlink{classmam_1_1_index_buffer_a0a84f78ee139a24d007659e2e5af839d}{size}}, unsigned int offset=0) override
+\begin{DoxyCompactList}\small\item\em Upload index data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_g_l_index_buffer_a849b4efe783a7698c7cea9b4b9bddccc}\label{classmam_1_1_g_l_index_buffer_a849b4efe783a7698c7cea9b4b9bddccc}} 
+virtual void \mbox{\hyperlink{classmam_1_1_g_l_index_buffer_a849b4efe783a7698c7cea9b4b9bddccc}{release}} () override
+\begin{DoxyCompactList}\small\item\em Delete G\+PU resources. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Open\+GL implementation of an Index Buffer. 
+
+Stores indices for drawing elements on the G\+PU. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+platform/opengl/gl\+\_\+buffer.\+hpp\end{DoxyCompactItemize}

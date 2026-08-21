@@ -1,0 +1,259 @@
+\hypertarget{classmam_1_1_audio_manager}{}\doxysection{mam\+::Audio\+Manager Class Reference}
+\label{classmam_1_1_audio_manager}\index{mam::AudioManager@{mam::AudioManager}}
+
+
+Manages audio device, context, buffers, sources, and layer-\/based volume.  
+
+
+
+
+{\ttfamily \#include $<$audio\+\_\+manager.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_audio_manager_a6a5d0e741f86528e85cc75c59325bc1b}\label{classmam_1_1_audio_manager_a6a5d0e741f86528e85cc75c59325bc1b}} 
+\mbox{\hyperlink{classmam_1_1_audio_manager_a6a5d0e741f86528e85cc75c59325bc1b}{Audio\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Constructs the audio manager and initializes internal values. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_audio_manager_a519d4430f8159fbca34ada805cf560aa}\label{classmam_1_1_audio_manager_a519d4430f8159fbca34ada805cf560aa}} 
+\mbox{\hyperlink{classmam_1_1_audio_manager_a519d4430f8159fbca34ada805cf560aa}{$\sim$\+Audio\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the audio manager and releases Open\+AL resources. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classmam_1_1_audio_manager_a4348024004eaacde1f631c8bb35896d4}{Load\+Wav\+File}} (const std\+::string filename, int index\+\_\+buffer)
+\begin{DoxyCompactList}\small\item\em Loads a W\+AV file into the specified buffer index. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_audio_manager_a519d24c28b9d0dd0767a93fa374110b0}\label{classmam_1_1_audio_manager_a519d24c28b9d0dd0767a93fa374110b0}} 
+bool \mbox{\hyperlink{classmam_1_1_audio_manager_a519d24c28b9d0dd0767a93fa374110b0}{Load\+O\+G\+G\+File}} (const std\+::string filename, int index\+\_\+buffer)
+\begin{DoxyCompactList}\small\item\em Loads an O\+GG file into the specified buffer index. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_audio_manager_ab171c46d96c5b76725453625764ebb2d}\label{classmam_1_1_audio_manager_ab171c46d96c5b76725453625764ebb2d}} 
+bool \mbox{\hyperlink{classmam_1_1_audio_manager_ab171c46d96c5b76725453625764ebb2d}{Load\+M\+P3\+File}} (const std\+::string filename, int index\+\_\+buffer)
+\begin{DoxyCompactList}\small\item\em Loads an M\+P3 file into the specified buffer index. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_audio_manager_a56499db22926931f4e9254cfb955408e}\label{classmam_1_1_audio_manager_a56499db22926931f4e9254cfb955408e}} 
+bool \mbox{\hyperlink{classmam_1_1_audio_manager_a56499db22926931f4e9254cfb955408e}{Load\+F\+L\+A\+C\+File}} (const std\+::string filename, int index\+\_\+buffer)
+\begin{DoxyCompactList}\small\item\em Loads a F\+L\+AC file into the specified buffer index. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_audio_manager_a9c7fabf79ffab0b3cc84a5793be6a693}\label{classmam_1_1_audio_manager_a9c7fabf79ffab0b3cc84a5793be6a693}} 
+void \mbox{\hyperlink{classmam_1_1_audio_manager_a9c7fabf79ffab0b3cc84a5793be6a693}{Create\+Context}} ()
+\begin{DoxyCompactList}\small\item\em Creates an Open\+AL context and initializes the audio device. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_audio_manager_a761e1f951216ac9c78e7b69104068e2f}{Create\+Source}} (\mbox{\hyperlink{structmam_1_1_source_data}{Source\+Data}} source)
+\begin{DoxyCompactList}\small\item\em Creates an audio source with the given parameters. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_audio_manager_ae5957b4140daa2b7974bed0e04b422d3}\label{classmam_1_1_audio_manager_ae5957b4140daa2b7974bed0e04b422d3}} 
+void \mbox{\hyperlink{classmam_1_1_audio_manager_ae5957b4140daa2b7974bed0e04b422d3}{Play\+Source}} (int index)
+\begin{DoxyCompactList}\small\item\em Plays the source at the given index. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_audio_manager_a04eb5a49a2607aaee1a6d8721c3b640d}\label{classmam_1_1_audio_manager_a04eb5a49a2607aaee1a6d8721c3b640d}} 
+void \mbox{\hyperlink{classmam_1_1_audio_manager_a04eb5a49a2607aaee1a6d8721c3b640d}{Pause\+Source}} (int index)
+\begin{DoxyCompactList}\small\item\em Pauses the source at the given index. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_audio_manager_a393d88aee28f9b604938720757b9f68b}\label{classmam_1_1_audio_manager_a393d88aee28f9b604938720757b9f68b}} 
+void \mbox{\hyperlink{classmam_1_1_audio_manager_a393d88aee28f9b604938720757b9f68b}{Stop\+Source}} (int index)
+\begin{DoxyCompactList}\small\item\em Stops the source at the given index. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classmam_1_1_audio_manager_a10362a921e64816b22857763396b8511}{Is\+Source\+Playing}} (int index)
+\begin{DoxyCompactList}\small\item\em Checks whether the specified source is currently playing. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_audio_manager_a4f75bb4dd51070dd0727569b6b60ac22}\label{classmam_1_1_audio_manager_a4f75bb4dd51070dd0727569b6b60ac22}} 
+void \mbox{\hyperlink{classmam_1_1_audio_manager_a4f75bb4dd51070dd0727569b6b60ac22}{Set\+Source\+Pitch}} (int index, float pitch)
+\begin{DoxyCompactList}\small\item\em Sets the pitch of a source. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_audio_manager_ab4e2cf1cfca3a10c2947e708546a5c20}\label{classmam_1_1_audio_manager_ab4e2cf1cfca3a10c2947e708546a5c20}} 
+void \mbox{\hyperlink{classmam_1_1_audio_manager_ab4e2cf1cfca3a10c2947e708546a5c20}{Set\+Source\+Gain}} (int index, float gain)
+\begin{DoxyCompactList}\small\item\em Sets the gain of a source (before layer/master mixing). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_audio_manager_a126736b6fd7db40efef6fe5cb8e2d9bb}\label{classmam_1_1_audio_manager_a126736b6fd7db40efef6fe5cb8e2d9bb}} 
+void \mbox{\hyperlink{classmam_1_1_audio_manager_a126736b6fd7db40efef6fe5cb8e2d9bb}{Set\+Source\+Position}} (int index, const glm\+::vec3 \&pos)
+\begin{DoxyCompactList}\small\item\em Sets the 3D position of a source. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_audio_manager_a3f5669098fa7ecbaab275bc346d6b3ec}\label{classmam_1_1_audio_manager_a3f5669098fa7ecbaab275bc346d6b3ec}} 
+void \mbox{\hyperlink{classmam_1_1_audio_manager_a3f5669098fa7ecbaab275bc346d6b3ec}{Set\+Source\+Velocity}} (int index, const glm\+::vec3 \&vel)
+\begin{DoxyCompactList}\small\item\em Sets the 3D velocity of a source. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_audio_manager_a7afc8eee23e55cd217e2ca3ea7de7e72}\label{classmam_1_1_audio_manager_a7afc8eee23e55cd217e2ca3ea7de7e72}} 
+float \mbox{\hyperlink{classmam_1_1_audio_manager_a7afc8eee23e55cd217e2ca3ea7de7e72}{Get\+Source\+Pitch}} (int index) const
+\begin{DoxyCompactList}\small\item\em Gets the pitch of a source. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_audio_manager_a4f824d0e9c6213b1cb4427142574237e}\label{classmam_1_1_audio_manager_a4f824d0e9c6213b1cb4427142574237e}} 
+float \mbox{\hyperlink{classmam_1_1_audio_manager_a4f824d0e9c6213b1cb4427142574237e}{Get\+Source\+Gain}} (int index) const
+\begin{DoxyCompactList}\small\item\em Gets the base gain of a source. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_audio_manager_aa8d80b9701a90c06892652c1af3133f1}\label{classmam_1_1_audio_manager_aa8d80b9701a90c06892652c1af3133f1}} 
+glm\+::vec3 \mbox{\hyperlink{classmam_1_1_audio_manager_aa8d80b9701a90c06892652c1af3133f1}{Get\+Source\+Position}} (int index) const
+\begin{DoxyCompactList}\small\item\em Gets the 3D position of a source. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_audio_manager_ae8e6a80f4b8b2661e4ba6df519038a0f}\label{classmam_1_1_audio_manager_ae8e6a80f4b8b2661e4ba6df519038a0f}} 
+glm\+::vec3 \mbox{\hyperlink{classmam_1_1_audio_manager_ae8e6a80f4b8b2661e4ba6df519038a0f}{Get\+Source\+Velocity}} (int index) const
+\begin{DoxyCompactList}\small\item\em Gets the 3D velocity of a source. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_audio_manager_a0576f0c26194ef9dd43a23b5be4dc4f8}\label{classmam_1_1_audio_manager_a0576f0c26194ef9dd43a23b5be4dc4f8}} 
+int \mbox{\hyperlink{classmam_1_1_audio_manager_a0576f0c26194ef9dd43a23b5be4dc4f8}{Get\+Source\+Count}} () const
+\begin{DoxyCompactList}\small\item\em Returns the number of created sources. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_audio_manager_ac7e1790c7c282f717d189b78c169adb6}\label{classmam_1_1_audio_manager_ac7e1790c7c282f717d189b78c169adb6}} 
+void \mbox{\hyperlink{classmam_1_1_audio_manager_ac7e1790c7c282f717d189b78c169adb6}{Set\+Listener}} ()
+\begin{DoxyCompactList}\small\item\em Updates listener position and orientation using default values. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_audio_manager_af909e648ec4a9fadb6ad1bda308af4c0}\label{classmam_1_1_audio_manager_af909e648ec4a9fadb6ad1bda308af4c0}} 
+void \mbox{\hyperlink{classmam_1_1_audio_manager_af909e648ec4a9fadb6ad1bda308af4c0}{Set\+Listener}} (const glm\+::vec3 \&pos, const glm\+::vec3 \&front, const glm\+::vec3 \&up)
+\begin{DoxyCompactList}\small\item\em Updates listener position and orientation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_audio_manager_a7b6f9eb97ec094c1f521e403bd69f29a}\label{classmam_1_1_audio_manager_a7b6f9eb97ec094c1f521e403bd69f29a}} 
+void \mbox{\hyperlink{classmam_1_1_audio_manager_a7b6f9eb97ec094c1f521e403bd69f29a}{Set\+Master\+Gain}} (float gain)
+\begin{DoxyCompactList}\small\item\em Sets the global (master) gain applied to all audio. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_audio_manager_a7ea895bb1d4bdbe2a8ff803dc511cb28}\label{classmam_1_1_audio_manager_a7ea895bb1d4bdbe2a8ff803dc511cb28}} 
+void \mbox{\hyperlink{classmam_1_1_audio_manager_a7ea895bb1d4bdbe2a8ff803dc511cb28}{Set\+Layer\+Gain}} (Audio\+Layer layer, float gain)
+\begin{DoxyCompactList}\small\item\em Sets the gain for a specific audio layer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_audio_manager_aec000ade401ed4a6bdab4488b11ab5cb}\label{classmam_1_1_audio_manager_aec000ade401ed4a6bdab4488b11ab5cb}} 
+float \mbox{\hyperlink{classmam_1_1_audio_manager_aec000ade401ed4a6bdab4488b11ab5cb}{Get\+Master\+Gain}} () const
+\begin{DoxyCompactList}\small\item\em Gets the master gain. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_audio_manager_abfd33f28c22ac6db324bc725485075a7}\label{classmam_1_1_audio_manager_abfd33f28c22ac6db324bc725485075a7}} 
+float \mbox{\hyperlink{classmam_1_1_audio_manager_abfd33f28c22ac6db324bc725485075a7}{Get\+Layer\+Gain}} (Audio\+Layer layer) const
+\begin{DoxyCompactList}\small\item\em Gets the gain applied to a specific audio layer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_audio_manager_ab3f8723a011b6be40d966d84127da892}\label{classmam_1_1_audio_manager_ab3f8723a011b6be40d966d84127da892}} 
+void \mbox{\hyperlink{classmam_1_1_audio_manager_ab3f8723a011b6be40d966d84127da892}{Update\+Source\+Gains}} ()
+\begin{DoxyCompactList}\small\item\em Recalculates all source gains based on layer and master gains. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classmam_1_1_audio_manager_ae25d337cb018159dac91ec5609f5099d}{Find\+Next\+Chunk}} (F\+I\+LE $\ast$f, const char target\mbox{[}4\mbox{]}, long \&out\+Size)
+\begin{DoxyCompactList}\small\item\em Searches for a specific chunk in a W\+AV file by ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ A\+Luint $>$ \mbox{\hyperlink{classmam_1_1_audio_manager_a4fd68c262dddb74fbb95a323eb1383e3}{buffer}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structmam_1_1_source_data}{Source\+Data}} $>$ \mbox{\hyperlink{classmam_1_1_audio_manager_a485c9d475c5392d1d87128cabe55af9b}{src}}
+\item 
+A\+L\+Cdevice $\ast$ \mbox{\hyperlink{classmam_1_1_audio_manager_aca9c13f19f46fb92aca509bfdf2ffe55}{device}}
+\item 
+A\+L\+Ccontext $\ast$ \mbox{\hyperlink{classmam_1_1_audio_manager_acb7aa36b3f184495d1b10c45147a284e}{ctx}}
+\item 
+A\+Lsizei \mbox{\hyperlink{classmam_1_1_audio_manager_acede6bb67d2d8f98e8e1dabe79193ce9}{size}}
+\item 
+A\+Lsizei \mbox{\hyperlink{classmam_1_1_audio_manager_a8f3423bf502547a03f0d4e5bd060c317}{frequency}}
+\item 
+A\+Lenum \mbox{\hyperlink{classmam_1_1_audio_manager_a8679efdcc37b93f17deff84cd84a8ee0}{format}}
+\item 
+float \mbox{\hyperlink{classmam_1_1_audio_manager_a710cf6143b768f6dd96cf905c37de53a}{master\+Gain}}
+\item 
+float \mbox{\hyperlink{classmam_1_1_audio_manager_af2fa2cdebba3f862932fbfd71cb9a166}{layer\+Gains}} \mbox{[}(int) Audio\+Layer\+::\+UI\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages audio device, context, buffers, sources, and layer-\/based volume. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmam_1_1_audio_manager_a761e1f951216ac9c78e7b69104068e2f}\label{classmam_1_1_audio_manager_a761e1f951216ac9c78e7b69104068e2f}} 
+\index{mam::AudioManager@{mam::AudioManager}!CreateSource@{CreateSource}}
+\index{CreateSource@{CreateSource}!mam::AudioManager@{mam::AudioManager}}
+\doxysubsubsection{\texorpdfstring{CreateSource()}{CreateSource()}}
+{\footnotesize\ttfamily void mam\+::\+Audio\+Manager\+::\+Create\+Source (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmam_1_1_source_data}{Source\+Data}}}]{source }\end{DoxyParamCaption})}
+
+
+
+Creates an audio source with the given parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & Source configuration data. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmam_1_1_audio_manager_ae25d337cb018159dac91ec5609f5099d}\label{classmam_1_1_audio_manager_ae25d337cb018159dac91ec5609f5099d}} 
+\index{mam::AudioManager@{mam::AudioManager}!FindNextChunk@{FindNextChunk}}
+\index{FindNextChunk@{FindNextChunk}!mam::AudioManager@{mam::AudioManager}}
+\doxysubsubsection{\texorpdfstring{FindNextChunk()}{FindNextChunk()}}
+{\footnotesize\ttfamily static bool mam\+::\+Audio\+Manager\+::\+Find\+Next\+Chunk (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{f,  }\item[{const char}]{target\mbox{[}4\mbox{]},  }\item[{long \&}]{out\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Searches for a specific chunk in a W\+AV file by ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & File pointer. \\
+\hline
+{\em target} & Chunk ID to locate. \\
+\hline
+{\em out\+Size} & Output chunk size. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if found, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmam_1_1_audio_manager_a10362a921e64816b22857763396b8511}\label{classmam_1_1_audio_manager_a10362a921e64816b22857763396b8511}} 
+\index{mam::AudioManager@{mam::AudioManager}!IsSourcePlaying@{IsSourcePlaying}}
+\index{IsSourcePlaying@{IsSourcePlaying}!mam::AudioManager@{mam::AudioManager}}
+\doxysubsubsection{\texorpdfstring{IsSourcePlaying()}{IsSourcePlaying()}}
+{\footnotesize\ttfamily bool mam\+::\+Audio\+Manager\+::\+Is\+Source\+Playing (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Checks whether the specified source is currently playing. 
+
+\begin{DoxyReturn}{Returns}
+True if playing, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmam_1_1_audio_manager_a4348024004eaacde1f631c8bb35896d4}\label{classmam_1_1_audio_manager_a4348024004eaacde1f631c8bb35896d4}} 
+\index{mam::AudioManager@{mam::AudioManager}!LoadWavFile@{LoadWavFile}}
+\index{LoadWavFile@{LoadWavFile}!mam::AudioManager@{mam::AudioManager}}
+\doxysubsubsection{\texorpdfstring{LoadWavFile()}{LoadWavFile()}}
+{\footnotesize\ttfamily bool mam\+::\+Audio\+Manager\+::\+Load\+Wav\+File (\begin{DoxyParamCaption}\item[{const std\+::string}]{filename,  }\item[{int}]{index\+\_\+buffer }\end{DoxyParamCaption})}
+
+
+
+Loads a W\+AV file into the specified buffer index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Path to the audio file. \\
+\hline
+{\em index\+\_\+buffer} & Target buffer index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True on success, false otherwise. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classmam_1_1_audio_manager_a4fd68c262dddb74fbb95a323eb1383e3}\label{classmam_1_1_audio_manager_a4fd68c262dddb74fbb95a323eb1383e3}} 
+\index{mam::AudioManager@{mam::AudioManager}!buffer@{buffer}}
+\index{buffer@{buffer}!mam::AudioManager@{mam::AudioManager}}
+\doxysubsubsection{\texorpdfstring{buffer}{buffer}}
+{\footnotesize\ttfamily std\+::vector$<$A\+Luint$>$ mam\+::\+Audio\+Manager\+::buffer\hspace{0.3cm}{\ttfamily [protected]}}
+
+Open\+AL buffers storing audio data. \mbox{\Hypertarget{classmam_1_1_audio_manager_acb7aa36b3f184495d1b10c45147a284e}\label{classmam_1_1_audio_manager_acb7aa36b3f184495d1b10c45147a284e}} 
+\index{mam::AudioManager@{mam::AudioManager}!ctx@{ctx}}
+\index{ctx@{ctx}!mam::AudioManager@{mam::AudioManager}}
+\doxysubsubsection{\texorpdfstring{ctx}{ctx}}
+{\footnotesize\ttfamily A\+L\+Ccontext$\ast$ mam\+::\+Audio\+Manager\+::ctx\hspace{0.3cm}{\ttfamily [protected]}}
+
+Open\+AL audio context. \mbox{\Hypertarget{classmam_1_1_audio_manager_aca9c13f19f46fb92aca509bfdf2ffe55}\label{classmam_1_1_audio_manager_aca9c13f19f46fb92aca509bfdf2ffe55}} 
+\index{mam::AudioManager@{mam::AudioManager}!device@{device}}
+\index{device@{device}!mam::AudioManager@{mam::AudioManager}}
+\doxysubsubsection{\texorpdfstring{device}{device}}
+{\footnotesize\ttfamily A\+L\+Cdevice$\ast$ mam\+::\+Audio\+Manager\+::device\hspace{0.3cm}{\ttfamily [protected]}}
+
+Open\+AL audio device. \mbox{\Hypertarget{classmam_1_1_audio_manager_a8679efdcc37b93f17deff84cd84a8ee0}\label{classmam_1_1_audio_manager_a8679efdcc37b93f17deff84cd84a8ee0}} 
+\index{mam::AudioManager@{mam::AudioManager}!format@{format}}
+\index{format@{format}!mam::AudioManager@{mam::AudioManager}}
+\doxysubsubsection{\texorpdfstring{format}{format}}
+{\footnotesize\ttfamily A\+Lenum mam\+::\+Audio\+Manager\+::format\hspace{0.3cm}{\ttfamily [protected]}}
+
+Audio format identifier. \mbox{\Hypertarget{classmam_1_1_audio_manager_a8f3423bf502547a03f0d4e5bd060c317}\label{classmam_1_1_audio_manager_a8f3423bf502547a03f0d4e5bd060c317}} 
+\index{mam::AudioManager@{mam::AudioManager}!frequency@{frequency}}
+\index{frequency@{frequency}!mam::AudioManager@{mam::AudioManager}}
+\doxysubsubsection{\texorpdfstring{frequency}{frequency}}
+{\footnotesize\ttfamily A\+Lsizei mam\+::\+Audio\+Manager\+::frequency\hspace{0.3cm}{\ttfamily [protected]}}
+
+Audio sample rate. \mbox{\Hypertarget{classmam_1_1_audio_manager_af2fa2cdebba3f862932fbfd71cb9a166}\label{classmam_1_1_audio_manager_af2fa2cdebba3f862932fbfd71cb9a166}} 
+\index{mam::AudioManager@{mam::AudioManager}!layerGains@{layerGains}}
+\index{layerGains@{layerGains}!mam::AudioManager@{mam::AudioManager}}
+\doxysubsubsection{\texorpdfstring{layerGains}{layerGains}}
+{\footnotesize\ttfamily float mam\+::\+Audio\+Manager\+::layer\+Gains\mbox{[}(int) Audio\+Layer\+::\+UI\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+
+Gain per audio layer. \mbox{\Hypertarget{classmam_1_1_audio_manager_a710cf6143b768f6dd96cf905c37de53a}\label{classmam_1_1_audio_manager_a710cf6143b768f6dd96cf905c37de53a}} 
+\index{mam::AudioManager@{mam::AudioManager}!masterGain@{masterGain}}
+\index{masterGain@{masterGain}!mam::AudioManager@{mam::AudioManager}}
+\doxysubsubsection{\texorpdfstring{masterGain}{masterGain}}
+{\footnotesize\ttfamily float mam\+::\+Audio\+Manager\+::master\+Gain\hspace{0.3cm}{\ttfamily [protected]}}
+
+Global gain applied to all audio. \mbox{\Hypertarget{classmam_1_1_audio_manager_acede6bb67d2d8f98e8e1dabe79193ce9}\label{classmam_1_1_audio_manager_acede6bb67d2d8f98e8e1dabe79193ce9}} 
+\index{mam::AudioManager@{mam::AudioManager}!size@{size}}
+\index{size@{size}!mam::AudioManager@{mam::AudioManager}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily A\+Lsizei mam\+::\+Audio\+Manager\+::size\hspace{0.3cm}{\ttfamily [protected]}}
+
+Loaded audio size in bytes. \mbox{\Hypertarget{classmam_1_1_audio_manager_a485c9d475c5392d1d87128cabe55af9b}\label{classmam_1_1_audio_manager_a485c9d475c5392d1d87128cabe55af9b}} 
+\index{mam::AudioManager@{mam::AudioManager}!src@{src}}
+\index{src@{src}!mam::AudioManager@{mam::AudioManager}}
+\doxysubsubsection{\texorpdfstring{src}{src}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structmam_1_1_source_data}{Source\+Data}}$>$ mam\+::\+Audio\+Manager\+::src\hspace{0.3cm}{\ttfamily [protected]}}
+
+List of created audio sources. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/mam/audio\+\_\+manager.\+hpp\end{DoxyCompactItemize}

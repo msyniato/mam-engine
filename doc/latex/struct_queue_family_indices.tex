@@ -1,0 +1,51 @@
+\hypertarget{struct_queue_family_indices}{}\doxysection{Queue\+Family\+Indices Struct Reference}
+\label{struct_queue_family_indices}\index{QueueFamilyIndices@{QueueFamilyIndices}}
+
+
+Holds queue family indices required by the Vulkan device.  
+
+
+
+
+{\ttfamily \#include $<$vk\+\_\+device.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{struct_queue_family_indices_a652cdfabe4719ae21a701e77d57e7899}{is\+Complete}} ()
+\begin{DoxyCompactList}\small\item\em Queue family supporting presentation to the surface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_queue_family_indices_a1e525a27a080ff5b5a4e545bdbc4da09}\label{struct_queue_family_indices_a1e525a27a080ff5b5a4e545bdbc4da09}} 
+std\+::optional$<$ uint32\+\_\+t $>$ {\bfseries graphics\+Family}
+\item 
+\mbox{\Hypertarget{struct_queue_family_indices_a7229b20d9ad2a8179565812fcf650775}\label{struct_queue_family_indices_a7229b20d9ad2a8179565812fcf650775}} 
+std\+::optional$<$ uint32\+\_\+t $>$ \mbox{\hyperlink{struct_queue_family_indices_a7229b20d9ad2a8179565812fcf650775}{present\+Family}}
+\begin{DoxyCompactList}\small\item\em Queue family supporting graphics commands. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Holds queue family indices required by the Vulkan device. 
+
+Vulkan devices expose multiple queue families. This structure stores the indices for graphics and presentation queues. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_queue_family_indices_a652cdfabe4719ae21a701e77d57e7899}\label{struct_queue_family_indices_a652cdfabe4719ae21a701e77d57e7899}} 
+\index{QueueFamilyIndices@{QueueFamilyIndices}!isComplete@{isComplete}}
+\index{isComplete@{isComplete}!QueueFamilyIndices@{QueueFamilyIndices}}
+\doxysubsubsection{\texorpdfstring{isComplete()}{isComplete()}}
+{\footnotesize\ttfamily bool Queue\+Family\+Indices\+::is\+Complete (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Queue family supporting presentation to the surface. 
+
+Checks if all required queue families were found. \begin{DoxyReturn}{Returns}
+True if both graphics and presentation queues exist. 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+platform/vulkan/vk\+\_\+device.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,111 @@
+\hypertarget{classmam_1_1_v_k_window}{}\doxysection{mam\+::V\+K\+Window Class Reference}
+\label{classmam_1_1_v_k_window}\index{mam::VKWindow@{mam::VKWindow}}
+
+
+Vulkan implementation of a window using G\+L\+FW.  
+
+
+
+
+{\ttfamily \#include $<$vk\+\_\+window.\+hpp$>$}
+
+Inheritance diagram for mam\+::V\+K\+Window\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmam_1_1_v_k_window}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmam_1_1_v_k_window_aa748cd23648f578e961cc4dfa4d0f2b6}{V\+K\+Window}} (const uint16\+\_\+t w, const uint16\+\_\+t h)
+\begin{DoxyCompactList}\small\item\em Construct a Vulkan window with given width and height. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_window_a6bfdd10dea409f2cb0c9773685a89440}\label{classmam_1_1_v_k_window_a6bfdd10dea409f2cb0c9773685a89440}} 
+\mbox{\hyperlink{classmam_1_1_v_k_window_a6bfdd10dea409f2cb0c9773685a89440}{$\sim$\+V\+K\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_window_afd67e94189fe0dbb3d236785580825b6}\label{classmam_1_1_v_k_window_afd67e94189fe0dbb3d236785580825b6}} 
+virtual void \mbox{\hyperlink{classmam_1_1_v_k_window_afd67e94189fe0dbb3d236785580825b6}{render}} () override
+\begin{DoxyCompactList}\small\item\em Render the current frame. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classmam_1_1_v_k_window_aa8b2c4203437de6f9cfe90229a3cd6a7}{is\+Closed}} () override
+\begin{DoxyCompactList}\small\item\em Check if the window is closed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_window_a7cab1f2fc2ac3d8bb543dcffa767cb6c}\label{classmam_1_1_v_k_window_a7cab1f2fc2ac3d8bb543dcffa767cb6c}} 
+virtual void \mbox{\hyperlink{classmam_1_1_v_k_window_a7cab1f2fc2ac3d8bb543dcffa767cb6c}{cleanup}} () override
+\begin{DoxyCompactList}\small\item\em Cleanup window resources. \end{DoxyCompactList}\item 
+virtual G\+L\+F\+Wwindow $\ast$ \mbox{\hyperlink{classmam_1_1_v_k_window_a8cc24153d404dfcb7ab5306a87b9fb1c}{get\+Native\+Window}} () override
+\begin{DoxyCompactList}\small\item\em Get the underlying G\+L\+FW window pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_window_a148f49e4ac701f5d553b29a714da3e2f}\label{classmam_1_1_v_k_window_a148f49e4ac701f5d553b29a714da3e2f}} 
+uint16\+\_\+t {\bfseries width\+\_\+}
+\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_window_a0239b386cc2abe699b1a7bc650f25e30}\label{classmam_1_1_v_k_window_a0239b386cc2abe699b1a7bc650f25e30}} 
+uint16\+\_\+t \mbox{\hyperlink{classmam_1_1_v_k_window_a0239b386cc2abe699b1a7bc650f25e30}{height\+\_\+}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classmam_1_1_window}{Window}} dimensions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Vulkan implementation of a window using G\+L\+FW. 
+
+Handles window creation, event processing, and rendering for Vulkan. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmam_1_1_v_k_window_aa748cd23648f578e961cc4dfa4d0f2b6}\label{classmam_1_1_v_k_window_aa748cd23648f578e961cc4dfa4d0f2b6}} 
+\index{mam::VKWindow@{mam::VKWindow}!VKWindow@{VKWindow}}
+\index{VKWindow@{VKWindow}!mam::VKWindow@{mam::VKWindow}}
+\doxysubsubsection{\texorpdfstring{VKWindow()}{VKWindow()}}
+{\footnotesize\ttfamily mam\+::\+V\+K\+Window\+::\+V\+K\+Window (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t}]{w,  }\item[{const uint16\+\_\+t}]{h }\end{DoxyParamCaption})}
+
+
+
+Construct a Vulkan window with given width and height. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & \mbox{\hyperlink{classmam_1_1_window}{Window}} width in pixels \\
+\hline
+{\em h} & \mbox{\hyperlink{classmam_1_1_window}{Window}} height in pixels \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmam_1_1_v_k_window_a8cc24153d404dfcb7ab5306a87b9fb1c}\label{classmam_1_1_v_k_window_a8cc24153d404dfcb7ab5306a87b9fb1c}} 
+\index{mam::VKWindow@{mam::VKWindow}!getNativeWindow@{getNativeWindow}}
+\index{getNativeWindow@{getNativeWindow}!mam::VKWindow@{mam::VKWindow}}
+\doxysubsubsection{\texorpdfstring{getNativeWindow()}{getNativeWindow()}}
+{\footnotesize\ttfamily virtual G\+L\+F\+Wwindow$\ast$ mam\+::\+V\+K\+Window\+::get\+Native\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the underlying G\+L\+FW window pointer. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to G\+L\+F\+Wwindow 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classmam_1_1_window_a0e91b079f7a5bf8815c361826579d8c5}{mam\+::\+Window}}.
+
+\mbox{\Hypertarget{classmam_1_1_v_k_window_aa8b2c4203437de6f9cfe90229a3cd6a7}\label{classmam_1_1_v_k_window_aa8b2c4203437de6f9cfe90229a3cd6a7}} 
+\index{mam::VKWindow@{mam::VKWindow}!isClosed@{isClosed}}
+\index{isClosed@{isClosed}!mam::VKWindow@{mam::VKWindow}}
+\doxysubsubsection{\texorpdfstring{isClosed()}{isClosed()}}
+{\footnotesize\ttfamily virtual bool mam\+::\+V\+K\+Window\+::is\+Closed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Check if the window is closed. 
+
+\begin{DoxyReturn}{Returns}
+true if window is closed, false otherwise 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classmam_1_1_window_a15d58bb239abdf7adf800d96366e370a}{mam\+::\+Window}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+platform/vulkan/vk\+\_\+window.\+hpp\end{DoxyCompactItemize}

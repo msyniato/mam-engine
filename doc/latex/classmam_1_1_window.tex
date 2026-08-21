@@ -1,0 +1,82 @@
+\hypertarget{classmam_1_1_window}{}\doxysection{mam\+::Window Class Reference}
+\label{classmam_1_1_window}\index{mam::Window@{mam::Window}}
+
+
+Abstract class representing a window.  
+
+
+
+
+{\ttfamily \#include $<$window.\+hpp$>$}
+
+Inheritance diagram for mam\+::Window\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmam_1_1_window}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_window_a464291fb0e1567a6938c14c37ffa98cb}\label{classmam_1_1_window_a464291fb0e1567a6938c14c37ffa98cb}} 
+\mbox{\hyperlink{classmam_1_1_window_a464291fb0e1567a6938c14c37ffa98cb}{Window}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_window_a18466dc7bf84ce3ecc8b1af9cb69342f}\label{classmam_1_1_window_a18466dc7bf84ce3ecc8b1af9cb69342f}} 
+\mbox{\hyperlink{classmam_1_1_window_a18466dc7bf84ce3ecc8b1af9cb69342f}{$\sim$\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_window_a4b741db5fc627894b7cc0aa8469384ff}\label{classmam_1_1_window_a4b741db5fc627894b7cc0aa8469384ff}} 
+virtual void \mbox{\hyperlink{classmam_1_1_window_a4b741db5fc627894b7cc0aa8469384ff}{render}} ()=0
+\begin{DoxyCompactList}\small\item\em Render the window contents. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classmam_1_1_window_a15d58bb239abdf7adf800d96366e370a}{is\+Closed}} ()=0
+\item 
+\mbox{\Hypertarget{classmam_1_1_window_aaf5979749c14c284a8848d5412badf15}\label{classmam_1_1_window_aaf5979749c14c284a8848d5412badf15}} 
+virtual void \mbox{\hyperlink{classmam_1_1_window_aaf5979749c14c284a8848d5412badf15}{cleanup}} ()=0
+\begin{DoxyCompactList}\small\item\em Cleanup resources associated with the window. \end{DoxyCompactList}\item 
+virtual G\+L\+F\+Wwindow $\ast$ \mbox{\hyperlink{classmam_1_1_window_a0e91b079f7a5bf8815c361826579d8c5}{get\+Native\+Window}} ()=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_window_a923a537b1e51f2e0cdbced16ca3307c7}\label{classmam_1_1_window_a923a537b1e51f2e0cdbced16ca3307c7}} 
+uint16\+\_\+t \mbox{\hyperlink{classmam_1_1_window_a923a537b1e51f2e0cdbced16ca3307c7}{width\+\_\+}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classmam_1_1_window}{Window}} width in pixels. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_window_aaff7ff531389dcc693ec74213f16e6f4}\label{classmam_1_1_window_aaff7ff531389dcc693ec74213f16e6f4}} 
+uint16\+\_\+t \mbox{\hyperlink{classmam_1_1_window_aaff7ff531389dcc693ec74213f16e6f4}{height\+\_\+}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classmam_1_1_window}{Window}} height in pixels. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract class representing a window. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmam_1_1_window_a0e91b079f7a5bf8815c361826579d8c5}\label{classmam_1_1_window_a0e91b079f7a5bf8815c361826579d8c5}} 
+\index{mam::Window@{mam::Window}!getNativeWindow@{getNativeWindow}}
+\index{getNativeWindow@{getNativeWindow}!mam::Window@{mam::Window}}
+\doxysubsubsection{\texorpdfstring{getNativeWindow()}{getNativeWindow()}}
+{\footnotesize\ttfamily virtual G\+L\+F\+Wwindow$\ast$ mam\+::\+Window\+::get\+Native\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get the native G\+L\+FW window pointer \begin{DoxyReturn}{Returns}
+Pointer to G\+L\+F\+Wwindow 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classmam_1_1_v_k_window_a8cc24153d404dfcb7ab5306a87b9fb1c}{mam\+::\+V\+K\+Window}}, and \mbox{\hyperlink{classmam_1_1_g_l_window_a112009a02c5d5f4fd396351bbffe2b32}{mam\+::\+G\+L\+Window}}.
+
+\mbox{\Hypertarget{classmam_1_1_window_a15d58bb239abdf7adf800d96366e370a}\label{classmam_1_1_window_a15d58bb239abdf7adf800d96366e370a}} 
+\index{mam::Window@{mam::Window}!isClosed@{isClosed}}
+\index{isClosed@{isClosed}!mam::Window@{mam::Window}}
+\doxysubsubsection{\texorpdfstring{isClosed()}{isClosed()}}
+{\footnotesize\ttfamily virtual bool mam\+::\+Window\+::is\+Closed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Check if the window is closed \begin{DoxyReturn}{Returns}
+True if closed 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classmam_1_1_v_k_window_aa8b2c4203437de6f9cfe90229a3cd6a7}{mam\+::\+V\+K\+Window}}, and \mbox{\hyperlink{classmam_1_1_g_l_window_aad6176b40caeffe0d89c6562fbe146b5}{mam\+::\+G\+L\+Window}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/mam/window.\+hpp\end{DoxyCompactItemize}

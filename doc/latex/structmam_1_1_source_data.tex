@@ -1,0 +1,89 @@
+\hypertarget{structmam_1_1_source_data}{}\doxysection{mam\+::Source\+Data Struct Reference}
+\label{structmam_1_1_source_data}\index{mam::SourceData@{mam::SourceData}}
+
+
+Holds parameters for an Open\+AL audio source.  
+
+
+
+
+{\ttfamily \#include $<$audio\+\_\+manager.\+hpp$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{structmam_1_1_source_data_a301d1ed1aaaa77b1fd0007ab5598894d}{pitch}}
+\item 
+float \mbox{\hyperlink{structmam_1_1_source_data_a02d53fc2abd6f7b725751f466b49f699}{gain}}
+\item 
+glm\+::vec3 \mbox{\hyperlink{structmam_1_1_source_data_a43429388accd2572dae4c636639a6ba2}{position}}
+\item 
+glm\+::vec3 \mbox{\hyperlink{structmam_1_1_source_data_ad19c99f68cc865b0c4d44ba74a4aa07e}{velocity}}
+\item 
+A\+Luint \mbox{\hyperlink{structmam_1_1_source_data_a108c3d26545ba4792e385bc3581526bf}{source}}
+\item 
+bool \mbox{\hyperlink{structmam_1_1_source_data_a927c23e45ee6484da4226ebb130b14cb}{loop}}
+\item 
+Audio\+Layer \mbox{\hyperlink{structmam_1_1_source_data_a9000163d9fe81819fa064fa562ecd523}{layer}}
+\item 
+A\+Luint \mbox{\hyperlink{structmam_1_1_source_data_a78e1fb72916f096e0e1af21ba0e9c7f2}{buffer}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Holds parameters for an Open\+AL audio source. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structmam_1_1_source_data_a78e1fb72916f096e0e1af21ba0e9c7f2}\label{structmam_1_1_source_data_a78e1fb72916f096e0e1af21ba0e9c7f2}} 
+\index{mam::SourceData@{mam::SourceData}!buffer@{buffer}}
+\index{buffer@{buffer}!mam::SourceData@{mam::SourceData}}
+\doxysubsubsection{\texorpdfstring{buffer}{buffer}}
+{\footnotesize\ttfamily A\+Luint mam\+::\+Source\+Data\+::buffer}
+
+Open\+AL buffer ID. \mbox{\Hypertarget{structmam_1_1_source_data_a02d53fc2abd6f7b725751f466b49f699}\label{structmam_1_1_source_data_a02d53fc2abd6f7b725751f466b49f699}} 
+\index{mam::SourceData@{mam::SourceData}!gain@{gain}}
+\index{gain@{gain}!mam::SourceData@{mam::SourceData}}
+\doxysubsubsection{\texorpdfstring{gain}{gain}}
+{\footnotesize\ttfamily float mam\+::\+Source\+Data\+::gain}
+
+Base gain of the source (before layer/master modifiers). \mbox{\Hypertarget{structmam_1_1_source_data_a9000163d9fe81819fa064fa562ecd523}\label{structmam_1_1_source_data_a9000163d9fe81819fa064fa562ecd523}} 
+\index{mam::SourceData@{mam::SourceData}!layer@{layer}}
+\index{layer@{layer}!mam::SourceData@{mam::SourceData}}
+\doxysubsubsection{\texorpdfstring{layer}{layer}}
+{\footnotesize\ttfamily Audio\+Layer mam\+::\+Source\+Data\+::layer}
+
+Audio layer this source belongs to. \mbox{\Hypertarget{structmam_1_1_source_data_a927c23e45ee6484da4226ebb130b14cb}\label{structmam_1_1_source_data_a927c23e45ee6484da4226ebb130b14cb}} 
+\index{mam::SourceData@{mam::SourceData}!loop@{loop}}
+\index{loop@{loop}!mam::SourceData@{mam::SourceData}}
+\doxysubsubsection{\texorpdfstring{loop}{loop}}
+{\footnotesize\ttfamily bool mam\+::\+Source\+Data\+::loop}
+
+Whether the source loops playback. \mbox{\Hypertarget{structmam_1_1_source_data_a301d1ed1aaaa77b1fd0007ab5598894d}\label{structmam_1_1_source_data_a301d1ed1aaaa77b1fd0007ab5598894d}} 
+\index{mam::SourceData@{mam::SourceData}!pitch@{pitch}}
+\index{pitch@{pitch}!mam::SourceData@{mam::SourceData}}
+\doxysubsubsection{\texorpdfstring{pitch}{pitch}}
+{\footnotesize\ttfamily float mam\+::\+Source\+Data\+::pitch}
+
+Playback pitch. \mbox{\Hypertarget{structmam_1_1_source_data_a43429388accd2572dae4c636639a6ba2}\label{structmam_1_1_source_data_a43429388accd2572dae4c636639a6ba2}} 
+\index{mam::SourceData@{mam::SourceData}!position@{position}}
+\index{position@{position}!mam::SourceData@{mam::SourceData}}
+\doxysubsubsection{\texorpdfstring{position}{position}}
+{\footnotesize\ttfamily glm\+::vec3 mam\+::\+Source\+Data\+::position}
+
+3D position of the source. \mbox{\Hypertarget{structmam_1_1_source_data_a108c3d26545ba4792e385bc3581526bf}\label{structmam_1_1_source_data_a108c3d26545ba4792e385bc3581526bf}} 
+\index{mam::SourceData@{mam::SourceData}!source@{source}}
+\index{source@{source}!mam::SourceData@{mam::SourceData}}
+\doxysubsubsection{\texorpdfstring{source}{source}}
+{\footnotesize\ttfamily A\+Luint mam\+::\+Source\+Data\+::source}
+
+Open\+AL source ID. \mbox{\Hypertarget{structmam_1_1_source_data_ad19c99f68cc865b0c4d44ba74a4aa07e}\label{structmam_1_1_source_data_ad19c99f68cc865b0c4d44ba74a4aa07e}} 
+\index{mam::SourceData@{mam::SourceData}!velocity@{velocity}}
+\index{velocity@{velocity}!mam::SourceData@{mam::SourceData}}
+\doxysubsubsection{\texorpdfstring{velocity}{velocity}}
+{\footnotesize\ttfamily glm\+::vec3 mam\+::\+Source\+Data\+::velocity}
+
+3D velocity of the source. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/mam/audio\+\_\+manager.\+hpp\end{DoxyCompactItemize}

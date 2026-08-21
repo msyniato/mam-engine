@@ -1,0 +1,301 @@
+\hypertarget{classmam_1_1_coordinator}{}\doxysection{mam\+::Coordinator Class Reference}
+\label{classmam_1_1_coordinator}\index{mam::Coordinator@{mam::Coordinator}}
+
+
+Central interface of the E\+CS framework.  
+
+
+
+
+{\ttfamily \#include $<$coordinator.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmam_1_1_coordinator_ae271c5a803dd870e7d6b3a39ac7c2032}{init}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the E\+CS managers. \end{DoxyCompactList}\item 
+Entity \mbox{\hyperlink{classmam_1_1_coordinator_a204e7dd5969a69a9b9d7ff7699059f2c}{create\+Entity}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new entity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_coordinator_a33dc356468e0a972ee3f10160760182d}{destroy\+Entity}} (Entity e)
+\begin{DoxyCompactList}\small\item\em Destroys an entity. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classmam_1_1_coordinator_a6b5a6168f18699525a40182f6894450b}{register\+Component}} ()
+\begin{DoxyCompactList}\small\item\em Registers a new component type. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classmam_1_1_coordinator_a0195af61f69f7f353e97a1c60bc787ce}{add\+Component}} (Entity e, T comp)
+\begin{DoxyCompactList}\small\item\em Adds a component to an entity. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classmam_1_1_coordinator_abbf1a67dbde0ade3a8a6cd4fd7f0ee35}{remove\+Component}} (Entity e)
+\begin{DoxyCompactList}\small\item\em Removes a component from an entity. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\T \& \mbox{\hyperlink{classmam_1_1_coordinator_ae576a71c92f09f5b0546db90c785315e}{get\+Component}} (Entity e)
+\begin{DoxyCompactList}\small\item\em Retrieves a component belonging to an entity. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\Component\+Type \mbox{\hyperlink{classmam_1_1_coordinator_a029ee90393da89cd9a50597e626f297c}{get\+Component\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Returns the component type identifier. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{classmam_1_1_coordinator_a693622e05ecff7aa8f6f58f973d93523}{register\+System}} ()
+\begin{DoxyCompactList}\small\item\em Registers a new system. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classmam_1_1_coordinator_a0e0d4dbfba5f6ef1edbb214288fe2922}{set\+System\+Signature}} (Signature s)
+\begin{DoxyCompactList}\small\item\em Sets the component signature required by a system. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\bool \mbox{\hyperlink{classmam_1_1_coordinator_a9d8666cbc86529133632a2927a5279c1}{add\+Entity\+To\+System}} (Entity e)
+\begin{DoxyCompactList}\small\item\em Attempts to add an entity to a system. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\bool \mbox{\hyperlink{classmam_1_1_coordinator_a27a5ebb54f6a3bc1cb6d1db885754ab4}{remove\+Entity\+From\+System}} (Entity e)
+\begin{DoxyCompactList}\small\item\em Removes an entity from a system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Central interface of the E\+CS framework. 
+
+The \mbox{\hyperlink{classmam_1_1_coordinator}{Coordinator}} acts as a façade that connects the three main E\+CS managers\+:
+
+
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{classmam_1_1_entity_manager}{Entity\+Manager}}
+\item \mbox{\hyperlink{classmam_1_1_component_manager}{Component\+Manager}}
+\item \mbox{\hyperlink{classmam_1_1_system_manager}{System\+Manager}}
+\end{DoxyItemize}
+
+It provides a unified A\+PI for creating entities, managing components, and registering systems. Game code typically interacts only with this class rather than directly with the individual managers. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmam_1_1_coordinator_a0195af61f69f7f353e97a1c60bc787ce}\label{classmam_1_1_coordinator_a0195af61f69f7f353e97a1c60bc787ce}} 
+\index{mam::Coordinator@{mam::Coordinator}!addComponent@{addComponent}}
+\index{addComponent@{addComponent}!mam::Coordinator@{mam::Coordinator}}
+\doxysubsubsection{\texorpdfstring{addComponent()}{addComponent()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void mam\+::\+Coordinator\+::add\+Component (\begin{DoxyParamCaption}\item[{Entity}]{e,  }\item[{T}]{comp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds a component to an entity. 
+
+Updates the entity\textquotesingle{}s signature accordingly.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Component type. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Entity receiving the component. \\
+\hline
+{\em comp} & Component instance. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmam_1_1_coordinator_a9d8666cbc86529133632a2927a5279c1}\label{classmam_1_1_coordinator_a9d8666cbc86529133632a2927a5279c1}} 
+\index{mam::Coordinator@{mam::Coordinator}!addEntityToSystem@{addEntityToSystem}}
+\index{addEntityToSystem@{addEntityToSystem}!mam::Coordinator@{mam::Coordinator}}
+\doxysubsubsection{\texorpdfstring{addEntityToSystem()}{addEntityToSystem()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool mam\+::\+Coordinator\+::add\+Entity\+To\+System (\begin{DoxyParamCaption}\item[{Entity}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Attempts to add an entity to a system. 
+
+The entity will only be added if its signature matches the system signature.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \mbox{\hyperlink{classmam_1_1_system}{System}} type. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Entity to add. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the entity was added. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmam_1_1_coordinator_a204e7dd5969a69a9b9d7ff7699059f2c}\label{classmam_1_1_coordinator_a204e7dd5969a69a9b9d7ff7699059f2c}} 
+\index{mam::Coordinator@{mam::Coordinator}!createEntity@{createEntity}}
+\index{createEntity@{createEntity}!mam::Coordinator@{mam::Coordinator}}
+\doxysubsubsection{\texorpdfstring{createEntity()}{createEntity()}}
+{\footnotesize\ttfamily Entity mam\+::\+Coordinator\+::create\+Entity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates a new entity. 
+
+\begin{DoxyReturn}{Returns}
+Newly created entity identifier. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmam_1_1_coordinator_a33dc356468e0a972ee3f10160760182d}\label{classmam_1_1_coordinator_a33dc356468e0a972ee3f10160760182d}} 
+\index{mam::Coordinator@{mam::Coordinator}!destroyEntity@{destroyEntity}}
+\index{destroyEntity@{destroyEntity}!mam::Coordinator@{mam::Coordinator}}
+\doxysubsubsection{\texorpdfstring{destroyEntity()}{destroyEntity()}}
+{\footnotesize\ttfamily void mam\+::\+Coordinator\+::destroy\+Entity (\begin{DoxyParamCaption}\item[{Entity}]{e }\end{DoxyParamCaption})}
+
+
+
+Destroys an entity. 
+
+All components belonging to the entity will be removed and systems will be notified accordingly.
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The entity to destroy. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmam_1_1_coordinator_ae576a71c92f09f5b0546db90c785315e}\label{classmam_1_1_coordinator_ae576a71c92f09f5b0546db90c785315e}} 
+\index{mam::Coordinator@{mam::Coordinator}!getComponent@{getComponent}}
+\index{getComponent@{getComponent}!mam::Coordinator@{mam::Coordinator}}
+\doxysubsubsection{\texorpdfstring{getComponent()}{getComponent()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \& mam\+::\+Coordinator\+::get\+Component (\begin{DoxyParamCaption}\item[{Entity}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves a component belonging to an entity. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Component type. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Entity whose component is requested. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the component. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmam_1_1_coordinator_a029ee90393da89cd9a50597e626f297c}\label{classmam_1_1_coordinator_a029ee90393da89cd9a50597e626f297c}} 
+\index{mam::Coordinator@{mam::Coordinator}!getComponentType@{getComponentType}}
+\index{getComponentType@{getComponentType}!mam::Coordinator@{mam::Coordinator}}
+\doxysubsubsection{\texorpdfstring{getComponentType()}{getComponentType()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+Component\+Type mam\+::\+Coordinator\+::get\+Component\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the component type identifier. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Component type. \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+Component\+Type associated with T. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmam_1_1_coordinator_ae271c5a803dd870e7d6b3a39ac7c2032}\label{classmam_1_1_coordinator_ae271c5a803dd870e7d6b3a39ac7c2032}} 
+\index{mam::Coordinator@{mam::Coordinator}!init@{init}}
+\index{init@{init}!mam::Coordinator@{mam::Coordinator}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void mam\+::\+Coordinator\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the E\+CS managers. 
+
+Creates instances of the entity, component, and system managers used internally by the E\+CS. \mbox{\Hypertarget{classmam_1_1_coordinator_a6b5a6168f18699525a40182f6894450b}\label{classmam_1_1_coordinator_a6b5a6168f18699525a40182f6894450b}} 
+\index{mam::Coordinator@{mam::Coordinator}!registerComponent@{registerComponent}}
+\index{registerComponent@{registerComponent}!mam::Coordinator@{mam::Coordinator}}
+\doxysubsubsection{\texorpdfstring{registerComponent()}{registerComponent()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void mam\+::\+Coordinator\+::register\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Registers a new component type. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Component type. \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{classmam_1_1_coordinator_a693622e05ecff7aa8f6f58f973d93523}\label{classmam_1_1_coordinator_a693622e05ecff7aa8f6f58f973d93523}} 
+\index{mam::Coordinator@{mam::Coordinator}!registerSystem@{registerSystem}}
+\index{registerSystem@{registerSystem}!mam::Coordinator@{mam::Coordinator}}
+\doxysubsubsection{\texorpdfstring{registerSystem()}{registerSystem()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::shared\+\_\+ptr$<$ T $>$ mam\+::\+Coordinator\+::register\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Registers a new system. 
+
+Systems operate on entities that match a specific component signature.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \mbox{\hyperlink{classmam_1_1_system}{System}} type. \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+Shared pointer to the created system. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmam_1_1_coordinator_abbf1a67dbde0ade3a8a6cd4fd7f0ee35}\label{classmam_1_1_coordinator_abbf1a67dbde0ade3a8a6cd4fd7f0ee35}} 
+\index{mam::Coordinator@{mam::Coordinator}!removeComponent@{removeComponent}}
+\index{removeComponent@{removeComponent}!mam::Coordinator@{mam::Coordinator}}
+\doxysubsubsection{\texorpdfstring{removeComponent()}{removeComponent()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void mam\+::\+Coordinator\+::remove\+Component (\begin{DoxyParamCaption}\item[{Entity}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes a component from an entity. 
+
+Updates the entity\textquotesingle{}s signature accordingly.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Component type. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Entity whose component should be removed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmam_1_1_coordinator_a27a5ebb54f6a3bc1cb6d1db885754ab4}\label{classmam_1_1_coordinator_a27a5ebb54f6a3bc1cb6d1db885754ab4}} 
+\index{mam::Coordinator@{mam::Coordinator}!removeEntityFromSystem@{removeEntityFromSystem}}
+\index{removeEntityFromSystem@{removeEntityFromSystem}!mam::Coordinator@{mam::Coordinator}}
+\doxysubsubsection{\texorpdfstring{removeEntityFromSystem()}{removeEntityFromSystem()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool mam\+::\+Coordinator\+::remove\+Entity\+From\+System (\begin{DoxyParamCaption}\item[{Entity}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes an entity from a system. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \mbox{\hyperlink{classmam_1_1_system}{System}} type. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Entity to remove. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the entity existed in the system. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmam_1_1_coordinator_a0e0d4dbfba5f6ef1edbb214288fe2922}\label{classmam_1_1_coordinator_a0e0d4dbfba5f6ef1edbb214288fe2922}} 
+\index{mam::Coordinator@{mam::Coordinator}!setSystemSignature@{setSystemSignature}}
+\index{setSystemSignature@{setSystemSignature}!mam::Coordinator@{mam::Coordinator}}
+\doxysubsubsection{\texorpdfstring{setSystemSignature()}{setSystemSignature()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void mam\+::\+Coordinator\+::set\+System\+Signature (\begin{DoxyParamCaption}\item[{Signature}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the component signature required by a system. 
+
+Entities must match this signature to be processed by the system.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \mbox{\hyperlink{classmam_1_1_system}{System}} type. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Required component signature. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/ecs/coordinator.\+hpp\end{DoxyCompactItemize}

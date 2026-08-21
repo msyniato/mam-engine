@@ -1,0 +1,107 @@
+\hypertarget{classmam_1_1_g_l_vertex_buffer}{}\doxysection{mam\+::G\+L\+Vertex\+Buffer Class Reference}
+\label{classmam_1_1_g_l_vertex_buffer}\index{mam::GLVertexBuffer@{mam::GLVertexBuffer}}
+
+
+Open\+GL implementation of a \mbox{\hyperlink{structmam_1_1_vertex}{Vertex}} Buffer.  
+
+
+
+
+{\ttfamily \#include $<$gl\+\_\+buffer.\+hpp$>$}
+
+Inheritance diagram for mam\+::G\+L\+Vertex\+Buffer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmam_1_1_g_l_vertex_buffer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmam_1_1_g_l_vertex_buffer_a85c4b66939ce1a8595e150cec81587a3}{G\+L\+Vertex\+Buffer}} (unsigned int \mbox{\hyperlink{classmam_1_1_vertex_buffer_a2ec1b0b6b9602759895378c57efa8a90}{count}})
+\begin{DoxyCompactList}\small\item\em Construct an empty vertex buffer with a given count. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmam_1_1_g_l_vertex_buffer_aed1d47f123252fd7b0520e702c7162b7}{G\+L\+Vertex\+Buffer}} (void $\ast$vertex, unsigned int \mbox{\hyperlink{classmam_1_1_vertex_buffer_a2ec1b0b6b9602759895378c57efa8a90}{count}})
+\begin{DoxyCompactList}\small\item\em Construct a vertex buffer and upload initial data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_g_l_vertex_buffer_ae379128a94cb6877e3b62fdd38334f70}\label{classmam_1_1_g_l_vertex_buffer_ae379128a94cb6877e3b62fdd38334f70}} 
+\mbox{\hyperlink{classmam_1_1_g_l_vertex_buffer_ae379128a94cb6877e3b62fdd38334f70}{$\sim$\+G\+L\+Vertex\+Buffer}} ()
+\begin{DoxyCompactList}\small\item\em Destructor, releases G\+PU resources. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_g_l_vertex_buffer_add3bc811ecbd9e0aac2ce2e55c01b9a3}\label{classmam_1_1_g_l_vertex_buffer_add3bc811ecbd9e0aac2ce2e55c01b9a3}} 
+virtual void \mbox{\hyperlink{classmam_1_1_g_l_vertex_buffer_add3bc811ecbd9e0aac2ce2e55c01b9a3}{bind}} () override
+\begin{DoxyCompactList}\small\item\em Bind the vertex buffer to the Open\+GL context. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmam_1_1_g_l_vertex_buffer_ac8efd520d7a61593e70e5eaa95c90386}{upload\+Data}} (const void $\ast$data, unsigned int size, unsigned int offset=0) override
+\begin{DoxyCompactList}\small\item\em Upload data to the G\+PU buffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_g_l_vertex_buffer_a48793c3367a3bbbf970125492b442b39}\label{classmam_1_1_g_l_vertex_buffer_a48793c3367a3bbbf970125492b442b39}} 
+virtual void \mbox{\hyperlink{classmam_1_1_g_l_vertex_buffer_a48793c3367a3bbbf970125492b442b39}{release}} () override
+\begin{DoxyCompactList}\small\item\em Release the G\+PU buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Open\+GL implementation of a \mbox{\hyperlink{structmam_1_1_vertex}{Vertex}} Buffer. 
+
+Stores vertex data on the G\+PU and provides methods for binding, uploading, and releasing. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmam_1_1_g_l_vertex_buffer_a85c4b66939ce1a8595e150cec81587a3}\label{classmam_1_1_g_l_vertex_buffer_a85c4b66939ce1a8595e150cec81587a3}} 
+\index{mam::GLVertexBuffer@{mam::GLVertexBuffer}!GLVertexBuffer@{GLVertexBuffer}}
+\index{GLVertexBuffer@{GLVertexBuffer}!mam::GLVertexBuffer@{mam::GLVertexBuffer}}
+\doxysubsubsection{\texorpdfstring{GLVertexBuffer()}{GLVertexBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily mam\+::\+G\+L\+Vertex\+Buffer\+::\+G\+L\+Vertex\+Buffer (\begin{DoxyParamCaption}\item[{unsigned int}]{count }\end{DoxyParamCaption})}
+
+
+
+Construct an empty vertex buffer with a given count. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em count} & Number of vertices \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmam_1_1_g_l_vertex_buffer_aed1d47f123252fd7b0520e702c7162b7}\label{classmam_1_1_g_l_vertex_buffer_aed1d47f123252fd7b0520e702c7162b7}} 
+\index{mam::GLVertexBuffer@{mam::GLVertexBuffer}!GLVertexBuffer@{GLVertexBuffer}}
+\index{GLVertexBuffer@{GLVertexBuffer}!mam::GLVertexBuffer@{mam::GLVertexBuffer}}
+\doxysubsubsection{\texorpdfstring{GLVertexBuffer()}{GLVertexBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily mam\+::\+G\+L\+Vertex\+Buffer\+::\+G\+L\+Vertex\+Buffer (\begin{DoxyParamCaption}\item[{void $\ast$}]{vertex,  }\item[{unsigned int}]{count }\end{DoxyParamCaption})}
+
+
+
+Construct a vertex buffer and upload initial data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vertex} & Pointer to vertex data \\
+\hline
+{\em count} & Number of vertices \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmam_1_1_g_l_vertex_buffer_ac8efd520d7a61593e70e5eaa95c90386}\label{classmam_1_1_g_l_vertex_buffer_ac8efd520d7a61593e70e5eaa95c90386}} 
+\index{mam::GLVertexBuffer@{mam::GLVertexBuffer}!uploadData@{uploadData}}
+\index{uploadData@{uploadData}!mam::GLVertexBuffer@{mam::GLVertexBuffer}}
+\doxysubsubsection{\texorpdfstring{uploadData()}{uploadData()}}
+{\footnotesize\ttfamily virtual void mam\+::\+G\+L\+Vertex\+Buffer\+::upload\+Data (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{unsigned int}]{size,  }\item[{unsigned int}]{offset = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Upload data to the G\+PU buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Pointer to the data \\
+\hline
+{\em size} & Size of the data in bytes \\
+\hline
+{\em offset} & Offset in the buffer to start writing (default 0) \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classmam_1_1_vertex_buffer_ad008cabd65e9dcf088503038ddb0e176}{mam\+::\+Vertex\+Buffer}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+platform/opengl/gl\+\_\+buffer.\+hpp\end{DoxyCompactItemize}

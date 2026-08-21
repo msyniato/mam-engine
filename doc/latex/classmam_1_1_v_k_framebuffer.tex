@@ -1,0 +1,105 @@
+\hypertarget{classmam_1_1_v_k_framebuffer}{}\doxysection{mam\+::V\+K\+Framebuffer Class Reference}
+\label{classmam_1_1_v_k_framebuffer}\index{mam::VKFramebuffer@{mam::VKFramebuffer}}
+
+
+Vulkan implementation of a framebuffer.  
+
+
+
+
+{\ttfamily \#include $<$vk\+\_\+framebuffer.\+hpp$>$}
+
+Inheritance diagram for mam\+::V\+K\+Framebuffer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmam_1_1_v_k_framebuffer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmam_1_1_v_k_framebuffer_a4c17087c248b0afdaef20de81c46e9d9}{V\+K\+Framebuffer}} (const \mbox{\hyperlink{structmam_1_1_framebuffer_spec}{Framebuffer\+Spec}} \&\mbox{\hyperlink{classmam_1_1_framebuffer_a2136f3c4e0da2430d92389a45bf00132}{spec}})
+\begin{DoxyCompactList}\small\item\em Construct a Vulkan framebuffer with the specified spec. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_framebuffer_a4eaadecebe95b608b974036a1c52dd0b}\label{classmam_1_1_v_k_framebuffer_a4eaadecebe95b608b974036a1c52dd0b}} 
+\mbox{\hyperlink{classmam_1_1_v_k_framebuffer_a4eaadecebe95b608b974036a1c52dd0b}{$\sim$\+V\+K\+Framebuffer}} () override
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_framebuffer_ac6b362118f3c160a61adb4559abdad8f}\label{classmam_1_1_v_k_framebuffer_ac6b362118f3c160a61adb4559abdad8f}} 
+void \mbox{\hyperlink{classmam_1_1_v_k_framebuffer_ac6b362118f3c160a61adb4559abdad8f}{bind}} () const override
+\begin{DoxyCompactList}\small\item\em Bind the framebuffer for rendering. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_framebuffer_a5d162aa7bf7d898379ad34abce2f9897}\label{classmam_1_1_v_k_framebuffer_a5d162aa7bf7d898379ad34abce2f9897}} 
+void \mbox{\hyperlink{classmam_1_1_v_k_framebuffer_a5d162aa7bf7d898379ad34abce2f9897}{unbind}} () const override
+\begin{DoxyCompactList}\small\item\em Unbind the framebuffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_v_k_framebuffer_a2c69c7874b578ea26e73b85279315ea9}{resize}} (u32 width, u32 height) override
+\begin{DoxyCompactList}\small\item\em Resize the framebuffer to new dimensions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmam_1_1_v_k_framebuffer_af6efef7eaebe911220ec28ab6bc9430e}{invalidate}} () override
+\begin{DoxyCompactList}\small\item\em Recreate the framebuffer and its attachments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Vulkan implementation of a framebuffer. 
+
+Manages a framebuffer with Vulkan images, image views, and related resources. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmam_1_1_v_k_framebuffer_a4c17087c248b0afdaef20de81c46e9d9}\label{classmam_1_1_v_k_framebuffer_a4c17087c248b0afdaef20de81c46e9d9}} 
+\index{mam::VKFramebuffer@{mam::VKFramebuffer}!VKFramebuffer@{VKFramebuffer}}
+\index{VKFramebuffer@{VKFramebuffer}!mam::VKFramebuffer@{mam::VKFramebuffer}}
+\doxysubsubsection{\texorpdfstring{VKFramebuffer()}{VKFramebuffer()}}
+{\footnotesize\ttfamily mam\+::\+V\+K\+Framebuffer\+::\+V\+K\+Framebuffer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmam_1_1_framebuffer_spec}{Framebuffer\+Spec}} \&}]{spec }\end{DoxyParamCaption})}
+
+
+
+Construct a Vulkan framebuffer with the specified spec. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spec} & \mbox{\hyperlink{classmam_1_1_framebuffer}{Framebuffer}} specification (size, attachments, etc.) \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmam_1_1_v_k_framebuffer_af6efef7eaebe911220ec28ab6bc9430e}\label{classmam_1_1_v_k_framebuffer_af6efef7eaebe911220ec28ab6bc9430e}} 
+\index{mam::VKFramebuffer@{mam::VKFramebuffer}!invalidate@{invalidate}}
+\index{invalidate@{invalidate}!mam::VKFramebuffer@{mam::VKFramebuffer}}
+\doxysubsubsection{\texorpdfstring{invalidate()}{invalidate()}}
+{\footnotesize\ttfamily void mam\+::\+V\+K\+Framebuffer\+::invalidate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Recreate the framebuffer and its attachments. 
+
+Called internally after resize or spec changes. 
+
+Implements \mbox{\hyperlink{classmam_1_1_framebuffer_a2f036dedd4f693e4f2f64d6b015ec9eb}{mam\+::\+Framebuffer}}.
+
+\mbox{\Hypertarget{classmam_1_1_v_k_framebuffer_a2c69c7874b578ea26e73b85279315ea9}\label{classmam_1_1_v_k_framebuffer_a2c69c7874b578ea26e73b85279315ea9}} 
+\index{mam::VKFramebuffer@{mam::VKFramebuffer}!resize@{resize}}
+\index{resize@{resize}!mam::VKFramebuffer@{mam::VKFramebuffer}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily void mam\+::\+V\+K\+Framebuffer\+::resize (\begin{DoxyParamCaption}\item[{u32}]{width,  }\item[{u32}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Resize the framebuffer to new dimensions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & New width in pixels \\
+\hline
+{\em height} & New height in pixels \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classmam_1_1_framebuffer_ab3a68582a376484d610a10f265608af9}{mam\+::\+Framebuffer}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+platform/vulkan/vk\+\_\+framebuffer.\+hpp\end{DoxyCompactItemize}

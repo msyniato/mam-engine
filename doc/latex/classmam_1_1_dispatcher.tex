@@ -1,0 +1,60 @@
+\hypertarget{classmam_1_1_dispatcher}{}\doxysection{mam\+::Dispatcher Class Reference}
+\label{classmam_1_1_dispatcher}\index{mam::Dispatcher@{mam::Dispatcher}}
+
+
+\mbox{\hyperlink{classmam_1_1_dispatcher}{Dispatcher}} class for enqueuing functions to the main thread.  
+
+
+
+
+{\ttfamily \#include $<$dispatcher.\+hpp$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename F , typename... Args$>$ }\\static void \mbox{\hyperlink{classmam_1_1_dispatcher_a68d1fe2a2ece3e9d3353287714a01c97}{Run\+On\+Main}} (F \&\&f, Args \&\&... args)
+\begin{DoxyCompactList}\small\item\em Enqueue a function with arguments to run on the main thread. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classmam_1_1_dispatcher}{Dispatcher}} class for enqueuing functions to the main thread. 
+
+Provides a static template method to enqueue functions with arguments. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmam_1_1_dispatcher_a68d1fe2a2ece3e9d3353287714a01c97}\label{classmam_1_1_dispatcher_a68d1fe2a2ece3e9d3353287714a01c97}} 
+\index{mam::Dispatcher@{mam::Dispatcher}!RunOnMain@{RunOnMain}}
+\index{RunOnMain@{RunOnMain}!mam::Dispatcher@{mam::Dispatcher}}
+\doxysubsubsection{\texorpdfstring{RunOnMain()}{RunOnMain()}}
+{\footnotesize\ttfamily template$<$typename F , typename... Args$>$ \\
+static void mam\+::\+Dispatcher\+::\+Run\+On\+Main (\begin{DoxyParamCaption}\item[{F \&\&}]{f,  }\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Enqueue a function with arguments to run on the main thread. 
+
+Example usage\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classmam_1_1_dispatcher_a68d1fe2a2ece3e9d3353287714a01c97}{Dispatcher::RunOnMain}}([](\textcolor{keywordtype}{int} x)\{ std::cout << x; \}, 42);}
+\end{DoxyCode}
+
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em F} & Function type \\
+\hline
+{\em Args} & Argument types \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em f} & Function to run \\
+\hline
+{\em args} & Arguments to pass to the function \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/mam/dispatcher.\+hpp\end{DoxyCompactItemize}

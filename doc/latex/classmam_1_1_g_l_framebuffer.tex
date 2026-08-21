@@ -1,0 +1,92 @@
+\hypertarget{classmam_1_1_g_l_framebuffer}{}\doxysection{mam\+::G\+L\+Framebuffer Class Reference}
+\label{classmam_1_1_g_l_framebuffer}\index{mam::GLFramebuffer@{mam::GLFramebuffer}}
+
+
+Open\+GL implementation of a framebuffer.  
+
+
+
+
+{\ttfamily \#include $<$gl\+\_\+frame\+\_\+buffer.\+hpp$>$}
+
+Inheritance diagram for mam\+::G\+L\+Framebuffer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmam_1_1_g_l_framebuffer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmam_1_1_g_l_framebuffer_a4c4249753ff05f5db40d2f81b57cf123}{G\+L\+Framebuffer}} (const \mbox{\hyperlink{structmam_1_1_framebuffer_spec}{Framebuffer\+Spec}} \&\mbox{\hyperlink{classmam_1_1_framebuffer_a2136f3c4e0da2430d92389a45bf00132}{spec}})
+\begin{DoxyCompactList}\small\item\em Construct a \mbox{\hyperlink{classmam_1_1_g_l_framebuffer}{G\+L\+Framebuffer}} with given specifications. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_g_l_framebuffer_a3c1f5d6da9cb1e93e4bca41ffeb3f3b9}\label{classmam_1_1_g_l_framebuffer_a3c1f5d6da9cb1e93e4bca41ffeb3f3b9}} 
+\mbox{\hyperlink{classmam_1_1_g_l_framebuffer_a3c1f5d6da9cb1e93e4bca41ffeb3f3b9}{$\sim$\+G\+L\+Framebuffer}} () override
+\begin{DoxyCompactList}\small\item\em Destructor, cleans up Open\+GL framebuffer resources. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_g_l_framebuffer_abd94b4ec1a35db1235e4e1b21d497f90}\label{classmam_1_1_g_l_framebuffer_abd94b4ec1a35db1235e4e1b21d497f90}} 
+void \mbox{\hyperlink{classmam_1_1_g_l_framebuffer_abd94b4ec1a35db1235e4e1b21d497f90}{bind}} () const override
+\begin{DoxyCompactList}\small\item\em Bind this framebuffer for rendering. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_g_l_framebuffer_a2510e6939290bde45623396b393c3045}\label{classmam_1_1_g_l_framebuffer_a2510e6939290bde45623396b393c3045}} 
+void \mbox{\hyperlink{classmam_1_1_g_l_framebuffer_a2510e6939290bde45623396b393c3045}{unbind}} () const override
+\begin{DoxyCompactList}\small\item\em Unbind the framebuffer (binds default framebuffer) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_g_l_framebuffer_a2aaecb9f067f1eef5cc1303a61069aea}{resize}} (u32 width, u32 height) override
+\begin{DoxyCompactList}\small\item\em Resize the framebuffer and its attachments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_g_l_framebuffer_aed034532f3f26f67da71c3a1ea7640c1}\label{classmam_1_1_g_l_framebuffer_aed034532f3f26f67da71c3a1ea7640c1}} 
+void \mbox{\hyperlink{classmam_1_1_g_l_framebuffer_aed034532f3f26f67da71c3a1ea7640c1}{invalidate}} () override
+\begin{DoxyCompactList}\small\item\em Recreate or invalidate the framebuffer resources Called internally after resize or initialization. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Open\+GL implementation of a framebuffer. 
+
+Handles creation, binding, resizing, and management of Open\+GL framebuffer objects. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmam_1_1_g_l_framebuffer_a4c4249753ff05f5db40d2f81b57cf123}\label{classmam_1_1_g_l_framebuffer_a4c4249753ff05f5db40d2f81b57cf123}} 
+\index{mam::GLFramebuffer@{mam::GLFramebuffer}!GLFramebuffer@{GLFramebuffer}}
+\index{GLFramebuffer@{GLFramebuffer}!mam::GLFramebuffer@{mam::GLFramebuffer}}
+\doxysubsubsection{\texorpdfstring{GLFramebuffer()}{GLFramebuffer()}}
+{\footnotesize\ttfamily mam\+::\+G\+L\+Framebuffer\+::\+G\+L\+Framebuffer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmam_1_1_framebuffer_spec}{Framebuffer\+Spec}} \&}]{spec }\end{DoxyParamCaption})}
+
+
+
+Construct a \mbox{\hyperlink{classmam_1_1_g_l_framebuffer}{G\+L\+Framebuffer}} with given specifications. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spec} & \mbox{\hyperlink{classmam_1_1_framebuffer}{Framebuffer}} specifications (size, attachments, etc.) \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmam_1_1_g_l_framebuffer_a2aaecb9f067f1eef5cc1303a61069aea}\label{classmam_1_1_g_l_framebuffer_a2aaecb9f067f1eef5cc1303a61069aea}} 
+\index{mam::GLFramebuffer@{mam::GLFramebuffer}!resize@{resize}}
+\index{resize@{resize}!mam::GLFramebuffer@{mam::GLFramebuffer}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily void mam\+::\+G\+L\+Framebuffer\+::resize (\begin{DoxyParamCaption}\item[{u32}]{width,  }\item[{u32}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Resize the framebuffer and its attachments. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & New width \\
+\hline
+{\em height} & New height \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classmam_1_1_framebuffer_ab3a68582a376484d610a10f265608af9}{mam\+::\+Framebuffer}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+platform/opengl/gl\+\_\+frame\+\_\+buffer.\+hpp\end{DoxyCompactItemize}

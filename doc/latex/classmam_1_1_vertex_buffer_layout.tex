@@ -1,0 +1,60 @@
+\hypertarget{classmam_1_1_vertex_buffer_layout}{}\doxysection{mam\+::Vertex\+Buffer\+Layout Class Reference}
+\label{classmam_1_1_vertex_buffer_layout}\index{mam::VertexBufferLayout@{mam::VertexBufferLayout}}
+
+
+Describes the layout of a vertex buffer.  
+
+
+
+
+{\ttfamily \#include $<$buffer.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_vertex_buffer_layout_a4f9ce581f31ad6e1ddd5dd752fc03517}\label{classmam_1_1_vertex_buffer_layout_a4f9ce581f31ad6e1ddd5dd752fc03517}} 
+\mbox{\hyperlink{classmam_1_1_vertex_buffer_layout_a4f9ce581f31ad6e1ddd5dd752fc03517}{Vertex\+Buffer\+Layout}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmam_1_1_vertex_buffer_layout_a185be55a86211674f9429eb65f89c8e3}{Vertex\+Buffer\+Layout}} (const std\+::initializer\+\_\+list$<$ \mbox{\hyperlink{structmam_1_1_vertex_buffer_element}{Vertex\+Buffer\+Element}} $>$ \&element)
+\begin{DoxyCompactList}\small\item\em Construct a layout from a list of elements. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_vertex_buffer_layout_a4959c31e6db459d996442364e880718e}\label{classmam_1_1_vertex_buffer_layout_a4959c31e6db459d996442364e880718e}} 
+const std\+::vector$<$ \mbox{\hyperlink{structmam_1_1_vertex_buffer_element}{Vertex\+Buffer\+Element}} $>$ \& \mbox{\hyperlink{classmam_1_1_vertex_buffer_layout_a4959c31e6db459d996442364e880718e}{get\+Elements}} () const
+\begin{DoxyCompactList}\small\item\em Get all elements. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_vertex_buffer_layout_aebe891826ea873325d8dc71c51aae58a}\label{classmam_1_1_vertex_buffer_layout_aebe891826ea873325d8dc71c51aae58a}} 
+std\+::vector$<$ \mbox{\hyperlink{structmam_1_1_vertex_buffer_element}{Vertex\+Buffer\+Element}} $>$\+::iterator \mbox{\hyperlink{classmam_1_1_vertex_buffer_layout_aebe891826ea873325d8dc71c51aae58a}{begin}} ()
+\begin{DoxyCompactList}\small\item\em Iterator for range-\/based for loops. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_vertex_buffer_layout_acac700397eb3a2a13298c89eb728c5b3}\label{classmam_1_1_vertex_buffer_layout_acac700397eb3a2a13298c89eb728c5b3}} 
+std\+::vector$<$ \mbox{\hyperlink{structmam_1_1_vertex_buffer_element}{Vertex\+Buffer\+Element}} $>$\+::iterator {\bfseries end} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_vertex_buffer_layout_ab185eaf0dd11ff3966a0da385cac3aee}\label{classmam_1_1_vertex_buffer_layout_ab185eaf0dd11ff3966a0da385cac3aee}} 
+uint32\+\_\+t \mbox{\hyperlink{classmam_1_1_vertex_buffer_layout_ab185eaf0dd11ff3966a0da385cac3aee}{stride}} = 0
+\begin{DoxyCompactList}\small\item\em Total stride of the vertex in bytes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Describes the layout of a vertex buffer. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmam_1_1_vertex_buffer_layout_a185be55a86211674f9429eb65f89c8e3}\label{classmam_1_1_vertex_buffer_layout_a185be55a86211674f9429eb65f89c8e3}} 
+\index{mam::VertexBufferLayout@{mam::VertexBufferLayout}!VertexBufferLayout@{VertexBufferLayout}}
+\index{VertexBufferLayout@{VertexBufferLayout}!mam::VertexBufferLayout@{mam::VertexBufferLayout}}
+\doxysubsubsection{\texorpdfstring{VertexBufferLayout()}{VertexBufferLayout()}}
+{\footnotesize\ttfamily mam\+::\+Vertex\+Buffer\+Layout\+::\+Vertex\+Buffer\+Layout (\begin{DoxyParamCaption}\item[{const std\+::initializer\+\_\+list$<$ \mbox{\hyperlink{structmam_1_1_vertex_buffer_element}{Vertex\+Buffer\+Element}} $>$ \&}]{element }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a layout from a list of elements. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em element} & Initializer list of vertex buffer elements \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/mam/buffer.\+hpp\end{DoxyCompactItemize}

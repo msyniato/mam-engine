@@ -1,0 +1,13 @@
+[requires]
+glfw/3.3.8
+glew/2.2.0
+spdlog/1.14.1
+glm/1.0.1
+tinyobjloader/2.0.0-rc10
+
+
+[generators]
+premake
+
+[options]
+glfw:vulkan_static=True

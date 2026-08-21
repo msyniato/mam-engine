@@ -1,0 +1,85 @@
+\hypertarget{structmam_1_1_vertex_buffer_element}{}\doxysection{mam\+::Vertex\+Buffer\+Element Struct Reference}
+\label{structmam_1_1_vertex_buffer_element}\index{mam::VertexBufferElement@{mam::VertexBufferElement}}
+
+
+Describes a single element (attribute) in a vertex buffer.  
+
+
+
+
+{\ttfamily \#include $<$buffer.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structmam_1_1_vertex_buffer_element_af7c822e6ab04feece04df05a1c916fe9}\label{structmam_1_1_vertex_buffer_element_af7c822e6ab04feece04df05a1c916fe9}} 
+\mbox{\hyperlink{structmam_1_1_vertex_buffer_element_af7c822e6ab04feece04df05a1c916fe9}{Vertex\+Buffer\+Element}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structmam_1_1_vertex_buffer_element_aabdfa6be0ceb88edb711593147bb9b43}{Vertex\+Buffer\+Element}} (Uniform\+Type type, std\+::string name, bool normalized=false)
+\begin{DoxyCompactList}\small\item\em Construct a vertex buffer element. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{structmam_1_1_vertex_buffer_element_a942bf43fc8b6f0fba08a450d9f0beb1b}{Get\+Component\+Count}} () const
+\begin{DoxyCompactList}\small\item\em Get the number of components in this attribute. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structmam_1_1_vertex_buffer_element_a8ca4cd90c38d8b6789773653e94bf7db}\label{structmam_1_1_vertex_buffer_element_a8ca4cd90c38d8b6789773653e94bf7db}} 
+std\+::string \mbox{\hyperlink{structmam_1_1_vertex_buffer_element_a8ca4cd90c38d8b6789773653e94bf7db}{name\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Name of the attribute. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structmam_1_1_vertex_buffer_element_ac7f1bb08f837f9bdf7c69c777f07d598}\label{structmam_1_1_vertex_buffer_element_ac7f1bb08f837f9bdf7c69c777f07d598}} 
+Uniform\+Type \mbox{\hyperlink{structmam_1_1_vertex_buffer_element_ac7f1bb08f837f9bdf7c69c777f07d598}{type\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Data type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structmam_1_1_vertex_buffer_element_ad26d8cf5d93d8c715a95c8c11305e02d}\label{structmam_1_1_vertex_buffer_element_ad26d8cf5d93d8c715a95c8c11305e02d}} 
+uint32\+\_\+t \mbox{\hyperlink{structmam_1_1_vertex_buffer_element_ad26d8cf5d93d8c715a95c8c11305e02d}{size\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Size in bytes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structmam_1_1_vertex_buffer_element_a9bfba776a7f77d978d703ca6f7653376}\label{structmam_1_1_vertex_buffer_element_a9bfba776a7f77d978d703ca6f7653376}} 
+uint32\+\_\+t \mbox{\hyperlink{structmam_1_1_vertex_buffer_element_a9bfba776a7f77d978d703ca6f7653376}{offset\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Offset from start of vertex. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structmam_1_1_vertex_buffer_element_ab88bc93d0c1b424a93be541f730de15a}\label{structmam_1_1_vertex_buffer_element_ab88bc93d0c1b424a93be541f730de15a}} 
+bool \mbox{\hyperlink{structmam_1_1_vertex_buffer_element_ab88bc93d0c1b424a93be541f730de15a}{normalized\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Whether the attribute should be normalized. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Describes a single element (attribute) in a vertex buffer. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structmam_1_1_vertex_buffer_element_aabdfa6be0ceb88edb711593147bb9b43}\label{structmam_1_1_vertex_buffer_element_aabdfa6be0ceb88edb711593147bb9b43}} 
+\index{mam::VertexBufferElement@{mam::VertexBufferElement}!VertexBufferElement@{VertexBufferElement}}
+\index{VertexBufferElement@{VertexBufferElement}!mam::VertexBufferElement@{mam::VertexBufferElement}}
+\doxysubsubsection{\texorpdfstring{VertexBufferElement()}{VertexBufferElement()}}
+{\footnotesize\ttfamily mam\+::\+Vertex\+Buffer\+Element\+::\+Vertex\+Buffer\+Element (\begin{DoxyParamCaption}\item[{Uniform\+Type}]{type,  }\item[{std\+::string}]{name,  }\item[{bool}]{normalized = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a vertex buffer element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Data type of the attribute \\
+\hline
+{\em name} & Name of the attribute \\
+\hline
+{\em normalized} & Whether the attribute should be normalized \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structmam_1_1_vertex_buffer_element_a942bf43fc8b6f0fba08a450d9f0beb1b}\label{structmam_1_1_vertex_buffer_element_a942bf43fc8b6f0fba08a450d9f0beb1b}} 
+\index{mam::VertexBufferElement@{mam::VertexBufferElement}!GetComponentCount@{GetComponentCount}}
+\index{GetComponentCount@{GetComponentCount}!mam::VertexBufferElement@{mam::VertexBufferElement}}
+\doxysubsubsection{\texorpdfstring{GetComponentCount()}{GetComponentCount()}}
+{\footnotesize\ttfamily uint32\+\_\+t mam\+::\+Vertex\+Buffer\+Element\+::\+Get\+Component\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the number of components in this attribute. 
+
+\begin{DoxyReturn}{Returns}
+Number of components (e.\+g., Float3 -\/$>$ 3) 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/mam/buffer.\+hpp\end{DoxyCompactItemize}

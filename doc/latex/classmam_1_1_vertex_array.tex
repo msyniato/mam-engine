@@ -1,0 +1,111 @@
+\hypertarget{classmam_1_1_vertex_array}{}\doxysection{mam\+::Vertex\+Array Class Reference}
+\label{classmam_1_1_vertex_array}\index{mam::VertexArray@{mam::VertexArray}}
+
+
+Abstract class representing a \mbox{\hyperlink{structmam_1_1_vertex}{Vertex}} Array Object (V\+AO).  
+
+
+
+
+{\ttfamily \#include $<$vertex\+\_\+array.\+hpp$>$}
+
+Inheritance diagram for mam\+::Vertex\+Array\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmam_1_1_vertex_array}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_vertex_array_a2201606d7f8ea261bf971c50254b8b2b}\label{classmam_1_1_vertex_array_a2201606d7f8ea261bf971c50254b8b2b}} 
+\mbox{\hyperlink{classmam_1_1_vertex_array_a2201606d7f8ea261bf971c50254b8b2b}{Vertex\+Array}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_vertex_array_ad9d48688b1f113ea1823ad491d01efd9}\label{classmam_1_1_vertex_array_ad9d48688b1f113ea1823ad491d01efd9}} 
+\mbox{\hyperlink{classmam_1_1_vertex_array_ad9d48688b1f113ea1823ad491d01efd9}{$\sim$\+Vertex\+Array}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_vertex_array_aeee15f3ecdf599ebe13436c517ba0d8a}\label{classmam_1_1_vertex_array_aeee15f3ecdf599ebe13436c517ba0d8a}} 
+virtual void \mbox{\hyperlink{classmam_1_1_vertex_array_aeee15f3ecdf599ebe13436c517ba0d8a}{bind}} () const =0
+\begin{DoxyCompactList}\small\item\em Bind the vertex array for rendering. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_vertex_array_a7100f76fa013b254ebc91922bb348ce0}\label{classmam_1_1_vertex_array_a7100f76fa013b254ebc91922bb348ce0}} 
+virtual void \mbox{\hyperlink{classmam_1_1_vertex_array_a7100f76fa013b254ebc91922bb348ce0}{un\+Bind}} () const =0
+\begin{DoxyCompactList}\small\item\em Unbind the vertex array. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmam_1_1_vertex_array_a319067e1962d347f3936d1b39b2cc238}{add\+Vertex\+Buffer}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmam_1_1_vertex_buffer}{Vertex\+Buffer}} $>$ \&vertex\+Buffer, unsigned int index=0, int count=0, Uniform\+Type type=Uniform\+Type\+::\+Float1, bool normalized=false, int stride=0, const void $\ast$offset=0)=0
+\begin{DoxyCompactList}\small\item\em Add a vertex buffer to the V\+AO. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmam_1_1_vertex_array_a584a5cb5839f3183a05bf882b2da7fc2}{set\+Index\+Buffer}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmam_1_1_index_buffer}{Index\+Buffer}} $>$ \&index\+Buffer)=0
+\begin{DoxyCompactList}\small\item\em Set the index buffer for the V\+AO. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_vertex_array_a8b1e6745569dd6525517e2ed99e5e373}\label{classmam_1_1_vertex_array_a8b1e6745569dd6525517e2ed99e5e373}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmam_1_1_vertex_buffer}{Vertex\+Buffer}} $>$ \mbox{\hyperlink{classmam_1_1_vertex_array_a8b1e6745569dd6525517e2ed99e5e373}{vertex\+Buffers\+\_\+}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structmam_1_1_vertex}{Vertex}} buffer attached to V\+AO. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_vertex_array_a9d339f58e1d75c0c9a6f38f2e8e5a78e}\label{classmam_1_1_vertex_array_a9d339f58e1d75c0c9a6f38f2e8e5a78e}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmam_1_1_index_buffer}{Index\+Buffer}} $>$ \mbox{\hyperlink{classmam_1_1_vertex_array_a9d339f58e1d75c0c9a6f38f2e8e5a78e}{index\+Buffer\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Index buffer attached to V\+AO. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_vertex_array_a5782f815ecc8d4a1805ffe67cd92d35c}\label{classmam_1_1_vertex_array_a5782f815ecc8d4a1805ffe67cd92d35c}} 
+uint32\+\_\+t \mbox{\hyperlink{classmam_1_1_vertex_array_a5782f815ecc8d4a1805ffe67cd92d35c}{id\+\_\+}}
+\begin{DoxyCompactList}\small\item\em G\+PU handle/\+ID for V\+AO. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract class representing a \mbox{\hyperlink{structmam_1_1_vertex}{Vertex}} Array Object (V\+AO). 
+
+Manages vertex buffers and index buffer for rendering. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmam_1_1_vertex_array_a319067e1962d347f3936d1b39b2cc238}\label{classmam_1_1_vertex_array_a319067e1962d347f3936d1b39b2cc238}} 
+\index{mam::VertexArray@{mam::VertexArray}!addVertexBuffer@{addVertexBuffer}}
+\index{addVertexBuffer@{addVertexBuffer}!mam::VertexArray@{mam::VertexArray}}
+\doxysubsubsection{\texorpdfstring{addVertexBuffer()}{addVertexBuffer()}}
+{\footnotesize\ttfamily virtual void mam\+::\+Vertex\+Array\+::add\+Vertex\+Buffer (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmam_1_1_vertex_buffer}{Vertex\+Buffer}} $>$ \&}]{vertex\+Buffer,  }\item[{unsigned int}]{index = {\ttfamily 0},  }\item[{int}]{count = {\ttfamily 0},  }\item[{Uniform\+Type}]{type = {\ttfamily UniformType\+:\+:Float1},  }\item[{bool}]{normalized = {\ttfamily false},  }\item[{int}]{stride = {\ttfamily 0},  }\item[{const void $\ast$}]{offset = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Add a vertex buffer to the V\+AO. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vertex\+Buffer} & Shared pointer to the vertex buffer \\
+\hline
+{\em index} & Attribute index (default 0) \\
+\hline
+{\em count} & Number of components per vertex (default 0) \\
+\hline
+{\em type} & Type of the attribute (default Float1) \\
+\hline
+{\em normalized} & True if the data should be normalized (default false) \\
+\hline
+{\em stride} & Stride in bytes between vertices (default 0) \\
+\hline
+{\em offset} & Pointer offset in the buffer (default 0) \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classmam_1_1_g_l_vertex_array_a44756bf7d6409edba1a477d73f75e2aa}{mam\+::\+G\+L\+Vertex\+Array}}, and \mbox{\hyperlink{classmam_1_1_v_k_vertex_array_ad21ca226d3f9d1b29715ca7161f27900}{mam\+::\+V\+K\+Vertex\+Array}}.
+
+\mbox{\Hypertarget{classmam_1_1_vertex_array_a584a5cb5839f3183a05bf882b2da7fc2}\label{classmam_1_1_vertex_array_a584a5cb5839f3183a05bf882b2da7fc2}} 
+\index{mam::VertexArray@{mam::VertexArray}!setIndexBuffer@{setIndexBuffer}}
+\index{setIndexBuffer@{setIndexBuffer}!mam::VertexArray@{mam::VertexArray}}
+\doxysubsubsection{\texorpdfstring{setIndexBuffer()}{setIndexBuffer()}}
+{\footnotesize\ttfamily virtual void mam\+::\+Vertex\+Array\+::set\+Index\+Buffer (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmam_1_1_index_buffer}{Index\+Buffer}} $>$ \&}]{index\+Buffer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Set the index buffer for the V\+AO. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index\+Buffer} & Shared pointer to the index buffer \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classmam_1_1_v_k_vertex_array_ab88a196617fef795e2665a1f823ee06c}{mam\+::\+V\+K\+Vertex\+Array}}, and \mbox{\hyperlink{classmam_1_1_g_l_vertex_array_a9abe0b0a04e239d54180e824f85eacfc}{mam\+::\+G\+L\+Vertex\+Array}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/mam/vertex\+\_\+array.\+hpp\end{DoxyCompactItemize}

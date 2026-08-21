@@ -1,0 +1,131 @@
+\hypertarget{classmam_1_1_g_l_device}{}\doxysection{mam\+::G\+L\+Device Class Reference}
+\label{classmam_1_1_g_l_device}\index{mam::GLDevice@{mam::GLDevice}}
+
+
+Open\+GL implementation of a Graphic Device.  
+
+
+
+
+{\ttfamily \#include $<$gl\+\_\+device.\+hpp$>$}
+
+Inheritance diagram for mam\+::G\+L\+Device\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmam_1_1_g_l_device}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmam_1_1_g_l_device_aad1d5f18986bc2050726f40b370800ce}{G\+L\+Device}} (glm\+::vec2 screen\+\_\+size, glm\+::mat4 init\+View)
+\begin{DoxyCompactList}\small\item\em Construct a \mbox{\hyperlink{classmam_1_1_g_l_device}{G\+L\+Device}} with screen size and initial view matrix. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_g_l_device_ae21d29fcaeaaeac2b2bde59c9702d0ee}\label{classmam_1_1_g_l_device_ae21d29fcaeaaeac2b2bde59c9702d0ee}} 
+\mbox{\hyperlink{classmam_1_1_g_l_device_ae21d29fcaeaaeac2b2bde59c9702d0ee}{G\+L\+Device}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_g_l_device_a44af93f252d55edb282278def4860ce9}\label{classmam_1_1_g_l_device_a44af93f252d55edb282278def4860ce9}} 
+\mbox{\hyperlink{classmam_1_1_g_l_device_a44af93f252d55edb282278def4860ce9}{$\sim$\+G\+L\+Device}} () override
+\begin{DoxyCompactList}\small\item\em Destructor, cleans up G\+PU resources. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_g_l_device_ac52bedcb86dd8d0aed7a7c584e51c3f9}\label{classmam_1_1_g_l_device_ac52bedcb86dd8d0aed7a7c584e51c3f9}} 
+void \mbox{\hyperlink{classmam_1_1_g_l_device_ac52bedcb86dd8d0aed7a7c584e51c3f9}{init}} () override
+\begin{DoxyCompactList}\small\item\em Initialize Open\+GL resources, shaders, pipelines, and \mbox{\hyperlink{classmam_1_1_g_buffer}{G\+Buffer}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_g_l_device_a5f4b168d53ca19990626359ecca2c9fc}{draw}} (\mbox{\hyperlink{classmam_1_1_mesh}{Mesh}} \&mesh) override
+\begin{DoxyCompactList}\small\item\em Draw a mesh using the current pipeline/material. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_g_l_device_af7b8763edc7277affe417d917190ede4}{draw}} (uint32\+\_\+t indices) override
+\begin{DoxyCompactList}\small\item\em Draw using a given number of indices. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_g_l_device_a83eef88f6387b62ec2541b536317fc0f}\label{classmam_1_1_g_l_device_a83eef88f6387b62ec2541b536317fc0f}} 
+void \mbox{\hyperlink{classmam_1_1_g_l_device_a83eef88f6387b62ec2541b536317fc0f}{cleanup}} () override
+\begin{DoxyCompactList}\small\item\em Clean up Open\+GL resources. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_g_l_device_a326c8b0eb83cad1c60b7afe8d899ffab}\label{classmam_1_1_g_l_device_a326c8b0eb83cad1c60b7afe8d899ffab}} 
+void \mbox{\hyperlink{classmam_1_1_g_l_device_a326c8b0eb83cad1c60b7afe8d899ffab}{enable\+Depth\+Test}} () override
+\begin{DoxyCompactList}\small\item\em Enable depth testing Can be extended to set depth test functions or write masks. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_g_l_device_a0f22cfdafa2878adb3a5565a89cfdb14}\label{classmam_1_1_g_l_device_a0f22cfdafa2878adb3a5565a89cfdb14}} 
+void \mbox{\hyperlink{classmam_1_1_g_l_device_a0f22cfdafa2878adb3a5565a89cfdb14}{disable\+Depth\+Test}} () override
+\begin{DoxyCompactList}\small\item\em Disable depth testing. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_g_l_device_a6323afbd1be2e070965304dfb8f6f2e6}\label{classmam_1_1_g_l_device_a6323afbd1be2e070965304dfb8f6f2e6}} 
+void \mbox{\hyperlink{classmam_1_1_g_l_device_a6323afbd1be2e070965304dfb8f6f2e6}{enable\+Face\+Culling}} () override
+\begin{DoxyCompactList}\small\item\em Enable face culling Can be extended to set front/back culling. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_g_l_device_ae10a53f80f66d31d297c9c0b38b6669b}\label{classmam_1_1_g_l_device_ae10a53f80f66d31d297c9c0b38b6669b}} 
+void \mbox{\hyperlink{classmam_1_1_g_l_device_ae10a53f80f66d31d297c9c0b38b6669b}{disable\+Face\+Culling}} () override
+\begin{DoxyCompactList}\small\item\em Disable face culling. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_g_l_device_a935a8d3457b47369104282c4fb4633b3}\label{classmam_1_1_g_l_device_a935a8d3457b47369104282c4fb4633b3}} 
+void \mbox{\hyperlink{classmam_1_1_g_l_device_a935a8d3457b47369104282c4fb4633b3}{render\+Screen}} () override
+\begin{DoxyCompactList}\small\item\em Render the final screen quad or post-\/processing step. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_g_l_device_ad2e162d1c7cbed577d1eba4013aac3e6}\label{classmam_1_1_g_l_device_ad2e162d1c7cbed577d1eba4013aac3e6}} 
+void \mbox{\hyperlink{classmam_1_1_g_l_device_ad2e162d1c7cbed577d1eba4013aac3e6}{begin\+Frame}} () override
+\begin{DoxyCompactList}\small\item\em Called at the beginning of a frame Prepares \mbox{\hyperlink{classmam_1_1_g_buffer}{G\+Buffer}}, clears buffers, etc. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_g_l_device_a6ec744971caca829347e9ef784f63e10}\label{classmam_1_1_g_l_device_a6ec744971caca829347e9ef784f63e10}} 
+void \mbox{\hyperlink{classmam_1_1_g_l_device_a6ec744971caca829347e9ef784f63e10}{end\+Frame}} () override
+\begin{DoxyCompactList}\small\item\em Called at the end of a frame Finalizes rendering, swaps buffers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Open\+GL implementation of a Graphic Device. 
+
+Handles rendering, frame management, and G\+PU state control for Open\+GL. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmam_1_1_g_l_device_aad1d5f18986bc2050726f40b370800ce}\label{classmam_1_1_g_l_device_aad1d5f18986bc2050726f40b370800ce}} 
+\index{mam::GLDevice@{mam::GLDevice}!GLDevice@{GLDevice}}
+\index{GLDevice@{GLDevice}!mam::GLDevice@{mam::GLDevice}}
+\doxysubsubsection{\texorpdfstring{GLDevice()}{GLDevice()}}
+{\footnotesize\ttfamily mam\+::\+G\+L\+Device\+::\+G\+L\+Device (\begin{DoxyParamCaption}\item[{glm\+::vec2}]{screen\+\_\+size,  }\item[{glm\+::mat4}]{init\+View }\end{DoxyParamCaption})}
+
+
+
+Construct a \mbox{\hyperlink{classmam_1_1_g_l_device}{G\+L\+Device}} with screen size and initial view matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em screen\+\_\+size} & The viewport/screen size (width, height) \\
+\hline
+{\em init\+View} & Initial view matrix \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmam_1_1_g_l_device_a5f4b168d53ca19990626359ecca2c9fc}\label{classmam_1_1_g_l_device_a5f4b168d53ca19990626359ecca2c9fc}} 
+\index{mam::GLDevice@{mam::GLDevice}!draw@{draw}}
+\index{draw@{draw}!mam::GLDevice@{mam::GLDevice}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void mam\+::\+G\+L\+Device\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmam_1_1_mesh}{Mesh}} \&}]{mesh }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Draw a mesh using the current pipeline/material. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mesh} & Reference to a \mbox{\hyperlink{classmam_1_1_mesh}{Mesh}} object \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classmam_1_1_graphic_device_a38a71df9796bb11bd1481295fa212722}{mam\+::\+Graphic\+Device}}.
+
+\mbox{\Hypertarget{classmam_1_1_g_l_device_af7b8763edc7277affe417d917190ede4}\label{classmam_1_1_g_l_device_af7b8763edc7277affe417d917190ede4}} 
+\index{mam::GLDevice@{mam::GLDevice}!draw@{draw}}
+\index{draw@{draw}!mam::GLDevice@{mam::GLDevice}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void mam\+::\+G\+L\+Device\+::draw (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{indices }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Draw using a given number of indices. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em indices} & Number of indices to draw \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classmam_1_1_graphic_device_abbe33a47f3954544a7577b043f01890a}{mam\+::\+Graphic\+Device}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+platform/opengl/gl\+\_\+device.\+hpp\end{DoxyCompactItemize}

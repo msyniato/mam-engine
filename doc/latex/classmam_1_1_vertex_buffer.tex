@@ -1,0 +1,83 @@
+\hypertarget{classmam_1_1_vertex_buffer}{}\doxysection{mam\+::Vertex\+Buffer Class Reference}
+\label{classmam_1_1_vertex_buffer}\index{mam::VertexBuffer@{mam::VertexBuffer}}
+
+
+Abstract class for a G\+PU vertex buffer.  
+
+
+
+
+{\ttfamily \#include $<$buffer.\+hpp$>$}
+
+Inheritance diagram for mam\+::Vertex\+Buffer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmam_1_1_vertex_buffer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_vertex_buffer_ae04b0b325b0236166b1d409b267a5f98}\label{classmam_1_1_vertex_buffer_ae04b0b325b0236166b1d409b267a5f98}} 
+virtual void \mbox{\hyperlink{classmam_1_1_vertex_buffer_ae04b0b325b0236166b1d409b267a5f98}{bind}} ()=0
+\begin{DoxyCompactList}\small\item\em Bind the buffer. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmam_1_1_vertex_buffer_ad008cabd65e9dcf088503038ddb0e176}{upload\+Data}} (const void $\ast$data, unsigned int size, unsigned int offset=0)=0
+\begin{DoxyCompactList}\small\item\em Upload data to the buffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_vertex_buffer_a9750e0fd5ee09062d906479eda2980c1}\label{classmam_1_1_vertex_buffer_a9750e0fd5ee09062d906479eda2980c1}} 
+virtual void \mbox{\hyperlink{classmam_1_1_vertex_buffer_a9750e0fd5ee09062d906479eda2980c1}{release}} ()=0
+\begin{DoxyCompactList}\small\item\em Release G\+PU resources. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_vertex_buffer_a0162092c7c0ea5356e87566b03756824}\label{classmam_1_1_vertex_buffer_a0162092c7c0ea5356e87566b03756824}} 
+void \mbox{\hyperlink{classmam_1_1_vertex_buffer_a0162092c7c0ea5356e87566b03756824}{set\+Layout}} (const \mbox{\hyperlink{classmam_1_1_vertex_buffer_layout}{Vertex\+Buffer\+Layout}} \&layout)
+\begin{DoxyCompactList}\small\item\em Set layout. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_vertex_buffer_a1fcfb135d4b8aa40872fc91402eb977c}\label{classmam_1_1_vertex_buffer_a1fcfb135d4b8aa40872fc91402eb977c}} 
+\mbox{\hyperlink{classmam_1_1_vertex_buffer_layout}{Vertex\+Buffer\+Layout}} \& \mbox{\hyperlink{classmam_1_1_vertex_buffer_a1fcfb135d4b8aa40872fc91402eb977c}{get\+Layout}} ()
+\begin{DoxyCompactList}\small\item\em Get layout. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_vertex_buffer_a2ec1b0b6b9602759895378c57efa8a90}\label{classmam_1_1_vertex_buffer_a2ec1b0b6b9602759895378c57efa8a90}} 
+u32 \mbox{\hyperlink{classmam_1_1_vertex_buffer_a2ec1b0b6b9602759895378c57efa8a90}{count}} ()
+\begin{DoxyCompactList}\small\item\em Get number of vertices. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_vertex_buffer_a7c40fe06fda64380bd3837c58b065ebe}\label{classmam_1_1_vertex_buffer_a7c40fe06fda64380bd3837c58b065ebe}} 
+u32 \mbox{\hyperlink{classmam_1_1_vertex_buffer_a7c40fe06fda64380bd3837c58b065ebe}{id\+\_\+}}
+\begin{DoxyCompactList}\small\item\em G\+PU buffer ID. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_vertex_buffer_abee5f2fdde6cd746165b891274656a68}\label{classmam_1_1_vertex_buffer_abee5f2fdde6cd746165b891274656a68}} 
+u32 \mbox{\hyperlink{classmam_1_1_vertex_buffer_abee5f2fdde6cd746165b891274656a68}{count\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Number of vertices. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_vertex_buffer_a93e163e8b2ef81179493d02eb6038c6e}\label{classmam_1_1_vertex_buffer_a93e163e8b2ef81179493d02eb6038c6e}} 
+\mbox{\hyperlink{classmam_1_1_vertex_buffer_layout}{Vertex\+Buffer\+Layout}} \mbox{\hyperlink{classmam_1_1_vertex_buffer_a93e163e8b2ef81179493d02eb6038c6e}{layout\+\_\+}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structmam_1_1_vertex}{Vertex}} layout. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract class for a G\+PU vertex buffer. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmam_1_1_vertex_buffer_ad008cabd65e9dcf088503038ddb0e176}\label{classmam_1_1_vertex_buffer_ad008cabd65e9dcf088503038ddb0e176}} 
+\index{mam::VertexBuffer@{mam::VertexBuffer}!uploadData@{uploadData}}
+\index{uploadData@{uploadData}!mam::VertexBuffer@{mam::VertexBuffer}}
+\doxysubsubsection{\texorpdfstring{uploadData()}{uploadData()}}
+{\footnotesize\ttfamily virtual void mam\+::\+Vertex\+Buffer\+::upload\+Data (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{unsigned int}]{size,  }\item[{unsigned int}]{offset = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Upload data to the buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Pointer to data \\
+\hline
+{\em size} & Size in bytes \\
+\hline
+{\em offset} & Offset in the buffer \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classmam_1_1_g_l_vertex_buffer_ac8efd520d7a61593e70e5eaa95c90386}{mam\+::\+G\+L\+Vertex\+Buffer}}, and \mbox{\hyperlink{classmam_1_1_v_k_vertex_buffer_a98454aaf07b55258462633960d0b14fd}{mam\+::\+V\+K\+Vertex\+Buffer}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/mam/buffer.\+hpp\end{DoxyCompactItemize}

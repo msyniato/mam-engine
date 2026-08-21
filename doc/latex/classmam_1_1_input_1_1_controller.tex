@@ -1,0 +1,109 @@
+\hypertarget{classmam_1_1_input_1_1_controller}{}\doxysection{mam\+::Input\+::Controller Class Reference}
+\label{classmam_1_1_input_1_1_controller}\index{mam::Input::Controller@{mam::Input::Controller}}
+
+
+Represents a game controller (e.\+g., Xbox/\+Joystick)  
+
+
+
+
+{\ttfamily \#include $<$input.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_input_1_1_controller_a5bf47f28917444a54863523611c2a6fa}\label{classmam_1_1_input_1_1_controller_a5bf47f28917444a54863523611c2a6fa}} 
+\mbox{\hyperlink{classmam_1_1_input_1_1_controller_a5bf47f28917444a54863523611c2a6fa}{Controller}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_input_1_1_controller_ab4723e66dcced2f5041ce596200b10db}\label{classmam_1_1_input_1_1_controller_ab4723e66dcced2f5041ce596200b10db}} 
+\mbox{\hyperlink{classmam_1_1_input_1_1_controller_ab4723e66dcced2f5041ce596200b10db}{$\sim$\+Controller}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_input_1_1_controller_aeb52c1686193951313e0cd9c5a430abf}\label{classmam_1_1_input_1_1_controller_aeb52c1686193951313e0cd9c5a430abf}} 
+void \mbox{\hyperlink{classmam_1_1_input_1_1_controller_aeb52c1686193951313e0cd9c5a430abf}{init}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the controller. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_input_1_1_controller_af4c351b9cf84052aed12fc16927bf42c}\label{classmam_1_1_input_1_1_controller_af4c351b9cf84052aed12fc16927bf42c}} 
+void \mbox{\hyperlink{classmam_1_1_input_1_1_controller_af4c351b9cf84052aed12fc16927bf42c}{update}} ()
+\begin{DoxyCompactList}\small\item\em Update controller state. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_input_1_1_controller_a33420b80354aa21256bf76e45ad80c0c}\label{classmam_1_1_input_1_1_controller_a33420b80354aa21256bf76e45ad80c0c}} 
+void \mbox{\hyperlink{classmam_1_1_input_1_1_controller_a33420b80354aa21256bf76e45ad80c0c}{shutdown}} ()
+\begin{DoxyCompactList}\small\item\em Shutdown the controller. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_input_1_1_controller_a65ea75f65f377ed5baa4286e8aacc8d1}\label{classmam_1_1_input_1_1_controller_a65ea75f65f377ed5baa4286e8aacc8d1}} 
+static bool \mbox{\hyperlink{classmam_1_1_input_1_1_controller_a65ea75f65f377ed5baa4286e8aacc8d1}{Is\+Button\+Pressed}} (int key\+\_\+button)
+\begin{DoxyCompactList}\small\item\em Check if a specific controller button is pressed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_input_1_1_controller_a583cafd59a01f6426d1bb70f65762bb4}\label{classmam_1_1_input_1_1_controller_a583cafd59a01f6426d1bb70f65762bb4}} 
+static float \mbox{\hyperlink{classmam_1_1_input_1_1_controller_a583cafd59a01f6426d1bb70f65762bb4}{get\+Joystick\+LX}} ()
+\begin{DoxyCompactList}\small\item\em Get left joystick X-\/axis value (-\/1.\+0 to 1.\+0) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_input_1_1_controller_a75b32639e275b0b4a92d1f722750c66c}\label{classmam_1_1_input_1_1_controller_a75b32639e275b0b4a92d1f722750c66c}} 
+static float \mbox{\hyperlink{classmam_1_1_input_1_1_controller_a75b32639e275b0b4a92d1f722750c66c}{get\+Joystick\+LY}} ()
+\begin{DoxyCompactList}\small\item\em Get left joystick Y-\/axis value (-\/1.\+0 to 1.\+0) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_input_1_1_controller_a744078e12dc16312e0acc5e4693d6269}\label{classmam_1_1_input_1_1_controller_a744078e12dc16312e0acc5e4693d6269}} 
+static float \mbox{\hyperlink{classmam_1_1_input_1_1_controller_a744078e12dc16312e0acc5e4693d6269}{get\+Joystick\+RX}} ()
+\begin{DoxyCompactList}\small\item\em Get right joystick X-\/axis value (-\/1.\+0 to 1.\+0) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_input_1_1_controller_aa448be5a5f213651dd84be70b6324b5e}\label{classmam_1_1_input_1_1_controller_aa448be5a5f213651dd84be70b6324b5e}} 
+static float \mbox{\hyperlink{classmam_1_1_input_1_1_controller_aa448be5a5f213651dd84be70b6324b5e}{get\+Joystick\+RY}} ()
+\begin{DoxyCompactList}\small\item\em Get right joystick Y-\/axis value (-\/1.\+0 to 1.\+0) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_input_1_1_controller_acab758535f695a11445bedca1d4b0653}\label{classmam_1_1_input_1_1_controller_acab758535f695a11445bedca1d4b0653}} 
+static float \mbox{\hyperlink{classmam_1_1_input_1_1_controller_acab758535f695a11445bedca1d4b0653}{get\+Left\+Trigger}} ()
+\begin{DoxyCompactList}\small\item\em Get left trigger value (0.\+0 to 1.\+0) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_input_1_1_controller_a35ceb0fe880223c584bc16b9e4e5857e}\label{classmam_1_1_input_1_1_controller_a35ceb0fe880223c584bc16b9e4e5857e}} 
+static float \mbox{\hyperlink{classmam_1_1_input_1_1_controller_a35ceb0fe880223c584bc16b9e4e5857e}{get\+Right\+Trigger}} ()
+\begin{DoxyCompactList}\small\item\em Get right trigger value (0.\+0 to 1.\+0) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_input_1_1_controller_aeb242ccfdb8eecb14500b829c37630b4}\label{classmam_1_1_input_1_1_controller_aeb242ccfdb8eecb14500b829c37630b4}} 
+static \mbox{\hyperlink{classmam_1_1_input_1_1_controller}{Controller}} $\ast$ \mbox{\hyperlink{classmam_1_1_input_1_1_controller_aeb242ccfdb8eecb14500b829c37630b4}{get}} ()
+\begin{DoxyCompactList}\small\item\em Returns the currently active controller. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{classmam_1_1_input_1_1_controller_a20c86c0653b93c36a8f418aba3f6b6e1}{get\+Value\+With\+Deadzone}} (float f, float dead\+Zone)
+\begin{DoxyCompactList}\small\item\em Apply deadzone to a joystick value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_input_1_1_controller_aca3f5341cc32b2b92e8136c734b05b5d}\label{classmam_1_1_input_1_1_controller_aca3f5341cc32b2b92e8136c734b05b5d}} 
+int \mbox{\hyperlink{classmam_1_1_input_1_1_controller_aca3f5341cc32b2b92e8136c734b05b5d}{controller\+Id\+\_\+}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classmam_1_1_input_1_1_controller}{Controller}} ID. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_input_1_1_controller_ad5b846e2379da7124cbcc0c9a7849414}\label{classmam_1_1_input_1_1_controller_ad5b846e2379da7124cbcc0c9a7849414}} 
+X\+I\+N\+P\+U\+T\+\_\+\+S\+T\+A\+TE \mbox{\hyperlink{classmam_1_1_input_1_1_controller_ad5b846e2379da7124cbcc0c9a7849414}{state\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Current controller state. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_input_1_1_controller_aefd8339a7c2393bca916a2da7e2cde7f}\label{classmam_1_1_input_1_1_controller_aefd8339a7c2393bca916a2da7e2cde7f}} 
+float \mbox{\hyperlink{classmam_1_1_input_1_1_controller_aefd8339a7c2393bca916a2da7e2cde7f}{deadzone\+X\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Deadzone for X-\/axis. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_input_1_1_controller_a442321181ce5ed3366c876d5c58ce4da}\label{classmam_1_1_input_1_1_controller_a442321181ce5ed3366c876d5c58ce4da}} 
+float \mbox{\hyperlink{classmam_1_1_input_1_1_controller_a442321181ce5ed3366c876d5c58ce4da}{deadzone\+Y\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Deadzone for Y-\/axis. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a game controller (e.\+g., Xbox/\+Joystick) 
+
+Provides initialization, update, shutdown, and querying analog and button input. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmam_1_1_input_1_1_controller_a20c86c0653b93c36a8f418aba3f6b6e1}\label{classmam_1_1_input_1_1_controller_a20c86c0653b93c36a8f418aba3f6b6e1}} 
+\index{mam::Input::Controller@{mam::Input::Controller}!getValueWithDeadzone@{getValueWithDeadzone}}
+\index{getValueWithDeadzone@{getValueWithDeadzone}!mam::Input::Controller@{mam::Input::Controller}}
+\doxysubsubsection{\texorpdfstring{getValueWithDeadzone()}{getValueWithDeadzone()}}
+{\footnotesize\ttfamily float mam\+::\+Input\+::\+Controller\+::get\+Value\+With\+Deadzone (\begin{DoxyParamCaption}\item[{float}]{f,  }\item[{float}]{dead\+Zone }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Apply deadzone to a joystick value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & Raw input value \\
+\hline
+{\em dead\+Zone} & Deadzone threshold \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Value after applying deadzone 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/mam/input.\+hpp\end{DoxyCompactItemize}

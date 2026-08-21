@@ -1,0 +1,87 @@
+\hypertarget{classmam_1_1_material}{}\doxysection{mam\+::Material Class Reference}
+\label{classmam_1_1_material}\index{mam::Material@{mam::Material}}
+
+
+\mbox{\hyperlink{classmam_1_1_material}{Material}} wrapper that holds pipelines and sets uniforms.  
+
+
+
+
+{\ttfamily \#include $<$material.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_material_ab26998b9ff3c36ab87bca22eb445131b}\label{classmam_1_1_material_ab26998b9ff3c36ab87bca22eb445131b}} 
+{\bfseries Material} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmam_1_1_pipeline2}{Pipeline2}} $>$ p1, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmam_1_1_pipeline2}{Pipeline2}} $>$ p2)
+\item 
+bool \mbox{\hyperlink{classmam_1_1_material_aad14d2af711416a1c0dcebfbb9abcb11}{init}} (const char $\ast$render\+V\+Path, const char $\ast$render\+F\+Path, const char $\ast$light\+V\+Path, const char $\ast$light\+F\+Path)
+\begin{DoxyCompactList}\small\item\em Initialize material with shader paths. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_material_a1d87bf70545571141d8e84ce49cf8c2b}\label{classmam_1_1_material_a1d87bf70545571141d8e84ce49cf8c2b}} 
+void \mbox{\hyperlink{classmam_1_1_material_a1d87bf70545571141d8e84ce49cf8c2b}{set\+Uniform}} (Render\+Stage stage, const std\+::string \&name, Uniform\+Type type, const float $\ast$value) const
+\begin{DoxyCompactList}\small\item\em Set float uniform. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_material_a569c21b6191bae3ee8f9b7475e637f61}\label{classmam_1_1_material_a569c21b6191bae3ee8f9b7475e637f61}} 
+void \mbox{\hyperlink{classmam_1_1_material_a569c21b6191bae3ee8f9b7475e637f61}{set\+Uniform}} (Render\+Stage stage, const std\+::string \&name, Uniform\+Type type, const int $\ast$value) const
+\begin{DoxyCompactList}\small\item\em Set integer uniform. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_material_ace4ad68c1bd64ad68c4c519e422e4a69}\label{classmam_1_1_material_ace4ad68c1bd64ad68c4c519e422e4a69}} 
+void \mbox{\hyperlink{classmam_1_1_material_ace4ad68c1bd64ad68c4c519e422e4a69}{set\+Uniform}} (Render\+Stage stage, const std\+::string \&name, Uniform\+Type type, const unsigned int $\ast$value) const
+\begin{DoxyCompactList}\small\item\em Set unsigned integer uniform. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_material_a61d6853e41b176386ebe5f6c13aeaee2}\label{classmam_1_1_material_a61d6853e41b176386ebe5f6c13aeaee2}} 
+void \mbox{\hyperlink{classmam_1_1_material_a61d6853e41b176386ebe5f6c13aeaee2}{start\+Render\+Pass}} () const
+\begin{DoxyCompactList}\small\item\em Start the main rendering pass. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_material_a2fcb1d780b2a97fea7875427ddfac442}\label{classmam_1_1_material_a2fcb1d780b2a97fea7875427ddfac442}} 
+void \mbox{\hyperlink{classmam_1_1_material_a2fcb1d780b2a97fea7875427ddfac442}{End\+Render\+Pass}} () const
+\begin{DoxyCompactList}\small\item\em End the current rendering pass. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_material_a0315d2b5e76f901c1c1e3762c680e844}\label{classmam_1_1_material_a0315d2b5e76f901c1c1e3762c680e844}} 
+void \mbox{\hyperlink{classmam_1_1_material_a0315d2b5e76f901c1c1e3762c680e844}{start\+Lighting\+Pass}} () const
+\begin{DoxyCompactList}\small\item\em Start the lighting pass. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_material_a1b9e287da3ddae89849009ed4257e276}\label{classmam_1_1_material_a1b9e287da3ddae89849009ed4257e276}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmam_1_1_pipeline2}{Pipeline2}} $>$ \mbox{\hyperlink{classmam_1_1_material_a1b9e287da3ddae89849009ed4257e276}{get\+Render\+Pipeline}} ()
+\begin{DoxyCompactList}\small\item\em Get the render pipeline. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_material_a076b4a8b706d741e68f62c8b73574990}\label{classmam_1_1_material_a076b4a8b706d741e68f62c8b73574990}} 
+std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classmam_1_1_pipeline2}{Pipeline2}} $>$ {\bfseries get\+Render\+Pipeline} () const
+\item 
+\mbox{\Hypertarget{classmam_1_1_material_ac040b9eacca8a1162de9ce0ce782c92c}\label{classmam_1_1_material_ac040b9eacca8a1162de9ce0ce782c92c}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmam_1_1_pipeline2}{Pipeline2}} $>$ \mbox{\hyperlink{classmam_1_1_material_ac040b9eacca8a1162de9ce0ce782c92c}{get\+Lighting\+Pipeline}} ()
+\begin{DoxyCompactList}\small\item\em Get the lighting pipeline. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_material_a53040f59fedf564c928a650690599f1c}\label{classmam_1_1_material_a53040f59fedf564c928a650690599f1c}} 
+std\+::shared\+\_\+ptr$<$ const \mbox{\hyperlink{classmam_1_1_pipeline2}{Pipeline2}} $>$ {\bfseries get\+Lighting\+Pipeline} () const
+\item 
+\mbox{\Hypertarget{classmam_1_1_material_adc2b7dbd6e5d67f4ee405c0dba0ecef9}\label{classmam_1_1_material_adc2b7dbd6e5d67f4ee405c0dba0ecef9}} 
+const std\+::unordered\+\_\+map$<$ std\+::string, int $>$ \& \mbox{\hyperlink{classmam_1_1_material_adc2b7dbd6e5d67f4ee405c0dba0ecef9}{uniform\+Cache}} () const
+\begin{DoxyCompactList}\small\item\em Get uniform location cache. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classmam_1_1_material}{Material}} wrapper that holds pipelines and sets uniforms. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmam_1_1_material_aad14d2af711416a1c0dcebfbb9abcb11}\label{classmam_1_1_material_aad14d2af711416a1c0dcebfbb9abcb11}} 
+\index{mam::Material@{mam::Material}!init@{init}}
+\index{init@{init}!mam::Material@{mam::Material}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily bool mam\+::\+Material\+::init (\begin{DoxyParamCaption}\item[{const char $\ast$}]{render\+V\+Path,  }\item[{const char $\ast$}]{render\+F\+Path,  }\item[{const char $\ast$}]{light\+V\+Path,  }\item[{const char $\ast$}]{light\+F\+Path }\end{DoxyParamCaption})}
+
+
+
+Initialize material with shader paths. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em render\+V\+Path} & \mbox{\hyperlink{structmam_1_1_vertex}{Vertex}} shader for rendering \\
+\hline
+{\em render\+F\+Path} & Fragment shader for rendering \\
+\hline
+{\em light\+V\+Path} & \mbox{\hyperlink{structmam_1_1_vertex}{Vertex}} shader for lighting \\
+\hline
+{\em light\+F\+Path} & Fragment shader for lighting \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if initialization succeeded 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/mam/material.\+hpp\end{DoxyCompactItemize}

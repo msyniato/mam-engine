@@ -1,0 +1,210 @@
+\hypertarget{classmam_1_1_shader}{}\doxysection{mam\+::Shader Class Reference}
+\label{classmam_1_1_shader}\index{mam::Shader@{mam::Shader}}
+
+
+Represents a G\+PU shader.  
+
+
+
+
+{\ttfamily \#include $<$shader.\+hpp$>$}
+
+Inheritance diagram for mam\+::Shader\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmam_1_1_shader}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classmam_1_1_shader_ae66eda0a8b85c6eceb6ff56b980b83b0}{Type}} \{ \mbox{\hyperlink{classmam_1_1_shader_ae66eda0a8b85c6eceb6ff56b980b83b0acf0a6827220f7aa730b321167b7c25c8}{Invalid}} = 0, 
+\mbox{\hyperlink{classmam_1_1_shader_ae66eda0a8b85c6eceb6ff56b980b83b0a10f1a03808d10de81035358e645b2291}{Fragment}}, 
+\mbox{\hyperlink{classmam_1_1_shader_ae66eda0a8b85c6eceb6ff56b980b83b0ab0e9deb92dd08ad2fd1cce3ce6cdb2ce}{Vertex}}, 
+\mbox{\hyperlink{classmam_1_1_shader_ae66eda0a8b85c6eceb6ff56b980b83b0a94c8638c9021c56bc39ff4fd5d429e37}{Geometry}}
+ \}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classmam_1_1_shader}{Shader}} type enumeration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_shader_a63ed1acf86a74be7f2f07ddb2ff4d910}\label{classmam_1_1_shader_a63ed1acf86a74be7f2f07ddb2ff4d910}} 
+virtual \mbox{\hyperlink{classmam_1_1_shader_a63ed1acf86a74be7f2f07ddb2ff4d910}{$\sim$\+Shader}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmam_1_1_shader_ab4e830be3e2b26718bf1af55714748a3}{load\+Source}} (const \mbox{\hyperlink{classmam_1_1_shader_ae66eda0a8b85c6eceb6ff56b980b83b0}{Type}} shader\+\_\+type, const char $\ast$source, const unsigned int source\+\_\+size)=0
+\begin{DoxyCompactList}\small\item\em Load shader source from memory. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmam_1_1_shader_ae4bfd530168549b418cd3fc149febd57}{load\+Source\+From\+File}} (const \mbox{\hyperlink{classmam_1_1_shader_ae66eda0a8b85c6eceb6ff56b980b83b0}{Type}} shader\+\_\+type, const char $\ast$path)=0
+\begin{DoxyCompactList}\small\item\em Load shader source from file. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classmam_1_1_shader_a6d1190e8d8a5f05ae10dfc3cf4d6f8e5}{compile}} ()=0
+\begin{DoxyCompactList}\small\item\em Compile the shader. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classmam_1_1_shader_a9c3c7367b68094fed946f3e5fe0a467e}{is\+\_\+compiled}} ()=0
+\begin{DoxyCompactList}\small\item\em Check if the shader has been compiled successfully. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classmam_1_1_shader_ae66eda0a8b85c6eceb6ff56b980b83b0}{Type}} \mbox{\hyperlink{classmam_1_1_shader_a7e85dea552363cce98d06c60e2bd1db7}{type}} ()=0
+\begin{DoxyCompactList}\small\item\em Get the shader type. \end{DoxyCompactList}\item 
+virtual uint32\+\_\+t \mbox{\hyperlink{classmam_1_1_shader_a4aeca62d97edc3950de19e66d5bde69e}{id}} ()=0
+\begin{DoxyCompactList}\small\item\em Get the G\+PU shader ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_shader_a34fc93133cb8202fabc267499683c126}\label{classmam_1_1_shader_a34fc93133cb8202fabc267499683c126}} 
+uint32\+\_\+t \mbox{\hyperlink{classmam_1_1_shader_a34fc93133cb8202fabc267499683c126}{id\+\_\+}}
+\begin{DoxyCompactList}\small\item\em G\+PU handle/\+ID for the shader. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_shader_a7c5a72e81050f9be4e19e4ebbf25eda3}\label{classmam_1_1_shader_a7c5a72e81050f9be4e19e4ebbf25eda3}} 
+\mbox{\hyperlink{classmam_1_1_shader_ae66eda0a8b85c6eceb6ff56b980b83b0}{Type}} \mbox{\hyperlink{classmam_1_1_shader_a7c5a72e81050f9be4e19e4ebbf25eda3}{type\+\_\+}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classmam_1_1_shader}{Shader}} type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_shader_acafabf038d36a82082bfbf111ad68a6b}\label{classmam_1_1_shader_acafabf038d36a82082bfbf111ad68a6b}} 
+bool \mbox{\hyperlink{classmam_1_1_shader_acafabf038d36a82082bfbf111ad68a6b}{is\+\_\+compiled\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Compilation status. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a G\+PU shader. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classmam_1_1_shader_ae66eda0a8b85c6eceb6ff56b980b83b0}\label{classmam_1_1_shader_ae66eda0a8b85c6eceb6ff56b980b83b0}} 
+\index{mam::Shader@{mam::Shader}!Type@{Type}}
+\index{Type@{Type}!mam::Shader@{mam::Shader}}
+\doxysubsubsection{\texorpdfstring{Type}{Type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classmam_1_1_shader_ae66eda0a8b85c6eceb6ff56b980b83b0}{mam\+::\+Shader\+::\+Type}}}
+
+
+
+\mbox{\hyperlink{classmam_1_1_shader}{Shader}} type enumeration. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Invalid@{Invalid}!mam::Shader@{mam::Shader}}\index{mam::Shader@{mam::Shader}!Invalid@{Invalid}}}\mbox{\Hypertarget{classmam_1_1_shader_ae66eda0a8b85c6eceb6ff56b980b83b0acf0a6827220f7aa730b321167b7c25c8}\label{classmam_1_1_shader_ae66eda0a8b85c6eceb6ff56b980b83b0acf0a6827220f7aa730b321167b7c25c8}} 
+Invalid&Invalid shader. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Fragment@{Fragment}!mam::Shader@{mam::Shader}}\index{mam::Shader@{mam::Shader}!Fragment@{Fragment}}}\mbox{\Hypertarget{classmam_1_1_shader_ae66eda0a8b85c6eceb6ff56b980b83b0a10f1a03808d10de81035358e645b2291}\label{classmam_1_1_shader_ae66eda0a8b85c6eceb6ff56b980b83b0a10f1a03808d10de81035358e645b2291}} 
+Fragment&Fragment/pixel shader. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Vertex@{Vertex}!mam::Shader@{mam::Shader}}\index{mam::Shader@{mam::Shader}!Vertex@{Vertex}}}\mbox{\Hypertarget{classmam_1_1_shader_ae66eda0a8b85c6eceb6ff56b980b83b0ab0e9deb92dd08ad2fd1cce3ce6cdb2ce}\label{classmam_1_1_shader_ae66eda0a8b85c6eceb6ff56b980b83b0ab0e9deb92dd08ad2fd1cce3ce6cdb2ce}} 
+Vertex&\mbox{\hyperlink{structmam_1_1_vertex}{Vertex}} shader. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Geometry@{Geometry}!mam::Shader@{mam::Shader}}\index{mam::Shader@{mam::Shader}!Geometry@{Geometry}}}\mbox{\Hypertarget{classmam_1_1_shader_ae66eda0a8b85c6eceb6ff56b980b83b0a94c8638c9021c56bc39ff4fd5d429e37}\label{classmam_1_1_shader_ae66eda0a8b85c6eceb6ff56b980b83b0a94c8638c9021c56bc39ff4fd5d429e37}} 
+Geometry&Geometry shader. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmam_1_1_shader_a6d1190e8d8a5f05ae10dfc3cf4d6f8e5}\label{classmam_1_1_shader_a6d1190e8d8a5f05ae10dfc3cf4d6f8e5}} 
+\index{mam::Shader@{mam::Shader}!compile@{compile}}
+\index{compile@{compile}!mam::Shader@{mam::Shader}}
+\doxysubsubsection{\texorpdfstring{compile()}{compile()}}
+{\footnotesize\ttfamily virtual bool mam\+::\+Shader\+::compile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Compile the shader. 
+
+\begin{DoxyReturn}{Returns}
+True if compilation succeeded 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classmam_1_1_g_l_shader_ab051327f0ea700f4148422f5afe6f6c9}{mam\+::\+G\+L\+Shader}}, and \mbox{\hyperlink{classmam_1_1_v_k_shader_ab441b8b89c4793cb34d3a008a1122b60}{mam\+::\+V\+K\+Shader}}.
+
+\mbox{\Hypertarget{classmam_1_1_shader_a4aeca62d97edc3950de19e66d5bde69e}\label{classmam_1_1_shader_a4aeca62d97edc3950de19e66d5bde69e}} 
+\index{mam::Shader@{mam::Shader}!id@{id}}
+\index{id@{id}!mam::Shader@{mam::Shader}}
+\doxysubsubsection{\texorpdfstring{id()}{id()}}
+{\footnotesize\ttfamily virtual uint32\+\_\+t mam\+::\+Shader\+::id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the G\+PU shader ID. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classmam_1_1_shader}{Shader}} ID 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classmam_1_1_g_l_shader_a0c51def0d66e5787b23f29d71a86fb41}{mam\+::\+G\+L\+Shader}}, and \mbox{\hyperlink{classmam_1_1_v_k_shader_a90dacf14e1702bf3503abbb0035f3b8d}{mam\+::\+V\+K\+Shader}}.
+
+\mbox{\Hypertarget{classmam_1_1_shader_a9c3c7367b68094fed946f3e5fe0a467e}\label{classmam_1_1_shader_a9c3c7367b68094fed946f3e5fe0a467e}} 
+\index{mam::Shader@{mam::Shader}!is\_compiled@{is\_compiled}}
+\index{is\_compiled@{is\_compiled}!mam::Shader@{mam::Shader}}
+\doxysubsubsection{\texorpdfstring{is\_compiled()}{is\_compiled()}}
+{\footnotesize\ttfamily virtual bool mam\+::\+Shader\+::is\+\_\+compiled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Check if the shader has been compiled successfully. 
+
+\begin{DoxyReturn}{Returns}
+True if compiled 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classmam_1_1_g_l_shader_a9bd24923a0294fbbf6ee50dbba305381}{mam\+::\+G\+L\+Shader}}, and \mbox{\hyperlink{classmam_1_1_v_k_shader_a7dc9fa04c95f1e7ad1ebea4871727d7f}{mam\+::\+V\+K\+Shader}}.
+
+\mbox{\Hypertarget{classmam_1_1_shader_ab4e830be3e2b26718bf1af55714748a3}\label{classmam_1_1_shader_ab4e830be3e2b26718bf1af55714748a3}} 
+\index{mam::Shader@{mam::Shader}!loadSource@{loadSource}}
+\index{loadSource@{loadSource}!mam::Shader@{mam::Shader}}
+\doxysubsubsection{\texorpdfstring{loadSource()}{loadSource()}}
+{\footnotesize\ttfamily virtual void mam\+::\+Shader\+::load\+Source (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmam_1_1_shader_ae66eda0a8b85c6eceb6ff56b980b83b0}{Type}}}]{shader\+\_\+type,  }\item[{const char $\ast$}]{source,  }\item[{const unsigned int}]{source\+\_\+size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Load shader source from memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shader\+\_\+type} & Type of shader (\mbox{\hyperlink{structmam_1_1_vertex}{Vertex}}, Fragment, etc.) \\
+\hline
+{\em source} & Pointer to source code string \\
+\hline
+{\em source\+\_\+size} & Size of the source in bytes \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classmam_1_1_g_l_shader_ab63a764f6cbdfe0d46ab17fd407e5e01}{mam\+::\+G\+L\+Shader}}, and \mbox{\hyperlink{classmam_1_1_v_k_shader_ad58b29e48af0acaf6e37f3d4908945ff}{mam\+::\+V\+K\+Shader}}.
+
+\mbox{\Hypertarget{classmam_1_1_shader_ae4bfd530168549b418cd3fc149febd57}\label{classmam_1_1_shader_ae4bfd530168549b418cd3fc149febd57}} 
+\index{mam::Shader@{mam::Shader}!loadSourceFromFile@{loadSourceFromFile}}
+\index{loadSourceFromFile@{loadSourceFromFile}!mam::Shader@{mam::Shader}}
+\doxysubsubsection{\texorpdfstring{loadSourceFromFile()}{loadSourceFromFile()}}
+{\footnotesize\ttfamily virtual void mam\+::\+Shader\+::load\+Source\+From\+File (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmam_1_1_shader_ae66eda0a8b85c6eceb6ff56b980b83b0}{Type}}}]{shader\+\_\+type,  }\item[{const char $\ast$}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Load shader source from file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shader\+\_\+type} & Type of shader \\
+\hline
+{\em path} & Path to shader file \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classmam_1_1_g_l_shader_a5ad9f807686d5b102f0e303a4c615513}{mam\+::\+G\+L\+Shader}}, and \mbox{\hyperlink{classmam_1_1_v_k_shader_ab04b527c0a2409f1d3fd0aa71f077cc2}{mam\+::\+V\+K\+Shader}}.
+
+\mbox{\Hypertarget{classmam_1_1_shader_a7e85dea552363cce98d06c60e2bd1db7}\label{classmam_1_1_shader_a7e85dea552363cce98d06c60e2bd1db7}} 
+\index{mam::Shader@{mam::Shader}!type@{type}}
+\index{type@{type}!mam::Shader@{mam::Shader}}
+\doxysubsubsection{\texorpdfstring{type()}{type()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classmam_1_1_shader_ae66eda0a8b85c6eceb6ff56b980b83b0}{Type}} mam\+::\+Shader\+::type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the shader type. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classmam_1_1_shader}{Shader}} type 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classmam_1_1_g_l_shader_a34d3b1ee08961b7812e7ed469c9f39b3}{mam\+::\+G\+L\+Shader}}, and \mbox{\hyperlink{classmam_1_1_v_k_shader_a2fc5ade82c70689240b91a115e29cac0}{mam\+::\+V\+K\+Shader}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/mam/shader.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,66 @@
+\hypertarget{classmam_1_1_material_base}{}\doxysection{mam\+::Material\+Base Class Reference}
+\label{classmam_1_1_material_base}\index{mam::MaterialBase@{mam::MaterialBase}}
+
+
+Base material containing shared shader and parameter info.  
+
+
+
+
+{\ttfamily \#include $<$material.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{structmam_1_1_material_parameter_desc}{Material\+Parameter\+Desc}} $\ast$ \mbox{\hyperlink{classmam_1_1_material_base_a5d3cdc4205f4cc33875107b2ac2f9afc}{Find\+Parameter}} (const std\+::string \&param\+Name) const
+\begin{DoxyCompactList}\small\item\em Find a parameter by name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_material_base_af096fdb715048cc5bd189f2aa9c43936}\label{classmam_1_1_material_base_af096fdb715048cc5bd189f2aa9c43936}} 
+std\+::string \mbox{\hyperlink{classmam_1_1_material_base_af096fdb715048cc5bd189f2aa9c43936}{name}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classmam_1_1_material}{Material}} name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_material_base_acbf55d5fbd3a901b9d92dbb6c7a31b15}\label{classmam_1_1_material_base_acbf55d5fbd3a901b9d92dbb6c7a31b15}} 
+\mbox{\hyperlink{classmam_1_1_g_l_shader}{G\+L\+Shader}} \mbox{\hyperlink{classmam_1_1_material_base_acbf55d5fbd3a901b9d92dbb6c7a31b15}{shader}}
+\begin{DoxyCompactList}\small\item\em Associated shader. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_material_base_a62c2c6b87b1f6cb00953bd8a5d3e9d05}\label{classmam_1_1_material_base_a62c2c6b87b1f6cb00953bd8a5d3e9d05}} 
+bool \mbox{\hyperlink{classmam_1_1_material_base_a62c2c6b87b1f6cb00953bd8a5d3e9d05}{transparent}} = false
+\begin{DoxyCompactList}\small\item\em True if material is transparent. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_material_base_a604e09600e913b9b2d79f92f957b0af9}\label{classmam_1_1_material_base_a604e09600e913b9b2d79f92f957b0af9}} 
+bool \mbox{\hyperlink{classmam_1_1_material_base_a604e09600e913b9b2d79f92f957b0af9}{double\+Sided}} = false
+\begin{DoxyCompactList}\small\item\em True if double-\/sided rendering is enabled. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_material_base_ae81ca0e8b9afcf7d881dcb0fb779044b}\label{classmam_1_1_material_base_ae81ca0e8b9afcf7d881dcb0fb779044b}} 
+bool \mbox{\hyperlink{classmam_1_1_material_base_ae81ca0e8b9afcf7d881dcb0fb779044b}{supports\+Instancing}} = true
+\begin{DoxyCompactList}\small\item\em True if instancing is supported. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_material_base_a1ef857b1ad01c83fd76602fff6e5ef3d}\label{classmam_1_1_material_base_a1ef857b1ad01c83fd76602fff6e5ef3d}} 
+std\+::vector$<$ \mbox{\hyperlink{structmam_1_1_material_parameter_desc}{Material\+Parameter\+Desc}} $>$ \mbox{\hyperlink{classmam_1_1_material_base_a1ef857b1ad01c83fd76602fff6e5ef3d}{parameters}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classmam_1_1_material}{Material}} parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base material containing shared shader and parameter info. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmam_1_1_material_base_a5d3cdc4205f4cc33875107b2ac2f9afc}\label{classmam_1_1_material_base_a5d3cdc4205f4cc33875107b2ac2f9afc}} 
+\index{mam::MaterialBase@{mam::MaterialBase}!FindParameter@{FindParameter}}
+\index{FindParameter@{FindParameter}!mam::MaterialBase@{mam::MaterialBase}}
+\doxysubsubsection{\texorpdfstring{FindParameter()}{FindParameter()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structmam_1_1_material_parameter_desc}{Material\+Parameter\+Desc}}$\ast$ mam\+::\+Material\+Base\+::\+Find\+Parameter (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{param\+Name }\end{DoxyParamCaption}) const}
+
+
+
+Find a parameter by name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em param\+Name} & Parameter name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the parameter descriptor, or nullptr if not found 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/mam/material.\+hpp\end{DoxyCompactItemize}

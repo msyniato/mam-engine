@@ -1,0 +1,141 @@
+\hypertarget{classmam_1_1_graphic_context}{}\doxysection{mam\+::Graphic\+Context Class Reference}
+\label{classmam_1_1_graphic_context}\index{mam::GraphicContext@{mam::GraphicContext}}
+
+
+High-\/level graphic context interface.  
+
+
+
+
+{\ttfamily \#include $<$graphic\+\_\+context.\+hpp$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmam_1_1_graphic_context_1_1_desc}{Desc}}
+\begin{DoxyCompactList}\small\item\em Graphics context description. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classmam_1_1_graphic_context_a7162a68d27fc62d157ae34adb39664c5}{A\+PI}} \{ \mbox{\hyperlink{classmam_1_1_graphic_context_a7162a68d27fc62d157ae34adb39664c5a334c4a4c42fdb79d7ebc3e73b517e6f8}{A\+P\+I\+::none}} = 0, 
+\mbox{\hyperlink{classmam_1_1_graphic_context_a7162a68d27fc62d157ae34adb39664c5a760716b590ee7c0adc25f434f577d8be}{A\+P\+I\+::\+Open\+GL}} = 1, 
+\mbox{\hyperlink{classmam_1_1_graphic_context_a7162a68d27fc62d157ae34adb39664c5a38625270231b647116c80bcbc4f9d1d8}{A\+P\+I\+::\+Vulkan}}
+ \}
+\begin{DoxyCompactList}\small\item\em Graphics A\+PI enumeration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmam_1_1_graphic_context_a074c9368ef508e00a08f3c7c757e70ae}{init}} (const \mbox{\hyperlink{structmam_1_1_graphic_context_1_1_desc}{Graphic\+Context\+::\+Desc}} \&desc)
+\begin{DoxyCompactList}\small\item\em Initialize the graphics context. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_graphic_context_addd460521ef32e9ff0317aad945fe567}\label{classmam_1_1_graphic_context_addd460521ef32e9ff0317aad945fe567}} 
+void \mbox{\hyperlink{classmam_1_1_graphic_context_addd460521ef32e9ff0317aad945fe567}{update}} ()
+\begin{DoxyCompactList}\small\item\em Update the graphics context (per-\/frame tasks) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_graphic_context_a6df0433b5b883a521bdf89c8e49dc04d}\label{classmam_1_1_graphic_context_a6df0433b5b883a521bdf89c8e49dc04d}} 
+void \mbox{\hyperlink{classmam_1_1_graphic_context_a6df0433b5b883a521bdf89c8e49dc04d}{shutdown}} ()
+\begin{DoxyCompactList}\small\item\em Shutdown and release resources. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_graphic_context_a50e9265e75abe678bcdf05a260fc2bf6}\label{classmam_1_1_graphic_context_a50e9265e75abe678bcdf05a260fc2bf6}} 
+static \mbox{\hyperlink{classmam_1_1_graphic_context_a7162a68d27fc62d157ae34adb39664c5}{A\+PI}} \mbox{\hyperlink{classmam_1_1_graphic_context_a50e9265e75abe678bcdf05a260fc2bf6}{Get\+A\+PI}} ()
+\begin{DoxyCompactList}\small\item\em Returns the currently selected A\+PI. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_graphic_context_af0413dbecbf535d8c00bcc8b5ed43adc}\label{classmam_1_1_graphic_context_af0413dbecbf535d8c00bcc8b5ed43adc}} 
+static std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classmam_1_1_window}{Window}} $>$ \mbox{\hyperlink{classmam_1_1_graphic_context_af0413dbecbf535d8c00bcc8b5ed43adc}{Create\+Window}} (const uint16\+\_\+t w, const uint16\+\_\+t h)
+\begin{DoxyCompactList}\small\item\em Create a new window with given width and height. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_graphic_context_a18c1bd4f270c85d518566e5fb566d265}\label{classmam_1_1_graphic_context_a18c1bd4f270c85d518566e5fb566d265}} 
+static std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classmam_1_1_shader}{Shader}} $>$ \mbox{\hyperlink{classmam_1_1_graphic_context_a18c1bd4f270c85d518566e5fb566d265}{Create\+Shader}} ()
+\begin{DoxyCompactList}\small\item\em Create a new shader instance. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_graphic_context_a07a08bacf57b7d7992b38de3258dd5f8}\label{classmam_1_1_graphic_context_a07a08bacf57b7d7992b38de3258dd5f8}} 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmam_1_1_pipeline2}{Pipeline2}} $>$ \mbox{\hyperlink{classmam_1_1_graphic_context_a07a08bacf57b7d7992b38de3258dd5f8}{Create\+Pipeline2}} ()
+\begin{DoxyCompactList}\small\item\em Create a new pipeline instance. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_graphic_context_a3f75135063165b77950566172ea47d71}\label{classmam_1_1_graphic_context_a3f75135063165b77950566172ea47d71}} 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmam_1_1_vertex_buffer}{Vertex\+Buffer}} $>$ \mbox{\hyperlink{classmam_1_1_graphic_context_a3f75135063165b77950566172ea47d71}{Create\+Vertex\+Buffer}} (unsigned int count=0)
+\begin{DoxyCompactList}\small\item\em Create a new empty vertex buffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_graphic_context_a13168c4932a8c267bbd21115565f8036}\label{classmam_1_1_graphic_context_a13168c4932a8c267bbd21115565f8036}} 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmam_1_1_vertex_buffer}{Vertex\+Buffer}} $>$ \mbox{\hyperlink{classmam_1_1_graphic_context_a13168c4932a8c267bbd21115565f8036}{Create\+Vertex\+Buffer}} (void $\ast$vertex, unsigned int count)
+\begin{DoxyCompactList}\small\item\em Create a new vertex buffer initialized with data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_graphic_context_ac1c932c65aabd0436f13e71e6c3774c2}\label{classmam_1_1_graphic_context_ac1c932c65aabd0436f13e71e6c3774c2}} 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmam_1_1_index_buffer}{Index\+Buffer}} $>$ \mbox{\hyperlink{classmam_1_1_graphic_context_ac1c932c65aabd0436f13e71e6c3774c2}{Create\+Index\+Buffer}} (unsigned int size=0)
+\begin{DoxyCompactList}\small\item\em Create a new empty index buffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_graphic_context_a677b8696fb3720ec590ff7f958e74a32}\label{classmam_1_1_graphic_context_a677b8696fb3720ec590ff7f958e74a32}} 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmam_1_1_index_buffer}{Index\+Buffer}} $>$ \mbox{\hyperlink{classmam_1_1_graphic_context_a677b8696fb3720ec590ff7f958e74a32}{Create\+Index\+Buffer}} (void $\ast$index, unsigned int size)
+\begin{DoxyCompactList}\small\item\em Create a new index buffer initialized with data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_graphic_context_acc06c12e42d023c925cd43dbe31fea0c}\label{classmam_1_1_graphic_context_acc06c12e42d023c925cd43dbe31fea0c}} 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmam_1_1_vertex_array}{Vertex\+Array}} $>$ \mbox{\hyperlink{classmam_1_1_graphic_context_acc06c12e42d023c925cd43dbe31fea0c}{Create\+Vertex\+Array}} ()
+\begin{DoxyCompactList}\small\item\em Create a new vertex array. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_graphic_context_ae466880574dc3cf40ec2b6254296ff0e}\label{classmam_1_1_graphic_context_ae466880574dc3cf40ec2b6254296ff0e}} 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmam_1_1_graphic_device}{Graphic\+Device}} $>$ \mbox{\hyperlink{classmam_1_1_graphic_context_ae466880574dc3cf40ec2b6254296ff0e}{Create\+Renderer}} ()
+\begin{DoxyCompactList}\small\item\em Create a renderer (graphic device) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_graphic_context_a5958db0f0faad8be30f38982be024e32}\label{classmam_1_1_graphic_context_a5958db0f0faad8be30f38982be024e32}} 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmam_1_1_graphic_device}{Graphic\+Device}} $>$ \mbox{\hyperlink{classmam_1_1_graphic_context_a5958db0f0faad8be30f38982be024e32}{get\+Graphic\+Device}} ()
+\begin{DoxyCompactList}\small\item\em Get the current graphic device. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_graphic_context_a112171ca7148d53adc7966f20cc973b2}\label{classmam_1_1_graphic_context_a112171ca7148d53adc7966f20cc973b2}} 
+static std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classmam_1_1_graphic_context}{Graphic\+Context}} $>$ \& \mbox{\hyperlink{classmam_1_1_graphic_context_a112171ca7148d53adc7966f20cc973b2}{get\+Graphic\+Context}} ()
+\begin{DoxyCompactList}\small\item\em Get the graphic context instance. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_graphic_context_a2feb4acce60496bd18e3e07ed961cd05}\label{classmam_1_1_graphic_context_a2feb4acce60496bd18e3e07ed961cd05}} 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmam_1_1_graphic_device}{Graphic\+Device}} $>$ \mbox{\hyperlink{classmam_1_1_graphic_context_a2feb4acce60496bd18e3e07ed961cd05}{Create\+Renderer}} (glm\+::vec2 screen\+\_\+size, glm\+::mat4 init\+View)
+\begin{DoxyCompactList}\small\item\em Create a renderer with screen size and initial view. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_graphic_context_a9fc64ac6a7ecfabf600567bce18a4326}\label{classmam_1_1_graphic_context_a9fc64ac6a7ecfabf600567bce18a4326}} 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmam_1_1_g_buffer}{G\+Buffer}} $>$ \mbox{\hyperlink{classmam_1_1_graphic_context_a9fc64ac6a7ecfabf600567bce18a4326}{Create\+G\+Buffer}} (glm\+::vec2 screen\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Create a \mbox{\hyperlink{classmam_1_1_g_buffer}{G\+Buffer}} for deferred rendering. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_graphic_context_af5558d7a7a3702c8136789ba3bf0a3f6}\label{classmam_1_1_graphic_context_af5558d7a7a3702c8136789ba3bf0a3f6}} 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmam_1_1_shader_storage_buffer}{Shader\+Storage\+Buffer}} $>$ \mbox{\hyperlink{classmam_1_1_graphic_context_af5558d7a7a3702c8136789ba3bf0a3f6}{Create\+Shader\+Storage\+Buffer}} (u32 pipeline\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Create a shader storage buffer with a given pipeline ID. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_graphic_context_a93beb36c0a091c37071e2398c6459fb9}\label{classmam_1_1_graphic_context_a93beb36c0a091c37071e2398c6459fb9}} 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmam_1_1_window}{Window}} $>$ \mbox{\hyperlink{classmam_1_1_graphic_context_a93beb36c0a091c37071e2398c6459fb9}{get\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Get the window instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+High-\/level graphic context interface. 
+
+Provides factory functions to create windows, shaders, pipelines, buffers, and rendering devices. Supports multiple graphics A\+P\+Is. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classmam_1_1_graphic_context_a7162a68d27fc62d157ae34adb39664c5}\label{classmam_1_1_graphic_context_a7162a68d27fc62d157ae34adb39664c5}} 
+\index{mam::GraphicContext@{mam::GraphicContext}!API@{API}}
+\index{API@{API}!mam::GraphicContext@{mam::GraphicContext}}
+\doxysubsubsection{\texorpdfstring{API}{API}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classmam_1_1_graphic_context_a7162a68d27fc62d157ae34adb39664c5}{mam\+::\+Graphic\+Context\+::\+A\+PI}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Graphics A\+PI enumeration. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{none@{none}!mam::GraphicContext@{mam::GraphicContext}}\index{mam::GraphicContext@{mam::GraphicContext}!none@{none}}}\mbox{\Hypertarget{classmam_1_1_graphic_context_a7162a68d27fc62d157ae34adb39664c5a334c4a4c42fdb79d7ebc3e73b517e6f8}\label{classmam_1_1_graphic_context_a7162a68d27fc62d157ae34adb39664c5a334c4a4c42fdb79d7ebc3e73b517e6f8}} 
+none&No A\+PI selected. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OpenGL@{OpenGL}!mam::GraphicContext@{mam::GraphicContext}}\index{mam::GraphicContext@{mam::GraphicContext}!OpenGL@{OpenGL}}}\mbox{\Hypertarget{classmam_1_1_graphic_context_a7162a68d27fc62d157ae34adb39664c5a760716b590ee7c0adc25f434f577d8be}\label{classmam_1_1_graphic_context_a7162a68d27fc62d157ae34adb39664c5a760716b590ee7c0adc25f434f577d8be}} 
+Open\+GL&Open\+GL A\+PI. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Vulkan@{Vulkan}!mam::GraphicContext@{mam::GraphicContext}}\index{mam::GraphicContext@{mam::GraphicContext}!Vulkan@{Vulkan}}}\mbox{\Hypertarget{classmam_1_1_graphic_context_a7162a68d27fc62d157ae34adb39664c5a38625270231b647116c80bcbc4f9d1d8}\label{classmam_1_1_graphic_context_a7162a68d27fc62d157ae34adb39664c5a38625270231b647116c80bcbc4f9d1d8}} 
+Vulkan&Vulkan A\+PI. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmam_1_1_graphic_context_a074c9368ef508e00a08f3c7c757e70ae}\label{classmam_1_1_graphic_context_a074c9368ef508e00a08f3c7c757e70ae}} 
+\index{mam::GraphicContext@{mam::GraphicContext}!init@{init}}
+\index{init@{init}!mam::GraphicContext@{mam::GraphicContext}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void mam\+::\+Graphic\+Context\+::init (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmam_1_1_graphic_context_1_1_desc}{Graphic\+Context\+::\+Desc}} \&}]{desc }\end{DoxyParamCaption})}
+
+
+
+Initialize the graphics context. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em desc} & Context description (size, A\+PI, etc.) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/mam/graphic\+\_\+context.\+hpp\end{DoxyCompactItemize}

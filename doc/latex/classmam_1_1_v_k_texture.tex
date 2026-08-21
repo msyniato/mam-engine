@@ -1,0 +1,337 @@
+\hypertarget{classmam_1_1_v_k_texture}{}\doxysection{mam\+::V\+K\+Texture Class Reference}
+\label{classmam_1_1_v_k_texture}\index{mam::VKTexture@{mam::VKTexture}}
+
+
+Vulkan implementation of the \mbox{\hyperlink{classmam_1_1_texture}{Texture}} interface.  
+
+
+
+
+{\ttfamily \#include $<$vk\+\_\+texture.\+hpp$>$}
+
+Inheritance diagram for mam\+::V\+K\+Texture\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmam_1_1_v_k_texture}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_texture_a4e42098f3e14c7835e50715c592ec14e}\label{classmam_1_1_v_k_texture_a4e42098f3e14c7835e50715c592ec14e}} 
+\mbox{\hyperlink{classmam_1_1_v_k_texture_a4e42098f3e14c7835e50715c592ec14e}{V\+K\+Texture}} ()
+\begin{DoxyCompactList}\small\item\em Constructs an empty Vulkan texture. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_texture_aae8b72e171258bece3a64f3b85d4592d}\label{classmam_1_1_v_k_texture_aae8b72e171258bece3a64f3b85d4592d}} 
+\mbox{\hyperlink{classmam_1_1_v_k_texture_aae8b72e171258bece3a64f3b85d4592d}{$\sim$\+V\+K\+Texture}} () override
+\begin{DoxyCompactList}\small\item\em Destroys the Vulkan texture and releases allocated G\+PU resources. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_v_k_texture_aa4876608ef47e0db60ddd65b8fc8fbb3}{set\+Data}} (const void $\ast$data, u32, G\+Lenum fmt, G\+Lenum type) override
+\begin{DoxyCompactList}\small\item\em Upload texture data with format and type information. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_v_k_texture_a2bffd16332ab9ad20b2f2009bd0e293d}{set\+Data}} (const void $\ast$data, u32 size\+Bytes) override
+\begin{DoxyCompactList}\small\item\em Upload raw texture data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_v_k_texture_a930a14c5f0ce5a45538223e8393845b3}{reset\+Texture}} (const std\+::string \&filepath, bool relative=true) override
+\begin{DoxyCompactList}\small\item\em Resets the texture using an image file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_v_k_texture_a4dd300b5edd5130b479c7864ed8ebe2e}{set\+Min\+Filter}} (Filter f) override
+\begin{DoxyCompactList}\small\item\em Sets the minification filter for the texture. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_v_k_texture_acddeeaf227b19fa9b5878d79ca6107c3}{set\+Mag\+Filter}} (Filter f) override
+\begin{DoxyCompactList}\small\item\em Sets the magnification filter for the texture. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_v_k_texture_a409ff951d90c160bf7b1b7c387b89b01}{set\+WrapS}} (Wrap c) override
+\begin{DoxyCompactList}\small\item\em Sets the wrapping mode for the S (U) coordinate. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_v_k_texture_a7180de63b1b6ee9cf4016bf3658c894d}{set\+WrapT}} (Wrap c) override
+\begin{DoxyCompactList}\small\item\em Sets the wrapping mode for the T (V) coordinate. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_v_k_texture_aa0dcc8aaadcc217357b389fc3e1297e0}{set\+WrapR}} (Wrap c) override
+\begin{DoxyCompactList}\small\item\em Sets the wrapping mode for the R (W) coordinate. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_v_k_texture_ab33d682f5eb50f02a672527d007782d0}{set\+Wrap}} (Wrap c) override
+\begin{DoxyCompactList}\small\item\em Sets the wrapping mode for all texture coordinates. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_v_k_texture_a026f1c820ef8ca0ce5df65e0ef55455c}{generate\+Mipmaps}} () const override
+\begin{DoxyCompactList}\small\item\em Generates mipmaps for the texture. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_v_k_texture_a985c107e57669a8408edd2183ecbca5f}{bind}} (u32 slot=0) const override
+\begin{DoxyCompactList}\small\item\em Binds the texture to a texture slot. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_v_k_texture_ab740c170c03b743815f80870ca02b5f3}{un\+Bind}} (u32 slot=0) const override
+\begin{DoxyCompactList}\small\item\em Unbinds the texture from a texture slot. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_v_k_texture_ae6c8fbbb99577a0d81d242b306f55d62}{create\+Image}} (uint32\+\_\+t \mbox{\hyperlink{classmam_1_1_texture_a397ad9b3a7f45cc0159bc457aec01dca}{width}}, uint32\+\_\+t \mbox{\hyperlink{classmam_1_1_texture_a101fb620bfaa471c432d539e5a360e98}{height}}, vk\+::\+Format format, vk\+::\+Image\+Tiling tiling, vk\+::\+Image\+Usage\+Flags usage, vk\+::\+Memory\+Property\+Flags properties)
+\begin{DoxyCompactList}\small\item\em Creates a Vulkan image for the texture. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_texture_ad7fde729b0e0361d78b0e0cb6404f715}\label{classmam_1_1_v_k_texture_ad7fde729b0e0361d78b0e0cb6404f715}} 
+vk\+::\+Image \mbox{\hyperlink{classmam_1_1_v_k_texture_ad7fde729b0e0361d78b0e0cb6404f715}{texture\+Image}}
+\begin{DoxyCompactList}\small\item\em Vulkan image representing the texture. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_texture_aa52ca7c647c187cd758891625686cad2}\label{classmam_1_1_v_k_texture_aa52ca7c647c187cd758891625686cad2}} 
+vk\+::\+Device\+Memory \mbox{\hyperlink{classmam_1_1_v_k_texture_aa52ca7c647c187cd758891625686cad2}{texture\+Image\+Memory}}
+\begin{DoxyCompactList}\small\item\em Device memory allocated for the texture image. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Vulkan implementation of the \mbox{\hyperlink{classmam_1_1_texture}{Texture}} interface. 
+
+This class provides a Vulkan-\/backed texture object that implements the generic \mbox{\hyperlink{classmam_1_1_texture}{Texture}} interface used by the engine. It handles creation of Vulkan images, memory allocation, texture data uploads, sampler configuration, and binding to descriptor slots. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmam_1_1_v_k_texture_a985c107e57669a8408edd2183ecbca5f}\label{classmam_1_1_v_k_texture_a985c107e57669a8408edd2183ecbca5f}} 
+\index{mam::VKTexture@{mam::VKTexture}!bind@{bind}}
+\index{bind@{bind}!mam::VKTexture@{mam::VKTexture}}
+\doxysubsubsection{\texorpdfstring{bind()}{bind()}}
+{\footnotesize\ttfamily void mam\+::\+V\+K\+Texture\+::bind (\begin{DoxyParamCaption}\item[{u32}]{slot = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Binds the texture to a texture slot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em slot} & \mbox{\hyperlink{classmam_1_1_texture}{Texture}} unit to bind to. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classmam_1_1_texture_ad3c0173a70db34130bb94054ba455833}{mam\+::\+Texture}}.
+
+\mbox{\Hypertarget{classmam_1_1_v_k_texture_ae6c8fbbb99577a0d81d242b306f55d62}\label{classmam_1_1_v_k_texture_ae6c8fbbb99577a0d81d242b306f55d62}} 
+\index{mam::VKTexture@{mam::VKTexture}!createImage@{createImage}}
+\index{createImage@{createImage}!mam::VKTexture@{mam::VKTexture}}
+\doxysubsubsection{\texorpdfstring{createImage()}{createImage()}}
+{\footnotesize\ttfamily void mam\+::\+V\+K\+Texture\+::create\+Image (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{width,  }\item[{uint32\+\_\+t}]{height,  }\item[{vk\+::\+Format}]{format,  }\item[{vk\+::\+Image\+Tiling}]{tiling,  }\item[{vk\+::\+Image\+Usage\+Flags}]{usage,  }\item[{vk\+::\+Memory\+Property\+Flags}]{properties }\end{DoxyParamCaption})}
+
+
+
+Creates a Vulkan image for the texture. 
+
+Allocates the image object and G\+PU memory required for the texture.
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Width of the image in pixels. \\
+\hline
+{\em height} & Height of the image in pixels. \\
+\hline
+{\em format} & Vulkan image format. \\
+\hline
+{\em tiling} & Image tiling mode. \\
+\hline
+{\em usage} & Intended usage of the image. \\
+\hline
+{\em properties} & Memory properties for allocation. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmam_1_1_v_k_texture_a026f1c820ef8ca0ce5df65e0ef55455c}\label{classmam_1_1_v_k_texture_a026f1c820ef8ca0ce5df65e0ef55455c}} 
+\index{mam::VKTexture@{mam::VKTexture}!generateMipmaps@{generateMipmaps}}
+\index{generateMipmaps@{generateMipmaps}!mam::VKTexture@{mam::VKTexture}}
+\doxysubsubsection{\texorpdfstring{generateMipmaps()}{generateMipmaps()}}
+{\footnotesize\ttfamily void mam\+::\+V\+K\+Texture\+::generate\+Mipmaps (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Generates mipmaps for the texture. 
+
+This creates lower resolution levels used for improved sampling performance and visual quality at different distances. 
+
+Implements \mbox{\hyperlink{classmam_1_1_texture_ab13f7257c3eaaa54ed8d6f8e9fd9927d}{mam\+::\+Texture}}.
+
+\mbox{\Hypertarget{classmam_1_1_v_k_texture_a930a14c5f0ce5a45538223e8393845b3}\label{classmam_1_1_v_k_texture_a930a14c5f0ce5a45538223e8393845b3}} 
+\index{mam::VKTexture@{mam::VKTexture}!resetTexture@{resetTexture}}
+\index{resetTexture@{resetTexture}!mam::VKTexture@{mam::VKTexture}}
+\doxysubsubsection{\texorpdfstring{resetTexture()}{resetTexture()}}
+{\footnotesize\ttfamily void mam\+::\+V\+K\+Texture\+::reset\+Texture (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filepath,  }\item[{bool}]{relative = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Resets the texture using an image file. 
+
+Loads the image from disk and recreates the Vulkan texture resources.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filepath} & Path to the texture file. \\
+\hline
+{\em relative} & If true, the path is relative to the asset directory. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classmam_1_1_texture_afa663f19765410c66f555cfff0e69368}{mam\+::\+Texture}}.
+
+\mbox{\Hypertarget{classmam_1_1_v_k_texture_a2bffd16332ab9ad20b2f2009bd0e293d}\label{classmam_1_1_v_k_texture_a2bffd16332ab9ad20b2f2009bd0e293d}} 
+\index{mam::VKTexture@{mam::VKTexture}!setData@{setData}}
+\index{setData@{setData}!mam::VKTexture@{mam::VKTexture}}
+\doxysubsubsection{\texorpdfstring{setData()}{setData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void mam\+::\+V\+K\+Texture\+::set\+Data (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{u32}]{size\+Bytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Upload raw texture data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Pointer to the raw pixel data. \\
+\hline
+{\em size\+Bytes} & Size of the data in bytes. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classmam_1_1_texture_a238d8dca41535634624aee918295135a}{mam\+::\+Texture}}.
+
+\mbox{\Hypertarget{classmam_1_1_v_k_texture_aa4876608ef47e0db60ddd65b8fc8fbb3}\label{classmam_1_1_v_k_texture_aa4876608ef47e0db60ddd65b8fc8fbb3}} 
+\index{mam::VKTexture@{mam::VKTexture}!setData@{setData}}
+\index{setData@{setData}!mam::VKTexture@{mam::VKTexture}}
+\doxysubsubsection{\texorpdfstring{setData()}{setData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void mam\+::\+V\+K\+Texture\+::set\+Data (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{u32}]{,  }\item[{G\+Lenum}]{fmt,  }\item[{G\+Lenum}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Upload texture data with format and type information. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Pointer to the raw pixel data. \\
+\hline
+{\em size} & Size of the data in bytes. \\
+\hline
+{\em fmt} & Pixel format of the data. \\
+\hline
+{\em type} & Data type of each component. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classmam_1_1_texture_ad6c10bc06dd67240d2ad1148e5894ac5}{mam\+::\+Texture}}.
+
+\mbox{\Hypertarget{classmam_1_1_v_k_texture_acddeeaf227b19fa9b5878d79ca6107c3}\label{classmam_1_1_v_k_texture_acddeeaf227b19fa9b5878d79ca6107c3}} 
+\index{mam::VKTexture@{mam::VKTexture}!setMagFilter@{setMagFilter}}
+\index{setMagFilter@{setMagFilter}!mam::VKTexture@{mam::VKTexture}}
+\doxysubsubsection{\texorpdfstring{setMagFilter()}{setMagFilter()}}
+{\footnotesize\ttfamily void mam\+::\+V\+K\+Texture\+::set\+Mag\+Filter (\begin{DoxyParamCaption}\item[{Filter}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the magnification filter for the texture. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & Filtering mode. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classmam_1_1_texture_ac4251a7f12eaf73eee118c3541ec1e74}{mam\+::\+Texture}}.
+
+\mbox{\Hypertarget{classmam_1_1_v_k_texture_a4dd300b5edd5130b479c7864ed8ebe2e}\label{classmam_1_1_v_k_texture_a4dd300b5edd5130b479c7864ed8ebe2e}} 
+\index{mam::VKTexture@{mam::VKTexture}!setMinFilter@{setMinFilter}}
+\index{setMinFilter@{setMinFilter}!mam::VKTexture@{mam::VKTexture}}
+\doxysubsubsection{\texorpdfstring{setMinFilter()}{setMinFilter()}}
+{\footnotesize\ttfamily void mam\+::\+V\+K\+Texture\+::set\+Min\+Filter (\begin{DoxyParamCaption}\item[{Filter}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the minification filter for the texture. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & Filtering mode. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classmam_1_1_texture_aa61e692e13f488d0b02b75f67b6f5010}{mam\+::\+Texture}}.
+
+\mbox{\Hypertarget{classmam_1_1_v_k_texture_ab33d682f5eb50f02a672527d007782d0}\label{classmam_1_1_v_k_texture_ab33d682f5eb50f02a672527d007782d0}} 
+\index{mam::VKTexture@{mam::VKTexture}!setWrap@{setWrap}}
+\index{setWrap@{setWrap}!mam::VKTexture@{mam::VKTexture}}
+\doxysubsubsection{\texorpdfstring{setWrap()}{setWrap()}}
+{\footnotesize\ttfamily void mam\+::\+V\+K\+Texture\+::set\+Wrap (\begin{DoxyParamCaption}\item[{Wrap}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the wrapping mode for all texture coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Wrapping mode applied to S, T, and R. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classmam_1_1_texture_a8f441915f788edbb7c9c075b8ea6a52f}{mam\+::\+Texture}}.
+
+\mbox{\Hypertarget{classmam_1_1_v_k_texture_aa0dcc8aaadcc217357b389fc3e1297e0}\label{classmam_1_1_v_k_texture_aa0dcc8aaadcc217357b389fc3e1297e0}} 
+\index{mam::VKTexture@{mam::VKTexture}!setWrapR@{setWrapR}}
+\index{setWrapR@{setWrapR}!mam::VKTexture@{mam::VKTexture}}
+\doxysubsubsection{\texorpdfstring{setWrapR()}{setWrapR()}}
+{\footnotesize\ttfamily void mam\+::\+V\+K\+Texture\+::set\+WrapR (\begin{DoxyParamCaption}\item[{Wrap}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the wrapping mode for the R (W) coordinate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Wrapping mode. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classmam_1_1_texture_adf213c047e27f98afdad59b638b414a3}{mam\+::\+Texture}}.
+
+\mbox{\Hypertarget{classmam_1_1_v_k_texture_a409ff951d90c160bf7b1b7c387b89b01}\label{classmam_1_1_v_k_texture_a409ff951d90c160bf7b1b7c387b89b01}} 
+\index{mam::VKTexture@{mam::VKTexture}!setWrapS@{setWrapS}}
+\index{setWrapS@{setWrapS}!mam::VKTexture@{mam::VKTexture}}
+\doxysubsubsection{\texorpdfstring{setWrapS()}{setWrapS()}}
+{\footnotesize\ttfamily void mam\+::\+V\+K\+Texture\+::set\+WrapS (\begin{DoxyParamCaption}\item[{Wrap}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the wrapping mode for the S (U) coordinate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Wrapping mode. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classmam_1_1_texture_a681aa39eda2d50b3aed075fb0b101dd2}{mam\+::\+Texture}}.
+
+\mbox{\Hypertarget{classmam_1_1_v_k_texture_a7180de63b1b6ee9cf4016bf3658c894d}\label{classmam_1_1_v_k_texture_a7180de63b1b6ee9cf4016bf3658c894d}} 
+\index{mam::VKTexture@{mam::VKTexture}!setWrapT@{setWrapT}}
+\index{setWrapT@{setWrapT}!mam::VKTexture@{mam::VKTexture}}
+\doxysubsubsection{\texorpdfstring{setWrapT()}{setWrapT()}}
+{\footnotesize\ttfamily void mam\+::\+V\+K\+Texture\+::set\+WrapT (\begin{DoxyParamCaption}\item[{Wrap}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the wrapping mode for the T (V) coordinate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Wrapping mode. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classmam_1_1_texture_ab71a8cf3db6071b70d97063c69a24f78}{mam\+::\+Texture}}.
+
+\mbox{\Hypertarget{classmam_1_1_v_k_texture_ab740c170c03b743815f80870ca02b5f3}\label{classmam_1_1_v_k_texture_ab740c170c03b743815f80870ca02b5f3}} 
+\index{mam::VKTexture@{mam::VKTexture}!unBind@{unBind}}
+\index{unBind@{unBind}!mam::VKTexture@{mam::VKTexture}}
+\doxysubsubsection{\texorpdfstring{unBind()}{unBind()}}
+{\footnotesize\ttfamily void mam\+::\+V\+K\+Texture\+::un\+Bind (\begin{DoxyParamCaption}\item[{u32}]{slot = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Unbinds the texture from a texture slot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em slot} & \mbox{\hyperlink{classmam_1_1_texture}{Texture}} unit to unbind from. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classmam_1_1_texture_a31165b51d20965ce518e446a2eae8719}{mam\+::\+Texture}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+platform/vulkan/vk\+\_\+texture.\+hpp\end{DoxyCompactItemize}

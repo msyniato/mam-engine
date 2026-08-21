@@ -1,0 +1,55 @@
+\hypertarget{classmam_1_1_index_buffer}{}\doxysection{mam\+::Index\+Buffer Class Reference}
+\label{classmam_1_1_index_buffer}\index{mam::IndexBuffer@{mam::IndexBuffer}}
+
+
+Abstract class for a G\+PU index buffer.  
+
+
+
+
+{\ttfamily \#include $<$buffer.\+hpp$>$}
+
+Inheritance diagram for mam\+::Index\+Buffer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmam_1_1_index_buffer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_index_buffer_a712383148fdd3adec07e17c98c42e25d}\label{classmam_1_1_index_buffer_a712383148fdd3adec07e17c98c42e25d}} 
+virtual void {\bfseries bind} ()=0
+\item 
+\mbox{\Hypertarget{classmam_1_1_index_buffer_a03c1fbc53392121c4ad22cf339f40e2e}\label{classmam_1_1_index_buffer_a03c1fbc53392121c4ad22cf339f40e2e}} 
+virtual void {\bfseries upload\+Data} (const void $\ast$data, unsigned int \mbox{\hyperlink{classmam_1_1_index_buffer_a0a84f78ee139a24d007659e2e5af839d}{size}}, unsigned int offset=0)=0
+\item 
+\mbox{\Hypertarget{classmam_1_1_index_buffer_afa240c6c15b594ce9e6eeee4638ec26b}\label{classmam_1_1_index_buffer_afa240c6c15b594ce9e6eeee4638ec26b}} 
+virtual void {\bfseries release} ()=0
+\item 
+\mbox{\Hypertarget{classmam_1_1_index_buffer_a0a84f78ee139a24d007659e2e5af839d}\label{classmam_1_1_index_buffer_a0a84f78ee139a24d007659e2e5af839d}} 
+u32 \mbox{\hyperlink{classmam_1_1_index_buffer_a0a84f78ee139a24d007659e2e5af839d}{size}} ()
+\begin{DoxyCompactList}\small\item\em Get size in bytes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_index_buffer_af0af6f5d1d141677af814f876995ae05}\label{classmam_1_1_index_buffer_af0af6f5d1d141677af814f876995ae05}} 
+u32 \mbox{\hyperlink{classmam_1_1_index_buffer_af0af6f5d1d141677af814f876995ae05}{count}} ()
+\begin{DoxyCompactList}\small\item\em Get number of indices. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_index_buffer_a605724adcea51c9a8f7e24f19dcb020c}\label{classmam_1_1_index_buffer_a605724adcea51c9a8f7e24f19dcb020c}} 
+u32 {\bfseries id\+\_\+}
+\item 
+\mbox{\Hypertarget{classmam_1_1_index_buffer_a0afa193df5839ac5a92518f07972e010}\label{classmam_1_1_index_buffer_a0afa193df5839ac5a92518f07972e010}} 
+u32 {\bfseries size\+\_\+}
+\item 
+\mbox{\Hypertarget{classmam_1_1_index_buffer_a093d5d92ee4dd4d04297971f77a934ff}\label{classmam_1_1_index_buffer_a093d5d92ee4dd4d04297971f77a934ff}} 
+u32 {\bfseries count\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract class for a G\+PU index buffer. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/mam/buffer.\+hpp\end{DoxyCompactItemize}

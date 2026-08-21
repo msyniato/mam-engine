@@ -1,0 +1,237 @@
+\hypertarget{classmam_1_1_texture}{}\doxysection{mam\+::Texture Class Reference}
+\label{classmam_1_1_texture}\index{mam::Texture@{mam::Texture}}
+
+
+Abstract class representing a G\+PU texture.  
+
+
+
+
+{\ttfamily \#include $<$texture.\+hpp$>$}
+
+Inheritance diagram for mam\+::Texture\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmam_1_1_texture}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmam_1_1_texture_1_1_texture_settings}{Texture\+Settings}}
+\begin{DoxyCompactList}\small\item\em Settings for texture filtering, wrapping, and format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_texture_a8a24db053cc15720e112ff03f6077bb7}\label{classmam_1_1_texture_a8a24db053cc15720e112ff03f6077bb7}} 
+\mbox{\hyperlink{classmam_1_1_texture_a8a24db053cc15720e112ff03f6077bb7}{Texture}} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_texture_a8e5ad9f086642b1e06fc421a47c669a7}\label{classmam_1_1_texture_a8e5ad9f086642b1e06fc421a47c669a7}} 
+virtual \mbox{\hyperlink{classmam_1_1_texture_a8e5ad9f086642b1e06fc421a47c669a7}{$\sim$\+Texture}} ()=default
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmam_1_1_texture_ad6c10bc06dd67240d2ad1148e5894ac5}{set\+Data}} (const void $\ast$data, u32, G\+Lenum fmt, G\+Lenum type)=0
+\begin{DoxyCompactList}\small\item\em Upload raw data to the texture. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmam_1_1_texture_a238d8dca41535634624aee918295135a}{set\+Data}} (const void $\ast$data, u32 size\+Bytes)=0
+\begin{DoxyCompactList}\small\item\em Upload raw data with size in bytes. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmam_1_1_texture_afa663f19765410c66f555cfff0e69368}{reset\+Texture}} (const std\+::string \&filepath, bool relative=true)=0
+\begin{DoxyCompactList}\small\item\em Reset texture from a file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_texture_aa61e692e13f488d0b02b75f67b6f5010}\label{classmam_1_1_texture_aa61e692e13f488d0b02b75f67b6f5010}} 
+virtual void \mbox{\hyperlink{classmam_1_1_texture_aa61e692e13f488d0b02b75f67b6f5010}{set\+Min\+Filter}} (Filter f)=0
+\begin{DoxyCompactList}\small\item\em Set the minification filter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_texture_ac4251a7f12eaf73eee118c3541ec1e74}\label{classmam_1_1_texture_ac4251a7f12eaf73eee118c3541ec1e74}} 
+virtual void \mbox{\hyperlink{classmam_1_1_texture_ac4251a7f12eaf73eee118c3541ec1e74}{set\+Mag\+Filter}} (Filter f)=0
+\begin{DoxyCompactList}\small\item\em Set the magnification filter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_texture_a681aa39eda2d50b3aed075fb0b101dd2}\label{classmam_1_1_texture_a681aa39eda2d50b3aed075fb0b101dd2}} 
+virtual void \mbox{\hyperlink{classmam_1_1_texture_a681aa39eda2d50b3aed075fb0b101dd2}{set\+WrapS}} (Wrap c)=0
+\begin{DoxyCompactList}\small\item\em Set wrapping mode for S coordinate. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_texture_ab71a8cf3db6071b70d97063c69a24f78}\label{classmam_1_1_texture_ab71a8cf3db6071b70d97063c69a24f78}} 
+virtual void \mbox{\hyperlink{classmam_1_1_texture_ab71a8cf3db6071b70d97063c69a24f78}{set\+WrapT}} (Wrap c)=0
+\begin{DoxyCompactList}\small\item\em Set wrapping mode for T coordinate. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_texture_adf213c047e27f98afdad59b638b414a3}\label{classmam_1_1_texture_adf213c047e27f98afdad59b638b414a3}} 
+virtual void \mbox{\hyperlink{classmam_1_1_texture_adf213c047e27f98afdad59b638b414a3}{set\+WrapR}} (Wrap c)=0
+\begin{DoxyCompactList}\small\item\em Set wrapping mode for R coordinate. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_texture_a8f441915f788edbb7c9c075b8ea6a52f}\label{classmam_1_1_texture_a8f441915f788edbb7c9c075b8ea6a52f}} 
+virtual void \mbox{\hyperlink{classmam_1_1_texture_a8f441915f788edbb7c9c075b8ea6a52f}{set\+Wrap}} (Wrap c)=0
+\begin{DoxyCompactList}\small\item\em Set wrapping mode for all coordinates. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_texture_ab13f7257c3eaaa54ed8d6f8e9fd9927d}\label{classmam_1_1_texture_ab13f7257c3eaaa54ed8d6f8e9fd9927d}} 
+virtual void \mbox{\hyperlink{classmam_1_1_texture_ab13f7257c3eaaa54ed8d6f8e9fd9927d}{generate\+Mipmaps}} () const =0
+\begin{DoxyCompactList}\small\item\em Generate mipmaps for the texture. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_texture_a397ad9b3a7f45cc0159bc457aec01dca}\label{classmam_1_1_texture_a397ad9b3a7f45cc0159bc457aec01dca}} 
+u32 \mbox{\hyperlink{classmam_1_1_texture_a397ad9b3a7f45cc0159bc457aec01dca}{width}} ()
+\begin{DoxyCompactList}\small\item\em Get texture width. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_texture_a101fb620bfaa471c432d539e5a360e98}\label{classmam_1_1_texture_a101fb620bfaa471c432d539e5a360e98}} 
+u32 \mbox{\hyperlink{classmam_1_1_texture_a101fb620bfaa471c432d539e5a360e98}{height}} ()
+\begin{DoxyCompactList}\small\item\em Get texture height. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmam_1_1_texture_ad3c0173a70db34130bb94054ba455833}{bind}} (u32 slot=0) const =0
+\begin{DoxyCompactList}\small\item\em Bind the texture to a slot. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmam_1_1_texture_a31165b51d20965ce518e446a2eae8719}{un\+Bind}} (u32 slot=0) const =0
+\begin{DoxyCompactList}\small\item\em Unbind the texture from a slot. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_texture_a346bdb2802a9e639416ccdb574e573a9}\label{classmam_1_1_texture_a346bdb2802a9e639416ccdb574e573a9}} 
+u32 \mbox{\hyperlink{classmam_1_1_texture_a346bdb2802a9e639416ccdb574e573a9}{id}} () const
+\begin{DoxyCompactList}\small\item\em Get G\+PU texture ID. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classmam_1_1_texture_a0d420e3f05a7c853bcf042fd6d263118}{operator==}} (const \mbox{\hyperlink{classmam_1_1_texture}{Texture}} \&other) const
+\begin{DoxyCompactList}\small\item\em Compare textures by G\+PU ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_texture_ad1dc82028ead90a7c56167c387b85628}\label{classmam_1_1_texture_ad1dc82028ead90a7c56167c387b85628}} 
+std\+::string \mbox{\hyperlink{classmam_1_1_texture_ad1dc82028ead90a7c56167c387b85628}{name\+\_\+}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classmam_1_1_texture}{Texture}} name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_texture_a05b12fb954906f86c89e3d3e43c14cd0}\label{classmam_1_1_texture_a05b12fb954906f86c89e3d3e43c14cd0}} 
+std\+::string \mbox{\hyperlink{classmam_1_1_texture_a05b12fb954906f86c89e3d3e43c14cd0}{path\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Path to texture file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_texture_a988a0a95aa1295ab37fb030fa257ba84}\label{classmam_1_1_texture_a988a0a95aa1295ab37fb030fa257ba84}} 
+std\+::string \mbox{\hyperlink{classmam_1_1_texture_a988a0a95aa1295ab37fb030fa257ba84}{shader\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Associated shader. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_texture_a029c0ffc070013e14bb44fe297a63456}\label{classmam_1_1_texture_a029c0ffc070013e14bb44fe297a63456}} 
+\mbox{\hyperlink{structmam_1_1_texture_1_1_texture_settings}{Texture\+Settings}} \mbox{\hyperlink{classmam_1_1_texture_a029c0ffc070013e14bb44fe297a63456}{setts\+\_\+}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classmam_1_1_texture}{Texture}} settings. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_texture_a314841f47870cbd526aeec466d61760b}\label{classmam_1_1_texture_a314841f47870cbd526aeec466d61760b}} 
+u32 \mbox{\hyperlink{classmam_1_1_texture_a314841f47870cbd526aeec466d61760b}{width\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Width in pixels. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_texture_a15b16153334085380935b90133408e1c}\label{classmam_1_1_texture_a15b16153334085380935b90133408e1c}} 
+u32 \mbox{\hyperlink{classmam_1_1_texture_a15b16153334085380935b90133408e1c}{height\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Height in pixels. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_texture_a9d2522ee910834d2292394f3422aa95c}\label{classmam_1_1_texture_a9d2522ee910834d2292394f3422aa95c}} 
+u32 \mbox{\hyperlink{classmam_1_1_texture_a9d2522ee910834d2292394f3422aa95c}{depth\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Depth (for 3D textures) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_texture_ab209ead7e1bf81967dd548430e88f4f7}\label{classmam_1_1_texture_ab209ead7e1bf81967dd548430e88f4f7}} 
+u32 \mbox{\hyperlink{classmam_1_1_texture_ab209ead7e1bf81967dd548430e88f4f7}{render\+\_\+id}}
+\begin{DoxyCompactList}\small\item\em G\+PU texture ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract class representing a G\+PU texture. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmam_1_1_texture_ad3c0173a70db34130bb94054ba455833}\label{classmam_1_1_texture_ad3c0173a70db34130bb94054ba455833}} 
+\index{mam::Texture@{mam::Texture}!bind@{bind}}
+\index{bind@{bind}!mam::Texture@{mam::Texture}}
+\doxysubsubsection{\texorpdfstring{bind()}{bind()}}
+{\footnotesize\ttfamily virtual void mam\+::\+Texture\+::bind (\begin{DoxyParamCaption}\item[{u32}]{slot = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Bind the texture to a slot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em slot} & \mbox{\hyperlink{classmam_1_1_texture}{Texture}} slot \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classmam_1_1_v_k_texture_a985c107e57669a8408edd2183ecbca5f}{mam\+::\+V\+K\+Texture}}, and \mbox{\hyperlink{classmam_1_1_g_l_texture_a68545a719a8b280738b6ad8e2e8a6abf}{mam\+::\+G\+L\+Texture}}.
+
+\mbox{\Hypertarget{classmam_1_1_texture_a0d420e3f05a7c853bcf042fd6d263118}\label{classmam_1_1_texture_a0d420e3f05a7c853bcf042fd6d263118}} 
+\index{mam::Texture@{mam::Texture}!operator==@{operator==}}
+\index{operator==@{operator==}!mam::Texture@{mam::Texture}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool mam\+::\+Texture\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmam_1_1_texture}{Texture}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compare textures by G\+PU ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Other texture \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if both textures have same G\+PU ID 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmam_1_1_texture_afa663f19765410c66f555cfff0e69368}\label{classmam_1_1_texture_afa663f19765410c66f555cfff0e69368}} 
+\index{mam::Texture@{mam::Texture}!resetTexture@{resetTexture}}
+\index{resetTexture@{resetTexture}!mam::Texture@{mam::Texture}}
+\doxysubsubsection{\texorpdfstring{resetTexture()}{resetTexture()}}
+{\footnotesize\ttfamily virtual void mam\+::\+Texture\+::reset\+Texture (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filepath,  }\item[{bool}]{relative = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Reset texture from a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filepath} & Path to the texture file \\
+\hline
+{\em relative} & True if path is relative to project \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classmam_1_1_g_l_texture_a0d4175dcc47a9e79fa40555e27b58936}{mam\+::\+G\+L\+Texture}}, and \mbox{\hyperlink{classmam_1_1_v_k_texture_a930a14c5f0ce5a45538223e8393845b3}{mam\+::\+V\+K\+Texture}}.
+
+\mbox{\Hypertarget{classmam_1_1_texture_a238d8dca41535634624aee918295135a}\label{classmam_1_1_texture_a238d8dca41535634624aee918295135a}} 
+\index{mam::Texture@{mam::Texture}!setData@{setData}}
+\index{setData@{setData}!mam::Texture@{mam::Texture}}
+\doxysubsubsection{\texorpdfstring{setData()}{setData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual void mam\+::\+Texture\+::set\+Data (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{u32}]{size\+Bytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Upload raw data with size in bytes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Pointer to data \\
+\hline
+{\em size\+Bytes} & Size of data in bytes \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classmam_1_1_g_l_texture_a67bf957b128119c9764aeeaf7772c615}{mam\+::\+G\+L\+Texture}}, and \mbox{\hyperlink{classmam_1_1_v_k_texture_a2bffd16332ab9ad20b2f2009bd0e293d}{mam\+::\+V\+K\+Texture}}.
+
+\mbox{\Hypertarget{classmam_1_1_texture_ad6c10bc06dd67240d2ad1148e5894ac5}\label{classmam_1_1_texture_ad6c10bc06dd67240d2ad1148e5894ac5}} 
+\index{mam::Texture@{mam::Texture}!setData@{setData}}
+\index{setData@{setData}!mam::Texture@{mam::Texture}}
+\doxysubsubsection{\texorpdfstring{setData()}{setData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void mam\+::\+Texture\+::set\+Data (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{u32}]{,  }\item[{G\+Lenum}]{fmt,  }\item[{G\+Lenum}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Upload raw data to the texture. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Pointer to data \\
+\hline
+{\em size} & Size or width (depending on override) \\
+\hline
+{\em fmt} & Format (Open\+GL enum) \\
+\hline
+{\em type} & Type (Open\+GL enum) \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classmam_1_1_g_l_texture_ab840c1c194f7c917b6d9cbe2fb275895}{mam\+::\+G\+L\+Texture}}, and \mbox{\hyperlink{classmam_1_1_v_k_texture_aa4876608ef47e0db60ddd65b8fc8fbb3}{mam\+::\+V\+K\+Texture}}.
+
+\mbox{\Hypertarget{classmam_1_1_texture_a31165b51d20965ce518e446a2eae8719}\label{classmam_1_1_texture_a31165b51d20965ce518e446a2eae8719}} 
+\index{mam::Texture@{mam::Texture}!unBind@{unBind}}
+\index{unBind@{unBind}!mam::Texture@{mam::Texture}}
+\doxysubsubsection{\texorpdfstring{unBind()}{unBind()}}
+{\footnotesize\ttfamily virtual void mam\+::\+Texture\+::un\+Bind (\begin{DoxyParamCaption}\item[{u32}]{slot = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Unbind the texture from a slot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em slot} & \mbox{\hyperlink{classmam_1_1_texture}{Texture}} slot \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classmam_1_1_v_k_texture_ab740c170c03b743815f80870ca02b5f3}{mam\+::\+V\+K\+Texture}}, and \mbox{\hyperlink{classmam_1_1_g_l_texture_aa334dec86b93a77bb3fde740272f55d1}{mam\+::\+G\+L\+Texture}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/mam/texture.\+hpp\end{DoxyCompactItemize}

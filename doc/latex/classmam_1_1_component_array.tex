@@ -1,0 +1,132 @@
+\hypertarget{classmam_1_1_component_array}{}\doxysection{mam\+::Component\+Array$<$ T $>$ Class Template Reference}
+\label{classmam_1_1_component_array}\index{mam::ComponentArray$<$ T $>$@{mam::ComponentArray$<$ T $>$}}
+
+
+Dense storage container for components of type T.  
+
+
+
+
+{\ttfamily \#include $<$component\+\_\+array.\+hpp$>$}
+
+Inheritance diagram for mam\+::Component\+Array$<$ T $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmam_1_1_component_array}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmam_1_1_component_array_afa1e0db2ef29a6f4d2d7e8ca9759c067}{insert\+Component}} (Entity e, T comp)
+\begin{DoxyCompactList}\small\item\em Inserts a component for an entity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_component_array_af508fd203799730905ebdb50fb93fb7e}{remove\+Component}} (Entity e)
+\begin{DoxyCompactList}\small\item\em Removes the component belonging to an entity. \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{classmam_1_1_component_array_a295b3e477d6bf2de6799249904b46c19}{get\+Component}} (Entity e)
+\begin{DoxyCompactList}\small\item\em Retrieves the component belonging to an entity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_component_array_ab0259882290c5205ec23d3b0e2325a89}{entity\+Destroyed}} (Entity e) override
+\begin{DoxyCompactList}\small\item\em Handles entity destruction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class mam\+::\+Component\+Array$<$ T $>$}
+
+Dense storage container for components of type T. 
+
+Stores components in a packed array to maintain cache-\/friendly iteration. Entity-\/to-\/index and index-\/to-\/entity maps are used to efficiently insert, remove, and access components in O(1) time.
+
+When a component is removed, the last element in the array is moved into the removed slot (swap-\/remove technique) to maintain dense storage.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Component type. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmam_1_1_component_array_ab0259882290c5205ec23d3b0e2325a89}\label{classmam_1_1_component_array_ab0259882290c5205ec23d3b0e2325a89}} 
+\index{mam::ComponentArray$<$ T $>$@{mam::ComponentArray$<$ T $>$}!entityDestroyed@{entityDestroyed}}
+\index{entityDestroyed@{entityDestroyed}!mam::ComponentArray$<$ T $>$@{mam::ComponentArray$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{entityDestroyed()}{entityDestroyed()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classmam_1_1_component_array}{mam\+::\+Component\+Array}}$<$ T $>$\+::entity\+Destroyed (\begin{DoxyParamCaption}\item[{Entity}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Handles entity destruction. 
+
+Removes the component if the entity owns one.
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The destroyed entity. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classmam_1_1_i_component_array_a03fd5c572a9663a3f710d45946da3138}{mam\+::\+I\+Component\+Array}}.
+
+\mbox{\Hypertarget{classmam_1_1_component_array_a295b3e477d6bf2de6799249904b46c19}\label{classmam_1_1_component_array_a295b3e477d6bf2de6799249904b46c19}} 
+\index{mam::ComponentArray$<$ T $>$@{mam::ComponentArray$<$ T $>$}!getComponent@{getComponent}}
+\index{getComponent@{getComponent}!mam::ComponentArray$<$ T $>$@{mam::ComponentArray$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getComponent()}{getComponent()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \& \mbox{\hyperlink{classmam_1_1_component_array}{mam\+::\+Component\+Array}}$<$ T $>$\+::get\+Component (\begin{DoxyParamCaption}\item[{Entity}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves the component belonging to an entity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The entity whose component should be accessed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the component. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmam_1_1_component_array_afa1e0db2ef29a6f4d2d7e8ca9759c067}\label{classmam_1_1_component_array_afa1e0db2ef29a6f4d2d7e8ca9759c067}} 
+\index{mam::ComponentArray$<$ T $>$@{mam::ComponentArray$<$ T $>$}!insertComponent@{insertComponent}}
+\index{insertComponent@{insertComponent}!mam::ComponentArray$<$ T $>$@{mam::ComponentArray$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{insertComponent()}{insertComponent()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classmam_1_1_component_array}{mam\+::\+Component\+Array}}$<$ T $>$\+::insert\+Component (\begin{DoxyParamCaption}\item[{Entity}]{e,  }\item[{T}]{comp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inserts a component for an entity. 
+
+Adds the component to the packed array and records the mapping between the entity and the component index.
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The entity receiving the component. \\
+\hline
+{\em comp} & The component instance to insert. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmam_1_1_component_array_af508fd203799730905ebdb50fb93fb7e}\label{classmam_1_1_component_array_af508fd203799730905ebdb50fb93fb7e}} 
+\index{mam::ComponentArray$<$ T $>$@{mam::ComponentArray$<$ T $>$}!removeComponent@{removeComponent}}
+\index{removeComponent@{removeComponent}!mam::ComponentArray$<$ T $>$@{mam::ComponentArray$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{removeComponent()}{removeComponent()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classmam_1_1_component_array}{mam\+::\+Component\+Array}}$<$ T $>$\+::remove\+Component (\begin{DoxyParamCaption}\item[{Entity}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes the component belonging to an entity. 
+
+Uses swap-\/remove to maintain a dense array. The last component in the array replaces the removed component.
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The entity whose component should be removed. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/ecs/component\+\_\+array.\+hpp\end{DoxyCompactItemize}

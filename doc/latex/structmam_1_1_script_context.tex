@@ -1,0 +1,64 @@
+\hypertarget{structmam_1_1_script_context}{}\doxysection{mam\+::Script\+Context Struct Reference}
+\label{structmam_1_1_script_context}\index{mam::ScriptContext@{mam::ScriptContext}}
+
+
+Runtime Lua script execution context.  
+
+
+
+
+{\ttfamily \#include $<$engine\+\_\+components.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structmam_1_1_script_context_aec4e68122887acd9d2c86afc2b159df1}{Script\+Context}} (sol\+::state \&lua)
+\begin{DoxyCompactList}\small\item\em Constructs a script environment. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structmam_1_1_script_context_a7cd3896cabe85379d5d41b9a2c564d65}\label{structmam_1_1_script_context_a7cd3896cabe85379d5d41b9a2c564d65}} 
+sol\+::environment \mbox{\hyperlink{structmam_1_1_script_context_a7cd3896cabe85379d5d41b9a2c564d65}{env}}
+\begin{DoxyCompactList}\small\item\em Lua environment for the script. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structmam_1_1_script_context_a585b9e6944d3d6d46a7ea473af08662e}\label{structmam_1_1_script_context_a585b9e6944d3d6d46a7ea473af08662e}} 
+sol\+::function \mbox{\hyperlink{structmam_1_1_script_context_a585b9e6944d3d6d46a7ea473af08662e}{init}}
+\begin{DoxyCompactList}\small\item\em Script initialization function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structmam_1_1_script_context_a8e29e93667d6e4f43d9e6f88cf3a7aa4}\label{structmam_1_1_script_context_a8e29e93667d6e4f43d9e6f88cf3a7aa4}} 
+sol\+::function \mbox{\hyperlink{structmam_1_1_script_context_a8e29e93667d6e4f43d9e6f88cf3a7aa4}{update}}
+\begin{DoxyCompactList}\small\item\em Script update function (called each frame). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structmam_1_1_script_context_a0bcc9c329e9e2874c23a92864f0ca59f}\label{structmam_1_1_script_context_a0bcc9c329e9e2874c23a92864f0ca59f}} 
+sol\+::function \mbox{\hyperlink{structmam_1_1_script_context_a0bcc9c329e9e2874c23a92864f0ca59f}{destroy}}
+\begin{DoxyCompactList}\small\item\em Script cleanup function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structmam_1_1_script_context_ae41ce54ba6f7d66a71efc05c2f28d7dc}\label{structmam_1_1_script_context_ae41ce54ba6f7d66a71efc05c2f28d7dc}} 
+bool \mbox{\hyperlink{structmam_1_1_script_context_ae41ce54ba6f7d66a71efc05c2f28d7dc}{initialized}} = false
+\begin{DoxyCompactList}\small\item\em Indicates whether the script has been initialized. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Runtime Lua script execution context. 
+
+Stores the Lua environment and lifecycle functions associated with a script attached to an entity. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structmam_1_1_script_context_aec4e68122887acd9d2c86afc2b159df1}\label{structmam_1_1_script_context_aec4e68122887acd9d2c86afc2b159df1}} 
+\index{mam::ScriptContext@{mam::ScriptContext}!ScriptContext@{ScriptContext}}
+\index{ScriptContext@{ScriptContext}!mam::ScriptContext@{mam::ScriptContext}}
+\doxysubsubsection{\texorpdfstring{ScriptContext()}{ScriptContext()}}
+{\footnotesize\ttfamily mam\+::\+Script\+Context\+::\+Script\+Context (\begin{DoxyParamCaption}\item[{sol\+::state \&}]{lua }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a script environment. 
+
+The environment inherits from the Lua global table.
+
+
+\begin{DoxyParams}{Parameters}
+{\em lua} & Lua state used to create the environment. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/ecs/engine\+\_\+components.\+hpp\end{DoxyCompactItemize}

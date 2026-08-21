@@ -1,0 +1,55 @@
+\hypertarget{classmam_1_1_shader_storage_buffer}{}\doxysection{mam\+::Shader\+Storage\+Buffer Class Reference}
+\label{classmam_1_1_shader_storage_buffer}\index{mam::ShaderStorageBuffer@{mam::ShaderStorageBuffer}}
+
+
+Abstract class for \mbox{\hyperlink{classmam_1_1_shader}{Shader}} Storage Buffer Objects (S\+S\+B\+Os)  
+
+
+
+
+{\ttfamily \#include $<$buffer.\+hpp$>$}
+
+Inheritance diagram for mam\+::Shader\+Storage\+Buffer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmam_1_1_shader_storage_buffer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_shader_storage_buffer_a7bc364c224aad22c020547782ad63eaf}\label{classmam_1_1_shader_storage_buffer_a7bc364c224aad22c020547782ad63eaf}} 
+virtual void {\bfseries bind} ()=0
+\item 
+\mbox{\Hypertarget{classmam_1_1_shader_storage_buffer_a45f8f039eaa33f17af231f841310d66a}\label{classmam_1_1_shader_storage_buffer_a45f8f039eaa33f17af231f841310d66a}} 
+virtual void {\bfseries un\+Bind} ()=0
+\item 
+\mbox{\Hypertarget{classmam_1_1_shader_storage_buffer_a74f73093299083b04885bbbf504c0e47}\label{classmam_1_1_shader_storage_buffer_a74f73093299083b04885bbbf504c0e47}} 
+virtual void {\bfseries upload\+Data} (void $\ast$data, u16 size, u8 offset)=0
+\item 
+\mbox{\Hypertarget{classmam_1_1_shader_storage_buffer_ab530fa65afb7c02fa1bcc89a23c20e19}\label{classmam_1_1_shader_storage_buffer_ab530fa65afb7c02fa1bcc89a23c20e19}} 
+virtual void {\bfseries release} ()=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_shader_storage_buffer_ad7e72f888be895d5a46d3922a64f03f4}\label{classmam_1_1_shader_storage_buffer_ad7e72f888be895d5a46d3922a64f03f4}} 
+u32 {\bfseries id\+\_\+}
+\item 
+\mbox{\Hypertarget{classmam_1_1_shader_storage_buffer_a97b4c8384e5eb5920a635b94cd77f7d4}\label{classmam_1_1_shader_storage_buffer_a97b4c8384e5eb5920a635b94cd77f7d4}} 
+u32 {\bfseries block\+\_\+index\+\_\+}
+\item 
+\mbox{\Hypertarget{classmam_1_1_shader_storage_buffer_a24497e688d1bdecc2147a9adecb20b02}\label{classmam_1_1_shader_storage_buffer_a24497e688d1bdecc2147a9adecb20b02}} 
+u32 {\bfseries binding\+\_\+point\+\_\+index\+\_\+}
+\item 
+\mbox{\Hypertarget{classmam_1_1_shader_storage_buffer_a68c0c42a873c8fab74867468d0b74aa6}\label{classmam_1_1_shader_storage_buffer_a68c0c42a873c8fab74867468d0b74aa6}} 
+u32 {\bfseries size\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract class for \mbox{\hyperlink{classmam_1_1_shader}{Shader}} Storage Buffer Objects (S\+S\+B\+Os) 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/mam/buffer.\+hpp\end{DoxyCompactItemize}

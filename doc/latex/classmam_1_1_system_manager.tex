@@ -1,0 +1,142 @@
+\hypertarget{classmam_1_1_system_manager}{}\doxysection{mam\+::System\+Manager Class Reference}
+\label{classmam_1_1_system_manager}\index{mam::SystemManager@{mam::SystemManager}}
+
+
+Manages all E\+CS systems and their signatures.  
+
+
+
+
+{\ttfamily \#include $<$system\+\_\+manager.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{classmam_1_1_system_manager_af4d1842c778c6bbebccf6e78d0474509}{register\+System}} ()
+\begin{DoxyCompactList}\small\item\em Registers a new system of type T. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classmam_1_1_system_manager_ae93793371d315a2bfb9e7cbf7102be75}{set\+Signature}} (Signature s)
+\begin{DoxyCompactList}\small\item\em Assigns a component signature to a system. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::optional$<$ Signature $>$ \mbox{\hyperlink{classmam_1_1_system_manager_a5ecf604fddb9b151a2a17fe59e994db8}{get\+System\+Signature}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the signature of a system. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{classmam_1_1_system_manager_a3c4e98470323f37117e7c2ab8ec12717}{get\+System\+Reference}} ()
+\begin{DoxyCompactList}\small\item\em Returns a reference to a registered system. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_system_manager_a233bb87499bb71d774a31e16732e0788}{entity\+Destroyed}} (Entity e)
+\begin{DoxyCompactList}\small\item\em Notifies the \mbox{\hyperlink{classmam_1_1_system_manager}{System\+Manager}} that an entity was destroyed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages all E\+CS systems and their signatures. 
+
+\mbox{\hyperlink{classmam_1_1_system_manager}{System\+Manager}} is responsible for\+:
+\begin{DoxyItemize}
+\item Registering systems
+\item Storing system signatures (component requirements)
+\item Providing access to system instances
+\item Handling entity destruction
+\end{DoxyItemize}
+
+Each system has a signature representing the combination of components required for entities to belong to it. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmam_1_1_system_manager_a233bb87499bb71d774a31e16732e0788}\label{classmam_1_1_system_manager_a233bb87499bb71d774a31e16732e0788}} 
+\index{mam::SystemManager@{mam::SystemManager}!entityDestroyed@{entityDestroyed}}
+\index{entityDestroyed@{entityDestroyed}!mam::SystemManager@{mam::SystemManager}}
+\doxysubsubsection{\texorpdfstring{entityDestroyed()}{entityDestroyed()}}
+{\footnotesize\ttfamily void mam\+::\+System\+Manager\+::entity\+Destroyed (\begin{DoxyParamCaption}\item[{Entity}]{e }\end{DoxyParamCaption})}
+
+
+
+Notifies the \mbox{\hyperlink{classmam_1_1_system_manager}{System\+Manager}} that an entity was destroyed. 
+
+The manager should remove the entity from all system entity lists.
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Entity being destroyed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmam_1_1_system_manager_a3c4e98470323f37117e7c2ab8ec12717}\label{classmam_1_1_system_manager_a3c4e98470323f37117e7c2ab8ec12717}} 
+\index{mam::SystemManager@{mam::SystemManager}!getSystemReference@{getSystemReference}}
+\index{getSystemReference@{getSystemReference}!mam::SystemManager@{mam::SystemManager}}
+\doxysubsubsection{\texorpdfstring{getSystemReference()}{getSystemReference()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::shared\+\_\+ptr$<$ T $>$ mam\+::\+System\+Manager\+::get\+System\+Reference (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a reference to a registered system. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \mbox{\hyperlink{classmam_1_1_system}{System}} type. \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+Shared pointer to the system, or nullptr if not registered. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmam_1_1_system_manager_a5ecf604fddb9b151a2a17fe59e994db8}\label{classmam_1_1_system_manager_a5ecf604fddb9b151a2a17fe59e994db8}} 
+\index{mam::SystemManager@{mam::SystemManager}!getSystemSignature@{getSystemSignature}}
+\index{getSystemSignature@{getSystemSignature}!mam::SystemManager@{mam::SystemManager}}
+\doxysubsubsection{\texorpdfstring{getSystemSignature()}{getSystemSignature()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::optional$<$ Signature $>$ mam\+::\+System\+Manager\+::get\+System\+Signature (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves the signature of a system. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \mbox{\hyperlink{classmam_1_1_system}{System}} type. \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+Optional signature if the system has been assigned one. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmam_1_1_system_manager_af4d1842c778c6bbebccf6e78d0474509}\label{classmam_1_1_system_manager_af4d1842c778c6bbebccf6e78d0474509}} 
+\index{mam::SystemManager@{mam::SystemManager}!registerSystem@{registerSystem}}
+\index{registerSystem@{registerSystem}!mam::SystemManager@{mam::SystemManager}}
+\doxysubsubsection{\texorpdfstring{registerSystem()}{registerSystem()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::shared\+\_\+ptr$<$ T $>$ mam\+::\+System\+Manager\+::register\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Registers a new system of type T. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \mbox{\hyperlink{classmam_1_1_system}{System}} type (derived from \mbox{\hyperlink{classmam_1_1_system}{System}}). \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+Shared pointer to the created system. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmam_1_1_system_manager_ae93793371d315a2bfb9e7cbf7102be75}\label{classmam_1_1_system_manager_ae93793371d315a2bfb9e7cbf7102be75}} 
+\index{mam::SystemManager@{mam::SystemManager}!setSignature@{setSignature}}
+\index{setSignature@{setSignature}!mam::SystemManager@{mam::SystemManager}}
+\doxysubsubsection{\texorpdfstring{setSignature()}{setSignature()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void mam\+::\+System\+Manager\+::set\+Signature (\begin{DoxyParamCaption}\item[{Signature}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Assigns a component signature to a system. 
+
+Entities must match this signature to be included in the system.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \mbox{\hyperlink{classmam_1_1_system}{System}} type. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Signature representing required components. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/ecs/system\+\_\+manager.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,56 @@
+\hypertarget{classmam_1_1_job_handle}{}\doxysection{mam\+::Job\+Handle Class Reference}
+\label{classmam_1_1_job_handle}\index{mam::JobHandle@{mam::JobHandle}}
+
+
+Lightweight handle to wait on a submitted job\textquotesingle{}s completion.  
+
+
+
+
+{\ttfamily \#include $<$job\+\_\+system.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmam_1_1_job_handle_a5b0e35d9cc09fc17eed8946e62dd602d}{Job\+Handle}} (std\+::shared\+\_\+future$<$ void $>$ f)
+\begin{DoxyCompactList}\small\item\em Construct a handle from a shared future. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_job_handle_a0d17d22d6d4f202a78f579bb2bf97dae}\label{classmam_1_1_job_handle_a0d17d22d6d4f202a78f579bb2bf97dae}} 
+bool \mbox{\hyperlink{classmam_1_1_job_handle_a0d17d22d6d4f202a78f579bb2bf97dae}{valid}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if the handle has a valid future. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_job_handle_a6789150b6c33798241b721d853c8d4cd}\label{classmam_1_1_job_handle_a6789150b6c33798241b721d853c8d4cd}} 
+void \mbox{\hyperlink{classmam_1_1_job_handle_a6789150b6c33798241b721d853c8d4cd}{wait}} () const
+\begin{DoxyCompactList}\small\item\em Block until the job is complete. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_job_handle_a658776407783e6be580cdb9f38c85f7c}\label{classmam_1_1_job_handle_a658776407783e6be580cdb9f38c85f7c}} 
+class {\bfseries Job\+System}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Lightweight handle to wait on a submitted job\textquotesingle{}s completion. 
+
+Wraps a std\+::shared\+\_\+future$<$void$>$ to allow copying. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmam_1_1_job_handle_a5b0e35d9cc09fc17eed8946e62dd602d}\label{classmam_1_1_job_handle_a5b0e35d9cc09fc17eed8946e62dd602d}} 
+\index{mam::JobHandle@{mam::JobHandle}!JobHandle@{JobHandle}}
+\index{JobHandle@{JobHandle}!mam::JobHandle@{mam::JobHandle}}
+\doxysubsubsection{\texorpdfstring{JobHandle()}{JobHandle()}}
+{\footnotesize\ttfamily mam\+::\+Job\+Handle\+::\+Job\+Handle (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+future$<$ void $>$}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Construct a handle from a shared future. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & Shared future representing the job \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/mam/job\+\_\+system.\+hpp\end{DoxyCompactItemize}

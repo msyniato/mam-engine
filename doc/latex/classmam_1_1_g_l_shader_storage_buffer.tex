@@ -1,0 +1,109 @@
+\hypertarget{classmam_1_1_g_l_shader_storage_buffer}{}\doxysection{mam\+::G\+L\+Shader\+Storage\+Buffer Class Reference}
+\label{classmam_1_1_g_l_shader_storage_buffer}\index{mam::GLShaderStorageBuffer@{mam::GLShaderStorageBuffer}}
+
+
+Open\+GL \mbox{\hyperlink{classmam_1_1_shader}{Shader}} Storage Buffer (S\+S\+BO) implementation.  
+
+
+
+
+{\ttfamily \#include $<$gl\+\_\+buffer.\+hpp$>$}
+
+Inheritance diagram for mam\+::G\+L\+Shader\+Storage\+Buffer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmam_1_1_g_l_shader_storage_buffer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmam_1_1_g_l_shader_storage_buffer_a35fc47505c37e82f765c9f1172a0c820}{G\+L\+Shader\+Storage\+Buffer}} (u32 pipeline\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Construct an empty S\+S\+BO for a specific pipeline. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmam_1_1_g_l_shader_storage_buffer_ae49b85dd9e54a4106d9d1ddb20d6f435}{G\+L\+Shader\+Storage\+Buffer}} (u32 pipeline\+\_\+id, void $\ast$data, u32 data\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Construct an S\+S\+BO with initial data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_g_l_shader_storage_buffer_acf176acb0203aee6d9750a623f36b2ba}\label{classmam_1_1_g_l_shader_storage_buffer_acf176acb0203aee6d9750a623f36b2ba}} 
+void \mbox{\hyperlink{classmam_1_1_g_l_shader_storage_buffer_acf176acb0203aee6d9750a623f36b2ba}{bind}} () override
+\begin{DoxyCompactList}\small\item\em Bind the S\+S\+BO to G\+PU. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_g_l_shader_storage_buffer_aa626c199612de1ace03c4534345a60ba}\label{classmam_1_1_g_l_shader_storage_buffer_aa626c199612de1ace03c4534345a60ba}} 
+void \mbox{\hyperlink{classmam_1_1_g_l_shader_storage_buffer_aa626c199612de1ace03c4534345a60ba}{un\+Bind}} () override
+\begin{DoxyCompactList}\small\item\em Unbind the S\+S\+BO. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_g_l_shader_storage_buffer_a04c44ef08d761179374baae7b09b8657}{upload\+Data}} (void $\ast$data, u16 size, u8 offset) override
+\begin{DoxyCompactList}\small\item\em Upload or update data in the S\+S\+BO. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_g_l_shader_storage_buffer_afcef9f2cca194b6f1e78428d6651881a}\label{classmam_1_1_g_l_shader_storage_buffer_afcef9f2cca194b6f1e78428d6651881a}} 
+void \mbox{\hyperlink{classmam_1_1_g_l_shader_storage_buffer_afcef9f2cca194b6f1e78428d6651881a}{release}} () override
+\begin{DoxyCompactList}\small\item\em Release the G\+PU resources. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Open\+GL \mbox{\hyperlink{classmam_1_1_shader}{Shader}} Storage Buffer (S\+S\+BO) implementation. 
+
+Allows shaders to read/write structured buffer data on the G\+PU. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmam_1_1_g_l_shader_storage_buffer_a35fc47505c37e82f765c9f1172a0c820}\label{classmam_1_1_g_l_shader_storage_buffer_a35fc47505c37e82f765c9f1172a0c820}} 
+\index{mam::GLShaderStorageBuffer@{mam::GLShaderStorageBuffer}!GLShaderStorageBuffer@{GLShaderStorageBuffer}}
+\index{GLShaderStorageBuffer@{GLShaderStorageBuffer}!mam::GLShaderStorageBuffer@{mam::GLShaderStorageBuffer}}
+\doxysubsubsection{\texorpdfstring{GLShaderStorageBuffer()}{GLShaderStorageBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily mam\+::\+G\+L\+Shader\+Storage\+Buffer\+::\+G\+L\+Shader\+Storage\+Buffer (\begin{DoxyParamCaption}\item[{u32}]{pipeline\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Construct an empty S\+S\+BO for a specific pipeline. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pipeline\+\_\+id} & Pipeline ID for binding \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmam_1_1_g_l_shader_storage_buffer_ae49b85dd9e54a4106d9d1ddb20d6f435}\label{classmam_1_1_g_l_shader_storage_buffer_ae49b85dd9e54a4106d9d1ddb20d6f435}} 
+\index{mam::GLShaderStorageBuffer@{mam::GLShaderStorageBuffer}!GLShaderStorageBuffer@{GLShaderStorageBuffer}}
+\index{GLShaderStorageBuffer@{GLShaderStorageBuffer}!mam::GLShaderStorageBuffer@{mam::GLShaderStorageBuffer}}
+\doxysubsubsection{\texorpdfstring{GLShaderStorageBuffer()}{GLShaderStorageBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily mam\+::\+G\+L\+Shader\+Storage\+Buffer\+::\+G\+L\+Shader\+Storage\+Buffer (\begin{DoxyParamCaption}\item[{u32}]{pipeline\+\_\+id,  }\item[{void $\ast$}]{data,  }\item[{u32}]{data\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Construct an S\+S\+BO with initial data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pipeline\+\_\+id} & Pipeline ID for binding \\
+\hline
+{\em data} & Pointer to initial data \\
+\hline
+{\em data\+\_\+size} & Size of the data in bytes \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmam_1_1_g_l_shader_storage_buffer_a04c44ef08d761179374baae7b09b8657}\label{classmam_1_1_g_l_shader_storage_buffer_a04c44ef08d761179374baae7b09b8657}} 
+\index{mam::GLShaderStorageBuffer@{mam::GLShaderStorageBuffer}!uploadData@{uploadData}}
+\index{uploadData@{uploadData}!mam::GLShaderStorageBuffer@{mam::GLShaderStorageBuffer}}
+\doxysubsubsection{\texorpdfstring{uploadData()}{uploadData()}}
+{\footnotesize\ttfamily void mam\+::\+G\+L\+Shader\+Storage\+Buffer\+::upload\+Data (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{u16}]{size,  }\item[{u8}]{offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Upload or update data in the S\+S\+BO. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Pointer to data \\
+\hline
+{\em size} & Size of the data in bytes \\
+\hline
+{\em offset} & Offset in the buffer \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classmam_1_1_shader_storage_buffer}{mam\+::\+Shader\+Storage\+Buffer}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+platform/opengl/gl\+\_\+buffer.\+hpp\end{DoxyCompactItemize}

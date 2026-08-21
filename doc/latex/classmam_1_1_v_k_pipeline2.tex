@@ -1,0 +1,376 @@
+\hypertarget{classmam_1_1_v_k_pipeline2}{}\doxysection{mam\+::V\+K\+Pipeline2 Class Reference}
+\label{classmam_1_1_v_k_pipeline2}\index{mam::VKPipeline2@{mam::VKPipeline2}}
+
+
+Vulkan implementation of the \mbox{\hyperlink{classmam_1_1_pipeline2}{Pipeline2}} interface.  
+
+
+
+
+{\ttfamily \#include $<$vk\+\_\+pipeline.\+hpp$>$}
+
+Inheritance diagram for mam\+::V\+K\+Pipeline2\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmam_1_1_v_k_pipeline2}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_pipeline2_a66f3a48574bb48f7fc50aa0e19ee147e}\label{classmam_1_1_v_k_pipeline2_a66f3a48574bb48f7fc50aa0e19ee147e}} 
+\mbox{\hyperlink{classmam_1_1_v_k_pipeline2_a66f3a48574bb48f7fc50aa0e19ee147e}{V\+K\+Pipeline2}} ()
+\begin{DoxyCompactList}\small\item\em Constructs an empty Vulkan pipeline. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_pipeline2_adcd6e9a0271c494d65fe564bef83f374}\label{classmam_1_1_v_k_pipeline2_adcd6e9a0271c494d65fe564bef83f374}} 
+\mbox{\hyperlink{classmam_1_1_v_k_pipeline2_adcd6e9a0271c494d65fe564bef83f374}{$\sim$\+V\+K\+Pipeline2}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the pipeline and releases Vulkan resources. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmam_1_1_v_k_pipeline2_a981c63d8cdfb50262273fa6c5ee00037}{add\+Shader}} (const std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classmam_1_1_shader}{Shader}} $>$ \&shader) override
+\begin{DoxyCompactList}\small\item\em Adds a shader to the pipeline. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classmam_1_1_v_k_pipeline2_af74c2256857a1b911983336f61069a4e}{create}} () override
+\begin{DoxyCompactList}\small\item\em Creates the Vulkan graphics pipeline. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_pipeline2_aa828271c4d982f5030503f005190874b}\label{classmam_1_1_v_k_pipeline2_aa828271c4d982f5030503f005190874b}} 
+virtual void \mbox{\hyperlink{classmam_1_1_v_k_pipeline2_aa828271c4d982f5030503f005190874b}{use}} () override
+\begin{DoxyCompactList}\small\item\em Activates the pipeline for rendering. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_pipeline2_af85a0d0d949af8cc899590b59176591a}\label{classmam_1_1_v_k_pipeline2_af85a0d0d949af8cc899590b59176591a}} 
+virtual void \mbox{\hyperlink{classmam_1_1_v_k_pipeline2_af85a0d0d949af8cc899590b59176591a}{destroy}} () override
+\begin{DoxyCompactList}\small\item\em Destroys all Vulkan objects associated with the pipeline. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_pipeline2_aa2c1cc45991316214c54602997348d7b}\label{classmam_1_1_v_k_pipeline2_aa2c1cc45991316214c54602997348d7b}} 
+void \mbox{\hyperlink{classmam_1_1_v_k_pipeline2_aa2c1cc45991316214c54602997348d7b}{init\+Structs}} ()
+\begin{DoxyCompactList}\small\item\em Initializes pipeline configuration structures. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classmam_1_1_v_k_pipeline2_a8a043d360cc3119f9d382e90417ab4dd}{get\+Uniform\+Location}} (const char $\ast$name) const override
+\begin{DoxyCompactList}\small\item\em Retrieves the location of a uniform. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmam_1_1_v_k_pipeline2_a95f850328705c4742706930f15caf06c}{set\+Uniform}} (const char $\ast$name, const void $\ast$value) override
+\begin{DoxyCompactList}\small\item\em Updates the value of a uniform variable. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmam_1_1_v_k_pipeline2_a5430eb83e9c801ca93968eb0cef5086c}{Create\+Uniform}} (std\+::string name, uint32\+\_\+t offset, uint32\+\_\+t size) override
+\begin{DoxyCompactList}\small\item\em Registers a uniform in the uniform buffer layout. \end{DoxyCompactList}\item 
+virtual u32 \mbox{\hyperlink{classmam_1_1_v_k_pipeline2_a5bb48ad17dc0647e8885810aef218e7b}{id}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the internal pipeline identifier. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_v_k_pipeline2_ac429251e91d58f3029f19edd14463db9}{add\+Attribute}} (u32 binding, u32 location, vk\+::\+Format format, u32 offset)
+\begin{DoxyCompactList}\small\item\em Adds a vertex attribute description. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_v_k_pipeline2_a7426f6f3a3e17c67f41a8ac90d6c2d82}{set\+Binding\+Description}} (u32 binding, u32 stride, vk\+::\+Vertex\+Input\+Rate input\+Rate)
+\begin{DoxyCompactList}\small\item\em Configures the vertex binding description. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_v_k_pipeline2_a494b93d64dba2273c7698cdba2ced55f}{set\+Input\+Assembly}} (vk\+::\+Primitive\+Topology draw\+Mode=vk\+::\+Primitive\+Topology\+::e\+Triangle\+List)
+\begin{DoxyCompactList}\small\item\em Configures the input assembly stage. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_v_k_pipeline2_a992e5477cdd30246b3ca1c454c25842c}{set\+Viewport}} (float width, float height, float depth=1.\+0f)
+\begin{DoxyCompactList}\small\item\em Configures the viewport. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_v_k_pipeline2_a152f268547be9d1ed347355b5e26822c}{set\+Scissor}} (s32 offsetX=0, s32 offsetY=0)
+\begin{DoxyCompactList}\small\item\em Configures the scissor rectangle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_v_k_pipeline2_a2772847ba04edd2db0494fe841f6aee2}{set\+Rasterizer}} (bool depth\+Clamp\+Enable=false, bool Discard\+Enable=false, vk\+::\+Polygon\+Mode mode=vk\+::\+Polygon\+Mode\+::e\+Fill, vk\+::\+Cull\+Mode\+Flag\+Bits cullmode=vk\+::\+Cull\+Mode\+Flag\+Bits\+::e\+Back, vk\+::\+Front\+Face frontface=vk\+::\+Front\+Face\+::e\+Clockwise, bool depth\+Bias\+Enable=false)
+\begin{DoxyCompactList}\small\item\em Configures rasterization settings. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_v_k_pipeline2_a002a7a701979f16abe30bce0b3d28cec}{set\+Color\+Blend\+Attachment}} (bool blend\+Enable=false)
+\begin{DoxyCompactList}\small\item\em Configures color blending for the attachment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_v_k_pipeline2_ab92acc85dac6d6bf7fedc2d52117ad62}{set\+Color\+Blending}} (bool logic\+Op\+Enable=false, vk\+::\+Logic\+Op logic\+Op=vk\+::\+Logic\+Op\+::e\+Copy)
+\begin{DoxyCompactList}\small\item\em Configures global color blending settings. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_pipeline2_afde1c1a07cf99c6aac4ee114f5cbf9d8}\label{classmam_1_1_v_k_pipeline2_afde1c1a07cf99c6aac4ee114f5cbf9d8}} 
+void \mbox{\hyperlink{classmam_1_1_v_k_pipeline2_afde1c1a07cf99c6aac4ee114f5cbf9d8}{create\+Descriptor\+Set\+Layout}} ()
+\begin{DoxyCompactList}\small\item\em Creates the descriptor set layout used by the pipeline. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_pipeline2_aaa9dd35d7c8732f1311856d3ec196999}\label{classmam_1_1_v_k_pipeline2_aaa9dd35d7c8732f1311856d3ec196999}} 
+void \mbox{\hyperlink{classmam_1_1_v_k_pipeline2_aaa9dd35d7c8732f1311856d3ec196999}{create\+Descriptor\+Pool}} ()
+\begin{DoxyCompactList}\small\item\em Creates the descriptor pool. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_pipeline2_a06fec395b247742430b55aa4da94fcce}\label{classmam_1_1_v_k_pipeline2_a06fec395b247742430b55aa4da94fcce}} 
+void \mbox{\hyperlink{classmam_1_1_v_k_pipeline2_a06fec395b247742430b55aa4da94fcce}{create\+Descriptor\+Sets}} ()
+\begin{DoxyCompactList}\small\item\em Allocates descriptor sets from the pool. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_v_k_pipeline2_a4188561ac9b519d39a17837d79a8092f}{create\+Render\+Pass}} ()
+\begin{DoxyCompactList}\small\item\em Creates the render pass used by the pipeline. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_pipeline2_a2f31eeb225a80624c90d62cca7b29579}\label{classmam_1_1_v_k_pipeline2_a2f31eeb225a80624c90d62cca7b29579}} 
+void \mbox{\hyperlink{classmam_1_1_v_k_pipeline2_a2f31eeb225a80624c90d62cca7b29579}{begin\+Render\+Pass}} ()
+\begin{DoxyCompactList}\small\item\em Begins the render pass. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_pipeline2_a0d56b56c629c1bb38c5e51a2afae6fed}\label{classmam_1_1_v_k_pipeline2_a0d56b56c629c1bb38c5e51a2afae6fed}} 
+void \mbox{\hyperlink{classmam_1_1_v_k_pipeline2_a0d56b56c629c1bb38c5e51a2afae6fed}{end\+Render\+Pass}} ()
+\begin{DoxyCompactList}\small\item\em Ends the render pass. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_pipeline2_af1bd6e9dbe489b55a58fb5cdaf295e93}\label{classmam_1_1_v_k_pipeline2_af1bd6e9dbe489b55a58fb5cdaf295e93}} 
+vk\+::\+Render\+Pass \mbox{\hyperlink{classmam_1_1_v_k_pipeline2_af1bd6e9dbe489b55a58fb5cdaf295e93}{render\+Pass}}
+\begin{DoxyCompactList}\small\item\em Render pass used by this pipeline. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Vulkan implementation of the \mbox{\hyperlink{classmam_1_1_pipeline2}{Pipeline2}} interface. 
+
+This class manages Vulkan graphics pipeline creation, shader management, descriptor sets, uniform buffers, and render pass execution. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmam_1_1_v_k_pipeline2_ac429251e91d58f3029f19edd14463db9}\label{classmam_1_1_v_k_pipeline2_ac429251e91d58f3029f19edd14463db9}} 
+\index{mam::VKPipeline2@{mam::VKPipeline2}!addAttribute@{addAttribute}}
+\index{addAttribute@{addAttribute}!mam::VKPipeline2@{mam::VKPipeline2}}
+\doxysubsubsection{\texorpdfstring{addAttribute()}{addAttribute()}}
+{\footnotesize\ttfamily void mam\+::\+V\+K\+Pipeline2\+::add\+Attribute (\begin{DoxyParamCaption}\item[{u32}]{binding,  }\item[{u32}]{location,  }\item[{vk\+::\+Format}]{format,  }\item[{u32}]{offset }\end{DoxyParamCaption})}
+
+
+
+Adds a vertex attribute description. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em binding} & \mbox{\hyperlink{structmam_1_1_vertex}{Vertex}} buffer binding index. \\
+\hline
+{\em location} & \mbox{\hyperlink{classmam_1_1_shader}{Shader}} attribute location. \\
+\hline
+{\em format} & Data format of the attribute. \\
+\hline
+{\em offset} & Byte offset within the vertex structure. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmam_1_1_v_k_pipeline2_a981c63d8cdfb50262273fa6c5ee00037}\label{classmam_1_1_v_k_pipeline2_a981c63d8cdfb50262273fa6c5ee00037}} 
+\index{mam::VKPipeline2@{mam::VKPipeline2}!addShader@{addShader}}
+\index{addShader@{addShader}!mam::VKPipeline2@{mam::VKPipeline2}}
+\doxysubsubsection{\texorpdfstring{addShader()}{addShader()}}
+{\footnotesize\ttfamily virtual void mam\+::\+V\+K\+Pipeline2\+::add\+Shader (\begin{DoxyParamCaption}\item[{const std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classmam_1_1_shader}{Shader}} $>$ \&}]{shader }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Adds a shader to the pipeline. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shader} & Unique pointer to the shader object. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classmam_1_1_pipeline2_a81a0d171b705162ce97ff95cc4609cd3}{mam\+::\+Pipeline2}}.
+
+\mbox{\Hypertarget{classmam_1_1_v_k_pipeline2_af74c2256857a1b911983336f61069a4e}\label{classmam_1_1_v_k_pipeline2_af74c2256857a1b911983336f61069a4e}} 
+\index{mam::VKPipeline2@{mam::VKPipeline2}!create@{create}}
+\index{create@{create}!mam::VKPipeline2@{mam::VKPipeline2}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily virtual bool mam\+::\+V\+K\+Pipeline2\+::create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Creates the Vulkan graphics pipeline. 
+
+\begin{DoxyReturn}{Returns}
+True if creation succeeded. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classmam_1_1_pipeline2_a5868610c85f484c49fe3df0a090ada1f}{mam\+::\+Pipeline2}}.
+
+\mbox{\Hypertarget{classmam_1_1_v_k_pipeline2_a4188561ac9b519d39a17837d79a8092f}\label{classmam_1_1_v_k_pipeline2_a4188561ac9b519d39a17837d79a8092f}} 
+\index{mam::VKPipeline2@{mam::VKPipeline2}!createRenderPass@{createRenderPass}}
+\index{createRenderPass@{createRenderPass}!mam::VKPipeline2@{mam::VKPipeline2}}
+\doxysubsubsection{\texorpdfstring{createRenderPass()}{createRenderPass()}}
+{\footnotesize\ttfamily void mam\+::\+V\+K\+Pipeline2\+::create\+Render\+Pass (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates the render pass used by the pipeline. 
+
+A render pass describes the rendering operations and attachments used during a frame. \mbox{\Hypertarget{classmam_1_1_v_k_pipeline2_a5430eb83e9c801ca93968eb0cef5086c}\label{classmam_1_1_v_k_pipeline2_a5430eb83e9c801ca93968eb0cef5086c}} 
+\index{mam::VKPipeline2@{mam::VKPipeline2}!CreateUniform@{CreateUniform}}
+\index{CreateUniform@{CreateUniform}!mam::VKPipeline2@{mam::VKPipeline2}}
+\doxysubsubsection{\texorpdfstring{CreateUniform()}{CreateUniform()}}
+{\footnotesize\ttfamily virtual void mam\+::\+V\+K\+Pipeline2\+::\+Create\+Uniform (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{uint32\+\_\+t}]{offset,  }\item[{uint32\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Registers a uniform in the uniform buffer layout. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the uniform. \\
+\hline
+{\em offset} & Byte offset within the buffer. \\
+\hline
+{\em size} & Size of the uniform in bytes. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classmam_1_1_pipeline2_a5a7d748c14c53b4420b690fe32d22fc4}{mam\+::\+Pipeline2}}.
+
+\mbox{\Hypertarget{classmam_1_1_v_k_pipeline2_a8a043d360cc3119f9d382e90417ab4dd}\label{classmam_1_1_v_k_pipeline2_a8a043d360cc3119f9d382e90417ab4dd}} 
+\index{mam::VKPipeline2@{mam::VKPipeline2}!getUniformLocation@{getUniformLocation}}
+\index{getUniformLocation@{getUniformLocation}!mam::VKPipeline2@{mam::VKPipeline2}}
+\doxysubsubsection{\texorpdfstring{getUniformLocation()}{getUniformLocation()}}
+{\footnotesize\ttfamily virtual int mam\+::\+V\+K\+Pipeline2\+::get\+Uniform\+Location (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Retrieves the location of a uniform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the uniform variable. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Integer identifier representing the uniform location. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classmam_1_1_pipeline2_a4d4e0b62a1727fe32a76b0c46c2525fc}{mam\+::\+Pipeline2}}.
+
+\mbox{\Hypertarget{classmam_1_1_v_k_pipeline2_a5bb48ad17dc0647e8885810aef218e7b}\label{classmam_1_1_v_k_pipeline2_a5bb48ad17dc0647e8885810aef218e7b}} 
+\index{mam::VKPipeline2@{mam::VKPipeline2}!id@{id}}
+\index{id@{id}!mam::VKPipeline2@{mam::VKPipeline2}}
+\doxysubsubsection{\texorpdfstring{id()}{id()}}
+{\footnotesize\ttfamily virtual u32 mam\+::\+V\+K\+Pipeline2\+::id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the internal pipeline identifier. 
+
+\begin{DoxyReturn}{Returns}
+Pipeline ID. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classmam_1_1_pipeline2_a59ce98989d0f732165cf92adb470b7ff}{mam\+::\+Pipeline2}}.
+
+\mbox{\Hypertarget{classmam_1_1_v_k_pipeline2_a7426f6f3a3e17c67f41a8ac90d6c2d82}\label{classmam_1_1_v_k_pipeline2_a7426f6f3a3e17c67f41a8ac90d6c2d82}} 
+\index{mam::VKPipeline2@{mam::VKPipeline2}!setBindingDescription@{setBindingDescription}}
+\index{setBindingDescription@{setBindingDescription}!mam::VKPipeline2@{mam::VKPipeline2}}
+\doxysubsubsection{\texorpdfstring{setBindingDescription()}{setBindingDescription()}}
+{\footnotesize\ttfamily void mam\+::\+V\+K\+Pipeline2\+::set\+Binding\+Description (\begin{DoxyParamCaption}\item[{u32}]{binding,  }\item[{u32}]{stride,  }\item[{vk\+::\+Vertex\+Input\+Rate}]{input\+Rate }\end{DoxyParamCaption})}
+
+
+
+Configures the vertex binding description. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em binding} & Binding index. \\
+\hline
+{\em stride} & Size of each vertex. \\
+\hline
+{\em input\+Rate} & \mbox{\hyperlink{structmam_1_1_vertex}{Vertex}} input rate (per vertex or per instance). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmam_1_1_v_k_pipeline2_a002a7a701979f16abe30bce0b3d28cec}\label{classmam_1_1_v_k_pipeline2_a002a7a701979f16abe30bce0b3d28cec}} 
+\index{mam::VKPipeline2@{mam::VKPipeline2}!setColorBlendAttachment@{setColorBlendAttachment}}
+\index{setColorBlendAttachment@{setColorBlendAttachment}!mam::VKPipeline2@{mam::VKPipeline2}}
+\doxysubsubsection{\texorpdfstring{setColorBlendAttachment()}{setColorBlendAttachment()}}
+{\footnotesize\ttfamily void mam\+::\+V\+K\+Pipeline2\+::set\+Color\+Blend\+Attachment (\begin{DoxyParamCaption}\item[{bool}]{blend\+Enable = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Configures color blending for the attachment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em blend\+Enable} & Enables blending. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmam_1_1_v_k_pipeline2_ab92acc85dac6d6bf7fedc2d52117ad62}\label{classmam_1_1_v_k_pipeline2_ab92acc85dac6d6bf7fedc2d52117ad62}} 
+\index{mam::VKPipeline2@{mam::VKPipeline2}!setColorBlending@{setColorBlending}}
+\index{setColorBlending@{setColorBlending}!mam::VKPipeline2@{mam::VKPipeline2}}
+\doxysubsubsection{\texorpdfstring{setColorBlending()}{setColorBlending()}}
+{\footnotesize\ttfamily void mam\+::\+V\+K\+Pipeline2\+::set\+Color\+Blending (\begin{DoxyParamCaption}\item[{bool}]{logic\+Op\+Enable = {\ttfamily false},  }\item[{vk\+::\+Logic\+Op}]{logic\+Op = {\ttfamily vk\+:\+:LogicOp\+:\+:eCopy} }\end{DoxyParamCaption})}
+
+
+
+Configures global color blending settings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em logic\+Op\+Enable} & Enables logical operations. \\
+\hline
+{\em logic\+Op} & Logical operation to apply. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmam_1_1_v_k_pipeline2_a494b93d64dba2273c7698cdba2ced55f}\label{classmam_1_1_v_k_pipeline2_a494b93d64dba2273c7698cdba2ced55f}} 
+\index{mam::VKPipeline2@{mam::VKPipeline2}!setInputAssembly@{setInputAssembly}}
+\index{setInputAssembly@{setInputAssembly}!mam::VKPipeline2@{mam::VKPipeline2}}
+\doxysubsubsection{\texorpdfstring{setInputAssembly()}{setInputAssembly()}}
+{\footnotesize\ttfamily void mam\+::\+V\+K\+Pipeline2\+::set\+Input\+Assembly (\begin{DoxyParamCaption}\item[{vk\+::\+Primitive\+Topology}]{draw\+Mode = {\ttfamily vk\+:\+:PrimitiveTopology\+:\+:eTriangleList} }\end{DoxyParamCaption})}
+
+
+
+Configures the input assembly stage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em draw\+Mode} & Primitive topology used for rendering. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmam_1_1_v_k_pipeline2_a2772847ba04edd2db0494fe841f6aee2}\label{classmam_1_1_v_k_pipeline2_a2772847ba04edd2db0494fe841f6aee2}} 
+\index{mam::VKPipeline2@{mam::VKPipeline2}!setRasterizer@{setRasterizer}}
+\index{setRasterizer@{setRasterizer}!mam::VKPipeline2@{mam::VKPipeline2}}
+\doxysubsubsection{\texorpdfstring{setRasterizer()}{setRasterizer()}}
+{\footnotesize\ttfamily void mam\+::\+V\+K\+Pipeline2\+::set\+Rasterizer (\begin{DoxyParamCaption}\item[{bool}]{depth\+Clamp\+Enable = {\ttfamily false},  }\item[{bool}]{Discard\+Enable = {\ttfamily false},  }\item[{vk\+::\+Polygon\+Mode}]{mode = {\ttfamily vk\+:\+:PolygonMode\+:\+:eFill},  }\item[{vk\+::\+Cull\+Mode\+Flag\+Bits}]{cullmode = {\ttfamily vk\+:\+:CullModeFlagBits\+:\+:eBack},  }\item[{vk\+::\+Front\+Face}]{frontface = {\ttfamily vk\+:\+:FrontFace\+:\+:eClockwise},  }\item[{bool}]{depth\+Bias\+Enable = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Configures rasterization settings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em depth\+Clamp\+Enable} & Enables depth clamping. \\
+\hline
+{\em Discard\+Enable} & Enables rasterizer discard. \\
+\hline
+{\em mode} & Polygon rendering mode. \\
+\hline
+{\em cullmode} & Face culling mode. \\
+\hline
+{\em frontface} & Front face orientation. \\
+\hline
+{\em depth\+Bias\+Enable} & Enables depth bias. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmam_1_1_v_k_pipeline2_a152f268547be9d1ed347355b5e26822c}\label{classmam_1_1_v_k_pipeline2_a152f268547be9d1ed347355b5e26822c}} 
+\index{mam::VKPipeline2@{mam::VKPipeline2}!setScissor@{setScissor}}
+\index{setScissor@{setScissor}!mam::VKPipeline2@{mam::VKPipeline2}}
+\doxysubsubsection{\texorpdfstring{setScissor()}{setScissor()}}
+{\footnotesize\ttfamily void mam\+::\+V\+K\+Pipeline2\+::set\+Scissor (\begin{DoxyParamCaption}\item[{s32}]{offsetX = {\ttfamily 0},  }\item[{s32}]{offsetY = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Configures the scissor rectangle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em offsetX} & Horizontal offset. \\
+\hline
+{\em offsetY} & Vertical offset. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmam_1_1_v_k_pipeline2_a95f850328705c4742706930f15caf06c}\label{classmam_1_1_v_k_pipeline2_a95f850328705c4742706930f15caf06c}} 
+\index{mam::VKPipeline2@{mam::VKPipeline2}!setUniform@{setUniform}}
+\index{setUniform@{setUniform}!mam::VKPipeline2@{mam::VKPipeline2}}
+\doxysubsubsection{\texorpdfstring{setUniform()}{setUniform()}}
+{\footnotesize\ttfamily virtual void mam\+::\+V\+K\+Pipeline2\+::set\+Uniform (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{const void $\ast$}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the value of a uniform variable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the uniform. \\
+\hline
+{\em value} & Pointer to the data to upload. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classmam_1_1_pipeline2_ac0e0c70ff0115bb709f3bbd6297a5d96}{mam\+::\+Pipeline2}}.
+
+\mbox{\Hypertarget{classmam_1_1_v_k_pipeline2_a992e5477cdd30246b3ca1c454c25842c}\label{classmam_1_1_v_k_pipeline2_a992e5477cdd30246b3ca1c454c25842c}} 
+\index{mam::VKPipeline2@{mam::VKPipeline2}!setViewport@{setViewport}}
+\index{setViewport@{setViewport}!mam::VKPipeline2@{mam::VKPipeline2}}
+\doxysubsubsection{\texorpdfstring{setViewport()}{setViewport()}}
+{\footnotesize\ttfamily void mam\+::\+V\+K\+Pipeline2\+::set\+Viewport (\begin{DoxyParamCaption}\item[{float}]{width,  }\item[{float}]{height,  }\item[{float}]{depth = {\ttfamily 1.0f} }\end{DoxyParamCaption})}
+
+
+
+Configures the viewport. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Width of the viewport. \\
+\hline
+{\em height} & Height of the viewport. \\
+\hline
+{\em depth} & Maximum depth value. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+platform/vulkan/vk\+\_\+pipeline.\+hpp\end{DoxyCompactItemize}

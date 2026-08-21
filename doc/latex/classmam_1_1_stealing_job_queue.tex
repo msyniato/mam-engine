@@ -1,0 +1,110 @@
+\hypertarget{classmam_1_1_stealing_job_queue}{}\doxysection{mam\+::Stealing\+Job\+Queue Class Reference}
+\label{classmam_1_1_stealing_job_queue}\index{mam::StealingJobQueue@{mam::StealingJobQueue}}
+
+
+Lock-\/free, bounded, work-\/stealing job queue.  
+
+
+
+
+{\ttfamily \#include $<$job\+\_\+system.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmam_1_1_stealing_job_queue_a7b4a99466ed6b3e5e8d8cfab707a99ec}{Stealing\+Job\+Queue}} (size\+\_\+t capacity=1024)
+\begin{DoxyCompactList}\small\item\em Construct the queue with given capacity. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classmam_1_1_stealing_job_queue_af30f956397b8d72bf8037992e42ddd0e}{push}} (\mbox{\hyperlink{structmam_1_1_job}{Job}} job)
+\begin{DoxyCompactList}\small\item\em Push a job onto the bottom of the queue. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classmam_1_1_stealing_job_queue_ad63f016c8a5009a7df3ee475f00c0c51}{pop}} (\mbox{\hyperlink{structmam_1_1_job}{Job}} \&job)
+\begin{DoxyCompactList}\small\item\em Pop a job from the bottom of the queue. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classmam_1_1_stealing_job_queue_a3e5010c168e7a61283dbb67d95bc2e3e}{steal}} (\mbox{\hyperlink{structmam_1_1_job}{Job}} \&job)
+\begin{DoxyCompactList}\small\item\em Steal a job from the top of the queue. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_stealing_job_queue_a303b59e8da667263f30ac14bb5f33d1a}\label{classmam_1_1_stealing_job_queue_a303b59e8da667263f30ac14bb5f33d1a}} 
+bool \mbox{\hyperlink{classmam_1_1_stealing_job_queue_a303b59e8da667263f30ac14bb5f33d1a}{empty}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if the queue is empty. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Lock-\/free, bounded, work-\/stealing job queue. 
+
+Owner thread can push/pop at bottom. Other threads can steal from top. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmam_1_1_stealing_job_queue_a7b4a99466ed6b3e5e8d8cfab707a99ec}\label{classmam_1_1_stealing_job_queue_a7b4a99466ed6b3e5e8d8cfab707a99ec}} 
+\index{mam::StealingJobQueue@{mam::StealingJobQueue}!StealingJobQueue@{StealingJobQueue}}
+\index{StealingJobQueue@{StealingJobQueue}!mam::StealingJobQueue@{mam::StealingJobQueue}}
+\doxysubsubsection{\texorpdfstring{StealingJobQueue()}{StealingJobQueue()}}
+{\footnotesize\ttfamily mam\+::\+Stealing\+Job\+Queue\+::\+Stealing\+Job\+Queue (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{capacity = {\ttfamily 1024} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Construct the queue with given capacity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em capacity} & Queue capacity (will be normalized to next power of two) \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmam_1_1_stealing_job_queue_ad63f016c8a5009a7df3ee475f00c0c51}\label{classmam_1_1_stealing_job_queue_ad63f016c8a5009a7df3ee475f00c0c51}} 
+\index{mam::StealingJobQueue@{mam::StealingJobQueue}!pop@{pop}}
+\index{pop@{pop}!mam::StealingJobQueue@{mam::StealingJobQueue}}
+\doxysubsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily bool mam\+::\+Stealing\+Job\+Queue\+::pop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmam_1_1_job}{Job}} \&}]{job }\end{DoxyParamCaption})}
+
+
+
+Pop a job from the bottom of the queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em job} & \mbox{\hyperlink{structmam_1_1_job}{Job}} to receive \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if a job was popped, false if empty 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmam_1_1_stealing_job_queue_af30f956397b8d72bf8037992e42ddd0e}\label{classmam_1_1_stealing_job_queue_af30f956397b8d72bf8037992e42ddd0e}} 
+\index{mam::StealingJobQueue@{mam::StealingJobQueue}!push@{push}}
+\index{push@{push}!mam::StealingJobQueue@{mam::StealingJobQueue}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily bool mam\+::\+Stealing\+Job\+Queue\+::push (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmam_1_1_job}{Job}}}]{job }\end{DoxyParamCaption})}
+
+
+
+Push a job onto the bottom of the queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em job} & \mbox{\hyperlink{structmam_1_1_job}{Job}} to push \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if successfully pushed, false if queue is full 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmam_1_1_stealing_job_queue_a3e5010c168e7a61283dbb67d95bc2e3e}\label{classmam_1_1_stealing_job_queue_a3e5010c168e7a61283dbb67d95bc2e3e}} 
+\index{mam::StealingJobQueue@{mam::StealingJobQueue}!steal@{steal}}
+\index{steal@{steal}!mam::StealingJobQueue@{mam::StealingJobQueue}}
+\doxysubsubsection{\texorpdfstring{steal()}{steal()}}
+{\footnotesize\ttfamily bool mam\+::\+Stealing\+Job\+Queue\+::steal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmam_1_1_job}{Job}} \&}]{job }\end{DoxyParamCaption})}
+
+
+
+Steal a job from the top of the queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em job} & \mbox{\hyperlink{structmam_1_1_job}{Job}} to receive \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if a job was stolen, false otherwise 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/mam/job\+\_\+system.\+hpp\end{DoxyCompactItemize}

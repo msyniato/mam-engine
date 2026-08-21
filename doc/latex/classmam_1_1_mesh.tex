@@ -1,0 +1,199 @@
+\hypertarget{classmam_1_1_mesh}{}\doxysection{mam\+::Mesh Class Reference}
+\label{classmam_1_1_mesh}\index{mam::Mesh@{mam::Mesh}}
+
+
+Represents a 3D mesh with vertices and indices.  
+
+
+
+
+{\ttfamily \#include $<$mesh.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmam_1_1_mesh_acbf28318196b056477a88d3f8e4d2958}{Mesh}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Construct a mesh with a name only. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmam_1_1_mesh_a464b05a7d7fe2ebb6e99b7911ee275f2}{Mesh}} (const std\+::string \&name, std\+::vector$<$ \mbox{\hyperlink{structmam_1_1_vertex}{Vertex}} $>$ \mbox{\hyperlink{classmam_1_1_mesh_a7569ee655f286086b059cc126654b9b9}{vertices}}, std\+::vector$<$ unsigned int $>$ \mbox{\hyperlink{classmam_1_1_mesh_aeb1c2a3e6a31b0fbd722c410b6d3a8a3}{indices}})
+\begin{DoxyCompactList}\small\item\em Construct a mesh with vertices and indices. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_mesh_af8575fcb48cb15b9a7c439bf43d30b0f}\label{classmam_1_1_mesh_af8575fcb48cb15b9a7c439bf43d30b0f}} 
+\mbox{\hyperlink{classmam_1_1_mesh_af8575fcb48cb15b9a7c439bf43d30b0f}{$\sim$\+Mesh}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_mesh_a8cc61d5c9d2f1db70ff3f1987a3dcbe2}{Load\+O\+BJ}} (const char $\ast$path)
+\begin{DoxyCompactList}\small\item\em Load mesh from an O\+BJ file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_mesh_ae2f03f2d412dff58d8cbff21f1f15595}{Load\+O\+B\+J\+\_\+\+C\+PU}} (const char $\ast$path)
+\begin{DoxyCompactList}\small\item\em Load mesh from O\+BJ file on C\+PU (no G\+PU upload). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_mesh_aaa2410c13140052658702f85a6246e18}\label{classmam_1_1_mesh_aaa2410c13140052658702f85a6246e18}} 
+void \mbox{\hyperlink{classmam_1_1_mesh_aaa2410c13140052658702f85a6246e18}{Upload\+To\+G\+PU}} ()
+\begin{DoxyCompactList}\small\item\em Upload vertex and index data to G\+PU. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_mesh_a3b6b57f9619be2846f8d80234afe08a7}\label{classmam_1_1_mesh_a3b6b57f9619be2846f8d80234afe08a7}} 
+void \mbox{\hyperlink{classmam_1_1_mesh_a3b6b57f9619be2846f8d80234afe08a7}{create\+Cube8v}} ()
+\begin{DoxyCompactList}\small\item\em Create a cube with 8 vertices. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_mesh_a38e227b6e84bca8e7d10126082e4080a}\label{classmam_1_1_mesh_a38e227b6e84bca8e7d10126082e4080a}} 
+void \mbox{\hyperlink{classmam_1_1_mesh_a38e227b6e84bca8e7d10126082e4080a}{create\+Cube24v}} ()
+\begin{DoxyCompactList}\small\item\em Create a cube with 24 vertices. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_mesh_aac7b36339cbb259fa6cc38b4f65d4fa1}\label{classmam_1_1_mesh_aac7b36339cbb259fa6cc38b4f65d4fa1}} 
+void \mbox{\hyperlink{classmam_1_1_mesh_aac7b36339cbb259fa6cc38b4f65d4fa1}{create\+Quad}} ()
+\begin{DoxyCompactList}\small\item\em Create a simple quad. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_mesh_a5e69ffa1a0d204b73d1e3f5821221ed5}{create\+Sphere}} (const int num\+\_\+heights=20.\+0f, const int num\+\_\+revs=20.\+0f)
+\begin{DoxyCompactList}\small\item\em Create a sphere mesh. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_mesh_a5983c97049c550a8f85a6903f53514d5}{Create\+Surfaces}} (const float $\ast$points, const int num\+\_\+heights, const int num\+\_\+revs, const float max\+\_\+height)
+\begin{DoxyCompactList}\small\item\em Create surfaces from parametric points. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_mesh_a091884dc2bf6cabe23c370ae56e65c52}\label{classmam_1_1_mesh_a091884dc2bf6cabe23c370ae56e65c52}} 
+void \mbox{\hyperlink{classmam_1_1_mesh_a091884dc2bf6cabe23c370ae56e65c52}{bind}} ()
+\begin{DoxyCompactList}\small\item\em Bind the mesh\textquotesingle{}s V\+AO for rendering. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_mesh_ad48c9ef00702f79a995441a2fd909661}\label{classmam_1_1_mesh_ad48c9ef00702f79a995441a2fd909661}} 
+void \mbox{\hyperlink{classmam_1_1_mesh_ad48c9ef00702f79a995441a2fd909661}{un\+Bind}} ()
+\begin{DoxyCompactList}\small\item\em Unbind the mesh\textquotesingle{}s V\+AO. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_mesh_af345eff029325734496d19c0b52972c8}\label{classmam_1_1_mesh_af345eff029325734496d19c0b52972c8}} 
+std\+::shared\+\_\+ptr$<$ class \mbox{\hyperlink{classmam_1_1_vertex_array}{Vertex\+Array}} $>$ \mbox{\hyperlink{classmam_1_1_mesh_af345eff029325734496d19c0b52972c8}{vertex\+Array}} ()
+\begin{DoxyCompactList}\small\item\em Get the mesh\textquotesingle{}s vertex array. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_mesh_a7569ee655f286086b059cc126654b9b9}\label{classmam_1_1_mesh_a7569ee655f286086b059cc126654b9b9}} 
+u32 \mbox{\hyperlink{classmam_1_1_mesh_a7569ee655f286086b059cc126654b9b9}{vertices}} ()
+\begin{DoxyCompactList}\small\item\em Get the number of vertices. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_mesh_aeb1c2a3e6a31b0fbd722c410b6d3a8a3}\label{classmam_1_1_mesh_aeb1c2a3e6a31b0fbd722c410b6d3a8a3}} 
+u32 \mbox{\hyperlink{classmam_1_1_mesh_aeb1c2a3e6a31b0fbd722c410b6d3a8a3}{indices}} ()
+\begin{DoxyCompactList}\small\item\em Get the number of indices. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_mesh_a5cba4756fcc9ec220f07c232f5f46ac1}\label{classmam_1_1_mesh_a5cba4756fcc9ec220f07c232f5f46ac1}} 
+void \mbox{\hyperlink{classmam_1_1_mesh_a5cba4756fcc9ec220f07c232f5f46ac1}{init\+Mesh}} ()
+\begin{DoxyCompactList}\small\item\em Initialize internal buffers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_mesh_a6d9f4ecfcd68a3ebb16d688930a11bea}\label{classmam_1_1_mesh_a6d9f4ecfcd68a3ebb16d688930a11bea}} 
+std\+::vector$<$ \mbox{\hyperlink{structmam_1_1_vertex}{Vertex}} $>$ \mbox{\hyperlink{classmam_1_1_mesh_a6d9f4ecfcd68a3ebb16d688930a11bea}{vertices\+\_\+}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structmam_1_1_vertex}{Vertex}} data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_mesh_a71440da2907ef3c7a1ab7edbd4eebdeb}\label{classmam_1_1_mesh_a71440da2907ef3c7a1ab7edbd4eebdeb}} 
+std\+::vector$<$ unsigned int $>$ \mbox{\hyperlink{classmam_1_1_mesh_a71440da2907ef3c7a1ab7edbd4eebdeb}{indices\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Index data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_mesh_a33266a15bbf307cd4bd41c17dc3f691a}\label{classmam_1_1_mesh_a33266a15bbf307cd4bd41c17dc3f691a}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmam_1_1_vertex_array}{Vertex\+Array}} $>$ \mbox{\hyperlink{classmam_1_1_mesh_a33266a15bbf307cd4bd41c17dc3f691a}{vertex\+Array\+\_\+}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structmam_1_1_vertex}{Vertex}} array object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_mesh_a0b1b217e9a6d1abf69e002af78efd07c}\label{classmam_1_1_mesh_a0b1b217e9a6d1abf69e002af78efd07c}} 
+std\+::shared\+\_\+ptr$<$ class \mbox{\hyperlink{classmam_1_1_vertex_buffer}{Vertex\+Buffer}} $>$ \mbox{\hyperlink{classmam_1_1_mesh_a0b1b217e9a6d1abf69e002af78efd07c}{vertex\+Buffer\+\_\+}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structmam_1_1_vertex}{Vertex}} buffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_mesh_a099fc7df08b10671bc615743f6121bff}\label{classmam_1_1_mesh_a099fc7df08b10671bc615743f6121bff}} 
+std\+::shared\+\_\+ptr$<$ class \mbox{\hyperlink{classmam_1_1_index_buffer}{Index\+Buffer}} $>$ \mbox{\hyperlink{classmam_1_1_mesh_a099fc7df08b10671bc615743f6121bff}{index\+Buffer\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Index buffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_mesh_a1de37f61a255616ff130661c02b61dfb}\label{classmam_1_1_mesh_a1de37f61a255616ff130661c02b61dfb}} 
+std\+::string \mbox{\hyperlink{classmam_1_1_mesh_a1de37f61a255616ff130661c02b61dfb}{name\+\_\+}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classmam_1_1_mesh}{Mesh}} name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a 3D mesh with vertices and indices. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmam_1_1_mesh_acbf28318196b056477a88d3f8e4d2958}\label{classmam_1_1_mesh_acbf28318196b056477a88d3f8e4d2958}} 
+\index{mam::Mesh@{mam::Mesh}!Mesh@{Mesh}}
+\index{Mesh@{Mesh}!mam::Mesh@{mam::Mesh}}
+\doxysubsubsection{\texorpdfstring{Mesh()}{Mesh()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily mam\+::\+Mesh\+::\+Mesh (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Construct a mesh with a name only. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \mbox{\hyperlink{classmam_1_1_mesh}{Mesh}} name \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmam_1_1_mesh_a464b05a7d7fe2ebb6e99b7911ee275f2}\label{classmam_1_1_mesh_a464b05a7d7fe2ebb6e99b7911ee275f2}} 
+\index{mam::Mesh@{mam::Mesh}!Mesh@{Mesh}}
+\index{Mesh@{Mesh}!mam::Mesh@{mam::Mesh}}
+\doxysubsubsection{\texorpdfstring{Mesh()}{Mesh()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily mam\+::\+Mesh\+::\+Mesh (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structmam_1_1_vertex}{Vertex}} $>$}]{vertices,  }\item[{std\+::vector$<$ unsigned int $>$}]{indices }\end{DoxyParamCaption})}
+
+
+
+Construct a mesh with vertices and indices. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \mbox{\hyperlink{classmam_1_1_mesh}{Mesh}} name \\
+\hline
+{\em vertices} & \mbox{\hyperlink{structmam_1_1_vertex}{Vertex}} data \\
+\hline
+{\em indices} & Index data \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmam_1_1_mesh_a5e69ffa1a0d204b73d1e3f5821221ed5}\label{classmam_1_1_mesh_a5e69ffa1a0d204b73d1e3f5821221ed5}} 
+\index{mam::Mesh@{mam::Mesh}!createSphere@{createSphere}}
+\index{createSphere@{createSphere}!mam::Mesh@{mam::Mesh}}
+\doxysubsubsection{\texorpdfstring{createSphere()}{createSphere()}}
+{\footnotesize\ttfamily void mam\+::\+Mesh\+::create\+Sphere (\begin{DoxyParamCaption}\item[{const int}]{num\+\_\+heights = {\ttfamily 20.0f},  }\item[{const int}]{num\+\_\+revs = {\ttfamily 20.0f} }\end{DoxyParamCaption})}
+
+
+
+Create a sphere mesh. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+\_\+heights} & Number of horizontal segments (default 20) \\
+\hline
+{\em num\+\_\+revs} & Number of vertical segments (default 20) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmam_1_1_mesh_a5983c97049c550a8f85a6903f53514d5}\label{classmam_1_1_mesh_a5983c97049c550a8f85a6903f53514d5}} 
+\index{mam::Mesh@{mam::Mesh}!CreateSurfaces@{CreateSurfaces}}
+\index{CreateSurfaces@{CreateSurfaces}!mam::Mesh@{mam::Mesh}}
+\doxysubsubsection{\texorpdfstring{CreateSurfaces()}{CreateSurfaces()}}
+{\footnotesize\ttfamily void mam\+::\+Mesh\+::\+Create\+Surfaces (\begin{DoxyParamCaption}\item[{const float $\ast$}]{points,  }\item[{const int}]{num\+\_\+heights,  }\item[{const int}]{num\+\_\+revs,  }\item[{const float}]{max\+\_\+height }\end{DoxyParamCaption})}
+
+
+
+Create surfaces from parametric points. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em points} & Array of points \\
+\hline
+{\em num\+\_\+heights} & Number of heights \\
+\hline
+{\em num\+\_\+revs} & Number of revolutions \\
+\hline
+{\em max\+\_\+height} & Maximum height \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmam_1_1_mesh_a8cc61d5c9d2f1db70ff3f1987a3dcbe2}\label{classmam_1_1_mesh_a8cc61d5c9d2f1db70ff3f1987a3dcbe2}} 
+\index{mam::Mesh@{mam::Mesh}!LoadOBJ@{LoadOBJ}}
+\index{LoadOBJ@{LoadOBJ}!mam::Mesh@{mam::Mesh}}
+\doxysubsubsection{\texorpdfstring{LoadOBJ()}{LoadOBJ()}}
+{\footnotesize\ttfamily void mam\+::\+Mesh\+::\+Load\+O\+BJ (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path }\end{DoxyParamCaption})}
+
+
+
+Load mesh from an O\+BJ file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path to O\+BJ file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmam_1_1_mesh_ae2f03f2d412dff58d8cbff21f1f15595}\label{classmam_1_1_mesh_ae2f03f2d412dff58d8cbff21f1f15595}} 
+\index{mam::Mesh@{mam::Mesh}!LoadOBJ\_CPU@{LoadOBJ\_CPU}}
+\index{LoadOBJ\_CPU@{LoadOBJ\_CPU}!mam::Mesh@{mam::Mesh}}
+\doxysubsubsection{\texorpdfstring{LoadOBJ\_CPU()}{LoadOBJ\_CPU()}}
+{\footnotesize\ttfamily void mam\+::\+Mesh\+::\+Load\+O\+B\+J\+\_\+\+C\+PU (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path }\end{DoxyParamCaption})}
+
+
+
+Load mesh from O\+BJ file on C\+PU (no G\+PU upload). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path to O\+BJ file \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/mam/mesh.\+hpp\end{DoxyCompactItemize}

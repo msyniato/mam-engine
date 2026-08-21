@@ -1,0 +1,151 @@
+\hypertarget{classmam_1_1_g_l_pipeline2}{}\doxysection{mam\+::G\+L\+Pipeline2 Class Reference}
+\label{classmam_1_1_g_l_pipeline2}\index{mam::GLPipeline2@{mam::GLPipeline2}}
+
+
+Open\+GL implementation of a rendering pipeline (\mbox{\hyperlink{classmam_1_1_pipeline2}{Pipeline2}})  
+
+
+
+
+{\ttfamily \#include $<$gl\+\_\+pipeline.\+hpp$>$}
+
+Inheritance diagram for mam\+::G\+L\+Pipeline2\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmam_1_1_g_l_pipeline2}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_g_l_pipeline2_af5cb93600c34448616422aad8ad6d812}\label{classmam_1_1_g_l_pipeline2_af5cb93600c34448616422aad8ad6d812}} 
+\mbox{\hyperlink{classmam_1_1_g_l_pipeline2_af5cb93600c34448616422aad8ad6d812}{G\+L\+Pipeline2}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classmam_1_1_g_l_pipeline2}{G\+L\+Pipeline2}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_g_l_pipeline2_a7a214f8c69803a9dcf6fa9c88b3d6780}\label{classmam_1_1_g_l_pipeline2_a7a214f8c69803a9dcf6fa9c88b3d6780}} 
+virtual \mbox{\hyperlink{classmam_1_1_g_l_pipeline2_a7a214f8c69803a9dcf6fa9c88b3d6780}{$\sim$\+G\+L\+Pipeline2}} () override
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classmam_1_1_g_l_pipeline2}{G\+L\+Pipeline2}}, releases Open\+GL resources. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmam_1_1_g_l_pipeline2_ab7eb69b4887c781c8aafa254a6eefe53}{add\+Shader}} (const std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classmam_1_1_shader}{Shader}} $>$ \&shader) override
+\begin{DoxyCompactList}\small\item\em Add a shader to the pipeline. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classmam_1_1_g_l_pipeline2_acec3c96d4c117eb9e7abc8836f92201d}{create}} () override
+\begin{DoxyCompactList}\small\item\em Compile and link all shaders in the pipeline. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_g_l_pipeline2_ab42b0b10720126b4bedc079137d85bb5}\label{classmam_1_1_g_l_pipeline2_ab42b0b10720126b4bedc079137d85bb5}} 
+virtual void \mbox{\hyperlink{classmam_1_1_g_l_pipeline2_ab42b0b10720126b4bedc079137d85bb5}{use}} () override
+\begin{DoxyCompactList}\small\item\em Activate this pipeline for rendering. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_g_l_pipeline2_a875ac6132b27fcb6f65d7c5cd1b191f6}\label{classmam_1_1_g_l_pipeline2_a875ac6132b27fcb6f65d7c5cd1b191f6}} 
+virtual void \mbox{\hyperlink{classmam_1_1_g_l_pipeline2_a875ac6132b27fcb6f65d7c5cd1b191f6}{destroy}} () override
+\begin{DoxyCompactList}\small\item\em Destroy the pipeline and free resources. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classmam_1_1_g_l_pipeline2_aaefc5703c0ab0274bf2ae782c404648b}{get\+Uniform\+Location}} (const char $\ast$name) const override
+\begin{DoxyCompactList}\small\item\em Get the location of a uniform variable by name. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmam_1_1_g_l_pipeline2_ac3cbfe9e9a61c488198bf2e11d776098}{set\+Uniform}} (const char $\ast$name, const void $\ast$value) override
+\begin{DoxyCompactList}\small\item\em Set a uniform value. \end{DoxyCompactList}\item 
+virtual u32 \mbox{\hyperlink{classmam_1_1_g_l_pipeline2_af66a6540d6ffa505eb2e0a18b6cf4089}{id}} () const override
+\begin{DoxyCompactList}\small\item\em Get the Open\+GL ID of this pipeline. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Open\+GL implementation of a rendering pipeline (\mbox{\hyperlink{classmam_1_1_pipeline2}{Pipeline2}}) 
+
+Manages shader compilation, linking, uniforms, and binding of the Open\+GL pipeline. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmam_1_1_g_l_pipeline2_ab7eb69b4887c781c8aafa254a6eefe53}\label{classmam_1_1_g_l_pipeline2_ab7eb69b4887c781c8aafa254a6eefe53}} 
+\index{mam::GLPipeline2@{mam::GLPipeline2}!addShader@{addShader}}
+\index{addShader@{addShader}!mam::GLPipeline2@{mam::GLPipeline2}}
+\doxysubsubsection{\texorpdfstring{addShader()}{addShader()}}
+{\footnotesize\ttfamily virtual void mam\+::\+G\+L\+Pipeline2\+::add\+Shader (\begin{DoxyParamCaption}\item[{const std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classmam_1_1_shader}{Shader}} $>$ \&}]{shader }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Add a shader to the pipeline. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shader} & Unique pointer to a \mbox{\hyperlink{classmam_1_1_shader}{Shader}} object \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classmam_1_1_pipeline2_a81a0d171b705162ce97ff95cc4609cd3}{mam\+::\+Pipeline2}}.
+
+\mbox{\Hypertarget{classmam_1_1_g_l_pipeline2_acec3c96d4c117eb9e7abc8836f92201d}\label{classmam_1_1_g_l_pipeline2_acec3c96d4c117eb9e7abc8836f92201d}} 
+\index{mam::GLPipeline2@{mam::GLPipeline2}!create@{create}}
+\index{create@{create}!mam::GLPipeline2@{mam::GLPipeline2}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily virtual bool mam\+::\+G\+L\+Pipeline2\+::create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Compile and link all shaders in the pipeline. 
+
+\begin{DoxyReturn}{Returns}
+true if successful 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classmam_1_1_pipeline2_a5868610c85f484c49fe3df0a090ada1f}{mam\+::\+Pipeline2}}.
+
+\mbox{\Hypertarget{classmam_1_1_g_l_pipeline2_aaefc5703c0ab0274bf2ae782c404648b}\label{classmam_1_1_g_l_pipeline2_aaefc5703c0ab0274bf2ae782c404648b}} 
+\index{mam::GLPipeline2@{mam::GLPipeline2}!getUniformLocation@{getUniformLocation}}
+\index{getUniformLocation@{getUniformLocation}!mam::GLPipeline2@{mam::GLPipeline2}}
+\doxysubsubsection{\texorpdfstring{getUniformLocation()}{getUniformLocation()}}
+{\footnotesize\ttfamily virtual int mam\+::\+G\+L\+Pipeline2\+::get\+Uniform\+Location (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the location of a uniform variable by name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the uniform \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Location in the shader program 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classmam_1_1_pipeline2_a4d4e0b62a1727fe32a76b0c46c2525fc}{mam\+::\+Pipeline2}}.
+
+\mbox{\Hypertarget{classmam_1_1_g_l_pipeline2_af66a6540d6ffa505eb2e0a18b6cf4089}\label{classmam_1_1_g_l_pipeline2_af66a6540d6ffa505eb2e0a18b6cf4089}} 
+\index{mam::GLPipeline2@{mam::GLPipeline2}!id@{id}}
+\index{id@{id}!mam::GLPipeline2@{mam::GLPipeline2}}
+\doxysubsubsection{\texorpdfstring{id()}{id()}}
+{\footnotesize\ttfamily virtual u32 mam\+::\+G\+L\+Pipeline2\+::id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the Open\+GL ID of this pipeline. 
+
+\begin{DoxyReturn}{Returns}
+G\+Luint ID 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classmam_1_1_pipeline2_a59ce98989d0f732165cf92adb470b7ff}{mam\+::\+Pipeline2}}.
+
+\mbox{\Hypertarget{classmam_1_1_g_l_pipeline2_ac3cbfe9e9a61c488198bf2e11d776098}\label{classmam_1_1_g_l_pipeline2_ac3cbfe9e9a61c488198bf2e11d776098}} 
+\index{mam::GLPipeline2@{mam::GLPipeline2}!setUniform@{setUniform}}
+\index{setUniform@{setUniform}!mam::GLPipeline2@{mam::GLPipeline2}}
+\doxysubsubsection{\texorpdfstring{setUniform()}{setUniform()}}
+{\footnotesize\ttfamily virtual void mam\+::\+G\+L\+Pipeline2\+::set\+Uniform (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{const void $\ast$}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Set a uniform value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Uniform name \\
+\hline
+{\em value} & Pointer to the value to set \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classmam_1_1_pipeline2_ac0e0c70ff0115bb709f3bbd6297a5d96}{mam\+::\+Pipeline2}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+platform/opengl/gl\+\_\+pipeline.\+hpp\end{DoxyCompactItemize}

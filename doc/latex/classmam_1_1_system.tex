@@ -1,0 +1,45 @@
+\hypertarget{classmam_1_1_system}{}\doxysection{mam\+::System Class Reference}
+\label{classmam_1_1_system}\index{mam::System@{mam::System}}
+
+
+Base class for all E\+CS systems.  
+
+
+
+
+{\ttfamily \#include $<$system.\+hpp$>$}
+
+Inheritance diagram for mam\+::System\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmam_1_1_system}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::set$<$ Entity $>$ \mbox{\hyperlink{classmam_1_1_system_aac32a41f41c7480c2b6c781ea4396399}{entities\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Set of entities currently managed by the system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for all E\+CS systems. 
+
+Systems define behavior that operates on entities with specific components. Each derived system stores the set of entities it currently processes. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classmam_1_1_system_aac32a41f41c7480c2b6c781ea4396399}\label{classmam_1_1_system_aac32a41f41c7480c2b6c781ea4396399}} 
+\index{mam::System@{mam::System}!entities\_@{entities\_}}
+\index{entities\_@{entities\_}!mam::System@{mam::System}}
+\doxysubsubsection{\texorpdfstring{entities\_}{entities\_}}
+{\footnotesize\ttfamily std\+::set$<$Entity$>$ mam\+::\+System\+::entities\+\_\+}
+
+
+
+Set of entities currently managed by the system. 
+
+The E\+CS coordinator updates this set whenever an entity\textquotesingle{}s component signature matches (or no longer matches) the system\textquotesingle{}s required signature. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/ecs/system.\+hpp\end{DoxyCompactItemize}

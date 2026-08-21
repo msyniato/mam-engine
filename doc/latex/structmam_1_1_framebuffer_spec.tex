@@ -1,0 +1,39 @@
+\hypertarget{structmam_1_1_framebuffer_spec}{}\doxysection{mam\+::Framebuffer\+Spec Struct Reference}
+\label{structmam_1_1_framebuffer_spec}\index{mam::FramebufferSpec@{mam::FramebufferSpec}}
+
+
+Specification for creating a framebuffer.  
+
+
+
+
+{\ttfamily \#include $<$frame\+\_\+buffer.\+hpp$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structmam_1_1_framebuffer_spec_a3f8e5e97c482cab8592b22d9ad417735}\label{structmam_1_1_framebuffer_spec_a3f8e5e97c482cab8592b22d9ad417735}} 
+u32 \mbox{\hyperlink{structmam_1_1_framebuffer_spec_a3f8e5e97c482cab8592b22d9ad417735}{width}} = 0
+\begin{DoxyCompactList}\small\item\em Width of the framebuffer in pixels. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structmam_1_1_framebuffer_spec_a5bfc077393337a5d8bcf7c10c03ffc13}\label{structmam_1_1_framebuffer_spec_a5bfc077393337a5d8bcf7c10c03ffc13}} 
+u32 \mbox{\hyperlink{structmam_1_1_framebuffer_spec_a5bfc077393337a5d8bcf7c10c03ffc13}{height}} = 0
+\begin{DoxyCompactList}\small\item\em Height of the framebuffer in pixels. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structmam_1_1_framebuffer_spec_a3eeb70586ed9b36d7a37c07117ddd5f4}\label{structmam_1_1_framebuffer_spec_a3eeb70586ed9b36d7a37c07117ddd5f4}} 
+std\+::vector$<$ mam\+::\+Format $>$ \mbox{\hyperlink{structmam_1_1_framebuffer_spec_a3eeb70586ed9b36d7a37c07117ddd5f4}{color\+Formats}}
+\begin{DoxyCompactList}\small\item\em Formats for color attachments. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structmam_1_1_framebuffer_spec_a90b0da0534d0183275a827bcb9ff0d28}\label{structmam_1_1_framebuffer_spec_a90b0da0534d0183275a827bcb9ff0d28}} 
+bool \mbox{\hyperlink{structmam_1_1_framebuffer_spec_a90b0da0534d0183275a827bcb9ff0d28}{has\+Depth}} = true
+\begin{DoxyCompactList}\small\item\em Whether the framebuffer has a depth attachment. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structmam_1_1_framebuffer_spec_a12df5bf7d7a89667ac8ed5607811e84a}\label{structmam_1_1_framebuffer_spec_a12df5bf7d7a89667ac8ed5607811e84a}} 
+mam\+::\+Format \mbox{\hyperlink{structmam_1_1_framebuffer_spec_a12df5bf7d7a89667ac8ed5607811e84a}{depth\+Format}} = mam\+::\+Format\+::\+D\+E\+P\+T\+H24\+S\+T\+E\+N\+C\+I\+L8
+\begin{DoxyCompactList}\small\item\em Format of the depth attachment (if any) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Specification for creating a framebuffer. 
+
+Defines size, color attachment formats, and depth attachment options. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/mam/frame\+\_\+buffer.\+hpp\end{DoxyCompactItemize}

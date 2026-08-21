@@ -1,0 +1,345 @@
+\hypertarget{classmam_1_1_v_k_device}{}\doxysection{mam\+::V\+K\+Device Class Reference}
+\label{classmam_1_1_v_k_device}\index{mam::VKDevice@{mam::VKDevice}}
+
+
+Vulkan implementation of the \mbox{\hyperlink{classmam_1_1_graphic_device}{Graphic\+Device}} interface.  
+
+
+
+
+{\ttfamily \#include $<$vk\+\_\+device.\+hpp$>$}
+
+Inheritance diagram for mam\+::V\+K\+Device\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmam_1_1_v_k_device}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_a19fbd29caf2f21255ef750f0eb1e282b}\label{classmam_1_1_v_k_device_a19fbd29caf2f21255ef750f0eb1e282b}} 
+\mbox{\hyperlink{classmam_1_1_v_k_device_a19fbd29caf2f21255ef750f0eb1e282b}{V\+K\+Device}} ()
+\begin{DoxyCompactList}\small\item\em Constructs the Vulkan device. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_af01029e4803e7481e421cc91014d6b44}\label{classmam_1_1_v_k_device_af01029e4803e7481e421cc91014d6b44}} 
+void \mbox{\hyperlink{classmam_1_1_v_k_device_af01029e4803e7481e421cc91014d6b44}{init}} () override
+\begin{DoxyCompactList}\small\item\em Initializes Vulkan and all rendering resources. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_aa6a1390d2451145ec531de7737707616}\label{classmam_1_1_v_k_device_aa6a1390d2451145ec531de7737707616}} 
+void \mbox{\hyperlink{classmam_1_1_v_k_device_aa6a1390d2451145ec531de7737707616}{cleanup}} () override
+\begin{DoxyCompactList}\small\item\em Cleans up all Vulkan resources. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_v_k_device_ab20f02f62cac810ce5314f319a16437f}{draw}} (\mbox{\hyperlink{classmam_1_1_mesh}{Mesh}} \&mesh) override
+\begin{DoxyCompactList}\small\item\em Draws a mesh. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_v_k_device_a6fb1e3f7f5277e476c3e141fa214c15c}{draw}} (uint32\+\_\+t indices) override
+\begin{DoxyCompactList}\small\item\em Draws indexed geometry. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_a6b064e73dd885ef472c07bda50405f56}\label{classmam_1_1_v_k_device_a6b064e73dd885ef472c07bda50405f56}} 
+void \mbox{\hyperlink{classmam_1_1_v_k_device_a6b064e73dd885ef472c07bda50405f56}{begin\+Frame}} () override
+\begin{DoxyCompactList}\small\item\em Begins rendering of a frame. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_a48e31ad315d4b0ea5810fe8bc192ea9d}\label{classmam_1_1_v_k_device_a48e31ad315d4b0ea5810fe8bc192ea9d}} 
+void \mbox{\hyperlink{classmam_1_1_v_k_device_a48e31ad315d4b0ea5810fe8bc192ea9d}{end\+Frame}} () override
+\begin{DoxyCompactList}\small\item\em Ends rendering of a frame and presents the result. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_a53ddecd2dfd1418ea14457b2bcb2291c}\label{classmam_1_1_v_k_device_a53ddecd2dfd1418ea14457b2bcb2291c}} 
+void \mbox{\hyperlink{classmam_1_1_v_k_device_a53ddecd2dfd1418ea14457b2bcb2291c}{enable\+Depth\+Test}} () override
+\begin{DoxyCompactList}\small\item\em Enable depth testing. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_a586d27800adeac537df4d095da66b93b}\label{classmam_1_1_v_k_device_a586d27800adeac537df4d095da66b93b}} 
+void \mbox{\hyperlink{classmam_1_1_v_k_device_a586d27800adeac537df4d095da66b93b}{disable\+Depth\+Test}} () override
+\begin{DoxyCompactList}\small\item\em Enables depth testing. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_a8b9a49a7f9a997c6d715ed4b3c7e2ae1}\label{classmam_1_1_v_k_device_a8b9a49a7f9a997c6d715ed4b3c7e2ae1}} 
+void \mbox{\hyperlink{classmam_1_1_v_k_device_a8b9a49a7f9a997c6d715ed4b3c7e2ae1}{enable\+Face\+Culling}} () override
+\begin{DoxyCompactList}\small\item\em Disables depth testing. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_ac5d1e20632ca831725aa29de20e93aca}\label{classmam_1_1_v_k_device_ac5d1e20632ca831725aa29de20e93aca}} 
+void \mbox{\hyperlink{classmam_1_1_v_k_device_ac5d1e20632ca831725aa29de20e93aca}{disable\+Face\+Culling}} () override
+\begin{DoxyCompactList}\small\item\em Enables face culling. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_ae62ca5c79eccd83b99a17d6488aaf441}\label{classmam_1_1_v_k_device_ae62ca5c79eccd83b99a17d6488aaf441}} 
+vk\+::\+Command\+Buffer \mbox{\hyperlink{classmam_1_1_v_k_device_ae62ca5c79eccd83b99a17d6488aaf441}{get\+Command\+Buffer}} ()
+\begin{DoxyCompactList}\small\item\em Returns the command buffer used for rendering. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_a2d278d95323f16cd3ca31379f060ea92}\label{classmam_1_1_v_k_device_a2d278d95323f16cd3ca31379f060ea92}} 
+void {\bfseries create\+Instance} ()
+\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_a3c6b8f89c7aca8914380613ac7effa44}\label{classmam_1_1_v_k_device_a3c6b8f89c7aca8914380613ac7effa44}} 
+void \mbox{\hyperlink{classmam_1_1_v_k_device_a3c6b8f89c7aca8914380613ac7effa44}{setup\+Debug\+Callback}} ()
+\begin{DoxyCompactList}\small\item\em Creates the Vulkan instance. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_acefdc8df8a390d209b40c2d4836fa571}\label{classmam_1_1_v_k_device_acefdc8df8a390d209b40c2d4836fa571}} 
+void \mbox{\hyperlink{classmam_1_1_v_k_device_acefdc8df8a390d209b40c2d4836fa571}{create\+Surface}} ()
+\begin{DoxyCompactList}\small\item\em Sets up the Vulkan validation layer debug callback. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_a1ddc68d83104f8858633b4ca0c0e30af}\label{classmam_1_1_v_k_device_a1ddc68d83104f8858633b4ca0c0e30af}} 
+void \mbox{\hyperlink{classmam_1_1_v_k_device_a1ddc68d83104f8858633b4ca0c0e30af}{pick\+Physical\+Device}} ()
+\begin{DoxyCompactList}\small\item\em Creates the window surface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_a143ffc1cb0e43c400108365404966e43}\label{classmam_1_1_v_k_device_a143ffc1cb0e43c400108365404966e43}} 
+void \mbox{\hyperlink{classmam_1_1_v_k_device_a143ffc1cb0e43c400108365404966e43}{create\+Logical\+Device}} ()
+\begin{DoxyCompactList}\small\item\em Selects a suitable physical G\+PU. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_a0623fefb7f966b57129ccce23d45af3e}\label{classmam_1_1_v_k_device_a0623fefb7f966b57129ccce23d45af3e}} 
+void \mbox{\hyperlink{classmam_1_1_v_k_device_a0623fefb7f966b57129ccce23d45af3e}{create\+Swap\+Chain}} ()
+\begin{DoxyCompactList}\small\item\em Creates the Vulkan logical device. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_a57a6eb956b9caeb8765622ec82b7911f}\label{classmam_1_1_v_k_device_a57a6eb956b9caeb8765622ec82b7911f}} 
+void \mbox{\hyperlink{classmam_1_1_v_k_device_a57a6eb956b9caeb8765622ec82b7911f}{create\+Image\+Views}} ()
+\begin{DoxyCompactList}\small\item\em Creates the swap chain. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_a053881368e8cf2ed252ef3140da3b40b}\label{classmam_1_1_v_k_device_a053881368e8cf2ed252ef3140da3b40b}} 
+void \mbox{\hyperlink{classmam_1_1_v_k_device_a053881368e8cf2ed252ef3140da3b40b}{create\+Render\+Pass}} ()
+\begin{DoxyCompactList}\small\item\em Creates image views for swap chain images. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_a0e04cf21dfb8fd611504cd1dd5e66aca}\label{classmam_1_1_v_k_device_a0e04cf21dfb8fd611504cd1dd5e66aca}} 
+void \mbox{\hyperlink{classmam_1_1_v_k_device_a0e04cf21dfb8fd611504cd1dd5e66aca}{create\+Framebuffers}} ()
+\begin{DoxyCompactList}\small\item\em Creates the render pass used for drawing. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_a01ef2cf81b714d6e4771e63791ffcf4c}\label{classmam_1_1_v_k_device_a01ef2cf81b714d6e4771e63791ffcf4c}} 
+void \mbox{\hyperlink{classmam_1_1_v_k_device_a01ef2cf81b714d6e4771e63791ffcf4c}{create\+Command\+Pool}} ()
+\begin{DoxyCompactList}\small\item\em Creates framebuffers for swap chain images. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_ade0ac663d21bfd0f2eefc074d232a300}\label{classmam_1_1_v_k_device_ade0ac663d21bfd0f2eefc074d232a300}} 
+void \mbox{\hyperlink{classmam_1_1_v_k_device_ade0ac663d21bfd0f2eefc074d232a300}{create\+Command\+Buffers}} ()
+\begin{DoxyCompactList}\small\item\em Creates the command pool. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_aa2118212590189e0c466d5c38db8f32d}\label{classmam_1_1_v_k_device_aa2118212590189e0c466d5c38db8f32d}} 
+void \mbox{\hyperlink{classmam_1_1_v_k_device_aa2118212590189e0c466d5c38db8f32d}{create\+Sync\+Objects}} ()
+\begin{DoxyCompactList}\small\item\em Allocates command buffers. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_a618d36a9d004baf30d682bf45ed67e2b}\label{classmam_1_1_v_k_device_a618d36a9d004baf30d682bf45ed67e2b}} 
+void \mbox{\hyperlink{classmam_1_1_v_k_device_a618d36a9d004baf30d682bf45ed67e2b}{cleanup\+Swap\+Chain}} ()
+\begin{DoxyCompactList}\small\item\em Creates synchronization primitives. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_ac2781df65085368173127066f61a2907}\label{classmam_1_1_v_k_device_ac2781df65085368173127066f61a2907}} 
+void \mbox{\hyperlink{classmam_1_1_v_k_device_ac2781df65085368173127066f61a2907}{recreate\+Swap\+Chain}} ()
+\begin{DoxyCompactList}\small\item\em Cleans up swap chain resources. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_v_k_device_a835a61d6e99a5cc7e779402e6cb1b688}{create\+Buffer}} (vk\+::\+Device\+Size size, vk\+::\+Buffer\+Usage\+Flags usage, vk\+::\+Memory\+Property\+Flags properties, vk\+::\+Buffer \&buffer, vk\+::\+Device\+Memory \&buffer\+Memory)
+\begin{DoxyCompactList}\small\item\em Recreates the swap chain when the window resizes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_ae7544537afb08b76e6a1aac75ef00d94}\label{classmam_1_1_v_k_device_ae7544537afb08b76e6a1aac75ef00d94}} 
+void \mbox{\hyperlink{classmam_1_1_v_k_device_ae7544537afb08b76e6a1aac75ef00d94}{copy\+Buffer}} (Vk\+Buffer src\+Buffer, Vk\+Buffer dst\+Buffer, Vk\+Device\+Size size)
+\begin{DoxyCompactList}\small\item\em Copies data between two buffers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_v_k_device_a7540dcd080c7302a8383167dd72b727f}{set\+Current\+Pipeline}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmam_1_1_pipeline2}{Pipeline2}} $>$ pipe)
+\begin{DoxyCompactList}\small\item\em Current frame index. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_a49121f72182e5cb7fdbc92973841f420}\label{classmam_1_1_v_k_device_a49121f72182e5cb7fdbc92973841f420}} 
+bool \mbox{\hyperlink{classmam_1_1_v_k_device_a49121f72182e5cb7fdbc92973841f420}{check\+Validation\+Layer\+Support}} ()
+\begin{DoxyCompactList}\small\item\em Current swap chain image index. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_a77a5b0a61217207e2cbeed6b6fed93f4}\label{classmam_1_1_v_k_device_a77a5b0a61217207e2cbeed6b6fed93f4}} 
+std\+::vector$<$ const char $\ast$ $>$ {\bfseries get\+Required\+Extensions} ()
+\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_ab09d066691cabbd95dea6916195e1e60}\label{classmam_1_1_v_k_device_ab09d066691cabbd95dea6916195e1e60}} 
+Vk\+Result {\bfseries Create\+Debug\+Utils\+Messenger\+E\+XT} (Vk\+Instance instance, const Vk\+Debug\+Utils\+Messenger\+Create\+Info\+E\+XT $\ast$p\+Create\+Info, const Vk\+Allocation\+Callbacks $\ast$p\+Allocator, Vk\+Debug\+Utils\+Messenger\+E\+XT $\ast$p\+Callback)
+\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_a9585abc23a01ef752a51cb51894910b1}\label{classmam_1_1_v_k_device_a9585abc23a01ef752a51cb51894910b1}} 
+bool {\bfseries is\+Device\+Suitable} (const vk\+::\+Physical\+Device \&\mbox{\hyperlink{classmam_1_1_v_k_device_a0d92ff454ec9b2ab149db1aad636d10d}{device}})
+\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_afb2f7206e97bebb2d40306d7d2a6f71d}\label{classmam_1_1_v_k_device_afb2f7206e97bebb2d40306d7d2a6f71d}} 
+\mbox{\hyperlink{struct_queue_family_indices}{Queue\+Family\+Indices}} {\bfseries find\+Queue\+Families} (vk\+::\+Physical\+Device \mbox{\hyperlink{classmam_1_1_v_k_device_a0d92ff454ec9b2ab149db1aad636d10d}{device}})
+\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_aca4511193a02699ab85d6e436f501aba}\label{classmam_1_1_v_k_device_aca4511193a02699ab85d6e436f501aba}} 
+bool {\bfseries check\+Device\+Extension\+Support} (const vk\+::\+Physical\+Device \&\mbox{\hyperlink{classmam_1_1_v_k_device_a0d92ff454ec9b2ab149db1aad636d10d}{device}})
+\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_a074ccecc60ecab461d99b73bbbf0c4b7}\label{classmam_1_1_v_k_device_a074ccecc60ecab461d99b73bbbf0c4b7}} 
+\mbox{\hyperlink{struct_swap_chain_support_details}{Swap\+Chain\+Support\+Details}} {\bfseries query\+Swap\+Chain\+Support} (const vk\+::\+Physical\+Device \&\mbox{\hyperlink{classmam_1_1_v_k_device_a0d92ff454ec9b2ab149db1aad636d10d}{device}})
+\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_abae0ca68e28fdd37c70559090da224df}\label{classmam_1_1_v_k_device_abae0ca68e28fdd37c70559090da224df}} 
+vk\+::\+Surface\+Format\+K\+HR {\bfseries choose\+Swap\+Surface\+Format} (const std\+::vector$<$ vk\+::\+Surface\+Format\+K\+HR $>$ \&available\+Formats)
+\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_a53aef579251769692fdc1d58e3ccc987}\label{classmam_1_1_v_k_device_a53aef579251769692fdc1d58e3ccc987}} 
+vk\+::\+Present\+Mode\+K\+HR {\bfseries choose\+Swap\+Present\+Mode} (const std\+::vector$<$ vk\+::\+Present\+Mode\+K\+HR $>$ available\+Present\+Modes)
+\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_a68fd7c7ad1529ecb45fcb2f5051c8b7d}\label{classmam_1_1_v_k_device_a68fd7c7ad1529ecb45fcb2f5051c8b7d}} 
+vk\+::\+Extent2D {\bfseries choose\+Swap\+Extent} (const vk\+::\+Surface\+Capabilities\+K\+HR \&capabilities)
+\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_a053008df068a704e8dab78439f478297}\label{classmam_1_1_v_k_device_a053008df068a704e8dab78439f478297}} 
+vk\+::\+Shader\+Module \mbox{\hyperlink{classmam_1_1_v_k_device_a053008df068a704e8dab78439f478297}{create\+Shader\+Module}} (const std\+::vector$<$ char $>$ \&code)
+\begin{DoxyCompactList}\small\item\em Creates a Vulkan shader module. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_a6face4212a5ff5c274c3c629596661e3}\label{classmam_1_1_v_k_device_a6face4212a5ff5c274c3c629596661e3}} 
+uint32\+\_\+t \mbox{\hyperlink{classmam_1_1_v_k_device_a6face4212a5ff5c274c3c629596661e3}{find\+Memory\+Type}} (uint32\+\_\+t type\+Filter, vk\+::\+Memory\+Property\+Flags properties)
+\begin{DoxyCompactList}\small\item\em Finds a compatible G\+PU memory type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_a43d2244b3edd121ddc9dd65d8937701a}\label{classmam_1_1_v_k_device_a43d2244b3edd121ddc9dd65d8937701a}} 
+void {\bfseries Destroy\+Debug\+Utils\+Messenger\+E\+XT} (Vk\+Instance instance, Vk\+Debug\+Utils\+Messenger\+E\+XT \mbox{\hyperlink{classmam_1_1_v_k_device_ae3a02f3f9dd0f3a5845621b904f83159}{callback}}, const Vk\+Allocation\+Callbacks $\ast$p\+Allocator)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static vk\+::\+Unique\+Device \& \mbox{\hyperlink{classmam_1_1_v_k_device_a90d6894db05d72660154ffdaac1e173b}{get\+Device}} ()
+\begin{DoxyCompactList}\small\item\em Disables face culling. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_aea7fa7b375dd49c18e4f13b53ef7fb8e}\label{classmam_1_1_v_k_device_aea7fa7b375dd49c18e4f13b53ef7fb8e}} 
+static \mbox{\hyperlink{classmam_1_1_v_k_device}{V\+K\+Device}} $\ast$ \mbox{\hyperlink{classmam_1_1_v_k_device_aea7fa7b375dd49c18e4f13b53ef7fb8e}{get}} ()
+\begin{DoxyCompactList}\small\item\em Returns the global \mbox{\hyperlink{classmam_1_1_v_k_device}{V\+K\+Device}} instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_a9cf0899d37179414374d9fd7c8c70e25}\label{classmam_1_1_v_k_device_a9cf0899d37179414374d9fd7c8c70e25}} 
+vk\+::\+Unique\+Instance {\bfseries instance}
+\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_a0d92ff454ec9b2ab149db1aad636d10d}\label{classmam_1_1_v_k_device_a0d92ff454ec9b2ab149db1aad636d10d}} 
+vk\+::\+Unique\+Device \mbox{\hyperlink{classmam_1_1_v_k_device_a0d92ff454ec9b2ab149db1aad636d10d}{device}}
+\begin{DoxyCompactList}\small\item\em Vulkan instance. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_a5f6b597bb6e7332ae6705dceaa6103c4}\label{classmam_1_1_v_k_device_a5f6b597bb6e7332ae6705dceaa6103c4}} 
+vk\+::\+Surface\+K\+HR \mbox{\hyperlink{classmam_1_1_v_k_device_a5f6b597bb6e7332ae6705dceaa6103c4}{surface}}
+\begin{DoxyCompactList}\small\item\em Logical device. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_a91467a44ac343fb4ffdcdfba869034fd}\label{classmam_1_1_v_k_device_a91467a44ac343fb4ffdcdfba869034fd}} 
+vk\+::\+Swapchain\+K\+HR \mbox{\hyperlink{classmam_1_1_v_k_device_a91467a44ac343fb4ffdcdfba869034fd}{swap\+Chain}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classmam_1_1_window}{Window}} surface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_a506db968c468c02b9a720d3e43f131ad}\label{classmam_1_1_v_k_device_a506db968c468c02b9a720d3e43f131ad}} 
+bool \mbox{\hyperlink{classmam_1_1_v_k_device_a506db968c468c02b9a720d3e43f131ad}{framebuffer\+Resized}} = false
+\begin{DoxyCompactList}\small\item\em Swap chain object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_afb6f8a0e7f2d35e35964be4cd7e636f3}\label{classmam_1_1_v_k_device_afb6f8a0e7f2d35e35964be4cd7e636f3}} 
+u32 \mbox{\hyperlink{classmam_1_1_v_k_device_afb6f8a0e7f2d35e35964be4cd7e636f3}{current\+Frame}} = 0
+\begin{DoxyCompactList}\small\item\em Indicates whether the framebuffer was resized. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_a906fef8e328083f24d18fd63dc77828e}\label{classmam_1_1_v_k_device_a906fef8e328083f24d18fd63dc77828e}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmam_1_1_v_k_pipeline2}{V\+K\+Pipeline2}} $>$ {\bfseries pipeline}
+\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_aac72002bd39d7da5c276933dec3b4f01}\label{classmam_1_1_v_k_device_aac72002bd39d7da5c276933dec3b4f01}} 
+uint32\+\_\+t \mbox{\hyperlink{classmam_1_1_v_k_device_aac72002bd39d7da5c276933dec3b4f01}{image\+Index}} = 0
+\begin{DoxyCompactList}\small\item\em Example pipeline (triangle example). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_a4504c8134fb347bbaea34a1cccf60ec4}\label{classmam_1_1_v_k_device_a4504c8134fb347bbaea34a1cccf60ec4}} 
+std\+::vector$<$ vk\+::\+Image $>$ {\bfseries swap\+Chain\+Images}
+\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_ab98f5b0327a0279abf99d2361415646e}\label{classmam_1_1_v_k_device_ab98f5b0327a0279abf99d2361415646e}} 
+std\+::vector$<$ vk\+::\+Image\+View $>$ \mbox{\hyperlink{classmam_1_1_v_k_device_ab98f5b0327a0279abf99d2361415646e}{swap\+Chain\+Image\+Views}}
+\begin{DoxyCompactList}\small\item\em Swap chain images. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_a651ad6350e64379981e343ad493a3581}\label{classmam_1_1_v_k_device_a651ad6350e64379981e343ad493a3581}} 
+vk\+::\+Physical\+Device \mbox{\hyperlink{classmam_1_1_v_k_device_a651ad6350e64379981e343ad493a3581}{physical\+Device}}
+\begin{DoxyCompactList}\small\item\em Image views for swap chain images. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_ae3a02f3f9dd0f3a5845621b904f83159}\label{classmam_1_1_v_k_device_ae3a02f3f9dd0f3a5845621b904f83159}} 
+Vk\+Debug\+Utils\+Messenger\+E\+XT \mbox{\hyperlink{classmam_1_1_v_k_device_ae3a02f3f9dd0f3a5845621b904f83159}{callback}}
+\begin{DoxyCompactList}\small\item\em Selected physical G\+PU. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_a8db65c6f2d97edc0bc160d85469cfc37}\label{classmam_1_1_v_k_device_a8db65c6f2d97edc0bc160d85469cfc37}} 
+vk\+::\+Format \mbox{\hyperlink{classmam_1_1_v_k_device_a8db65c6f2d97edc0bc160d85469cfc37}{swap\+Chain\+Image\+Format}}
+\begin{DoxyCompactList}\small\item\em Debug callback handle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_a5b2dd7c58220302f2a1551370cd88df8}\label{classmam_1_1_v_k_device_a5b2dd7c58220302f2a1551370cd88df8}} 
+vk\+::\+Extent2D \mbox{\hyperlink{classmam_1_1_v_k_device_a5b2dd7c58220302f2a1551370cd88df8}{swap\+Chain\+Extent}}
+\begin{DoxyCompactList}\small\item\em Swap chain image format. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_a511099126c494efbfaf90ec4d96ac977}\label{classmam_1_1_v_k_device_a511099126c494efbfaf90ec4d96ac977}} 
+std\+::vector$<$ vk\+::\+Framebuffer $>$ \mbox{\hyperlink{classmam_1_1_v_k_device_a511099126c494efbfaf90ec4d96ac977}{swap\+Chain\+Framebuffers}}
+\begin{DoxyCompactList}\small\item\em Swap chain resolution. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_adfec5353d5833350d5a60f095fd90bc7}\label{classmam_1_1_v_k_device_adfec5353d5833350d5a60f095fd90bc7}} 
+vk\+::\+Command\+Pool \mbox{\hyperlink{classmam_1_1_v_k_device_adfec5353d5833350d5a60f095fd90bc7}{command\+Pool}}
+\begin{DoxyCompactList}\small\item\em Framebuffers used for rendering. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_a4f65376ef30d9f43a37d6a27e2fca759}\label{classmam_1_1_v_k_device_a4f65376ef30d9f43a37d6a27e2fca759}} 
+std\+::vector$<$ vk\+::\+Command\+Buffer $>$ \mbox{\hyperlink{classmam_1_1_v_k_device_a4f65376ef30d9f43a37d6a27e2fca759}{command\+Buffers}}
+\begin{DoxyCompactList}\small\item\em Command pool used to allocate command buffers. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_a24411fddb731ef567612adfcdc9f76a2}\label{classmam_1_1_v_k_device_a24411fddb731ef567612adfcdc9f76a2}} 
+vk\+::\+Render\+Pass \mbox{\hyperlink{classmam_1_1_v_k_device_a24411fddb731ef567612adfcdc9f76a2}{render\+Pass}}
+\begin{DoxyCompactList}\small\item\em Command buffers for rendering. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_a2a03b8d3b46e33ff6d92a562cb8da1f7}\label{classmam_1_1_v_k_device_a2a03b8d3b46e33ff6d92a562cb8da1f7}} 
+vk\+::\+Pipeline\+Layout \mbox{\hyperlink{classmam_1_1_v_k_device_a2a03b8d3b46e33ff6d92a562cb8da1f7}{pipeline\+Layout}}
+\begin{DoxyCompactList}\small\item\em Render pass. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_a4e0c1cf741899ec2c55283473d0bf657}\label{classmam_1_1_v_k_device_a4e0c1cf741899ec2c55283473d0bf657}} 
+vk\+::\+Pipeline \mbox{\hyperlink{classmam_1_1_v_k_device_a4e0c1cf741899ec2c55283473d0bf657}{graphics\+Pipeline}}
+\begin{DoxyCompactList}\small\item\em Pipeline layout. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_a803fc0d8c9fcfddc613328cb63dcb064}\label{classmam_1_1_v_k_device_a803fc0d8c9fcfddc613328cb63dcb064}} 
+vk\+::\+Queue \mbox{\hyperlink{classmam_1_1_v_k_device_a803fc0d8c9fcfddc613328cb63dcb064}{graphics\+Queue}}
+\begin{DoxyCompactList}\small\item\em Graphics pipeline. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_a7f211899ba157ccd0abeab61660b9545}\label{classmam_1_1_v_k_device_a7f211899ba157ccd0abeab61660b9545}} 
+vk\+::\+Queue \mbox{\hyperlink{classmam_1_1_v_k_device_a7f211899ba157ccd0abeab61660b9545}{present\+Queue}}
+\begin{DoxyCompactList}\small\item\em Graphics queue. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_a42ae7b2787ad6d2ae7c5b7de16f069ca}\label{classmam_1_1_v_k_device_a42ae7b2787ad6d2ae7c5b7de16f069ca}} 
+vk\+::\+Buffer \mbox{\hyperlink{classmam_1_1_v_k_device_a42ae7b2787ad6d2ae7c5b7de16f069ca}{vertex\+Buffer}}
+\begin{DoxyCompactList}\small\item\em Presentation queue. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_ae4fa2d731998538998a31d5c269ed073}\label{classmam_1_1_v_k_device_ae4fa2d731998538998a31d5c269ed073}} 
+vk\+::\+Device\+Memory \mbox{\hyperlink{classmam_1_1_v_k_device_ae4fa2d731998538998a31d5c269ed073}{vertex\+Buffer\+Memory}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structmam_1_1_vertex}{Vertex}} buffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_adde4dda6f98a46392a34933bf8b9b078}\label{classmam_1_1_v_k_device_adde4dda6f98a46392a34933bf8b9b078}} 
+vk\+::\+Buffer \mbox{\hyperlink{classmam_1_1_v_k_device_adde4dda6f98a46392a34933bf8b9b078}{index\+Buffer}}
+\begin{DoxyCompactList}\small\item\em Memory for the vertex buffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_a226a0bd9a7e499a31bc094b54dac82e1}\label{classmam_1_1_v_k_device_a226a0bd9a7e499a31bc094b54dac82e1}} 
+vk\+::\+Device\+Memory \mbox{\hyperlink{classmam_1_1_v_k_device_a226a0bd9a7e499a31bc094b54dac82e1}{index\+Buffer\+Memory}}
+\begin{DoxyCompactList}\small\item\em Index buffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_aa5baa81f69d5f18ab1cfc0358015753d}\label{classmam_1_1_v_k_device_aa5baa81f69d5f18ab1cfc0358015753d}} 
+std\+::vector$<$ vk\+::\+Semaphore $>$ \mbox{\hyperlink{classmam_1_1_v_k_device_aa5baa81f69d5f18ab1cfc0358015753d}{image\+Available\+Semaphores}}
+\begin{DoxyCompactList}\small\item\em Memory for the index buffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_a75a418a4a40db2543bef2ef8209b01c2}\label{classmam_1_1_v_k_device_a75a418a4a40db2543bef2ef8209b01c2}} 
+std\+::vector$<$ vk\+::\+Semaphore $>$ \mbox{\hyperlink{classmam_1_1_v_k_device_a75a418a4a40db2543bef2ef8209b01c2}{render\+Finished\+Semaphores}}
+\begin{DoxyCompactList}\small\item\em Semaphores signaling image availability. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_v_k_device_ab818772f2a902063f5dbd584cf3bb990}\label{classmam_1_1_v_k_device_ab818772f2a902063f5dbd584cf3bb990}} 
+std\+::vector$<$ vk\+::\+Fence $>$ \mbox{\hyperlink{classmam_1_1_v_k_device_ab818772f2a902063f5dbd584cf3bb990}{in\+Flight\+Fences}}
+\begin{DoxyCompactList}\small\item\em Semaphores signaling render completion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Vulkan implementation of the \mbox{\hyperlink{classmam_1_1_graphic_device}{Graphic\+Device}} interface. 
+
+This class manages the Vulkan rendering backend including\+:
+\begin{DoxyItemize}
+\item Vulkan instance and logical device
+\item Swap chain creation and recreation
+\item Render pass and framebuffers
+\item Command buffers and synchronization
+\item G\+PU buffers
+\item Frame rendering 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmam_1_1_v_k_device_a835a61d6e99a5cc7e779402e6cb1b688}\label{classmam_1_1_v_k_device_a835a61d6e99a5cc7e779402e6cb1b688}} 
+\index{mam::VKDevice@{mam::VKDevice}!createBuffer@{createBuffer}}
+\index{createBuffer@{createBuffer}!mam::VKDevice@{mam::VKDevice}}
+\doxysubsubsection{\texorpdfstring{createBuffer()}{createBuffer()}}
+{\footnotesize\ttfamily void mam\+::\+V\+K\+Device\+::create\+Buffer (\begin{DoxyParamCaption}\item[{vk\+::\+Device\+Size}]{size,  }\item[{vk\+::\+Buffer\+Usage\+Flags}]{usage,  }\item[{vk\+::\+Memory\+Property\+Flags}]{properties,  }\item[{vk\+::\+Buffer \&}]{buffer,  }\item[{vk\+::\+Device\+Memory \&}]{buffer\+Memory }\end{DoxyParamCaption})}
+
+
+
+Recreates the swap chain when the window resizes. 
+
+Creates a Vulkan buffer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & Size of the buffer. \\
+\hline
+{\em usage} & Usage flags. \\
+\hline
+{\em properties} & Memory properties. \\
+\hline
+{\em buffer} & Output buffer handle. \\
+\hline
+{\em buffer\+Memory} & Allocated memory. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmam_1_1_v_k_device_ab20f02f62cac810ce5314f319a16437f}\label{classmam_1_1_v_k_device_ab20f02f62cac810ce5314f319a16437f}} 
+\index{mam::VKDevice@{mam::VKDevice}!draw@{draw}}
+\index{draw@{draw}!mam::VKDevice@{mam::VKDevice}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void mam\+::\+V\+K\+Device\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmam_1_1_mesh}{Mesh}} \&}]{mesh }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Draws a mesh. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mesh} & \mbox{\hyperlink{classmam_1_1_mesh}{Mesh}} to render. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classmam_1_1_graphic_device_a38a71df9796bb11bd1481295fa212722}{mam\+::\+Graphic\+Device}}.
+
+\mbox{\Hypertarget{classmam_1_1_v_k_device_a6fb1e3f7f5277e476c3e141fa214c15c}\label{classmam_1_1_v_k_device_a6fb1e3f7f5277e476c3e141fa214c15c}} 
+\index{mam::VKDevice@{mam::VKDevice}!draw@{draw}}
+\index{draw@{draw}!mam::VKDevice@{mam::VKDevice}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void mam\+::\+V\+K\+Device\+::draw (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{indices }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Draws indexed geometry. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em indices} & Number of indices to draw. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classmam_1_1_graphic_device_abbe33a47f3954544a7577b043f01890a}{mam\+::\+Graphic\+Device}}.
+
+\mbox{\Hypertarget{classmam_1_1_v_k_device_a90d6894db05d72660154ffdaac1e173b}\label{classmam_1_1_v_k_device_a90d6894db05d72660154ffdaac1e173b}} 
+\index{mam::VKDevice@{mam::VKDevice}!getDevice@{getDevice}}
+\index{getDevice@{getDevice}!mam::VKDevice@{mam::VKDevice}}
+\doxysubsubsection{\texorpdfstring{getDevice()}{getDevice()}}
+{\footnotesize\ttfamily static vk\+::\+Unique\+Device\& mam\+::\+V\+K\+Device\+::get\+Device (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Disables face culling. 
+
+Returns the Vulkan logical device. \mbox{\Hypertarget{classmam_1_1_v_k_device_a7540dcd080c7302a8383167dd72b727f}\label{classmam_1_1_v_k_device_a7540dcd080c7302a8383167dd72b727f}} 
+\index{mam::VKDevice@{mam::VKDevice}!setCurrentPipeline@{setCurrentPipeline}}
+\index{setCurrentPipeline@{setCurrentPipeline}!mam::VKDevice@{mam::VKDevice}}
+\doxysubsubsection{\texorpdfstring{setCurrentPipeline()}{setCurrentPipeline()}}
+{\footnotesize\ttfamily void mam\+::\+V\+K\+Device\+::set\+Current\+Pipeline (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmam_1_1_pipeline2}{Pipeline2}} $>$}]{pipe }\end{DoxyParamCaption})}
+
+
+
+Current frame index. 
+
+Sets the active rendering pipeline. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+platform/vulkan/vk\+\_\+device.\+hpp\end{DoxyCompactItemize}

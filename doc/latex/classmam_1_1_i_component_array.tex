@@ -1,0 +1,59 @@
+\hypertarget{classmam_1_1_i_component_array}{}\doxysection{mam\+::I\+Component\+Array Class Reference}
+\label{classmam_1_1_i_component_array}\index{mam::IComponentArray@{mam::IComponentArray}}
+
+
+Interface for component arrays used by the E\+CS.  
+
+
+
+
+{\ttfamily \#include $<$component\+\_\+array.\+hpp$>$}
+
+Inheritance diagram for mam\+::I\+Component\+Array\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmam_1_1_i_component_array}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_i_component_array_a91694c7566bbf82eb145488435052078}\label{classmam_1_1_i_component_array_a91694c7566bbf82eb145488435052078}} 
+virtual \mbox{\hyperlink{classmam_1_1_i_component_array_a91694c7566bbf82eb145488435052078}{$\sim$\+I\+Component\+Array}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmam_1_1_i_component_array_a03fd5c572a9663a3f710d45946da3138}{entity\+Destroyed}} (Entity e)=0
+\begin{DoxyCompactList}\small\item\em Notifies the component array that an entity has been destroyed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for component arrays used by the E\+CS. 
+
+This abstract class allows different typed component arrays to be stored in a generic container. It provides a common interface for reacting to entity destruction events so that components belonging to destroyed entities can be removed. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmam_1_1_i_component_array_a03fd5c572a9663a3f710d45946da3138}\label{classmam_1_1_i_component_array_a03fd5c572a9663a3f710d45946da3138}} 
+\index{mam::IComponentArray@{mam::IComponentArray}!entityDestroyed@{entityDestroyed}}
+\index{entityDestroyed@{entityDestroyed}!mam::IComponentArray@{mam::IComponentArray}}
+\doxysubsubsection{\texorpdfstring{entityDestroyed()}{entityDestroyed()}}
+{\footnotesize\ttfamily virtual void mam\+::\+I\+Component\+Array\+::entity\+Destroyed (\begin{DoxyParamCaption}\item[{Entity}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Notifies the component array that an entity has been destroyed. 
+
+Implementations should remove any component associated with the given entity.
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The destroyed entity. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classmam_1_1_component_array_ab0259882290c5205ec23d3b0e2325a89}{mam\+::\+Component\+Array$<$ T $>$}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/ecs/component\+\_\+array.\+hpp\end{DoxyCompactItemize}

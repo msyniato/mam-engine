@@ -1,0 +1,169 @@
+\hypertarget{classmam_1_1_component_manager}{}\doxysection{mam\+::Component\+Manager Class Reference}
+\label{classmam_1_1_component_manager}\index{mam::ComponentManager@{mam::ComponentManager}}
+
+
+Manages all component types and their storage.  
+
+
+
+
+{\ttfamily \#include $<$component\+\_\+manager.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classmam_1_1_component_manager_a5cf0067cc23f6f4b3d6e9f65ab0c25be}{register\+Component}} ()
+\begin{DoxyCompactList}\small\item\em Registers a new component type. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\Component\+Type \mbox{\hyperlink{classmam_1_1_component_manager_a1704c421622c436771bfcdd466ef2f4f}{get\+Component\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Returns the Component\+Type ID associated with a component. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classmam_1_1_component_manager_a3b6264eebe50bcb57716d31e09ef614b}{add\+Component}} (Entity e, T comp)
+\begin{DoxyCompactList}\small\item\em Adds a component to an entity. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classmam_1_1_component_manager_ad7db2bd8bce3983796ca032dc9fdf299}{remove\+Component}} (Entity e)
+\begin{DoxyCompactList}\small\item\em Removes a component from an entity. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\T \& \mbox{\hyperlink{classmam_1_1_component_manager_a2dde6dcd53726aeaf913dc62889c3982}{get\+Component}} (Entity e)
+\begin{DoxyCompactList}\small\item\em Retrieves a component belonging to an entity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_component_manager_a91627fe3dd4a90949ed98a03f14d1abb}{entity\+Destroyed}} (Entity e)
+\begin{DoxyCompactList}\small\item\em Handles entity destruction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages all component types and their storage. 
+
+The \mbox{\hyperlink{classmam_1_1_component_manager}{Component\+Manager}} is responsible for\+:
+\begin{DoxyItemize}
+\item Registering component types
+\item Assigning a unique Component\+Type ID to each component
+\item Storing and retrieving component arrays
+\item Adding, removing, and accessing components for entities
+\end{DoxyItemize}
+
+Internally, each component type is stored inside a Component\+Array$<$\+T$>$, which provides dense storage for cache-\/efficient iteration. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmam_1_1_component_manager_a3b6264eebe50bcb57716d31e09ef614b}\label{classmam_1_1_component_manager_a3b6264eebe50bcb57716d31e09ef614b}} 
+\index{mam::ComponentManager@{mam::ComponentManager}!addComponent@{addComponent}}
+\index{addComponent@{addComponent}!mam::ComponentManager@{mam::ComponentManager}}
+\doxysubsubsection{\texorpdfstring{addComponent()}{addComponent()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void mam\+::\+Component\+Manager\+::add\+Component (\begin{DoxyParamCaption}\item[{Entity}]{e,  }\item[{T}]{comp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds a component to an entity. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The component type. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The entity receiving the component. \\
+\hline
+{\em comp} & The component instance to add. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmam_1_1_component_manager_a91627fe3dd4a90949ed98a03f14d1abb}\label{classmam_1_1_component_manager_a91627fe3dd4a90949ed98a03f14d1abb}} 
+\index{mam::ComponentManager@{mam::ComponentManager}!entityDestroyed@{entityDestroyed}}
+\index{entityDestroyed@{entityDestroyed}!mam::ComponentManager@{mam::ComponentManager}}
+\doxysubsubsection{\texorpdfstring{entityDestroyed()}{entityDestroyed()}}
+{\footnotesize\ttfamily void mam\+::\+Component\+Manager\+::entity\+Destroyed (\begin{DoxyParamCaption}\item[{Entity}]{e }\end{DoxyParamCaption})}
+
+
+
+Handles entity destruction. 
+
+When an entity is destroyed, all component arrays must remove any components associated with that entity.
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The destroyed entity. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmam_1_1_component_manager_a2dde6dcd53726aeaf913dc62889c3982}\label{classmam_1_1_component_manager_a2dde6dcd53726aeaf913dc62889c3982}} 
+\index{mam::ComponentManager@{mam::ComponentManager}!getComponent@{getComponent}}
+\index{getComponent@{getComponent}!mam::ComponentManager@{mam::ComponentManager}}
+\doxysubsubsection{\texorpdfstring{getComponent()}{getComponent()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \& mam\+::\+Component\+Manager\+::get\+Component (\begin{DoxyParamCaption}\item[{Entity}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves a component belonging to an entity. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The component type. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The entity whose component should be retrieved. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the component. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmam_1_1_component_manager_a1704c421622c436771bfcdd466ef2f4f}\label{classmam_1_1_component_manager_a1704c421622c436771bfcdd466ef2f4f}} 
+\index{mam::ComponentManager@{mam::ComponentManager}!getComponentType@{getComponentType}}
+\index{getComponentType@{getComponentType}!mam::ComponentManager@{mam::ComponentManager}}
+\doxysubsubsection{\texorpdfstring{getComponentType()}{getComponentType()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+Component\+Type mam\+::\+Component\+Manager\+::get\+Component\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the Component\+Type ID associated with a component. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The component type. \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+The Component\+Type identifier. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmam_1_1_component_manager_a5cf0067cc23f6f4b3d6e9f65ab0c25be}\label{classmam_1_1_component_manager_a5cf0067cc23f6f4b3d6e9f65ab0c25be}} 
+\index{mam::ComponentManager@{mam::ComponentManager}!registerComponent@{registerComponent}}
+\index{registerComponent@{registerComponent}!mam::ComponentManager@{mam::ComponentManager}}
+\doxysubsubsection{\texorpdfstring{registerComponent()}{registerComponent()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void mam\+::\+Component\+Manager\+::register\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Registers a new component type. 
+
+Each component type is assigned a unique Component\+Type identifier used by the E\+CS to build entity signatures.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The component type to register. \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{classmam_1_1_component_manager_ad7db2bd8bce3983796ca032dc9fdf299}\label{classmam_1_1_component_manager_ad7db2bd8bce3983796ca032dc9fdf299}} 
+\index{mam::ComponentManager@{mam::ComponentManager}!removeComponent@{removeComponent}}
+\index{removeComponent@{removeComponent}!mam::ComponentManager@{mam::ComponentManager}}
+\doxysubsubsection{\texorpdfstring{removeComponent()}{removeComponent()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void mam\+::\+Component\+Manager\+::remove\+Component (\begin{DoxyParamCaption}\item[{Entity}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes a component from an entity. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The component type. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The entity whose component should be removed. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/ecs/component\+\_\+manager.\+hpp\end{DoxyCompactItemize}

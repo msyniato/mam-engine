@@ -1,0 +1,324 @@
+\hypertarget{classmam_1_1_g_l_texture}{}\doxysection{mam\+::G\+L\+Texture Class Reference}
+\label{classmam_1_1_g_l_texture}\index{mam::GLTexture@{mam::GLTexture}}
+
+
+Open\+GL implementation of a \mbox{\hyperlink{classmam_1_1_texture}{Texture}}.  
+
+
+
+
+{\ttfamily \#include $<$gl\+\_\+texture.\+hpp$>$}
+
+Inheritance diagram for mam\+::G\+L\+Texture\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmam_1_1_g_l_texture}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmam_1_1_g_l_texture_a61894c2e2b464fdb6ba5becac240e2c8}{G\+L\+Texture}} (const std\+::string \&filepath, bool relative)
+\begin{DoxyCompactList}\small\item\em Construct a texture from a file path. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmam_1_1_g_l_texture_ad994ede326b55a82eae4fdd3bce2e44d}{G\+L\+Texture}} (const u32 \mbox{\hyperlink{classmam_1_1_texture_a397ad9b3a7f45cc0159bc457aec01dca}{width}}, const u32 \mbox{\hyperlink{classmam_1_1_texture_a101fb620bfaa471c432d539e5a360e98}{height}}, const \mbox{\hyperlink{structmam_1_1_texture_1_1_texture_settings}{Texture\+Settings}} \&properties)
+\begin{DoxyCompactList}\small\item\em Construct an empty texture with specified size and properties. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_g_l_texture_af98e4740a889ec50c88de841634cb135}\label{classmam_1_1_g_l_texture_af98e4740a889ec50c88de841634cb135}} 
+\mbox{\hyperlink{classmam_1_1_g_l_texture_af98e4740a889ec50c88de841634cb135}{$\sim$\+G\+L\+Texture}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classmam_1_1_g_l_texture}{G\+L\+Texture}} object and release G\+PU resources. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_g_l_texture_ab840c1c194f7c917b6d9cbe2fb275895}{set\+Data}} (const void $\ast$data, u32, G\+Lenum fmt, G\+Lenum type) override
+\begin{DoxyCompactList}\small\item\em Set the texture data with format and type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_g_l_texture_a67bf957b128119c9764aeeaf7772c615}{set\+Data}} (const void $\ast$data, u32 size\+Bytes) override
+\begin{DoxyCompactList}\small\item\em Set the raw texture data in bytes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_g_l_texture_a0d4175dcc47a9e79fa40555e27b58936}{reset\+Texture}} (const std\+::string \&filepath, bool relative=true) override
+\begin{DoxyCompactList}\small\item\em Reload or reset the texture from a file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_g_l_texture_a68545a719a8b280738b6ad8e2e8a6abf}{bind}} (u32 slot=0) const override
+\begin{DoxyCompactList}\small\item\em Bind the texture to a specific slot. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_g_l_texture_aa334dec86b93a77bb3fde740272f55d1}{un\+Bind}} (u32 slot=0) const override
+\begin{DoxyCompactList}\small\item\em Unbind the texture from a specific slot. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_g_l_texture_a31c197ac6eee8a134a28c503af36a1ad}{set\+Min\+Filter}} (Filter f) override
+\begin{DoxyCompactList}\small\item\em Set the minifying filter for the texture. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_g_l_texture_a29eb8ea31aa71f04386dd65607764c80}{set\+Mag\+Filter}} (Filter f) override
+\begin{DoxyCompactList}\small\item\em Set the magnifying filter for the texture. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_g_l_texture_a7d846d1103f9ec1d91f8b4c0fa902f2a}{set\+WrapS}} (Wrap c) override
+\begin{DoxyCompactList}\small\item\em Set texture wrap mode for S coordinate. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_g_l_texture_a3ff318913a3b34ee707c2cac93aa1c0a}{set\+WrapT}} (Wrap c) override
+\begin{DoxyCompactList}\small\item\em Set texture wrap mode for T coordinate. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_g_l_texture_af550941f62c83b34e72ea0e57be79faa}{set\+WrapR}} (Wrap c) override
+\begin{DoxyCompactList}\small\item\em Set texture wrap mode for R coordinate. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_g_l_texture_a46587869f3cfb589959e769e2e011268}{set\+Wrap}} (Wrap c) override
+\begin{DoxyCompactList}\small\item\em Set texture wrap mode for all coordinates. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_g_l_texture_aa8c5e4e1ff582267388c337b96348a13}\label{classmam_1_1_g_l_texture_aa8c5e4e1ff582267388c337b96348a13}} 
+void \mbox{\hyperlink{classmam_1_1_g_l_texture_aa8c5e4e1ff582267388c337b96348a13}{generate\+Mipmaps}} () const override
+\begin{DoxyCompactList}\small\item\em Generate mipmaps for the texture. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Open\+GL implementation of a \mbox{\hyperlink{classmam_1_1_texture}{Texture}}. 
+
+Supports 2D textures with filtering, wrapping, mipmaps, and data upload. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmam_1_1_g_l_texture_a61894c2e2b464fdb6ba5becac240e2c8}\label{classmam_1_1_g_l_texture_a61894c2e2b464fdb6ba5becac240e2c8}} 
+\index{mam::GLTexture@{mam::GLTexture}!GLTexture@{GLTexture}}
+\index{GLTexture@{GLTexture}!mam::GLTexture@{mam::GLTexture}}
+\doxysubsubsection{\texorpdfstring{GLTexture()}{GLTexture()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily mam\+::\+G\+L\+Texture\+::\+G\+L\+Texture (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filepath,  }\item[{bool}]{relative }\end{DoxyParamCaption})}
+
+
+
+Construct a texture from a file path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filepath} & Path to the texture file \\
+\hline
+{\em relative} & Whether the path is relative to the project root \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmam_1_1_g_l_texture_ad994ede326b55a82eae4fdd3bce2e44d}\label{classmam_1_1_g_l_texture_ad994ede326b55a82eae4fdd3bce2e44d}} 
+\index{mam::GLTexture@{mam::GLTexture}!GLTexture@{GLTexture}}
+\index{GLTexture@{GLTexture}!mam::GLTexture@{mam::GLTexture}}
+\doxysubsubsection{\texorpdfstring{GLTexture()}{GLTexture()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily mam\+::\+G\+L\+Texture\+::\+G\+L\+Texture (\begin{DoxyParamCaption}\item[{const u32}]{width,  }\item[{const u32}]{height,  }\item[{const \mbox{\hyperlink{structmam_1_1_texture_1_1_texture_settings}{Texture\+Settings}} \&}]{properties }\end{DoxyParamCaption})}
+
+
+
+Construct an empty texture with specified size and properties. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Width of the texture \\
+\hline
+{\em height} & Height of the texture \\
+\hline
+{\em properties} & \mbox{\hyperlink{classmam_1_1_texture}{Texture}} settings (filter, wrap, format) \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmam_1_1_g_l_texture_a68545a719a8b280738b6ad8e2e8a6abf}\label{classmam_1_1_g_l_texture_a68545a719a8b280738b6ad8e2e8a6abf}} 
+\index{mam::GLTexture@{mam::GLTexture}!bind@{bind}}
+\index{bind@{bind}!mam::GLTexture@{mam::GLTexture}}
+\doxysubsubsection{\texorpdfstring{bind()}{bind()}}
+{\footnotesize\ttfamily void mam\+::\+G\+L\+Texture\+::bind (\begin{DoxyParamCaption}\item[{u32}]{slot = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Bind the texture to a specific slot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em slot} & \mbox{\hyperlink{classmam_1_1_texture}{Texture}} unit to bind to \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classmam_1_1_texture_ad3c0173a70db34130bb94054ba455833}{mam\+::\+Texture}}.
+
+\mbox{\Hypertarget{classmam_1_1_g_l_texture_a0d4175dcc47a9e79fa40555e27b58936}\label{classmam_1_1_g_l_texture_a0d4175dcc47a9e79fa40555e27b58936}} 
+\index{mam::GLTexture@{mam::GLTexture}!resetTexture@{resetTexture}}
+\index{resetTexture@{resetTexture}!mam::GLTexture@{mam::GLTexture}}
+\doxysubsubsection{\texorpdfstring{resetTexture()}{resetTexture()}}
+{\footnotesize\ttfamily void mam\+::\+G\+L\+Texture\+::reset\+Texture (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filepath,  }\item[{bool}]{relative = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reload or reset the texture from a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filepath} & Path to the texture file \\
+\hline
+{\em relative} & Whether the path is relative to project root \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classmam_1_1_texture_afa663f19765410c66f555cfff0e69368}{mam\+::\+Texture}}.
+
+\mbox{\Hypertarget{classmam_1_1_g_l_texture_a67bf957b128119c9764aeeaf7772c615}\label{classmam_1_1_g_l_texture_a67bf957b128119c9764aeeaf7772c615}} 
+\index{mam::GLTexture@{mam::GLTexture}!setData@{setData}}
+\index{setData@{setData}!mam::GLTexture@{mam::GLTexture}}
+\doxysubsubsection{\texorpdfstring{setData()}{setData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void mam\+::\+G\+L\+Texture\+::set\+Data (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{u32}]{size\+Bytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Set the raw texture data in bytes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Pointer to raw data \\
+\hline
+{\em size\+Bytes} & Size in bytes \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classmam_1_1_texture_a238d8dca41535634624aee918295135a}{mam\+::\+Texture}}.
+
+\mbox{\Hypertarget{classmam_1_1_g_l_texture_ab840c1c194f7c917b6d9cbe2fb275895}\label{classmam_1_1_g_l_texture_ab840c1c194f7c917b6d9cbe2fb275895}} 
+\index{mam::GLTexture@{mam::GLTexture}!setData@{setData}}
+\index{setData@{setData}!mam::GLTexture@{mam::GLTexture}}
+\doxysubsubsection{\texorpdfstring{setData()}{setData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void mam\+::\+G\+L\+Texture\+::set\+Data (\begin{DoxyParamCaption}\item[{const void $\ast$}]{data,  }\item[{u32}]{,  }\item[{G\+Lenum}]{fmt,  }\item[{G\+Lenum}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Set the texture data with format and type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Pointer to the pixel data \\
+\hline
+{\em size} & Width/\+Height placeholder (ignored here) \\
+\hline
+{\em fmt} & Open\+GL format (G\+L\+\_\+\+R\+GB, G\+L\+\_\+\+R\+G\+BA, etc.) \\
+\hline
+{\em type} & Open\+GL type (G\+L\+\_\+\+U\+N\+S\+I\+G\+N\+E\+D\+\_\+\+B\+Y\+TE, etc.) \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classmam_1_1_texture_ad6c10bc06dd67240d2ad1148e5894ac5}{mam\+::\+Texture}}.
+
+\mbox{\Hypertarget{classmam_1_1_g_l_texture_a29eb8ea31aa71f04386dd65607764c80}\label{classmam_1_1_g_l_texture_a29eb8ea31aa71f04386dd65607764c80}} 
+\index{mam::GLTexture@{mam::GLTexture}!setMagFilter@{setMagFilter}}
+\index{setMagFilter@{setMagFilter}!mam::GLTexture@{mam::GLTexture}}
+\doxysubsubsection{\texorpdfstring{setMagFilter()}{setMagFilter()}}
+{\footnotesize\ttfamily void mam\+::\+G\+L\+Texture\+::set\+Mag\+Filter (\begin{DoxyParamCaption}\item[{Filter}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Set the magnifying filter for the texture. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & Filter type \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classmam_1_1_texture_ac4251a7f12eaf73eee118c3541ec1e74}{mam\+::\+Texture}}.
+
+\mbox{\Hypertarget{classmam_1_1_g_l_texture_a31c197ac6eee8a134a28c503af36a1ad}\label{classmam_1_1_g_l_texture_a31c197ac6eee8a134a28c503af36a1ad}} 
+\index{mam::GLTexture@{mam::GLTexture}!setMinFilter@{setMinFilter}}
+\index{setMinFilter@{setMinFilter}!mam::GLTexture@{mam::GLTexture}}
+\doxysubsubsection{\texorpdfstring{setMinFilter()}{setMinFilter()}}
+{\footnotesize\ttfamily void mam\+::\+G\+L\+Texture\+::set\+Min\+Filter (\begin{DoxyParamCaption}\item[{Filter}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Set the minifying filter for the texture. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & Filter type \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classmam_1_1_texture_aa61e692e13f488d0b02b75f67b6f5010}{mam\+::\+Texture}}.
+
+\mbox{\Hypertarget{classmam_1_1_g_l_texture_a46587869f3cfb589959e769e2e011268}\label{classmam_1_1_g_l_texture_a46587869f3cfb589959e769e2e011268}} 
+\index{mam::GLTexture@{mam::GLTexture}!setWrap@{setWrap}}
+\index{setWrap@{setWrap}!mam::GLTexture@{mam::GLTexture}}
+\doxysubsubsection{\texorpdfstring{setWrap()}{setWrap()}}
+{\footnotesize\ttfamily void mam\+::\+G\+L\+Texture\+::set\+Wrap (\begin{DoxyParamCaption}\item[{Wrap}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Set texture wrap mode for all coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Wrap mode \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classmam_1_1_texture_a8f441915f788edbb7c9c075b8ea6a52f}{mam\+::\+Texture}}.
+
+\mbox{\Hypertarget{classmam_1_1_g_l_texture_af550941f62c83b34e72ea0e57be79faa}\label{classmam_1_1_g_l_texture_af550941f62c83b34e72ea0e57be79faa}} 
+\index{mam::GLTexture@{mam::GLTexture}!setWrapR@{setWrapR}}
+\index{setWrapR@{setWrapR}!mam::GLTexture@{mam::GLTexture}}
+\doxysubsubsection{\texorpdfstring{setWrapR()}{setWrapR()}}
+{\footnotesize\ttfamily void mam\+::\+G\+L\+Texture\+::set\+WrapR (\begin{DoxyParamCaption}\item[{Wrap}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Set texture wrap mode for R coordinate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Wrap mode \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classmam_1_1_texture_adf213c047e27f98afdad59b638b414a3}{mam\+::\+Texture}}.
+
+\mbox{\Hypertarget{classmam_1_1_g_l_texture_a7d846d1103f9ec1d91f8b4c0fa902f2a}\label{classmam_1_1_g_l_texture_a7d846d1103f9ec1d91f8b4c0fa902f2a}} 
+\index{mam::GLTexture@{mam::GLTexture}!setWrapS@{setWrapS}}
+\index{setWrapS@{setWrapS}!mam::GLTexture@{mam::GLTexture}}
+\doxysubsubsection{\texorpdfstring{setWrapS()}{setWrapS()}}
+{\footnotesize\ttfamily void mam\+::\+G\+L\+Texture\+::set\+WrapS (\begin{DoxyParamCaption}\item[{Wrap}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Set texture wrap mode for S coordinate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Wrap mode \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classmam_1_1_texture_a681aa39eda2d50b3aed075fb0b101dd2}{mam\+::\+Texture}}.
+
+\mbox{\Hypertarget{classmam_1_1_g_l_texture_a3ff318913a3b34ee707c2cac93aa1c0a}\label{classmam_1_1_g_l_texture_a3ff318913a3b34ee707c2cac93aa1c0a}} 
+\index{mam::GLTexture@{mam::GLTexture}!setWrapT@{setWrapT}}
+\index{setWrapT@{setWrapT}!mam::GLTexture@{mam::GLTexture}}
+\doxysubsubsection{\texorpdfstring{setWrapT()}{setWrapT()}}
+{\footnotesize\ttfamily void mam\+::\+G\+L\+Texture\+::set\+WrapT (\begin{DoxyParamCaption}\item[{Wrap}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Set texture wrap mode for T coordinate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Wrap mode \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classmam_1_1_texture_ab71a8cf3db6071b70d97063c69a24f78}{mam\+::\+Texture}}.
+
+\mbox{\Hypertarget{classmam_1_1_g_l_texture_aa334dec86b93a77bb3fde740272f55d1}\label{classmam_1_1_g_l_texture_aa334dec86b93a77bb3fde740272f55d1}} 
+\index{mam::GLTexture@{mam::GLTexture}!unBind@{unBind}}
+\index{unBind@{unBind}!mam::GLTexture@{mam::GLTexture}}
+\doxysubsubsection{\texorpdfstring{unBind()}{unBind()}}
+{\footnotesize\ttfamily void mam\+::\+G\+L\+Texture\+::un\+Bind (\begin{DoxyParamCaption}\item[{u32}]{slot = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Unbind the texture from a specific slot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em slot} & \mbox{\hyperlink{classmam_1_1_texture}{Texture}} unit to unbind \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classmam_1_1_texture_a31165b51d20965ce518e446a2eae8719}{mam\+::\+Texture}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+platform/opengl/gl\+\_\+texture.\+hpp\end{DoxyCompactItemize}

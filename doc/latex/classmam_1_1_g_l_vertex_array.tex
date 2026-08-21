@@ -1,0 +1,100 @@
+\hypertarget{classmam_1_1_g_l_vertex_array}{}\doxysection{mam\+::G\+L\+Vertex\+Array Class Reference}
+\label{classmam_1_1_g_l_vertex_array}\index{mam::GLVertexArray@{mam::GLVertexArray}}
+
+
+Open\+GL implementation of a \mbox{\hyperlink{structmam_1_1_vertex}{Vertex}} Array Object (V\+AO)  
+
+
+
+
+{\ttfamily \#include $<$gl\+\_\+vertex\+\_\+array.\+hpp$>$}
+
+Inheritance diagram for mam\+::G\+L\+Vertex\+Array\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmam_1_1_g_l_vertex_array}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_g_l_vertex_array_a22ecd72cd230d208fb2cc49073d69927}\label{classmam_1_1_g_l_vertex_array_a22ecd72cd230d208fb2cc49073d69927}} 
+\mbox{\hyperlink{classmam_1_1_g_l_vertex_array_a22ecd72cd230d208fb2cc49073d69927}{G\+L\+Vertex\+Array}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classmam_1_1_g_l_vertex_array}{G\+L\+Vertex\+Array}} and create underlying Open\+GL V\+AO. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_g_l_vertex_array_a90a4b7a9da665e0b673c4b6d3869703a}\label{classmam_1_1_g_l_vertex_array_a90a4b7a9da665e0b673c4b6d3869703a}} 
+\mbox{\hyperlink{classmam_1_1_g_l_vertex_array_a90a4b7a9da665e0b673c4b6d3869703a}{$\sim$\+G\+L\+Vertex\+Array}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classmam_1_1_g_l_vertex_array}{G\+L\+Vertex\+Array}} and release G\+PU resources. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_g_l_vertex_array_a8d9d7569a587934c8ce3cab47b79cd9b}\label{classmam_1_1_g_l_vertex_array_a8d9d7569a587934c8ce3cab47b79cd9b}} 
+virtual void \mbox{\hyperlink{classmam_1_1_g_l_vertex_array_a8d9d7569a587934c8ce3cab47b79cd9b}{bind}} () const override
+\begin{DoxyCompactList}\small\item\em Bind the V\+AO for rendering. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_g_l_vertex_array_a101c5d15618f91156c7589f99cd9c428}\label{classmam_1_1_g_l_vertex_array_a101c5d15618f91156c7589f99cd9c428}} 
+virtual void \mbox{\hyperlink{classmam_1_1_g_l_vertex_array_a101c5d15618f91156c7589f99cd9c428}{un\+Bind}} () const override
+\begin{DoxyCompactList}\small\item\em Unbind the V\+AO. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmam_1_1_g_l_vertex_array_a44756bf7d6409edba1a477d73f75e2aa}{add\+Vertex\+Buffer}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmam_1_1_vertex_buffer}{Vertex\+Buffer}} $>$ \&vertex\+Buffer, unsigned int index, int count, Uniform\+Type type, bool normalized, int stride, const void $\ast$offset) override
+\begin{DoxyCompactList}\small\item\em Attach a vertex buffer to the V\+AO. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmam_1_1_g_l_vertex_array_a9abe0b0a04e239d54180e824f85eacfc}{set\+Index\+Buffer}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmam_1_1_index_buffer}{Index\+Buffer}} $>$ \&index\+Buffer) override
+\begin{DoxyCompactList}\small\item\em Attach an index buffer to the V\+AO. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Open\+GL implementation of a \mbox{\hyperlink{structmam_1_1_vertex}{Vertex}} Array Object (V\+AO) 
+
+Manages vertex buffers and index buffers for rendering. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmam_1_1_g_l_vertex_array_a44756bf7d6409edba1a477d73f75e2aa}\label{classmam_1_1_g_l_vertex_array_a44756bf7d6409edba1a477d73f75e2aa}} 
+\index{mam::GLVertexArray@{mam::GLVertexArray}!addVertexBuffer@{addVertexBuffer}}
+\index{addVertexBuffer@{addVertexBuffer}!mam::GLVertexArray@{mam::GLVertexArray}}
+\doxysubsubsection{\texorpdfstring{addVertexBuffer()}{addVertexBuffer()}}
+{\footnotesize\ttfamily virtual void mam\+::\+G\+L\+Vertex\+Array\+::add\+Vertex\+Buffer (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmam_1_1_vertex_buffer}{Vertex\+Buffer}} $>$ \&}]{vertex\+Buffer,  }\item[{unsigned int}]{index,  }\item[{int}]{count,  }\item[{Uniform\+Type}]{type,  }\item[{bool}]{normalized,  }\item[{int}]{stride,  }\item[{const void $\ast$}]{offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Attach a vertex buffer to the V\+AO. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vertex\+Buffer} & Shared pointer to the vertex buffer \\
+\hline
+{\em index} & Attribute index \\
+\hline
+{\em count} & Number of components (optional override) \\
+\hline
+{\em type} & Type of the attribute (e.\+g., Float3) \\
+\hline
+{\em normalized} & Whether the data should be normalized \\
+\hline
+{\em stride} & Stride in bytes between consecutive vertex attributes \\
+\hline
+{\em offset} & Pointer offset in the buffer \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classmam_1_1_vertex_array_a319067e1962d347f3936d1b39b2cc238}{mam\+::\+Vertex\+Array}}.
+
+\mbox{\Hypertarget{classmam_1_1_g_l_vertex_array_a9abe0b0a04e239d54180e824f85eacfc}\label{classmam_1_1_g_l_vertex_array_a9abe0b0a04e239d54180e824f85eacfc}} 
+\index{mam::GLVertexArray@{mam::GLVertexArray}!setIndexBuffer@{setIndexBuffer}}
+\index{setIndexBuffer@{setIndexBuffer}!mam::GLVertexArray@{mam::GLVertexArray}}
+\doxysubsubsection{\texorpdfstring{setIndexBuffer()}{setIndexBuffer()}}
+{\footnotesize\ttfamily virtual void mam\+::\+G\+L\+Vertex\+Array\+::set\+Index\+Buffer (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmam_1_1_index_buffer}{Index\+Buffer}} $>$ \&}]{index\+Buffer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Attach an index buffer to the V\+AO. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index\+Buffer} & Shared pointer to the index buffer \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classmam_1_1_vertex_array_a584a5cb5839f3183a05bf882b2da7fc2}{mam\+::\+Vertex\+Array}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+platform/opengl/gl\+\_\+vertex\+\_\+array.\+hpp\end{DoxyCompactItemize}

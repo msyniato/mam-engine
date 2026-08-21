@@ -1,0 +1,59 @@
+\hypertarget{classmam_1_1_render_system}{}\doxysection{mam\+::Render\+System Class Reference}
+\label{classmam_1_1_render_system}\index{mam::RenderSystem@{mam::RenderSystem}}
+
+
+\mbox{\hyperlink{classmam_1_1_system}{System}} responsible for rendering entities with meshes.  
+
+
+
+
+{\ttfamily \#include $<$engine\+\_\+systems.\+hpp$>$}
+
+Inheritance diagram for mam\+::Render\+System\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmam_1_1_render_system}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmam_1_1_render_system_af9fa63043eb61d8ab047672373c3c26e}{Update}} (\mbox{\hyperlink{classmam_1_1_coordinator}{Coordinator}} \&coord, \mbox{\hyperlink{classmam_1_1_camera}{Camera}} \&cam, \mbox{\hyperlink{classmam_1_1_graphic_device}{Graphic\+Device}} \&rend, double dt)
+\begin{DoxyCompactList}\small\item\em Updates the render system for a single frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classmam_1_1_system}{System}} responsible for rendering entities with meshes. 
+
+Processes all entities with \mbox{\hyperlink{structmam_1_1_render_component}{Render\+Component}} and \mbox{\hyperlink{structmam_1_1_transform_component}{Transform\+Component}} and submits them to the rendering pipeline. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmam_1_1_render_system_af9fa63043eb61d8ab047672373c3c26e}\label{classmam_1_1_render_system_af9fa63043eb61d8ab047672373c3c26e}} 
+\index{mam::RenderSystem@{mam::RenderSystem}!Update@{Update}}
+\index{Update@{Update}!mam::RenderSystem@{mam::RenderSystem}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void mam\+::\+Render\+System\+::\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmam_1_1_coordinator}{Coordinator}} \&}]{coord,  }\item[{\mbox{\hyperlink{classmam_1_1_camera}{Camera}} \&}]{cam,  }\item[{\mbox{\hyperlink{classmam_1_1_graphic_device}{Graphic\+Device}} \&}]{rend,  }\item[{double}]{dt }\end{DoxyParamCaption})}
+
+
+
+Updates the render system for a single frame. 
+
+Iterates over all entities that have the required components (e.\+g., \mbox{\hyperlink{structmam_1_1_render_component}{Render\+Component}}, \mbox{\hyperlink{structmam_1_1_transform_component}{Transform\+Component}}) and draws them using the provided camera and graphics device.
+
+
+\begin{DoxyParams}{Parameters}
+{\em coord} & Reference to the E\+CS coordinator. \\
+\hline
+{\em cam} & Reference to the active camera. \\
+\hline
+{\em rend} & Reference to the graphics device / renderer. \\
+\hline
+{\em dt} & Delta time since the last frame in seconds. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/ecs/engine\+\_\+systems.\+hpp\end{DoxyCompactItemize}

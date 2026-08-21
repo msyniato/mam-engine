@@ -1,0 +1,245 @@
+\hypertarget{classmam_1_1_camera}{}\doxysection{mam\+::Camera Class Reference}
+\label{classmam_1_1_camera}\index{mam::Camera@{mam::Camera}}
+
+
+Represents a 3D camera with position, orientation, and movement controls.  
+
+
+
+
+{\ttfamily \#include $<$camera.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmam_1_1_camera_aac9d6f3ad8932ce726e38995ae71536f}{Camera}} (const glm\+::vec2 window\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Constructs the camera with a given window size. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_camera_ad936f637b49e86fb87507bfbf7b140d6}\label{classmam_1_1_camera_ad936f637b49e86fb87507bfbf7b140d6}} 
+\mbox{\hyperlink{classmam_1_1_camera_ad936f637b49e86fb87507bfbf7b140d6}{$\sim$\+Camera}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_camera_a54f280a31ea5dbdd39a0cb2b7c037773}{init\+View\+Target}} (const glm\+::vec3 \&target, const glm\+::vec2 window\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Initializes the camera to look at a specific target. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_camera_af4ddf704a3e20230458de3581bd3f9dc}{update}} (const double dt, const glm\+::vec2 window\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Updates the camera based on delta time and window size. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_camera_a4795a7b0618abb4c8a470e1c1feeab63}{set\+Enabled}} (const bool b)
+\begin{DoxyCompactList}\small\item\em Enables or disables the camera. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_camera_a1755f12e02b31799c5bbfe8ef5597d0e}\label{classmam_1_1_camera_a1755f12e02b31799c5bbfe8ef5597d0e}} 
+bool \mbox{\hyperlink{classmam_1_1_camera_a1755f12e02b31799c5bbfe8ef5597d0e}{enabled}} ()
+\begin{DoxyCompactList}\small\item\em Returns whether the camera is enabled. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_camera_a5f38ada1e9759b47a6692da94c977b3a}{set\+Position}} (const glm\+::vec3 v)
+\begin{DoxyCompactList}\small\item\em Sets the camera\textquotesingle{}s world position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_camera_a4102a76362fa613c12774c746fd97fb1}\label{classmam_1_1_camera_a4102a76362fa613c12774c746fd97fb1}} 
+glm\+::vec3 \mbox{\hyperlink{classmam_1_1_camera_a4102a76362fa613c12774c746fd97fb1}{position}} ()
+\begin{DoxyCompactList}\small\item\em Returns the camera\textquotesingle{}s position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_camera_accd2324bfc8ec638e635430af1f838c1}{set\+View\+Direction}} (const glm\+::vec3 v)
+\begin{DoxyCompactList}\small\item\em Sets the camera\textquotesingle{}s view direction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_camera_a5c7f202a9c99a188d9a9606dd34681e6}\label{classmam_1_1_camera_a5c7f202a9c99a188d9a9606dd34681e6}} 
+glm\+::vec3 \mbox{\hyperlink{classmam_1_1_camera_a5c7f202a9c99a188d9a9606dd34681e6}{view\+Direction}} ()
+\begin{DoxyCompactList}\small\item\em Returns the current view direction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_camera_a5b1c635d708f7f38f6dec94a73ecc0af}\label{classmam_1_1_camera_a5b1c635d708f7f38f6dec94a73ecc0af}} 
+glm\+::vec3 \mbox{\hyperlink{classmam_1_1_camera_a5b1c635d708f7f38f6dec94a73ecc0af}{front}} ()
+\begin{DoxyCompactList}\small\item\em Returns the front vector of the camera. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_camera_a3b99d23abd8fa633fd872f9d6d8f820a}\label{classmam_1_1_camera_a3b99d23abd8fa633fd872f9d6d8f820a}} 
+glm\+::vec3 \mbox{\hyperlink{classmam_1_1_camera_a3b99d23abd8fa633fd872f9d6d8f820a}{up}} ()
+\begin{DoxyCompactList}\small\item\em Returns the up vector of the camera. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_camera_a270792d4a4c13b9575311be4a39081ec}{set\+Speed}} (const float s)
+\begin{DoxyCompactList}\small\item\em Sets the camera movement speed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_camera_ab2dcfe66c61037fda48f44edf8b04b85}\label{classmam_1_1_camera_ab2dcfe66c61037fda48f44edf8b04b85}} 
+float \mbox{\hyperlink{classmam_1_1_camera_ab2dcfe66c61037fda48f44edf8b04b85}{speed}} ()
+\begin{DoxyCompactList}\small\item\em Returns the camera speed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_camera_ae4c5fcdd00fa365221d99beffc462fec}{set\+Sensitivity}} (const float s)
+\begin{DoxyCompactList}\small\item\em Sets the mouse sensitivity. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_camera_ae7f55d54b63fb33cf9f2a2070b0564f1}\label{classmam_1_1_camera_ae7f55d54b63fb33cf9f2a2070b0564f1}} 
+float \mbox{\hyperlink{classmam_1_1_camera_ae7f55d54b63fb33cf9f2a2070b0564f1}{sensitivity}} ()
+\begin{DoxyCompactList}\small\item\em Returns the mouse sensitivity. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_camera_a838eb5d5666e35f6f139c3bcffc78687}\label{classmam_1_1_camera_a838eb5d5666e35f6f139c3bcffc78687}} 
+float \mbox{\hyperlink{classmam_1_1_camera_a838eb5d5666e35f6f139c3bcffc78687}{fov}} () const
+\begin{DoxyCompactList}\small\item\em Returns the field of view (F\+OV) in degrees. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_camera_a46c6890aa73e67a57019ca9397b8fddf}\label{classmam_1_1_camera_a46c6890aa73e67a57019ca9397b8fddf}} 
+float \mbox{\hyperlink{classmam_1_1_camera_a46c6890aa73e67a57019ca9397b8fddf}{aspect\+Ratio}} () const
+\begin{DoxyCompactList}\small\item\em Returns the aspect ratio of the camera. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_camera_a856f73d7483697b61b11321ae7b297a8}\label{classmam_1_1_camera_a856f73d7483697b61b11321ae7b297a8}} 
+glm\+::vec3 \mbox{\hyperlink{classmam_1_1_camera_a856f73d7483697b61b11321ae7b297a8}{view\+\_\+direction\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Direction the camera is looking at. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_camera_ace8a4d446a5d9486566564d91e042306}\label{classmam_1_1_camera_ace8a4d446a5d9486566564d91e042306}} 
+glm\+::vec3 \mbox{\hyperlink{classmam_1_1_camera_ace8a4d446a5d9486566564d91e042306}{position\+\_\+}}
+\begin{DoxyCompactList}\small\item\em World position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_camera_a1b8c69e2fe84c318dd595ca1af0aad72}\label{classmam_1_1_camera_a1b8c69e2fe84c318dd595ca1af0aad72}} 
+glm\+::vec3 \mbox{\hyperlink{classmam_1_1_camera_a1b8c69e2fe84c318dd595ca1af0aad72}{front\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Forward vector. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_camera_af98cda012ef6c2e847d0a7dd86b4d195}\label{classmam_1_1_camera_af98cda012ef6c2e847d0a7dd86b4d195}} 
+glm\+::vec3 \mbox{\hyperlink{classmam_1_1_camera_af98cda012ef6c2e847d0a7dd86b4d195}{up\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Up vector. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_camera_a482023cbddbf6335ba06f011147224a8}\label{classmam_1_1_camera_a482023cbddbf6335ba06f011147224a8}} 
+glm\+::vec2 \mbox{\hyperlink{classmam_1_1_camera_a482023cbddbf6335ba06f011147224a8}{last\+\_\+mouse\+\_\+position\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Last recorded mouse position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_camera_aeba3a86b6d8d0808fc41e73c28ee8adc}\label{classmam_1_1_camera_aeba3a86b6d8d0808fc41e73c28ee8adc}} 
+glm\+::vec2 \mbox{\hyperlink{classmam_1_1_camera_aeba3a86b6d8d0808fc41e73c28ee8adc}{accum\+\_\+mouse\+\_\+offset\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Accumulated mouse movement. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_camera_afe42e725b9618dc8341f73555ceefba8}\label{classmam_1_1_camera_afe42e725b9618dc8341f73555ceefba8}} 
+float \mbox{\hyperlink{classmam_1_1_camera_afe42e725b9618dc8341f73555ceefba8}{aspect\+\_\+ratio\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Aspect ratio (width / height) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_camera_aee269272125a495155b1d5d10bfe8a59}\label{classmam_1_1_camera_aee269272125a495155b1d5d10bfe8a59}} 
+float \mbox{\hyperlink{classmam_1_1_camera_aee269272125a495155b1d5d10bfe8a59}{sensitivity\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Mouse look sensitivity. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_camera_a9f000c2f239877269f4162c7231a07e3}\label{classmam_1_1_camera_a9f000c2f239877269f4162c7231a07e3}} 
+float \mbox{\hyperlink{classmam_1_1_camera_a9f000c2f239877269f4162c7231a07e3}{speed\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Movement speed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_camera_a225cb7bcd2d0399640c5abb582440e9f}\label{classmam_1_1_camera_a225cb7bcd2d0399640c5abb582440e9f}} 
+float \mbox{\hyperlink{classmam_1_1_camera_a225cb7bcd2d0399640c5abb582440e9f}{pitch\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Rotation around X axis. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_camera_a8b55bc2974aa507542559c320afe1fbf}\label{classmam_1_1_camera_a8b55bc2974aa507542559c320afe1fbf}} 
+float \mbox{\hyperlink{classmam_1_1_camera_a8b55bc2974aa507542559c320afe1fbf}{fov\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Field of view (degrees) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_camera_a853eada588d56cc1376452ee049791df}\label{classmam_1_1_camera_a853eada588d56cc1376452ee049791df}} 
+float \mbox{\hyperlink{classmam_1_1_camera_a853eada588d56cc1376452ee049791df}{yaw\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Rotation around Y axis. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_camera_aca0ec47b42e0847d57a5232ab8e19160}\label{classmam_1_1_camera_aca0ec47b42e0847d57a5232ab8e19160}} 
+bool \mbox{\hyperlink{classmam_1_1_camera_aca0ec47b42e0847d57a5232ab8e19160}{first\+\_\+frame\+\_\+}}
+\begin{DoxyCompactList}\small\item\em True for first update frame. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_camera_ada1e1bee6d43b72ec42cdc4eeb8e72c1}\label{classmam_1_1_camera_ada1e1bee6d43b72ec42cdc4eeb8e72c1}} 
+bool \mbox{\hyperlink{classmam_1_1_camera_ada1e1bee6d43b72ec42cdc4eeb8e72c1}{is\+\_\+enabled\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Whether the camera is active. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a 3D camera with position, orientation, and movement controls. 
+
+Provides view and projection parameters, supports mouse-\/look, and allows enabling/disabling the camera. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmam_1_1_camera_aac9d6f3ad8932ce726e38995ae71536f}\label{classmam_1_1_camera_aac9d6f3ad8932ce726e38995ae71536f}} 
+\index{mam::Camera@{mam::Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!mam::Camera@{mam::Camera}}
+\doxysubsubsection{\texorpdfstring{Camera()}{Camera()}}
+{\footnotesize\ttfamily mam\+::\+Camera\+::\+Camera (\begin{DoxyParamCaption}\item[{const glm\+::vec2}]{window\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Constructs the camera with a given window size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window\+\_\+size} & Size of the rendering window (width, height) \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmam_1_1_camera_a54f280a31ea5dbdd39a0cb2b7c037773}\label{classmam_1_1_camera_a54f280a31ea5dbdd39a0cb2b7c037773}} 
+\index{mam::Camera@{mam::Camera}!initViewTarget@{initViewTarget}}
+\index{initViewTarget@{initViewTarget}!mam::Camera@{mam::Camera}}
+\doxysubsubsection{\texorpdfstring{initViewTarget()}{initViewTarget()}}
+{\footnotesize\ttfamily void mam\+::\+Camera\+::init\+View\+Target (\begin{DoxyParamCaption}\item[{const glm\+::vec3 \&}]{target,  }\item[{const glm\+::vec2}]{window\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Initializes the camera to look at a specific target. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & Target position in world space \\
+\hline
+{\em window\+\_\+size} & Size of the rendering window \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmam_1_1_camera_a4795a7b0618abb4c8a470e1c1feeab63}\label{classmam_1_1_camera_a4795a7b0618abb4c8a470e1c1feeab63}} 
+\index{mam::Camera@{mam::Camera}!setEnabled@{setEnabled}}
+\index{setEnabled@{setEnabled}!mam::Camera@{mam::Camera}}
+\doxysubsubsection{\texorpdfstring{setEnabled()}{setEnabled()}}
+{\footnotesize\ttfamily void mam\+::\+Camera\+::set\+Enabled (\begin{DoxyParamCaption}\item[{const bool}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Enables or disables the camera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & True to enable, false to disable \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmam_1_1_camera_a5f38ada1e9759b47a6692da94c977b3a}\label{classmam_1_1_camera_a5f38ada1e9759b47a6692da94c977b3a}} 
+\index{mam::Camera@{mam::Camera}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!mam::Camera@{mam::Camera}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily void mam\+::\+Camera\+::set\+Position (\begin{DoxyParamCaption}\item[{const glm\+::vec3}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the camera\textquotesingle{}s world position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & New position vector \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmam_1_1_camera_ae4c5fcdd00fa365221d99beffc462fec}\label{classmam_1_1_camera_ae4c5fcdd00fa365221d99beffc462fec}} 
+\index{mam::Camera@{mam::Camera}!setSensitivity@{setSensitivity}}
+\index{setSensitivity@{setSensitivity}!mam::Camera@{mam::Camera}}
+\doxysubsubsection{\texorpdfstring{setSensitivity()}{setSensitivity()}}
+{\footnotesize\ttfamily void mam\+::\+Camera\+::set\+Sensitivity (\begin{DoxyParamCaption}\item[{const float}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the mouse sensitivity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Sensitivity multiplier \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmam_1_1_camera_a270792d4a4c13b9575311be4a39081ec}\label{classmam_1_1_camera_a270792d4a4c13b9575311be4a39081ec}} 
+\index{mam::Camera@{mam::Camera}!setSpeed@{setSpeed}}
+\index{setSpeed@{setSpeed}!mam::Camera@{mam::Camera}}
+\doxysubsubsection{\texorpdfstring{setSpeed()}{setSpeed()}}
+{\footnotesize\ttfamily void mam\+::\+Camera\+::set\+Speed (\begin{DoxyParamCaption}\item[{const float}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the camera movement speed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Speed in units per second \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmam_1_1_camera_accd2324bfc8ec638e635430af1f838c1}\label{classmam_1_1_camera_accd2324bfc8ec638e635430af1f838c1}} 
+\index{mam::Camera@{mam::Camera}!setViewDirection@{setViewDirection}}
+\index{setViewDirection@{setViewDirection}!mam::Camera@{mam::Camera}}
+\doxysubsubsection{\texorpdfstring{setViewDirection()}{setViewDirection()}}
+{\footnotesize\ttfamily void mam\+::\+Camera\+::set\+View\+Direction (\begin{DoxyParamCaption}\item[{const glm\+::vec3}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the camera\textquotesingle{}s view direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & New view direction vector \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmam_1_1_camera_af4ddf704a3e20230458de3581bd3f9dc}\label{classmam_1_1_camera_af4ddf704a3e20230458de3581bd3f9dc}} 
+\index{mam::Camera@{mam::Camera}!update@{update}}
+\index{update@{update}!mam::Camera@{mam::Camera}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void mam\+::\+Camera\+::update (\begin{DoxyParamCaption}\item[{const double}]{dt,  }\item[{const glm\+::vec2}]{window\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Updates the camera based on delta time and window size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & Time elapsed since last update (seconds) \\
+\hline
+{\em window\+\_\+size} & Size of the rendering window \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/mam/camera.\+hpp\end{DoxyCompactItemize}

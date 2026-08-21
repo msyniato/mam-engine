@@ -1,0 +1,92 @@
+\hypertarget{classmam_1_1_script_system}{}\doxysection{mam\+::Script\+System Class Reference}
+\label{classmam_1_1_script_system}\index{mam::ScriptSystem@{mam::ScriptSystem}}
+
+
+\mbox{\hyperlink{classmam_1_1_system}{System}} responsible for executing Lua scripts attached to entities.  
+
+
+
+
+{\ttfamily \#include $<$script\+\_\+system.\+hpp$>$}
+
+Inheritance diagram for mam\+::Script\+System\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmam_1_1_script_system}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmam_1_1_script_system_a8ff0d65648620ef83a82ae90d10b29ef}{Init}} (\mbox{\hyperlink{classmam_1_1_coordinator}{Coordinator}} $\ast$coord)
+\begin{DoxyCompactList}\small\item\em Initializes the script system. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_script_system_a2df9c356cf63fc592b7f8521eff97b43}{Shutdown}} ()
+\begin{DoxyCompactList}\small\item\em Shuts down the script system. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmam_1_1_script_system_a5bdaea740cc3d2d034a8fba5443a1924}{Update}} (\mbox{\hyperlink{classmam_1_1_coordinator}{Coordinator}} \&c, double dt)
+\begin{DoxyCompactList}\small\item\em Updates all active scripts for the current frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classmam_1_1_system}{System}} responsible for executing Lua scripts attached to entities. 
+
+\mbox{\hyperlink{classmam_1_1_script_system}{Script\+System}} manages the lifecycle of scripts, including\+:
+\begin{DoxyItemize}
+\item Initializing the Lua environment
+\item Binding the engine A\+PI to Lua
+\item Executing script update functions each frame
+\item Ensuring scripts are loaded and initialized for each entity 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmam_1_1_script_system_a8ff0d65648620ef83a82ae90d10b29ef}\label{classmam_1_1_script_system_a8ff0d65648620ef83a82ae90d10b29ef}} 
+\index{mam::ScriptSystem@{mam::ScriptSystem}!Init@{Init}}
+\index{Init@{Init}!mam::ScriptSystem@{mam::ScriptSystem}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void mam\+::\+Script\+System\+::\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmam_1_1_coordinator}{Coordinator}} $\ast$}]{coord }\end{DoxyParamCaption})}
+
+
+
+Initializes the script system. 
+
+Sets up the Lua state and stores a reference to the E\+CS coordinator.
+
+
+\begin{DoxyParams}{Parameters}
+{\em coord} & Pointer to the E\+CS coordinator. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmam_1_1_script_system_a2df9c356cf63fc592b7f8521eff97b43}\label{classmam_1_1_script_system_a2df9c356cf63fc592b7f8521eff97b43}} 
+\index{mam::ScriptSystem@{mam::ScriptSystem}!Shutdown@{Shutdown}}
+\index{Shutdown@{Shutdown}!mam::ScriptSystem@{mam::ScriptSystem}}
+\doxysubsubsection{\texorpdfstring{Shutdown()}{Shutdown()}}
+{\footnotesize\ttfamily void mam\+::\+Script\+System\+::\+Shutdown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Shuts down the script system. 
+
+Cleans up the Lua state and releases resources. \mbox{\Hypertarget{classmam_1_1_script_system_a5bdaea740cc3d2d034a8fba5443a1924}\label{classmam_1_1_script_system_a5bdaea740cc3d2d034a8fba5443a1924}} 
+\index{mam::ScriptSystem@{mam::ScriptSystem}!Update@{Update}}
+\index{Update@{Update}!mam::ScriptSystem@{mam::ScriptSystem}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void mam\+::\+Script\+System\+::\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmam_1_1_coordinator}{Coordinator}} \&}]{c,  }\item[{double}]{dt }\end{DoxyParamCaption})}
+
+
+
+Updates all active scripts for the current frame. 
+
+Calls the {\ttfamily update} function of each \mbox{\hyperlink{structmam_1_1_script_component}{Script\+Component}} that has been loaded.
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Reference to the E\+CS coordinator. \\
+\hline
+{\em dt} & Delta time since the last frame (seconds). \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/ecs/script\+\_\+system.\+hpp\end{DoxyCompactItemize}

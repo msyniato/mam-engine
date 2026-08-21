@@ -1,0 +1,129 @@
+\hypertarget{classmam_1_1_graphic_device}{}\doxysection{mam\+::Graphic\+Device Class Reference}
+\label{classmam_1_1_graphic_device}\index{mam::GraphicDevice@{mam::GraphicDevice}}
+
+
+Abstract graphics device interface.  
+
+
+
+
+{\ttfamily \#include $<$graphic\+\_\+device.\+hpp$>$}
+
+Inheritance diagram for mam\+::Graphic\+Device\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmam_1_1_graphic_device}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_graphic_device_a8bf1f29f3953c2b85a7630851ee35689}\label{classmam_1_1_graphic_device_a8bf1f29f3953c2b85a7630851ee35689}} 
+\mbox{\hyperlink{classmam_1_1_graphic_device_a8bf1f29f3953c2b85a7630851ee35689}{Graphic\+Device}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_graphic_device_a5a0821eea5783441cc2cbe0485a43e2b}\label{classmam_1_1_graphic_device_a5a0821eea5783441cc2cbe0485a43e2b}} 
+virtual \mbox{\hyperlink{classmam_1_1_graphic_device_a5a0821eea5783441cc2cbe0485a43e2b}{$\sim$\+Graphic\+Device}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_graphic_device_adfa4f86e10f6b79f5e16356bffbbdf7e}\label{classmam_1_1_graphic_device_adfa4f86e10f6b79f5e16356bffbbdf7e}} 
+virtual void \mbox{\hyperlink{classmam_1_1_graphic_device_adfa4f86e10f6b79f5e16356bffbbdf7e}{init}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the graphics device. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmam_1_1_graphic_device_a38a71df9796bb11bd1481295fa212722}{draw}} (class \mbox{\hyperlink{classmam_1_1_mesh}{Mesh}} \&mesh)
+\begin{DoxyCompactList}\small\item\em Draw a mesh using its vertex/index data. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classmam_1_1_graphic_device_abbe33a47f3954544a7577b043f01890a}{draw}} (uint32\+\_\+t indices)
+\begin{DoxyCompactList}\small\item\em Draw elements by index count. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_graphic_device_a68f8737462038510093693895d183d9c}\label{classmam_1_1_graphic_device_a68f8737462038510093693895d183d9c}} 
+virtual void \mbox{\hyperlink{classmam_1_1_graphic_device_a68f8737462038510093693895d183d9c}{cleanup}} ()
+\begin{DoxyCompactList}\small\item\em Cleanup G\+PU resources. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_graphic_device_adf0b9bc0cfe850dbbb83065168d140bf}\label{classmam_1_1_graphic_device_adf0b9bc0cfe850dbbb83065168d140bf}} 
+virtual void \mbox{\hyperlink{classmam_1_1_graphic_device_adf0b9bc0cfe850dbbb83065168d140bf}{begin\+Frame}} ()
+\begin{DoxyCompactList}\small\item\em Begin a new frame (set up render target, clear buffers) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_graphic_device_aa7d7363b07998224cfb8646e2307525b}\label{classmam_1_1_graphic_device_aa7d7363b07998224cfb8646e2307525b}} 
+virtual void \mbox{\hyperlink{classmam_1_1_graphic_device_aa7d7363b07998224cfb8646e2307525b}{end\+Frame}} ()
+\begin{DoxyCompactList}\small\item\em End the current frame (swap buffers, present) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_graphic_device_aa408fda2cda721fc237d317eb2f1caf0}\label{classmam_1_1_graphic_device_aa408fda2cda721fc237d317eb2f1caf0}} 
+virtual void \mbox{\hyperlink{classmam_1_1_graphic_device_aa408fda2cda721fc237d317eb2f1caf0}{enable\+Depth\+Test}} ()
+\begin{DoxyCompactList}\small\item\em Enable depth testing. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_graphic_device_a242d2610c38abd8edeb6819d256aac67}\label{classmam_1_1_graphic_device_a242d2610c38abd8edeb6819d256aac67}} 
+virtual void \mbox{\hyperlink{classmam_1_1_graphic_device_a242d2610c38abd8edeb6819d256aac67}{disable\+Depth\+Test}} ()
+\begin{DoxyCompactList}\small\item\em Disable depth testing. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_graphic_device_a2e61be45696926ed6ce614092306c637}\label{classmam_1_1_graphic_device_a2e61be45696926ed6ce614092306c637}} 
+virtual void \mbox{\hyperlink{classmam_1_1_graphic_device_a2e61be45696926ed6ce614092306c637}{enable\+Face\+Culling}} ()
+\begin{DoxyCompactList}\small\item\em Enable face culling. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_graphic_device_a353a8772f68b755dcabb72dc4d693cb0}\label{classmam_1_1_graphic_device_a353a8772f68b755dcabb72dc4d693cb0}} 
+virtual void \mbox{\hyperlink{classmam_1_1_graphic_device_a353a8772f68b755dcabb72dc4d693cb0}{disable\+Face\+Culling}} ()
+\begin{DoxyCompactList}\small\item\em Disable face culling. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_graphic_device_a7576c1f33e6602a4add4be2f6582c766}\label{classmam_1_1_graphic_device_a7576c1f33e6602a4add4be2f6582c766}} 
+virtual void \mbox{\hyperlink{classmam_1_1_graphic_device_a7576c1f33e6602a4add4be2f6582c766}{render\+Screen}} ()
+\begin{DoxyCompactList}\small\item\em Render full-\/screen pass (e.\+g., post-\/processing) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_graphic_device_a04de6662e283d87d792b02ffdce2d708}\label{classmam_1_1_graphic_device_a04de6662e283d87d792b02ffdce2d708}} 
+std\+::shared\+\_\+ptr$<$ class \mbox{\hyperlink{classmam_1_1_material}{Material}} $>$ \mbox{\hyperlink{classmam_1_1_graphic_device_a04de6662e283d87d792b02ffdce2d708}{material\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Current material used for rendering. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_graphic_device_a741a2fce5d015743a1c15cb9d73f53ea}\label{classmam_1_1_graphic_device_a741a2fce5d015743a1c15cb9d73f53ea}} 
+std\+::shared\+\_\+ptr$<$ class \mbox{\hyperlink{classmam_1_1_g_buffer}{G\+Buffer}} $>$ \mbox{\hyperlink{classmam_1_1_graphic_device_a741a2fce5d015743a1c15cb9d73f53ea}{g\+Buffer\+\_\+}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classmam_1_1_g_buffer}{G\+Buffer}} used for deferred rendering. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_graphic_device_a9d28939075dc0fe5ccdbacf27e1bc6b3}\label{classmam_1_1_graphic_device_a9d28939075dc0fe5ccdbacf27e1bc6b3}} 
+std\+::shared\+\_\+ptr$<$ class \mbox{\hyperlink{classmam_1_1_shader_storage_buffer}{Shader\+Storage\+Buffer}} $>$ \mbox{\hyperlink{classmam_1_1_graphic_device_a9d28939075dc0fe5ccdbacf27e1bc6b3}{light\+Buffer\+\_\+}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classmam_1_1_shader}{Shader}} storage buffer for lights. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_graphic_device_add148bd5f1bd5756baeabda3017abee8}\label{classmam_1_1_graphic_device_add148bd5f1bd5756baeabda3017abee8}} 
+u32 \mbox{\hyperlink{classmam_1_1_graphic_device_add148bd5f1bd5756baeabda3017abee8}{vao\+\_\+}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structmam_1_1_vertex}{Vertex}} Array Object ID. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_graphic_device_a2ef6f3a04ca38c496e1d4a65c030dc9f}\label{classmam_1_1_graphic_device_a2ef6f3a04ca38c496e1d4a65c030dc9f}} 
+u32 \mbox{\hyperlink{classmam_1_1_graphic_device_a2ef6f3a04ca38c496e1d4a65c030dc9f}{vbo\+\_\+}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structmam_1_1_vertex}{Vertex}} Buffer Object ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract graphics device interface. 
+
+Handles rendering operations such as drawing meshes, managing frame lifecycle, enabling/disabling depth test and face culling, and storing references to materials and buffers. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmam_1_1_graphic_device_a38a71df9796bb11bd1481295fa212722}\label{classmam_1_1_graphic_device_a38a71df9796bb11bd1481295fa212722}} 
+\index{mam::GraphicDevice@{mam::GraphicDevice}!draw@{draw}}
+\index{draw@{draw}!mam::GraphicDevice@{mam::GraphicDevice}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual void mam\+::\+Graphic\+Device\+::draw (\begin{DoxyParamCaption}\item[{class \mbox{\hyperlink{classmam_1_1_mesh}{Mesh}} \&}]{mesh }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Draw a mesh using its vertex/index data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mesh} & \mbox{\hyperlink{classmam_1_1_mesh}{Mesh}} to draw \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classmam_1_1_v_k_device_ab20f02f62cac810ce5314f319a16437f}{mam\+::\+V\+K\+Device}}, and \mbox{\hyperlink{classmam_1_1_g_l_device_a5f4b168d53ca19990626359ecca2c9fc}{mam\+::\+G\+L\+Device}}.
+
+\mbox{\Hypertarget{classmam_1_1_graphic_device_abbe33a47f3954544a7577b043f01890a}\label{classmam_1_1_graphic_device_abbe33a47f3954544a7577b043f01890a}} 
+\index{mam::GraphicDevice@{mam::GraphicDevice}!draw@{draw}}
+\index{draw@{draw}!mam::GraphicDevice@{mam::GraphicDevice}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void mam\+::\+Graphic\+Device\+::draw (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{indices }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Draw elements by index count. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em indices} & Number of indices to draw \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classmam_1_1_v_k_device_a6fb1e3f7f5277e476c3e141fa214c15c}{mam\+::\+V\+K\+Device}}, and \mbox{\hyperlink{classmam_1_1_g_l_device_af7b8763edc7277affe417d917190ede4}{mam\+::\+G\+L\+Device}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/mam/graphic\+\_\+device.\+hpp\end{DoxyCompactItemize}

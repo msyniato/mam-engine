@@ -1,0 +1,112 @@
+\hypertarget{classmam_1_1_input}{}\doxysection{mam\+::Input Class Reference}
+\label{classmam_1_1_input}\index{mam::Input@{mam::Input}}
+
+
+Handles keyboard, mouse, and controller input.  
+
+
+
+
+{\ttfamily \#include $<$input.\+hpp$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classmam_1_1_input_1_1_controller}{Controller}}
+\begin{DoxyCompactList}\small\item\em Represents a game controller (e.\+g., Xbox/\+Joystick) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classmam_1_1_input_a410d2e418a4275f3ac9b49ba10d1df8a}{init}} (G\+L\+F\+Wwindow $\ast$window)
+\begin{DoxyCompactList}\small\item\em Initialize input system with a G\+L\+FW window. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_input_a95ccf1e44c108954b5627b7bba31d9d3}\label{classmam_1_1_input_a95ccf1e44c108954b5627b7bba31d9d3}} 
+static bool \mbox{\hyperlink{classmam_1_1_input_a95ccf1e44c108954b5627b7bba31d9d3}{is\+Key\+Pressed}} (Key\+Code key)
+\begin{DoxyCompactList}\small\item\em Check if a key is currently pressed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_input_afd738a20c1b1dbb94d5886ef4867592c}\label{classmam_1_1_input_afd738a20c1b1dbb94d5886ef4867592c}} 
+static bool \mbox{\hyperlink{classmam_1_1_input_afd738a20c1b1dbb94d5886ef4867592c}{is\+Key\+Released}} (Key\+Code key)
+\begin{DoxyCompactList}\small\item\em Check if a key is currently released. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_input_a979125ccb3045b7d6b13e0a2fd29d2a2}\label{classmam_1_1_input_a979125ccb3045b7d6b13e0a2fd29d2a2}} 
+static bool \mbox{\hyperlink{classmam_1_1_input_a979125ccb3045b7d6b13e0a2fd29d2a2}{is\+Key\+Repeated}} (Key\+Code key)
+\begin{DoxyCompactList}\small\item\em Check if a key is being repeated (held down) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_input_a1af226d73e6a96d39877ba6c889a831a}\label{classmam_1_1_input_a1af226d73e6a96d39877ba6c889a831a}} 
+static bool \mbox{\hyperlink{classmam_1_1_input_a1af226d73e6a96d39877ba6c889a831a}{is\+Mouse\+Button\+Pressed}} (Mouse\+Code key)
+\begin{DoxyCompactList}\small\item\em Check if a mouse button is pressed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_input_ad5636f4078f6f7c4d1a107fd1a0a1bc2}\label{classmam_1_1_input_ad5636f4078f6f7c4d1a107fd1a0a1bc2}} 
+static bool \mbox{\hyperlink{classmam_1_1_input_ad5636f4078f6f7c4d1a107fd1a0a1bc2}{is\+Mouse\+Button\+Released}} (Mouse\+Code key)
+\begin{DoxyCompactList}\small\item\em Check if a mouse button is released. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_input_a632a0ab0af49f8e14ef4e2c136e6946e}\label{classmam_1_1_input_a632a0ab0af49f8e14ef4e2c136e6946e}} 
+static float \mbox{\hyperlink{classmam_1_1_input_a632a0ab0af49f8e14ef4e2c136e6946e}{get\+Mouse\+Scroll\+Offset}} ()
+\begin{DoxyCompactList}\small\item\em Returns mouse scroll offset in the Y-\/axis. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_input_a58725bd43fb8c8d27617b0ccae318e7d}\label{classmam_1_1_input_a58725bd43fb8c8d27617b0ccae318e7d}} 
+static void \mbox{\hyperlink{classmam_1_1_input_a58725bd43fb8c8d27617b0ccae318e7d}{show\+Mouse}} (bool show)
+\begin{DoxyCompactList}\small\item\em Show or hide the mouse cursor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_input_a3f449c1368ddf04a78577f3bcf454e43}\label{classmam_1_1_input_a3f449c1368ddf04a78577f3bcf454e43}} 
+static glm\+::vec2 \mbox{\hyperlink{classmam_1_1_input_a3f449c1368ddf04a78577f3bcf454e43}{mouse\+Position}} ()
+\begin{DoxyCompactList}\small\item\em Returns current mouse position (x, y) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_input_abc6c01b6ae2bf243e7f1ee68b2bbe148}\label{classmam_1_1_input_abc6c01b6ae2bf243e7f1ee68b2bbe148}} 
+static float \mbox{\hyperlink{classmam_1_1_input_abc6c01b6ae2bf243e7f1ee68b2bbe148}{mouseX}} ()
+\begin{DoxyCompactList}\small\item\em Returns current mouse X coordinate. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_input_ae5de47cad2401fe058e3445f69f7571b}\label{classmam_1_1_input_ae5de47cad2401fe058e3445f69f7571b}} 
+static float \mbox{\hyperlink{classmam_1_1_input_ae5de47cad2401fe058e3445f69f7571b}{mouseY}} ()
+\begin{DoxyCompactList}\small\item\em Returns current mouse Y coordinate. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classmam_1_1_input_a090ec270d8936b9a021474fc9231853b}\label{classmam_1_1_input_a090ec270d8936b9a021474fc9231853b}} 
+static std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classmam_1_1_input}{Input}} $>$ \mbox{\hyperlink{classmam_1_1_input_a090ec270d8936b9a021474fc9231853b}{Create}} ()
+\begin{DoxyCompactList}\small\item\em Create a new \mbox{\hyperlink{classmam_1_1_input}{Input}} instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classmam_1_1_input_ad7070ad69183d218993561f757488aed}{scroll\+Callback}} (G\+L\+F\+Wwindow $\ast$window, double xoffset, double yoffset)
+\begin{DoxyCompactList}\small\item\em G\+L\+FW scroll callback function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classmam_1_1_input_a684ff413f4ccc2e5b2c5247a62f48066}\label{classmam_1_1_input_a684ff413f4ccc2e5b2c5247a62f48066}} 
+static float \mbox{\hyperlink{classmam_1_1_input_a684ff413f4ccc2e5b2c5247a62f48066}{scroll\+Offset\+Y\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Y-\/axis scroll offset. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles keyboard, mouse, and controller input. 
+
+Provides static functions to query key/mouse state and mouse position, scroll offset, and controller input. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmam_1_1_input_a410d2e418a4275f3ac9b49ba10d1df8a}\label{classmam_1_1_input_a410d2e418a4275f3ac9b49ba10d1df8a}} 
+\index{mam::Input@{mam::Input}!init@{init}}
+\index{init@{init}!mam::Input@{mam::Input}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily static void mam\+::\+Input\+::init (\begin{DoxyParamCaption}\item[{G\+L\+F\+Wwindow $\ast$}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Initialize input system with a G\+L\+FW window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & G\+L\+FW window pointer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmam_1_1_input_ad7070ad69183d218993561f757488aed}\label{classmam_1_1_input_ad7070ad69183d218993561f757488aed}} 
+\index{mam::Input@{mam::Input}!scrollCallback@{scrollCallback}}
+\index{scrollCallback@{scrollCallback}!mam::Input@{mam::Input}}
+\doxysubsubsection{\texorpdfstring{scrollCallback()}{scrollCallback()}}
+{\footnotesize\ttfamily static void mam\+::\+Input\+::scroll\+Callback (\begin{DoxyParamCaption}\item[{G\+L\+F\+Wwindow $\ast$}]{window,  }\item[{double}]{xoffset,  }\item[{double}]{yoffset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+G\+L\+FW scroll callback function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & G\+L\+FW window \\
+\hline
+{\em xoffset} & Horizontal scroll offset \\
+\hline
+{\em yoffset} & Vertical scroll offset \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/mam/input.\+hpp\end{DoxyCompactItemize}
